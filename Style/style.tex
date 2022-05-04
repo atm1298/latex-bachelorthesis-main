@@ -17,6 +17,7 @@
 % Load package to configure header and footer
 \usepackage{scrlayer-scrpage}
 
+\usepackage{acronym}
 
 
 % Set some options regarding the document layout. See KOMA guide
@@ -95,11 +96,11 @@
 % set some default options for TikZ -- in this case for automata
 \tikzset{
   every state/.style={
-    draw=maincolor,
-    thick,
-    fill=maincolor!18,
-    minimum size=0pt
-  }
+      draw=maincolor,
+      thick,
+      fill=maincolor!18,
+      minimum size=0pt
+    }
 }
 
 % load listings package to typeset sourcecode
@@ -119,13 +120,13 @@
 
 % enable german umlauts in listings
 \lstset{
-  literate={ö}{{\"o}}1
-           {Ö}{{\"O}}1
-           {ä}{{\"a}}1
-           {Ä}{{\"A}}1
-           {ü}{{\"u}}1
-           {Ü}{{\"U}}1
-           {ß}{{\ss}}1
+literate={ö}{{\"o}}1
+{Ö}{{\"O}}1
+{ä}{{\"a}}1
+{Ä}{{\"A}}1
+{ü}{{\"u}}1
+{Ü}{{\"U}}1
+{ß}{{\ss}}1
 }
 
 % define style for pseudo code
@@ -152,10 +153,10 @@
 
 % setup hyperref
 \hypersetup{breaklinks=true,
-            pdfborder={0 0 0},
-            ngerman,
-            pdfhighlight={/N},
-            pdfdisplaydoctitle=true}
+  pdfborder={0 0 0},
+  ngerman,
+  pdfhighlight={/N},
+  pdfdisplaydoctitle=true}
 
 % Fix bugs in some package, e.g. listings and hyperref
 \usepackage{scrhack}
