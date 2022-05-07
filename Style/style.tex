@@ -19,7 +19,7 @@
 
 \usepackage{acronym}
 
-
+\newcommand*{\secref}[1]{\hyperref[{#1}]{\ref*{#1} \nameref*{#1}}}
 % Set some options regarding the document layout. See KOMA guide
 \KOMAoptions{%
   paper=a4,

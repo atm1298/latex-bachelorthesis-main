@@ -58,10 +58,8 @@ Visionen für die Zukunft realitätsnah festgelegt.
         \renewcommand{\arraystretch}{1.5}
         \begin{tabular}{p{0.1\textwidth}p{0.8\textwidth}}
                 \hline
-                \textbf{/V10/} & Erstellende des Status sind in der Lage, effizient zentrale
-                Informationen darzustellen.                                                  \\
-                \textbf{/V20/} & Betrachtende sind besser dazu in der Lage, Erstellende zu
-                kontaktieren, als aktuell.                                                   \\
+                \textbf{/V10/} & Verleihende des Status sind in der Lage,                                          \\
+                \textbf{/V20/} & Ausleihende sind besser dazu in der Lage,                                         \\
                 \hline
         \end{tabular}
 \end{center}
@@ -75,12 +73,11 @@ operationalisieren. Diese folgen dabei den standardisierten Regeln zur Formulier
         \renewcommand{\arraystretch}{1.5}
         \begin{tabular}{p{0.1\textwidth}p{0.8\textwidth}}
                 \hline
-                \textbf{/Z10/} & Betrachtende des Systems erhalten zielgerichtete und aktuelle
-                Informationen zum Verbleib der aufgesuchten Person.                                                                          \\
-                \textbf{/Z20/} & Erstellende verwenden ein gebrauchstaugliches, niedrigschwelliges Interface zum Erstellen von Informationen \\
-                \textbf{/Z30/} & Erstellende sind jederzeit in der Lage, ihre Informationen zu ändern.                                       \\
-                \textbf{/Z40/} & Erstellende sind überall in der Lage, ihre Informationen zu ändern.                                         \\
-                \textbf{/Z50/} & Der Status ist durch Erstellende leicht und unkompliziert veränderbar.                                      \\
+                \textbf{/Z10/} & Ausleihende eines Assets erhalten zielgerichtete und aktuelle
+                Informationen zum Verbleib der.                                                                          \\
+                \textbf{/Z20/} & XX sind jederzeit in der Lage, ihre Informationen zu ändern.                                       \\
+                \textbf{/Z40/} & XX sind überall in der Lage, ihre Informationen zu ändern.                                         \\
+                \textbf{/Z50/} & Der Status ist durch XX leicht und unkompliziert veränderbar.                                      \\
                 \hline
         \end{tabular}
 \end{center}
@@ -97,10 +94,10 @@ Benutzer- und Kontextanalyse abgeleitet.
                 \hline
                 \textbf{/R10/} & Das System ist eine Web-Anwendung.                                                        \\
                 \textbf{/R20/} & Die Zielgruppe sind Mitarbeitende des IMIS und Studierende.                               \\
-                \textbf{/R30/} & Die Zielgruppe teilt sich in zwei Nutzergruppen: die Erstellenden und
-                Betrachtenden des Systems. Die Definitionen der Nutzergruppen sind in Kapitel (\ref{section:benutzer})
+                \textbf{/R30/} & Die Zielgruppe teilt sich in zwei Nutzergruppen: die Verleihenden und
+                Ausleihende von Assets. Die Definitionen der Nutzergruppen sind in Kapitel (\secref{section:benutzer})
                 zu finden.                                                                                                 \\
-                \textbf{/R40/} & Das System wird von Erstellenden sowohl im mobilen als auch im Arbeitskontext genutzt (). \\
+                \textbf{/R40/} & Das System wird von Verleihenden sowohl im mobilen als auch im Arbeitskontext genutzt (). \\
                 \textbf{/R50/} & Die eingesetzte Software auf der Zielmaschine ist clientseitig ein
                 Webbrowser. Die marktführenden Webbrowser müssen unterstützt werden: Chrome, Firefox,
                 Safari \cite{noauthor_browser_nodate}.                                                                     \\
@@ -126,7 +123,7 @@ Ein System ist in einer technischen Umgebung eingebettet \cite{balzert2009}. Es 
 \subsection*{Funktionale Anforderungen}
 \label{section:funktionale}
 Im Folgenden werden die Kernfunktionalitäten des Systems aufgeführt \cite{balzert2009}.
-Diese ergeben sich aus der Aufgabenanalyse (section:aufgaben). Um die Anforderungen mit einer eindeutigen Semantik zu formulieren, wurde eine Anforderungsschablone (\ref{fig:schablone}) verwendet, um natürlichsprachliche Anforderungen zu definieren \cite{balzert2009}.
+Diese ergeben sich aus der Aufgabenanalyse (\ref{section:aufgaben}). Um die Anforderungen mit einer eindeutigen Semantik zu formulieren, wurde eine Anforderungsschablone (\ref{fig:schablone}) verwendet, um natürlichsprachliche Anforderungen zu definieren \cite{balzert2009}.
 
 \begin{figure}[h]
         \centering
@@ -139,16 +136,16 @@ Diese ergeben sich aus der Aufgabenanalyse (section:aufgaben). Um die Anforderun
         \renewcommand{\arraystretch}{1.5}
         \begin{tabular}{p{0.1\textwidth}p{0.8\textwidth}}
                 \hline
-                \textbf{/F10/}  & Das System \textit{muss} Erstellenden die Möglichkeit bieten, Informationen jederzeit einzutragen (A).                             \\
-                \textbf{/F20/}  & Das System \textit{muss} Erstellenden die Möglichkeit bieten, Status wiederzuverwenden.                                            \\
-                \textbf{/F30/}  & Das System \textit{muss} Erstellenden die Möglichkeit bieten, ein Profil zu erstellen (A).                                         \\
-                \textbf{/F40/}  & Das System \textit{muss} Betrachtenden relevante Informationen anzeigen, welche vom Erstellenden hinterlassen werden sollen (A).   \\
-                \textbf{/F50/}  & Das System \textit{muss} Erstellenden die Möglichkeit geben, den alleinigen Zugriff auf die eigenen Daten zu haben.                \\
-                \textbf{/F60/}  & Das System \textit{soll} Erstellenden die Möglichkeit bieten, individuelle und personalisierte Inhalte zu visualisieren (A).       \\
+                \textbf{/F10/}  & Das System \textit{muss} XX die Möglichkeit bieten, Informationen jederzeit einzutragen (A).                             \\
+                \textbf{/F20/}  & Das System \textit{muss} XX die Möglichkeit bieten, Status wiederzuverwenden.                                            \\
+                \textbf{/F30/}  & Das System \textit{muss} XX die Möglichkeit bieten, ein Profil zu erstellen (A).                                         \\
+                \textbf{/F40/}  & Das System \textit{muss} XXn relevante Informationen anzeigen, welche vom Erstellenden hinterlassen werden sollen (A).   \\
+                \textbf{/F50/}  & Das System \textit{muss} XX die Möglichkeit geben, den alleinigen Zugriff auf die eigenen Daten zu haben.                \\
+                \textbf{/F60/}  & Das System \textit{soll} XX die Möglichkeit bieten, individuelle und personalisierte Inhalte zu visualisieren (A).       \\
                 \textbf{/F70/}  & Das System \textit{soll} daran erinnern, die Informationen zu aktualisieren (A).                                                   \\
-                \textbf{/F80/}  & Das System \textit{soll} Erstellenden die Möglichkeit bieten, sich eine Vorschau ihres aktuell angezeigten Türschilds anzuschauen. \\
-                \textbf{/F90/}  & Das System \textit{sollte in Zukunft} die Möglichkeit bieten, per Schalter bedienbar zu sein.                                      \\
-                \textbf{/F100/} & Das System \textit{sollte in Zukunft} Betrachtenden die Möglichkeit bieten, Informationen zu hinterlassen (A).                     \\
+                \textbf{/F80/}  & Das System \textit{soll} XX die Möglichkeit bieten, sich eine Vorschau ihres aktuell angezeigten Türschilds anzuschauen. \\
+                \textbf{/F90/}  & Das System \textit{sollte in Zukunft} XX.                                     \\
+                \textbf{/F100/} & Das System \textit{sollte in Zukunft} XX die Möglichkeit bieten, Informationen zu hinterlassen (A).                     \\
                 \textbf{/F110/} & Das System \textit{sollte in Zukunft} den angezeigten Status automatisch aus den Daten des digitalen Kalenders ermitteln können.   \\
                 \hline
         \end{tabular}
@@ -170,7 +167,7 @@ Im letzten Schritt werden die nicht-funktionalen Anforderungen festgelegt, welch
                 section:benutzer (Sonderrolle) unterscheiden und die dazugehörigen Zugriffsrechte
                 sicherstellen.                                                                                                                                                                      \\
                 \textbf{/Q30/} & Das System \textit{soll} modular strukturiert sein, damit Inhalte und Funktionalitäten effizient eingebunden werden können und das System einfach erweiterbar ist. \\
-                \textbf{/Q40/} & Das System \textit{soll} beim Zugriff über das Internet eine gesicherte Übertragung (bspw. HTTPS) ermöglichen.                                                     \\
+                \textbf{/Q40/} & Das System \textit{soll} beim Zugriff über das Internet eine gesicherte Übertragung (bspw. \ac{HTTPS}) ermöglichen.                                                     \\
                 \textbf{/Q50/} & Das System \textit{soll} alle Benutzerinteraktionen in unter fünf Sekunden ausführen.                                                                              \\
                 \hline
         \end{tabular}
