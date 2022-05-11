@@ -12,36 +12,46 @@ auf dem Universitätsgelände oder online statt. Die Befragten wurden durch ein 
 semi-strukturiertes Interview geführt. Im Vorfeld wurde dafür ein Interviewleitfaden entwickelt
 (Anhang Verlinken). Es wurde eine Unterteilung in Verleihende und Ausleihende von Assets vorgenommen
 (genaue Definition der Benutzergruppen in Abschnitt
-\ref{section:benutzer}). Bei den Teilnehmenden handelt es sich um Mitarbeitende und Studierende der
-Universität zu Lübeck, welche am \ac{imis} tätig sind. In \ref{table:e} sind die Rollen der befragten
-Verleihenden aufgeführt. Die Verleihenden der Assets können gleichzeitig auch die Rolle der
-Ausleihende einnehmen. Die Rollen der befragten Ausleihende sind in \ref{table:b} dargestellt. Die IDs
-der Tabellen werden als Verweise in den folgenden Abschnitten verwendet.
+\ref{section:benutzer}). Bei den Teilnehmenden handelt es sich um Mitarbeitende, welche am \ac{imis}
+tätig sind und Studierende der Medieninformatik an der Universität zu Lübeck. In \ref{table:v} sind die Rollen der
+Verleihenden aufgeführt. Die Verleihenden der Assets können gleichzeitig die Position des
+Ausleihenden einnehmen. 
+Die Rollen der Ausleihendn befragten sind in \ref{table:a} dargestellt. Die IDs
+der Teilnehmenden werden als Verweise in den folgenden Abschnitten verwendet\footnote{die mit * gekennzeichneten Personen wurden gemeinsam interviewt}.
 
 
 \begin{table}[h]
     \centering
-    \begin{zebratabular}{ll}
-        \headerrow ID & Rolle \\
-            V1 & Professor\\
-            V2 & Wissenschaftlicher Mitarbeiter\\
-            V3 & Wissenschaftlicher Mitarbeiter \\
-            V4 & Sekretariat und administratives Personal\\
-    \end{zebratabular}  
     \caption{Teilnehmende der Interviews, Verleihende}
-    \label{table:e}
+    \begin{tabular}{ll}
+        \arrayrulecolor{maincolor}\hline
+        \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Rolle \\
+        \arrayrulecolor{maincolor}\hline
+            V1 & Wissenschaftlicher Mitarbeiter, weiß wo Dinge stehen, leiht aber nicht direkt aus\\
+            V2 & Wissenschaftlicher Mitarbeiter\\
+            V3 & Wissenschaftlicher Mitarbeiter\\
+            V4 & Wissenschaftlicher Mitarbeiter\\
+            V5 & Sekretariat, administratives Personal\\
+            \arrayrulecolor{maincolor}\hline
+    \end{tabular}  
+    \label{table:v}
 \end{table}
 
 \begin{table}[h]
-    \centering
-    \begin{zebratabular}{ll}
-        \headerrow ID & Rolle \\
-            A1  & Bachelorstudent und Hilfswissenschaftler\\
-            A2 & Bachelorstudent\\
-            A3  & Masterstudent und Hilfswissenschaftlerin\\
-    \end{zebratabular}
+    \centering 
     \caption{Teilnehmende der Interviews, Ausleihende}
-    \label{table:b}
+    \begin{tabular}{ll}
+        \arrayrulecolor{maincolor}\hline
+        \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Rolle \\
+        \arrayrulecolor{maincolor}\hline
+            A1  & Bachelorstudentin, Hilfswissenschaftlerin\\
+            A2 &  Bachelorstudent\\
+            A3  & Masterstudent, Hilfswissenschaftler \\
+            A4*  & Bachelorstudentin \\
+            A5*  & Bachelorstudentin \\
+        \arrayrulecolor{maincolor}\hline
+    \end{tabular}
+    \label{table:a}
     \hfill
     
 \end{table}
@@ -55,21 +65,9 @@ der Tabellen werden als Verweise in den folgenden Abschnitten verwendet.
 \section{Kontextanalyse}
 \label{section:kontext}
 
-\section{Analyse des aktuellen Stands}
+\section{Problemanalyse}
 \label{section:iststand}
 
-Snipe-IT ist eine kostenlose, quelloffene IT-Asset-Verwaltungs-Plattform,
-welche das Nachverfolgen von Software-Lizenzen, Hardware und
-Verbrauchsgegenständen ermöglicht. Genannte Assets können über ein Dashboard
-hinzugefügt, verwaltet und gelöscht werden. Über Labels können Assets zur
-Übersichtlichkeit in verschiedene Kategorien eingeordnet werden, während
-Tags ein Asset eindeutig identifizieren (z. B. Seriennummer). Zudem ermöglicht
-das „Checkin/Checkout“-System die Nachverfolgung aller Assets, falls diese
-z. B.  an Person ausgeliehen werden. Zu jedem Zeitpunkt kann ein Asset
-maximal einer Person zugeordnet werden, wodurch das mehrfache gleichzeitige
-Ausleihen eines Assets verhindert wird. Darüber hinaus beschreiben Status-Label
-den Zustands eines Assets und ob dieses ausgeliehen werden kann. Alle
-Funktionalitäten können zudem über eine REST-API programmatisch genutzt werden.
 
 
 \section{Formalisierte Anforderungen}

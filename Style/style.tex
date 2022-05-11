@@ -52,10 +52,12 @@
 
 
 % define new environment for zebra tables
-\newcommand{\mainrowcolors}{\rowcolors{1}{maincolor!25}{maincolor!5}}
+\usepackage{colortbl}
+\newcommand{\mainrowcolors}{\rowcolors{1}{white}{white}}
 \newenvironment{zebratabular}{\mainrowcolors\begin{tabular}}{\end{tabular}}
 \newcommand{\setrownumber}[1]{\global\rownum#1\relax}
-\newcommand{\headerrow}{\rowcolor{maincolor!50}\setrownumber1}
+%\newcommand{\headerrow}{\normalfont\sffamily\color{maincolor}\setrownumber1}
+%\rowcolor{maincolor!50}
 
 % add main color to section headers
 \addtokomafont{chapter}{\color{maincolor}}
