@@ -3,21 +3,28 @@
 \chapter{Analyse}
 \label{chapter-analyse}
 
-Dieses Kapitel beschreibt alle für die Arbeit notwendigen Grundlagen.
+In diesem Kapitel werden die Rahmenbedingungen des Projektes umfassend analysiert, um die relevanten
+Faktoren zu identifizieren, die Einfluss auf die Entwicklung und die spätere Nutzung des Systems
+nehmen. Nach einer Ausführung der Datenquellen (\ref{section:daten}) wird zunächst eine
+Benutzeranalyse (\ref{section:benutzer}) durchgeführt. Anschließend werden die Aufgaben, die
+Nutzende mithilfe der Anwendung bewältigen möchten, diskutiert (\ref{section:aufgaben}) und der
+organisatorische sowie zeitlich-räumliche Kontext der Nutzung (\ref{section:kontext}) analysiert.
+Zudem wurde eine Analyse des Problems (\ref{section:iststand}) durchgeführt. Abschließend
+wurden die objektiven Anforderungen an das System formalisiert (\ref{section:anforderung}).
 
 \section{Datenquellen}
 \label{section:daten}
-Für die Analyse wurden Stakeholder-Interviews durchgeführt. Die Interviews fanden im Mai 2022
-auf dem Universitätsgelände oder online statt. Die Befragten wurden durch ein qualitatives,
+Für die Analyse wurden Stakeholder-Interviews durchgeführt. Die Interviews fanden im Mai 2022 auf
+dem Universitätsgelände oder online statt. Die Befragten wurden durch ein qualitatives,
 semi-strukturiertes Interview geführt. Im Vorfeld wurde dafür ein Interviewleitfaden entwickelt
 (Anhang Verlinken). Es wurde eine Unterteilung in Verleihende und Ausleihende von Assets vorgenommen
-(genaue Definition der Benutzergruppen in Abschnitt
-\ref{section:benutzer}). Bei den Teilnehmenden handelt es sich um Mitarbeitende, welche am \ac{imis}
-tätig sind und Studierende der Medieninformatik an der Universität zu Lübeck. In \ref{table:v} sind die Zuständigkeitsbereiche der
+(genaue Definition der Benutzergruppen in Abschnitt \ref{section:benutzer}). Bei den Teilnehmenden
+handelt es sich um Mitarbeitende, welche am \ac{imis} tätig sind und Studierende der
+Medieninformatik an der Universität zu Lübeck. In \ref{table:v} sind die Zuständigkeitsbereiche der
 Verleihenden aufgeführt. Die Verleihenden der Assets können gleichzeitig die Position des
-Ausleihenden einnehmen. 
-Die Rollen der Ausleihendn befragten sind in \ref{table:a} dargestellt. Die IDs
-der Teilnehmenden werden als Verweise in den folgenden Abschnitten verwendet\footnote{die mit * gekennzeichneten Personen wurden gemeinsam interviewt}.
+Ausleihenden einnehmen. Die Rollen der Ausleihendn befragten sind in \ref{table:a} dargestellt. Die
+IDs der Teilnehmenden werden als Verweise in den folgenden Abschnitten verwendet\footnote{die mit *
+gekennzeichneten Personen wurden gemeinsam interviewt}.
 
 % Mit der Fomulierung aufpassen! WiMi und Administratives Personal gibt es nicht! Vorsicht
 \begin{table}[h]
@@ -25,7 +32,8 @@ der Teilnehmenden werden als Verweise in den folgenden Abschnitten verwendet\foo
     \caption{Teilnehmende der Interviews, Verleihende}
     \begin{tabular}{lll}
         \arrayrulecolor{maincolor}\hline
-        \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Alter & \sffamily\color{maincolor}Zuständigkeitsbereich \\
+        \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Alter &
+        \sffamily\color{maincolor}Zuständigkeitsbereich \\
         \arrayrulecolor{maincolor}\hline
             V1 & 25 - 35 J. & Keine direkte Zuständigkeit, kann Zugang verschaffen\\
             V2 & 25 - 35 J. & Multimedialabor\\
@@ -59,60 +67,55 @@ der Teilnehmenden werden als Verweise in den folgenden Abschnitten verwendet\foo
 
 \section{Benutzeranalyse}
 \label{section:benutzer}
-- Zielgruppe festlegen
+- Zielgruppe festlegen: Beziehe mich Hauptsächlich auf die Ausleihenen, aus den und den Gründen.
+Dadurch fallen aber auch bestimmte Punkte für Verleihende an,...
 
-Mit Hilfe der vorangestellten Stakeholder-Interviews konnten zwei
-Benutzergruppen für das System anaylsiert werden. Die erste Benutzergruppe
-umfasst Mitarbeitende des \ac{imis}, welche dafür verantwortlich sind Assets zu
-verleihen, diese werden im folgenden als Verleihende bezeichnet (\ref{table:v}).
-Verleihende sind in der Lage, einzelne Assets herauszugeben, allerdings haben
-nicht alle Verleihende auf alle Assets den gleichen Zugriff, dies ist von
-Forschungsgruppe zu Forschungsgruppe unterschiedliche und umfasst zudem
-unterschiedliche Vorgänge. Folglich können Verleihenden der Assets gleichzeitig
-die Position der Ausleihenden einnehmen. Die Ausleihenden stellen die zweite
-Benutzergruppe dar, hierbei handelt es sich inbesondere um Studierende, welche
+Mit Hilfe der vorangestellten Stakeholder-Interviews konnten zwei Benutzergruppen für das System
+anaylsiert werden. Die erste Benutzergruppe umfasst Mitarbeitende des \ac{imis}, welche dafür
+verantwortlich sind Assets zu verleihen, diese werden im folgenden als Verleihende bezeichnet
+(\ref{table:v}). Verleihende sind in der Lage, einzelne Assets herauszugeben, allerdings haben nicht
+alle Verleihende auf alle Assets den gleichen Zugriff, dies ist von Forschungsgruppe zu
+Forschungsgruppe unterschiedliche und umfasst zudem unterschiedliche Vorgänge. Folglich können
+Verleihenden der Assets gleichzeitig die Position der Ausleihenden einnehmen. Die Ausleihenden
+stellen die zweite Benutzergruppe dar, hierbei handelt es sich inbesondere um Studierende, welche
 Assets Ausleihen können (\ref{table:a}).
 
 - Merkmale: Mitarbeitende = nochmal wieder ein anderer Prozess beim Ausleihen
 
-Aus den Interviews (\ref{section:daten}) konnte außerdem entnommen werden, dass
-die Zielgruppe täglich ein Smartphone, Tablet, Laptop oder Desktop PC nutzt und
-somit ein grundlegendes technisches Verständnis vorausgesetzt werden (ATI
-Ergebnisse nutzen zum Belgen).
+Aus den Interviews (\ref{section:daten}) konnte außerdem entnommen werden, dass die Zielgruppe
+täglich ein Smartphone, Tablet, Laptop oder Desktop PC nutzt und somit ein grundlegendes technisches
+Verständnis vorausgesetzt werden (ATI Ergebnisse nutzen zum Belgen).
 
 
-Die Zielgruppe besteht hauptsächlich aus Mitarbeitenden des \ac{imis} sowie
-Studierenden.
+Die Zielgruppe besteht hauptsächlich aus Mitarbeitenden des \ac{imis} sowie Studierenden.
 
 
-Dieses nimmt eine Sonderrolle ein, da das Sekretariat eine zentrale Anlaufstelle
-bildet und das Personal daher zusätzliche organisatorische Aufgaben übernimmt.
+Dieses nimmt eine Sonderrolle ein, da das Sekretariat eine zentrale Anlaufstelle bildet und das
+Personal daher zusätzliche organisatorische Aufgaben übernimmt.
 
 
 
 \section{Aufgabenanalyse}
 \label{section:aufgaben}
 
-Für die Stakeholder fallen verschiedene Eigenschaften an, die auf Basis der
-vorher durchgeführten Interviews (\ref{section:daten}) hergeleitet wurden. Es
-stellte sich heraus, dass für die beiden Benutzergruppen \glqq
-Verleihende\grqq{} und \glqq Ausleihende\grqq{} ähnliche Anforderungen an das
-System stellen, da ähnliche Ziele und Kontexte und somit auch ähnliche
-Eigenschaften bei der Interaktion mit dem System vorliegen. Die folgenden
-Eigenschaften konnten aus den Interviews geschlossen werden:
+Für die Stakeholder fallen verschiedene Eigenschaften an, die auf Basis der vorher durchgeführten
+Interviews (\ref{section:daten}) hergeleitet wurden. Es stellte sich heraus, dass für die beiden
+Benutzergruppen \glqq Verleihende\grqq{} und \glqq Ausleihende\grqq{} ähnliche Anforderungen an das
+System stellen, da ähnliche Ziele und Kontexte und somit auch ähnliche Eigenschaften bei der
+Interaktion mit dem System vorliegen. Die folgenden Eigenschaften konnten aus den Interviews
+geschlossen werden:
 
 \begin{table}[h]
         \centering
         \caption{Herausgearbeitete Eigenschaften}
         \begin{tabular}{ll}
                 \arrayrulecolor{maincolor}\hline
-                \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Rolle
-                \\
+                \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Rolle \\
                 \arrayrulecolor{maincolor}\hline
-                E1                           & Übersicht über auzuleihende
-                Assets                                                           \\
-                E2                           & Sichtbarkeit von
-                Ansprechpartner:innen                                            \\
+                E1                           & Übersicht über auzuleihende Assets
+                \\
+                E2                           & Sichtbarkeit von Ansprechpartner:innen
+                \\
                 E3                           & Reservierungen ermöglichen        \\
                 E4                           & Erinnerungen bekommen             \\
                 E5                           & Checkliste für Vorschläge         \\
@@ -120,8 +123,7 @@ Eigenschaften konnten aus den Interviews geschlossen werden:
                 E7                           & Anleitungen                       \\
                 E8                           & Vorschläge                        \\
                 E9                           & Kalenderübersicht                 \\
-                E10                          & Kommunikations Möglichkeit bieten
-                \\
+                E10                          & Kommunikations Möglichkeit bieten \\
                 E11                          & Informationen betrachten          \\
                 E12                          &                                   \\
                 \arrayrulecolor{maincolor}\hline
@@ -136,43 +138,37 @@ Eigenschaften konnten aus den Interviews geschlossen werden:
 \section{Kontextanalyse}
 \label{section:kontext}
 
-Um zu ermitteln, in welcher Nutzungsumgebung die Anwendung verwendet werden
-soll, wurde eine Kontextanalyse durchgeführt.
+Um zu ermitteln, in welcher Nutzungsumgebung die Anwendung verwendet werden soll, wurde eine
+Kontextanalyse durchgeführt.
 
 \subsection*{Organisatorischer Kontext}
-Innerhalb des Universitäts-Kontextes gibt es aus formaler Sicht eine überwiegend
-flache Hierarchie zwischen Studierenden und Mitarbeitenden, wobei zwischen
-Hilfswissenschaftlern und Hilfswissenschaftlerinnen, wissenschaftlichen
-Mitarbeitenden sowie Professoren und Professorinnen unterschieden werden kann.
-Diese Gruppen haben teilweise unterschiedlichen Zugriff auf bestimmte Systeme
-wie einen Kalender, in dem Mitarbeitende die belegten Zeiten von Kollegen
-einsehen können.
+Innerhalb des Universitäts-Kontextes gibt es aus formaler Sicht eine überwiegend flache Hierarchie
+zwischen Studierenden und Mitarbeitenden, wobei zwischen Hilfswissenschaftlern und
+Hilfswissenschaftlerinnen, wissenschaftlichen Mitarbeitenden sowie Professoren und Professorinnen
+unterschieden werden kann. Diese Gruppen haben teilweise unterschiedlichen Zugriff auf bestimmte
+Systeme wie einen Kalender, in dem Mitarbeitende die belegten Zeiten von Kollegen einsehen können.
 
-Aus informeller Sicht ist die Verbindung zwischen Mitarbeitenden und den
-Personen, die das Büro aufsuchen, meist kollegial (z.B. bei anderen
-Mitarbeitenden) oder situativ (z.B. bei Studierenden).
+Aus informeller Sicht ist die Verbindung zwischen Mitarbeitenden und den Personen, die das Büro
+aufsuchen, meist kollegial (z.B. bei anderen Mitarbeitenden) oder situativ (z.B. bei Studierenden).
 
 \subsection*{Zeitlich-Räumlicher Kontext}
 \label{section:zeit}
-Der Kontext sollte sowohl aus Sicht der Verleihenden als auch aus Sicht der
-Ausleihenden analysiert werden. Die Anwendung soll einen einheitlichen Ausleihprozess schaffen.
-Mitarbeitende halten sich entweder in ihren Büros oder an
-einem anderen Ort auf, daher werden bei der Analyse des zeitlich-räumlichen
-Kontextes beide Fälle betrachtet.
+Der Kontext sollte sowohl aus Sicht der Verleihenden als auch aus Sicht der Ausleihenden analysiert
+werden. Die Anwendung soll einen einheitlichen Ausleihprozess schaffen. Mitarbeitende halten sich
+entweder in ihren Büros oder an einem anderen Ort auf, daher werden bei der Analyse des
+zeitlich-räumlichen Kontextes beide Fälle betrachtet.
 
-Befindet sich Mitarbeitende im Büro, arbeiten sie an einem Desktop-Arbeitsplatz.
-Der Computer ist dabei die meiste Zeit eingeschaltet, häufig arbeiten
-Mitarbeitende am Computer, beispielsweise in Form einer Web-App an, da der
-Aufwand zur Bedienung dieser Web-App gering ist (...). Wenn Mitarbeitende aus
-diversen Gründen ihr Büro verlassen, stehen sie auf und schließen beim
-Hinausgehen die Bürotür.
+Befindet sich Mitarbeitende im Büro, arbeiten sie an einem Desktop-Arbeitsplatz. Der Computer ist
+dabei die meiste Zeit eingeschaltet, häufig arbeiten Mitarbeitende am Computer, beispielsweise in
+Form einer Web-App an, da der Aufwand zur Bedienung dieser Web-App gering ist (...). Wenn
+Mitarbeitende aus diversen Gründen ihr Büro verlassen, stehen sie auf und schließen beim Hinausgehen
+die Bürotür.
 
-Die Bedienung der Anwendung sollte daher sehr
-niedrigschwellig sein, da Mitarbeitende häufig nicht viel Zeit für die Bedienung
-haben oder investieren möchten (...).
+Die Bedienung der Anwendung sollte daher sehr niedrigschwellig sein, da Mitarbeitende häufig nicht
+viel Zeit für die Bedienung haben oder investieren möchten (...).
 
-Da der Ort variiert, liegt hier ein mobiler Nutzungskontext vor, welches beispielsweise
-durch die Nutzung einer Web-App auf dem Smartphone ermöglicht werden kann (V1, V2, V , A).
+Da der Ort variiert, liegt hier ein mobiler Nutzungskontext vor, welches beispielsweise durch die
+Nutzung einer Web-App auf dem Smartphone ermöglicht werden kann (V1, V2, V , A).
 
 
 \section{Problemanalyse}
@@ -180,16 +176,20 @@ durch die Nutzung einer Web-App auf dem Smartphone ermöglicht werden kann (V1, 
 
 \begin{itemize}
         \item Keine Liste (Was gibt es wo?) (alle)
-        \item Keine einheitlichen Prozesse (von Forschungsgruppe zu Forschungsgruppe unterschiedliche) (V1, V2,V3)
+        \item Keine einheitlichen Prozesse (von Forschungsgruppe zu Forschungsgruppe
+        unterschiedliche) (V1, V2,V3)
         \item Nicht bekannt, was auszuleihen geführt (alle)
         \item Keine direkten Ansprechpartner (A1, A3)
         \item Verantwortlichkeiten unklar (für Studierende) (A1, A2, A5)
         \item Sachen werden kurzeitig auch einfach genkommen (A1, V1, V2)
-        \item Was passiert, wenn es kaputt geht? Absicherung, Transparenz, bekannte Macken klar? -> nein (alle V)
-        \item Häufgiges weiterverweisen, an andere Personen, weil kein direkter Ansprechpartner (V1, V3, V4, A1, A2)
+        \item Was passiert, wenn es kaputt geht? Absicherung, Transparenz, bekannte Macken klar? ->
+        nein (alle V)
+        \item Häufgiges weiterverweisen, an andere Personen, weil kein direkter Ansprechpartner (V1,
+        V3, V4, A1, A2)
         \item Mail schreiben, weil Risko zu hoch, das Asset schon weg ist (A3)
         \item Immer nachfragen = nervig (A6)
-        \item Weiß nicht was für ein Gerät es genau ist,... nicht kompatible -> Auskunft fehlt (Selbstaneignung) (A3)
+        \item Weiß nicht was für ein Gerät es genau ist,... nicht kompatible -> Auskunft fehlt
+        (Selbstaneignung) (A3)
         \item Über Flurfunk oder Videoworkshop aber nicht über alles bescheid (alle As)
         \item Aber auch: entspannt aber nicht klar, was ausleihende ist (A4, A5)
         \item Blöd, weil jemand aus der Arbeit gerissen wird (A6)
@@ -200,7 +200,8 @@ durch die Nutzung einer Web-App auf dem Smartphone ermöglicht werden kann (V1, 
         \item Unterschrift auf irgendeinem Zettel (V1, V2, V3, V4)
         \item Häufig nicht dokumentiert (V1, V2)
         \item Selbstaneignung (V1, V4, V5, A3)
-        \item Studierende kommen ohne wissen und fragen nach "Kamera" -> Nachfragen, was sie brauchen und helfen -> Gespräch komplex (V2)
+        \item Studierende kommen ohne wissen und fragen nach "Kamera" -> Nachfragen, was sie
+        brauchen und helfen -> Gespräch komplex (V2)
         \item Usecases abdecken,... (V2, A6)
         \item Vertrauenbasis ; Kein Verzeichniss von Gebrauchsspuren (A1, V1,)
         \item kein Schnelles Rankmmen, weil an Person angewiesen sind (A3)
@@ -208,32 +209,30 @@ durch die Nutzung einer Web-App auf dem Smartphone ermöglicht werden kann (V1, 
 \end{itemize}
 
 
-Derzeit melden sich ein Studierenden bei Anliegen an eine bestimmte
-Person im Voraus an, beispielsweise per E-Mail ().
+Derzeit melden sich ein Studierenden bei Anliegen an eine bestimmte Person im Voraus an,
+beispielsweise per E-Mail ().
 
-Mitarbeitende, von denen bekannt ist, dass sie anwesend sind,
-werden häufiger spontan aufgesucht als andere ().
+Mitarbeitende, von denen bekannt ist, dass sie anwesend sind, werden häufiger spontan aufgesucht als
+andere ().
 
 
 \section{Formalisierte Anforderungen}
 \label{section:anforderung}
 
-Im Folgenden werden systematisch formalisierte Anforderungen präsentiert, welche
-die Ergebnisse der Analysen abschließend zusammenfassen. Es werden zunächst die
-Visionen und Ziele (\ref{section:visionziel}) definiert, des Weiteren werden die
-Rahmenbedingungen (\ref{section:rahmen}) und der Kontext des Systems
-(\ref{section:kontextueberblick}) dargestellt. Darauf aufbauend wird eine
-funktionale Anforderung erstellt (\ref{section:funktionale}). Abschließen werden
-die Qualitätsanforderungen formuliert (\ref{section:qualität}).
+Im Folgenden werden systematisch formalisierte Anforderungen präsentiert, welche die Ergebnisse der
+Analysen abschließend zusammenfassen. Es werden zunächst die Visionen und Ziele
+(\ref{section:visionziel}) definiert, des Weiteren werden die Rahmenbedingungen
+(\ref{section:rahmen}) und der Kontext des Systems (\ref{section:kontextueberblick}) dargestellt.
+Darauf aufbauend wird eine funktionale Anforderung erstellt (\ref{section:funktionale}). Abschließen
+werden die Qualitätsanforderungen formuliert (\ref{section:qualität}).
 
 
 \subsection*{Vision und Ziele}
 \label{section:visionziel}
-Zunächst sollten die Visionen und Ziele des Systems konkretisiert werden, an
-denen sich die Anforderungen auf Zielgerichtetheit überprüfen lassen
-\cite{balzert2009}. Diese setzen sich aus der Analyse der Benutzenden sowie
-Aufgaben und des Kontextes zusammen. Im ersten Schritt werden die Visionen für
-die Zukunft realitätsnah festgelegt.
+Zunächst werden die Visionen und Ziele des Systems konkretisiert, an denen sich die Anforderungen
+auf Zielgerichtetheit überprüfen lassen \cite{balzert2009}. Diese setzen sich aus der Analyse der
+Benutzenden sowie Aufgaben und des Kontextes zusammen. Im ersten Schritt werden die Visionen für die
+Zukunft realitätsnah festgelegt.
 
 
 
@@ -241,126 +240,117 @@ die Zukunft realitätsnah festgelegt.
         \renewcommand{\arraystretch}{1.5}
         \begin{tabular}{p{0.1\textwidth}p{0.8\textwidth}}
                 \hline
-                \textbf{/V10/} & Verleihende des Status sind in der Lage,  \\
-                \textbf{/V20/} & Ausleihende sind besser dazu in der Lage, \\
+                \textbf{/V10/} & Verleihende   \\
+                \textbf{/V20/} & Ausleihende haben wissen, über auszuleihende Assets. \\
                 \hline
         \end{tabular}
 \end{center}
 
-Basierend auf diese Visionen lassen sich die Ziele formulieren, welche die
-Visionen operationalisieren. Diese folgen dabei den standardisierten Regeln zur
-Formulierung von Zielen \cite{pohl_requirements_2008}.
+Basierend auf diese Visionen lassen sich die Ziele formulieren, welche die Visionen
+operationalisieren. Diese folgen dabei den standardisierten Regeln zur Formulierung von Zielen
+\cite{pohl_requirements_2008}.
 
 
 \begin{center}
         \renewcommand{\arraystretch}{1.5}
         \begin{tabular}{p{0.1\textwidth}p{0.8\textwidth}}
                 \hline
-                \textbf{/Z10/} & Ausleihende eines Assets erhalten
-                zielgerichtete und aktuelle Informationen zum Verbleib der.      \\
-                \textbf{/Z20/} & XX sind jederzeit in der Lage, ihre
-                Informationen zu ändern.                                         \\
-                \textbf{/Z40/} & XX sind überall in der Lage, ihre Informationen
-                zu ändern.                                                       \\
-                \textbf{/Z50/} & Der Status ist durch XX leicht und
-                unkompliziert veränderbar.                                       \\
+                \textbf{/Z10/} & Ausleihende eines Assets erhalten zielgerichtete und aktuelle
+                Informationen zum Verbleib.      \\
+                \textbf{/Z20/} & Ausleihende sind jederzeit in der Lage, .
+                \\
+                \textbf{/Z40/} & XX sind überall in der Lage, ihre Informationen zu ändern.
+                \\
+                \textbf{/Z50/} & .                                       \\
                 \hline
         \end{tabular}
 \end{center}
 
 \subsection*{Rahmenbedingungen}
 \label{section:rahmen}
-Die Randbedingungen legen organisatorische und technische Restriktionen für das
-System oder den Entwicklungsprozess fest \cite{balzert2009}. Die Bedingungen
-wurden aus dem Lastenheft und der Benutzer- und Kontextanalyse abgeleitet.
+Die Randbedingungen legen organisatorische und technische Restriktionen für das System oder den
+Entwicklungsprozess fest \cite{balzert2009}. Die Bedingungen wurden aus der Benutzer- und
+Kontextanalyse abgeleitet.
 
 \begin{center}
         \renewcommand{\arraystretch}{1.5}
         \begin{tabular}{p{0.1\textwidth}p{0.8\textwidth}}
                 \hline
                 \textbf{/R10/} & Das System ist eine Web-Anwendung.             \\
-                \textbf{/R20/} & Die Zielgruppe sind Mitarbeitende des IMIS und
-                Studierende.                                                    \\
-                \textbf{/R30/} & Die Zielgruppe teilt sich in zwei
-                Nutzergruppen: die Verleihenden und Ausleihende von Assets. Die
-                Definitionen der Nutzergruppen sind in Kapitel
+                \textbf{/R20/} & Die Zielgruppe sind Mitarbeitende des IMIS und Studierende.
+                \\
+                \textbf{/R30/} & Die Zielgruppe teilt sich in zwei Nutzergruppen: die Verleihenden
+                und Ausleihende von Assets. Die Definitionen der Nutzergruppen sind in Kapitel
                 (\secref{section:benutzer}) zu finden.                          \\
-                \textbf{/R40/} & Das System wird von Verleihenden sowohl im
-                mobilen als auch im Arbeitskontext genutzt ().                  \\
-                \textbf{/R50/} & Die eingesetzte Software auf der Zielmaschine
-                ist clientseitig ein Webbrowser. Die marktführenden Webbrowser
-                müssen unterstützt werden: Chrome, Firefox, Safari
-                \cite{noauthor_browser_nodate}.                                 \\
+                \textbf{/R40/} & Das System wird von Verleihenden sowohl im mobilen als auch im
+                ...Kontext genutzt.                  \\
+                \textbf{/R50/} & Die eingesetzte Software auf der Zielmaschine ist clientseitig ein
+                Webbrowser. Die marktführenden Webbrowser müssen unterstützt werden: Chrome,
+                Firefox, Safari \cite{noauthor_browser_nodate}.                                 \\
                 \hline
         \end{tabular}
 \end{center}
 
 \subsection*{Kontext und Überblick}
 \label{section:kontextueberblick}
-Ein System ist in einer technischen Umgebung eingebettet \cite{balzert2009}. Es
-wurde im Folgenden Bezug auf das aktuelle Vorgehen und die Schnittstellen des
-System genommen.
+Ein System ist in einer technischen Umgebung eingebettet \cite{balzert2009}. Es wurde im folgenden
+Bezug auf das aktuelle Vorgehen mithilfe der Problemanalyse geschlossen.
 
 \begin{center}
         \renewcommand{\arraystretch}{1.5}
         \begin{tabular}{p{0.1\textwidth}p{0.8\textwidth}}
                 \hline
-                \textbf{/K10/} & Das aktuelle Vorgehen umfasst Klebezettel an
-                den Türen der Mitarbeitenden.                                 \\
-                \textbf{/K20/} & Es existiert eine Schnittstelle zum Back-End
-                des Labormanagementsystems.                                   \\
-                \textbf{/K30/} & Es existiert ein digitaler Kalender, auf den
-                die Mitarbeitenden Zugriff haben, in dem geblockte Zeiten
-                einzelner Personen angezeigt werden.                          \\
+                \textbf{/K10/} & Das aktuelle Vorgehen umfasst keine Liste für Verleihende und
+                Ausleihende.                                 \\
+                \textbf{/K20/} & Es kommmt zu Doppelbeschaffungen.
+                \\
+                \textbf{/K30/} & Es existieren von Forschungsgruppe zu Forschungsgruppe
+                unterschiedliche Ausleihprozesse.                        \\
                 \hline
         \end{tabular}
 \end{center}
 
 \subsection*{Funktionale Anforderungen}
 \label{section:funktionale}
-Im Folgenden werden die Kernfunktionalitäten des Systems aufgeführt
-\cite{balzert2009}. Diese ergeben sich aus der Aufgabenanalyse
-(\ref{section:aufgaben}). Um die Anforderungen mit einer eindeutigen Semantik zu
-formulieren, wurde eine Anforderungsschablone (\ref{fig:schablone}) verwendet,
-um natürlichsprachliche Anforderungen zu definieren \cite{balzert2009}.
+Im Folgenden werden die Kernfunktionalitäten des Systems aufgeführt \cite{balzert2009}. Diese
+ergeben sich aus der Aufgabenanalyse (\ref{section:aufgaben}). Um die Anforderungen mit einer
+eindeutigen Semantik zu formulieren, wurde eine Anforderungsschablone (\ref{fig:schablone})
+verwendet, um natürlichsprachliche Anforderungen zu definieren \cite{balzert2009}.
 
 \begin{figure}[h]
         \centering
         \includegraphics[scale=0.45]{Bilder/anforderungsschablone.pdf}
         \label{fig:schablone}
-        \caption[Anforderungsschablone]{Anforderungsschablone
-                \cite{balzert2009}}
+        \caption[Anforderungsschablone]{Anforderungsschablone \cite{balzert2009}}
 \end{figure}
+
 
 \begin{center}
         \renewcommand{\arraystretch}{1.5}
         \begin{tabular}{p{0.1\textwidth}p{0.8\textwidth}}
                 \hline
-                \textbf{/F10/}  & Das System \textit{muss} XX die Möglichkeit
-                bieten, Informationen jederzeit einzutragen (A).               \\
-                \textbf{/F20/}  & Das System \textit{muss} XX die Möglichkeit
-                bieten, Status wiederzuverwenden.                              \\
-                \textbf{/F30/}  & Das System \textit{muss} XX die Möglichkeit
-                bieten, ein Profil zu erstellen (A).                           \\
-                \textbf{/F40/}  & Das System \textit{muss} XXn relevante
-                Informationen anzeigen, welche vom Erstellenden hinterlassen
-                werden sollen (A).                                             \\
-                \textbf{/F50/}  & Das System \textit{muss} XX die Möglichkeit
-                geben, den alleinigen Zugriff auf die eigenen Daten zu haben.  \\
-                \textbf{/F60/}  & Das System \textit{soll} XX die Möglichkeit
-                bieten, individuelle und personalisierte Inhalte zu
-                visualisieren (A).                                             \\
-                \textbf{/F70/}  & Das System \textit{soll} daran erinnern, die
-                Informationen zu aktualisieren (A).                            \\
-                \textbf{/F80/}  & Das System \textit{soll} XX die Möglichkeit
-                bieten, sich eine Vorschau ihres aktuell angezeigten Türschilds
-                anzuschauen.                                                   \\
-                \textbf{/F90/}  & Das System \textit{sollte in Zukunft} XX.    \\
-                \textbf{/F100/} & Das System \textit{sollte in Zukunft} XX die
-                Möglichkeit bieten, Informationen zu hinterlassen (A).         \\
-                \textbf{/F110/} & Das System \textit{sollte in Zukunft} den
-                angezeigten Status automatisch aus den Daten des digitalen
-                Kalenders ermitteln können.                                    \\
+                \textbf{/F10/}  & Das System \textit{muss} Verleihenden und Ausleihenden die
+                Möglichkeit bieten, eine Übersicht der Assets jederzeit einsehen zu können (A).
+                \\
+                \textbf{/F20/}  & Das System \textit{muss} XX die Möglichkeit bieten,  .
+                \\
+                \textbf{/F30/}  & Das System \textit{muss} XX die Möglichkeit bieten,  (A).
+                \\
+                \textbf{/F40/}  & Das System \textit{muss} XX relevante Informationen anzeigen,
+                (A).                                             \\
+                \textbf{/F50/}  & Das System \textit{muss} XX die Möglichkeit geben,.  \\
+                \textbf{/F60/}  & Das System \textit{soll} die Möglichkeit bieten, individuelle und
+                personalisierte Inhalte zu visualisieren -> Checkliste (A).
+                \\
+                \textbf{/F70/}  & Das System \textit{soll} daran erinnern, die Ausgeliehenen Assets
+                zurückzubringen oder zu verlängern oder abzuholen (A).                            \\
+                \textbf{/F80/}  & Das System \textit{soll} XX die Möglichkeit bieten, .
+                \\
+                \textbf{/F90/}  & Das System \textit{sollte in Zukunft} .    \\
+                \textbf{/F100/} & Das System \textit{sollte in Zukunft} XX die Möglichkeit bieten,
+                Informationen zu hinterlassen (A).         \\
+                \textbf{/F110/} & Das System \textit{sollte in Zukunft} .
+                \\
                 \hline
         \end{tabular}
 \end{center}
@@ -368,31 +358,29 @@ um natürlichsprachliche Anforderungen zu definieren \cite{balzert2009}.
 
 \subsection*{Qualitätsanforderungen}
 \label{section:qualität}
-Im letzten Schritt werden die nicht-funktionalen Anforderungen festgelegt,
-welche die qualitativen oder quantitativen Eigenschaften eines Systems
-darstellen \cite{balzert2009}. Auch hier wird, falls möglich, die
-Anforderungsschablone aus \ref{fig:schablone} verwendet.
+Im letzten Schritt werden die nicht-funktionalen Anforderungen festgelegt, welche die qualitativen
+oder quantitativen Eigenschaften eines Systems darstellen \cite{balzert2009}. Auch hier wird, falls
+möglich, die Anforderungsschablone aus \ref{fig:schablone} verwendet.
 
 \begin{center}
         \renewcommand{\arraystretch}{1.5}
         \begin{tabular}{p{0.1\textwidth}p{0.8\textwidth}}
                 \hline
-                \textbf{/Q10/} & Das System \textit{muss} den Grundsätzen der
-                DIN EN ISO 9241-110:2019-09 (Ergonomie der
-                Mensch-System-Interaktion - Teil 110: Interaktionsprinzipien)
-                folgen (\textit{DIN EN ISO 9241-110}, 2019).                    \\
-                \textbf{/Q20/} & Das System \textit{muss} die definierten
-                Nutzungsklassen aus Kapitel section:benutzer (Sonderrolle)
-                unterscheiden und die dazugehörigen Zugriffsrechte
+                \textbf{/Q10/} & Das System \textit{muss} den Grundsätzen der DIN EN ISO
+                9241-110:2019-09 (Ergonomie der Mensch-System-Interaktion - Teil 110:
+                Interaktionsprinzipien) folgen (\textit{DIN EN ISO 9241-110}, 2019).
+                \\
+                \textbf{/Q20/} & Das System \textit{muss} die definierten Nutzungsklassen aus
+                \ref{section:benutzer} unterscheiden und die dazugehörigen Zugriffsrechte
                 sicherstellen.                                                  \\
-                \textbf{/Q30/} & Das System \textit{soll} modular strukturiert
-                sein, damit Inhalte und Funktionalitäten effizient eingebunden
-                werden können und das System einfach erweiterbar ist.           \\
-                \textbf{/Q40/} & Das System \textit{soll} beim Zugriff über das
-                Internet eine gesicherte Übertragung (bspw. \ac{HTTPS})
-                ermöglichen.                                                    \\
-                \textbf{/Q50/} & Das System \textit{soll} alle
-                Benutzerinteraktionen in unter fünf Sekunden ausführen.         \\
+                \textbf{/Q30/} & Das System \textit{soll} modular strukturiert sein, damit Inhalte
+                und Funktionalitäten effizient eingebunden werden können und das System einfach
+                erweiterbar ist.           \\
+                \textbf{/Q40/} & Das System \textit{soll} beim Zugriff über das Internet eine
+                gesicherte Übertragung (bspw. \ac{HTTPS}) ermöglichen.
+                \\
+                \textbf{/Q50/} & Das System \textit{soll} alle Benutzerinteraktionen in unter fünf
+                Sekunden ausführen.         \\
                 \hline
         \end{tabular}
 \end{center}
