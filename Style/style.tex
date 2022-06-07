@@ -18,29 +18,31 @@
 \usepackage{scrlayer-scrpage}
 
 \usepackage{acronym}
+\usepackage{setspace}
+\setstretch{1.2}
+
 
 \newcommand*{\secref}[1]{\hyperref[{#1}]{\ref*{#1} \nameref*{#1}}}
 % Set some options regarding the document layout. See KOMA guide
 \KOMAoptions{%
   paper=a4,
-  fontsize=11pt,
+  fontsize=11.5pt,
   parskip=half,
   headings=normal,
   BCOR=1cm,
   headsepline,
   headsepline=0.5pt,
-  DIV=12}
+  DIV=13}
 
 % do not align bottom of pages
 \raggedbottom
 
 % set style of captions
-\setcapindent{0pt} % do not indent second line of captions
+\setcapindent{24pt} % do not indent second line of captions
 \setkomafont{caption}{\small}
-\setkomafont{captionlabel}{\bfseries}
-\setcapwidth[c]{0.9\textwidth}
-
-
+\setkomafont{caption}{\vspace*{3mm}}
+\setkomafont{captionlabel}{\textbf}
+\setcapwidth[c]{1\textwidth}
 
 % load extended tabulars used in the list of abbreviation
 \usepackage{tabularx}
@@ -60,11 +62,19 @@
 %\rowcolor{maincolor!50}
 
 % add main color to section headers
-\addtokomafont{chapter}{\color{maincolor}}
-\addtokomafont{section}{\color{maincolor}}
-\addtokomafont{subsection}{\color{maincolor}}
-\addtokomafont{subsubsection}{\color{maincolor}}
-\addtokomafont{paragraph}{\color{maincolor}}
+\usepackage[outermarks,noindentafter,nobottomtitles]{titlesec}
+\titleformat{\section}[hang]{\Large\sffamily\color{maincolor}}{\thetitle}{8pt}{\vspace{-2mm}}{}
+\titleformat{\subsection}[hang]{\large\sffamily\color{maincolor}}{\thetitle}{8pt}{}
+\titleformat{\subsubsection}[hang]{\normalfont\sffamily\color{maincolor}}{\thetitle}{8pt}{}
+\titleformat{\paragraph}[hang]{\bfseries\sffamily\color{maincolor}}{\thetitle}{8pt}{}
+
+%Etwas aufwendiger für die Kapitelüberschriften:
+\titleformat{\chapter}[display]
+{\huge\sffamily\color{maincolor}} 
+{\color{maincolor!30}\fontsize{60pt}{40pt}\selectfont\thechapter}
+{-0.2cm} %is vertical space in [display] mode
+{\vspace{-2mm}} %1ex ist die Hähe von x im aktuellen Font
+[\vspace{-4mm}]
 
 % do not print numbers next to each formula
 \usepackage{mathtools}
