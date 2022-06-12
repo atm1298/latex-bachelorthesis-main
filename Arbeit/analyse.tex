@@ -1,22 +1,21 @@
 %!TEX root = thesis.tex
 
-\chapter{Analyse}
+\chapter{Anforderungen}
 \label{chapter-analyse}
 
-\todo[]{Probleme weiter vorne jetzt!!}
-Um die relevanten Faktoren und Rahmenbedingungen, die Einfluss auf die Entwicklung und die spätere
-Nutzung des Reservierungstools nehmen, identifizieren und einzuordnen zu können wurde eine Analyse
-nach dem menschenzentrierten Gestaltungsprozess durchgeführt, um unter anderem Benutzende, Aufgaben
-und Kontext des Projektes genauer zu verstehen. Nach einer Ausführung der Datenquellen
+Um die relevanten Anforderungen, die Einfluss auf die Entwicklung und die spätere Nutzung des
+Reservierungstools nehmen, identifizieren und einzuordnen zu können wurde eine Analyse nach dem
+menschenzentrierten Gestaltungsprozess durchgeführt, um unter anderem Benutzende, Aufgaben und
+Kontext des Projektes genauer zu verstehen. Nach einer Ausführung der Datenquellen
 (\ref{section:daten}) wurden zunächst zwei Benutzergruppen (Verleihende und Ausleihende) mittels
 einer Benutzeranalyse (\ref{section:benutzer}) unter der zu Hilfenahme der durchgeführten Interviews
-klassifiziert und eingegrenzt. Anschließend wurden die Aufgaben, die Verleihende und Ausleihende
-mithilfe der Anwendung bewältigen möchten, diskutiert (\ref{section:aufgaben}) und der
-organisatorische sowie zeitlich-räumliche Kontext des Verleihens und Ausleihens am \ac{imis}
-(\ref{section:kontext}) untersucht. Daraufhin wurden die Probleme und Herausforderungen des
-aktuellen Vorgehens und unterschiedlichen Ausleihprozesse (\ref{section:iststand}) festgehalten.
-Aufbauend auf den Resultaten der vorangestellten Untersuchungen wurden die objektiven Anforderungen
-an den SnipeIT Companion formalisiert (\ref{section:anforderung}).
+klassifiziert und eingegrenzt. Daraufhin wurden die Probleme und Herausforderungen des aktuellen
+Vorgehens und den unterschiedlichen Ausleihprozessen (\ref{section:iststand}) geschildert. Anschließend
+wurden die Aufgaben, die Verleihende und Ausleihende mithilfe der Anwendung bewältigen möchten,
+diskutiert (\ref{section:aufgaben}) sowie der organisatorische und zeitlich-räumliche Kontext des
+Verleihens und Ausleihens am \ac{imis} (\ref{section:kontext}) untersucht. Aufbauend auf den
+Resultaten der vorangestellten Untersuchungen wurden die objektiven Anforderungen an den SnipeIT
+Companion formalisiert (\ref{section:anforderung}).
 
 \section{Datenquellen}
 \label{section:daten}
@@ -91,17 +90,27 @@ Ausleihende eines Assets gehören, für das System erarbeitet.
 Aus den Interviews (\ref{section:daten}) konnte zudem entnommen werden, dass beide Benutzergruppen
 täglich ein Smartphone, Tablet, Laptop oder Desktop PC nutzen und somit ein grundlegendes
 technisches Verständnis vorausgesetzt werden kann. Diese Behauptung konnte mit den Ergebnissen der
-\ac{ati}-Skala bestärkt werden (\ref{table:ati}).
+\ac{ati}-Skala bestärkt werden (\ref{table:ati}). 
+
+Mit $N=3$ und einem durchschnittlichen Alter von .
+Der durchschnittliche Wert der \ac{ati}-Skala lag bei $M=5,00$ $(SD=0,58)$.
+
+Mit $N=6$ und einem durchschnittlichen Alter von .
+Der durchschnittliche Wert der \ac{ati}-Skala lag bei $M=5,13$ $(SD=0,54)$.
+
 
 \begin{table}[h]
         \centering
         \caption{Ergebnisse der \ac{ati}-Skala}
-        \begin{tabular}{ll}
+        \begin{tabular}{lccc}
                 \arrayrulecolor{maincolor}\hline
-                \sffamily\color{maincolor}Mittelwert & \sffamily\color{maincolor}Blaa
+                \sffamily\color{maincolor}Benutzergruppe & \sffamily\color{maincolor}Mittelwert $(M)$&
+                \sffamily\color{maincolor}Standardabweichung $(SD)$ &
+                \sffamily\color{maincolor}Teilnehmende $(N)$
                 \\
                 \arrayrulecolor{maincolor}\hline
-                Zahl                                 & Dinge \\
+                Verleihende & 5,00                                 & 0,58 & 3\\
+                Ausleihende & 5,13                                 & 0,54 & 6\\
                 \arrayrulecolor{maincolor}\hline
         \end{tabular}
         \label{table:ati}
@@ -132,43 +141,57 @@ Studierende, da der Vertrauens- und Bekanntheitsgrad ein anderer ist (V1,V2,V3).
 \section{Problemanalyse}
 \label{section:iststand}
         
-Um die Probleme des Ausleihens am \ac{imis} nachvollziehen zu können, wurde im folgenden eine
-Problemanalyse auf Basis der Interview aussagen getroffen. 
-Der Übersichtlichkeit werden im Folgenden Probleme, welche Verleihende und Ausleihende betreffen zu
-erst Thematisiert. Daraufhin werden Probleme der einzelnen Benutzergruppen näher erläutert.
+Um die Relevanz des Verleihens am \ac{imis} sowie die Prozesse und damit einhergehenden
+Problematiken besser nachvollziehen zu können, wurde eine Problemanalyse auf Basis der Interviews
+getroffen. Der Übersichtlichkeit wegen werden im Folgenden Probleme, welche Verleihende und
+Ausleihende betreffen thematisiert. Daraufhin werden Probleme der einzelnen Benutzergruppen
+näher erläutert.
 
 \subsection*{Probleme: Allgemein}
-Aus den Interviews konnte gefolgert werden, dass keine öffentlichen Listen für Studieren über die
-Assets einsehbar sind. Gleichzeitig wurde erarbeitet, dass auch keine vollständigen intenren Listen
-oder Übersichten am \ac{imis} vorhanden sind (V,A). Dies führt dazu, dass beiden Nutzergruppen nicht
-bekannt ist, was ausleihbar ist (alle). Es kommt zu einem häufigerem weiterverweisen, an andere
-Personen, weil kein direkter Ansprechpartner ersichtlich ist (V1,V3, V4, A1, A2, A3). Da es aus Seiten
-der \ac{hiwi} und der \ac{wimi} zu Vorkommnissen kam, bei denen Assets kurzzeitig, ohne Vermerk
-genommen wurden, ... (A1, V1, V2). Das Ausleihen unter den \ac{hiwi} und \ac{wimi} läuft häufig auf
-Vertrauenbasis; Kein Verzeichnis von Gebrauchsspuren (A1, V1,)
+\label{section:probleme-allgemein}
+Eines der größten Probleme im derzeitigen Ablauf ist das nicht vorhanden sein, einer öffentlichen
+Liste für Studieren, über die ausleihbare Assets eingesehen werden können. Auch aufseiten der
+Verleihenden, also unter den \ac{wimi} ist keine vollständige internen Übersicht vorhanden (V,A).
+Dies führt dazu, dass durch nicht wissen wenig Assets ausgeliehen werden können (alle). Durch die
+verschiedenen Forschungsgruppen am \ac{imis} und die damit verbundenen Labore gibt es verschiedene
+Ansprechpartner:innen für die jeweiligen Assets in den Laboren. Die Zuständigkeit dieser
+Ansprechpartner:innen ist jedoch nicht ausreichend ersichtlich, sodass es häufig zu weiterverweisen,
+an andere Ansprechpartner:innen kommt, wobei auch hier unter \ac{wimi} nicht immer klare
+Ansprechpartner:innen ersichtlich sind (V1,V3, V4, A1, A2, A3). 
 
-Selbstaneignung (V1, V4, V5, A3) Studierende kommen ohne wissen 
+Studierende, welche als \ac{hiwi} am \ac{imis} angestellt sind, haben beim Ausleihen häufig einen
+Vertrauensvorschuss, sodass bei Kurzem Verleihen und Tätigkeiten im Gebäude Assets verleihen oder
+entnommen werden, ohne dies zu Vermerken (A1, V1, V2). Dies gilt auch für \ac{wimi} (A1, V1, V2). Das
 
-Je nach dem, wieviel Wissen Ausleihende haben Usecase..(V2, A6)
+Sollten Assets beschädigt werden gibt es kein Verzeichnis für Gebrauchsspuren, .. Technisches Gerät
+seine Macken hat auch keine Kenntnisse... (A1, V1).
+
+Beim Verleihen von Assets kommt es häufig vor, dass insbesondere Studierende,
+ohne Wissen ein Asset ausleihen wollen. Aufseiten der Verleihenden herrscht hier ein
+Ungleichgewicht, während einige auf die Selbstaneignung und Google verweisen, ist es anderen
+wichtig, den Use Case der Nutzung zu verstehen und die damit verbundenen Einstellungen der Assets
+sowie weiteres Zubehör zu empfehlen (V1, V2, V4, V5, A3, A6). 
 
 \subsection*{Probleme: Verleihende}
-Eine zentrale Schwachstelle des aktuellen Prozesses ist es, das es keinen einheitlichen Prozesses
+Eine zentrale Schwachstelle des aktuellen Prozesses ist es, dass es keinen einheitlichen Prozess
 gibt. Das Ausleihen von Assets wird von Forschungsgruppe zu Forschungsgruppe unterschiedliche
-gehandhabt, bzw. innerhalb der Forschungsgruppe gibt es je nach Verleihenden auch wieder
-unterschiede im Prozess (V1, V2,V3). Während Verleihenden wichtig ist, dass Ausleihende über die
-Assets Bescheid wissnen und der Usecase detailliert besprochen und erläutert wird, ist die
-Vermittlung dieses Wissens nicht von Bedeutung. \\
-Überleitung finden\\
-Zettelwirtschaft (V4, V5) Unterschrift auf irgendeinem Zettel (V1, V2, V3, V4) Häufig nicht
-dokumentiert (V1, V2). Was passiert, wenn es kaputt geht? Absicherung, Transparenz, bekannte Macken
-klar? -> nein (alle V)
+gehandhabt, bzw. innerhalb der Forschungsgruppe gibt es je nach Verleihenden auch wieder unterschied
+im Prozess (V1, V2,V3). Wie bereits in den Allgemeinen Problemen (\ref{section:probleme-allgemein})
+geschildert ist es einigen Verleihenden wichtig, dass Ausleihende über die Assets Bescheid wissen
+und der Use Case detailliert besprochen und erläutert wird, für wiederum andere ist die Vermittlung
+dieses Wissens nicht von Bedeutung (). Dies führt dazu, dass ... \todo[]{-> Verweis auf Ausleihende} 
 
-Auf Seiten ist das nichtvorhanden sein einer Übersicht der Verfügbaren Assets insofern gravierend,
-als dass es durch die Unwissenheit zu Doppelbeschaffung kommen kann (V1, V2, V3). Außerdem kann es
-dazu kommen, das Material beschaffts wird, welches mit dem Vorhanden nicht kompatible ist (V2,V3).
+Um ein Asset ausleihen zu können, müssen Ausleihende auf einem Formular unterschreiben, in anderen
+fällen wird auf irgendeinem Zettel unterschrieben (V1, V2, V3, V4), dies führt zu einer
+Zettelwirtschaft (V4, V5). Wiederum häufig nicht dokumentiert (V1, V2). Was passiert, wenn es kaputt
+geht? Absicherung, Transparenz, bekannte Macken klar? -> nein (alle V)
 
-2 Jahre nicht gewusste, wo ein Teil liegt, dabei war es gefühlt im Raum neben an ... hätte die
-Arbeit bei einem verangenen Projekt sehr erleichert (V2).
+Da auch eine interne Übersicht der Verfügbaren Assets für Verleihende nicht vorhanden ist, kommt es
+durch Unwissenheit zu Doppelbeschaffung (V1, V2, V3). Außerdem kommt es dazu, das Assets beschafft
+werden, welche mit dem Vorhanden nicht kompatible sind (V2,V3). \ac*{wimi} beschaffen sich für
+Studien häufig Assets, welche nicht vermerkt werden oder in den einzelnen Büros liegen und vergessen
+werden, oder ein angeschafftes Asset nach zwei Jahre wieder auftaucht, was die Arbeit bei einem
+vergangenen Projekt sehr erleichtert (V1, V2, V3).
 
 Es ist kein sponatens planen (V1, V2, V3, ...) und für Studien schwer
 
@@ -179,17 +202,20 @@ hat ist zuständig,... Akku leer, ... nicht vernünftig zurückgelegt ()
 
 \subsection*{Probleme: Ausleihende}
 % Verantwortlichkeiten unklar (für Studierende) (A1, A2, A5)
-Über Flurfunk oder Videoworkshop aber nicht über alles bescheid (alle As) Aber auch: entspannt aber
-nicht klar, was ausleihende ist (A4, A5). Unzuverlässlig (spontanes Planen schwierig), weil... (A1,
-A6). Keine Garantie, dass es etwas zu bestimmten Punkten da ist (A1, A3) kein Schnelles Herankommen,
-weil an Person angewiesen sind (A3). Spontane nachfragen nach Assets sind eher weniger häufig
-aufseiten der Studierenden zu sehen, hier wird vorher eher eine Mail an einen \ac{wimi}, in den
-Meisten Fällen an die Verantwortlichen Übungsleiter oder die Studiengangskoordination, schreiben,
-weil Riskio zu hoch, das Asset schon weg ist (A3). Stark kritisiert wird hier, dass das nachfragen
-als sehr nervig wahrgenommen wird, weil jemand aus der Arbeit gerissen wird (A6). Dazu kommt, dass
-Ausleihene häufig nicht genau wissen um was für ein Gerät es genau handelt, so kann es zu
-kompatiblitätsfehlern kommen Auskunft fehlt (Selbstaneignung) (A3), Projekt konnte am Ende aber
-nicht mit dem Asset umgesetzt werden (A3). 
+Für Studierende ist das ausleihen insofern schwer, als nur über Flurfunk oder Videoworkshop
+über einzelne Assets berichtet wird (alle As), der Vorgang, per E-Mail mach für einige Studierende
+entspannt sein, trotzdem erschwert es das ausleihen, wenn nicht Bescheid darüber gegeben wird was
+Ausleihbar ist (A4, A5). Wiederum andere empfinden das E-Mail schreiben als stören, insbesondere,
+wenn bewusst ist wie viel \ac{wimi} zu tun haben, daher ist spontane planen eher unzuverlässig (A1,
+A6). Stark bemängelt wird, dass es keine Garantie gibt, dass etwas zum gewünschten Zeitpunkt da ist
+(A1, A3) und noch dazu kein Schnelles Herankommen, weil man auf Person angewiesen ist (A3). Spontanes
+nachfragen nach Assets sind eher weniger häufig aufseiten der Studierenden zu sehen, hier wird
+vorher eher eine Mail an einen \ac{wimi}, in den meisten Fällen an die verantwortlichen Übungsleiter
+oder die Studiengangkoordination, schreiben, weil Risiko zu hoch, das Asset schon weg ist (A3).
+Stark kritisiert wird hier, dass das nachfragen als sehr nervig wahrgenommen wird, weil jemand aus
+der Arbeit gerissen wird (A6). Dazu kommt, dass Ausleihene häufig nicht genau wissen um was für ein
+Gerät es genau handelt, so kann es zu kompatiblitätsfehlern kommen Auskunft fehlt (Selbstaneignung)
+(A3), Projekt konnte am Ende aber nicht mit dem Asset umgesetzt werden (A3). 
 
 
 \section{Aufgabenanalyse}
