@@ -22,7 +22,6 @@
 \setstretch{1.2}
 
 
-\newcommand*{\secref}[1]{\hyperref[{#1}]{\ref*{#1} \nameref*{#1}}}
 % Set some options regarding the document layout. See KOMA guide
 \KOMAoptions{%
   paper=a4,
@@ -161,7 +160,12 @@ literate={ö}{{\"o}}1
 % load varioref and hyperref to create nicer references using vref
 \usepackage[ngerman]{varioref}
 \PassOptionsToPackage{hyphens}{url} % allow line break at hyphens in URLs
+
+\usepackage{varioref}
 \usepackage{hyperref}
+\newcommand{\ssecref}[1]{\hyperref[{#1}]{\autoref{#1}: „\nameref{#1}“}}
+\newcommand*{\secref}[1]{\hyperref[{#1}]{\ref*{#1} \nameref*{#1}}}
+
 
 % setup hyperref
 \hypersetup{breaklinks=true,
@@ -209,3 +213,7 @@ literate={ö}{{\"o}}1
 
 \declaretheorem[sibling=Theorem,style=definition]{Bemerkung}
 \labelformat{Bemerkung}{Bemerkung\ #1}
+
+
+\setcounter{secnumdepth}{1}
+\setcounter{tocdepth}{1}
