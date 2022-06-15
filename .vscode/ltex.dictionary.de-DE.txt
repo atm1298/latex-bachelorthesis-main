@@ -3,3 +3,5 @@ Reservierungenstools
 Reservierungstools
 Ausleihprozesse
 Ausleihprozess
+SnipeIT
+Companion
