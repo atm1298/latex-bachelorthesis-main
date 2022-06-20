@@ -484,8 +484,8 @@ Bezug auf das aktuelle Vorgehen mithilfe der Problemanalyse geschlossen.
                 unterschiedliche Ausleihprozesse. \\
                 \sffamily\color{maincolor}/K30/ & Es existieren Formular, mit denen das Verleihen
                 dokumentiert wird. \\
-                \sffamily\color{maincolor}/K40/ & Es existieren eine Assetmanagementsoftware
-                (SnipeIT), welche ... übernimmt. \\
+                \sffamily\color{maincolor}/K40/ & Im Rahmen eines Pilotprojekts existiert das
+                Asset-Management-System SnipeIT. \\
                 \arrayrulecolor{maincolor}\hline
         \end{longtable}
 \end{center}
@@ -511,7 +511,7 @@ verwendet, um natürlichsprachliche Anforderungen zu definieren \cite{balzert200
         \renewcommand{\arraystretch}{1.5}
         \begin{longtable}{lp{0.85\textwidth}} \arrayrulecolor{maincolor}\hline
                  \sffamily\color{maincolor}/F10/  & Das System \textit{muss} Verleihenden und
-                Ausleihenden die Möglichkeit bieten, ausleihbare Assets jederzeit mittels einer
+                Ausleihenden die Möglichkeit bieten, alle Assets jederzeit mittels einer
                 Übersicht einsehen zu können (A). \\
                  \sffamily\color{maincolor}/F20/  & Das System \textit{muss}  Verleihenden und
                  Ausleihenden die Möglichkeit bieten, die Verfügbarkeit eines Assets einsehen zu
@@ -520,42 +520,41 @@ verwendet, um natürlichsprachliche Anforderungen zu definieren \cite{balzert200
                  Ausleihenden die Möglichkeit bieten, nach Assets zu Filtern und zu Suchen (A). \\
                  \sffamily\color{maincolor}/F40/  & Das System \textit{muss}  Verleihenden und
                 Ausleihenden relevante Informationen zu den Assets anzeigen (Bild, Name,
-                Seriennummer) (A). \\
+                Beschreibung und Seriennummer) (A). \\
                  \sffamily\color{maincolor}/F50/  & Das System \textit{muss}  Ausleihenden relevante
                  Informationen zu Ansprechpartner:innen anzeigen. \\
                  \sffamily\color{maincolor}/F60/  & Das System \textit{muss} Verleihenden und
                  Ausleihenden die Möglichkeit bieten, Reservierungen von Assets vornehme zu können.
                  \\
                  \sffamily\color{maincolor}/F61/  & Das System \textit{muss} Verleihenden und
-                 Ausleihenden die Möglichkeit bieten, eine Kalenderübersicht einsehen zu können. \\
+                 Ausleihenden die Möglichkeit bieten, die verfügbaren Zeitslots der Assets einsehen
+                 zu können. \\
                  \sffamily\color{maincolor}/F70/  & Das System \textit{muss} Verleihenden und
                  Ausleihenden die Möglichkeit bieten, sich mit dem vorhanden IDM (LDAP) Account
-                 einzuloggen. Informationen zu Ansprechpartner:innen anzeigen. \\
+                 einzuloggen. \\
                  \sffamily\color{maincolor}/F80/  & Das System \textit{soll} Ausleihenden die
-                Möglichkeit bieten, individuelle und personalisierte Inhalte zu visualisieren
-                (Dialog) (A). \\
+                Möglichkeit bieten, mittels eines Assistenten individuelle und personalisierte
+                Asset-Vorschläge zu erhalten (A). \\
                  \sffamily\color{maincolor}/F90/  & Das System \textit{soll} Ausleihende daran
                  erinnern, die ausgeliehenen Assets abzuholen, zurückzubringen oder zu verlängern
-                 (A). \\
+                 sind (A). \\
                  \sffamily\color{maincolor}/F100/  & Das System \textit{soll} Verleihende automatisch
                  kontaktieren, wenn ein Asset reserviert wurde (A). \\
-                 \sffamily\color{maincolor}/F110/  & Das System \textit{soll} Verleihende automatisch
-                 erinnern, wenn der Zugriff zu einem Asset benötigt wird (A). \\
-                 \sffamily\color{maincolor}/F120/  & Das System \textit{soll} Ausleihenden die
-                 Möglichkeit bieten, Set und Vorschläge zu erhalten, welche zu dem ausgewählten Use
-                 Case oder Asset passen. \\
-                 \sffamily\color{maincolor}/F130/ & Das System \textit{soll} Verleihenden und
-                 Ausleihenden die Möglichkeit bieten, Assets mithilfe eines QR-Scans in den
-                 Warenkorb zu packen. \\
-                 \sffamily\color{maincolor}/F140/  & Das System \textit{soll} Verleihenden und
+                 \sffamily\color{maincolor}/F110/  & Das System \textit{soll} Verleihende
+                 automatisch erinnern, wenn der Zugriff zu einem Asset benötigt wird (A). \\
+                 \sffamily\color{maincolor}/F120/ & Das System \textit{soll} Verleihenden und
                  Ausleihenden die Möglichkeit bieten, Mängel, Schäden oder Macken am Asset zu
                  Kennzeichen. \\
-                 \sffamily\color{maincolor}/F150/ & Das System \textit{soll} Verleihenden die
-                 Möglichkeit geben administrative Aufgaben zu erledigen und an Wartungen zu erinnern.\\
-                 \sffamily\color{maincolor}/F160/  & Das System \textit{sollte in Zukunft}
+                 \sffamily\color{maincolor}/F130/  & Das System \textit{soll} Verleihenden die
+                 Möglichkeit geben administrative Aufgaben zu erledigen und an Wartungen zu
+                 erinnern. \\
+                 \sffamily\color{maincolor}/F140/ &   Das System \textit{sollte in Zukunft}
+                 Verleihenden und Ausleihenden die Möglichkeit bieten, Assets mithilfe eines
+                 QR-Scans in den Warenkorb zu packen.\\
+                 \sffamily\color{maincolor}/F150/  & Das System \textit{sollte in Zukunft}
                  Verleihenden und Ausleihenden die Möglichkeit bieten, Kommentare und
                  Erfahrungsberichte unter Assets zu schreiben. \\
-                 \sffamily\color{maincolor}/F170/ & Das System \textit{sollte in Zukunft}
+                 \sffamily\color{maincolor}/F160/ & Das System \textit{sollte in Zukunft}
                  Kommunikation mit Verleihenden ermöglichen, sodass keine extra Instanz benötigt
                  wird. \\
                 \arrayrulecolor{maincolor}\hline
