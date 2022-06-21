@@ -1,0 +1,1 @@
+{"rule":"GERMAN_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QDie Interviews wurden aufgezeichnet und anschließend in Teilen, mithilfe eines vereinfachten Transkriptionssystems, überführt.\\E$"}
