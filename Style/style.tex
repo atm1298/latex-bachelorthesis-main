@@ -21,17 +21,46 @@
 \usepackage{setspace}
 \setstretch{1.2}
 
+% Anforderungenreferenzierung
+\usepackage{array}
+\usepackage{etoolbox}
+\usepackage{longtable}
+
+\newcommand\anfletter{Q}
+
+\newcommand\setanf[1]{\renewcommand\anfletter{#1}}
+
+\newcounter{anfnumber}
+\newcounter{anfsubnumber}
+\newcommand\showanfnumber{
+        \sffamily\color{maincolor}{/\anfletter\arabic{anfnumber}\arabic{anfsubnumber}/}
+        \def\@currentlabel{/\arabic{anfnumber}\arabic{anfsubnumber}/}
+        \label{anf:\anfletter\arabic{anfnumber}\arabic{anfsubnumber}}
+}
+
+\newcommand\anfrow{\setcounter{anfsubnumber}{0}\refstepcounter{anfnumber}\showanfnumber}
+\newcommand\anfsubrow{\refstepcounter{anfsubnumber}\showanfnumber}
+
+\newcommand{\anfref}[1]{\hyperref[anf:#1]{/#1/}}
+
+\preto\tabular{\setcounter{anfnumber}{0}}
+\preto\tabular{\setcounter{anfsubnumber}{0}}
+
+\preto\longtable{\setcounter{anfnumber}{0}}
+\preto\longtable{\setcounter{anfsubnumber}{0}}
+
+
 
 % Set some options regarding the document layout. See KOMA guide
 \KOMAoptions{%
-  paper=a4,
-  fontsize=11.5pt,
-  parskip=half,
-  headings=normal,
-  BCOR=1cm,
-  headsepline,
-  headsepline=0.5pt,
-  DIV=13}
+        paper=a4,
+        fontsize=11.5pt,
+        parskip=half,
+        headings=normal,
+        BCOR=1cm,
+        headsepline,
+        headsepline=0.5pt,
+        DIV=13}
 
 % do not align bottom of pages
 \raggedbottom
@@ -70,7 +99,7 @@
 
 %Etwas aufwendiger für die Kapitelüberschriften:
 \titleformat{\chapter}[display]
-{\huge\sffamily\color{maincolor}} 
+{\huge\sffamily\color{maincolor}}
 {\color{maincolor!30}\fontsize{60pt}{40pt}\selectfont\thechapter}
 {-0.2cm} %is vertical space in [display] mode
 {\vspace{-2mm}} %1ex ist die Hähe von x im aktuellen Font
@@ -101,18 +130,18 @@
 
 % load additional libraries for TikZ
 \usetikzlibrary{%
-  automata,%
-  positioning,%
+        automata,%
+        positioning,%
 }
 
 % set some default options for TikZ -- in this case for automata
 \tikzset{
-  every state/.style={
-      draw=maincolor,
-      thick,
-      fill=maincolor!18,
-      minimum size=0pt
-    }
+        every state/.style={
+                        draw=maincolor,
+                        thick,
+                        fill=maincolor!18,
+                        minimum size=0pt
+                }
 }
 
 % load listings package to typeset sourcecode
@@ -120,13 +149,13 @@
 
 % set some options for the listings package
 \lstset{%
-  upquote=true,%
-  showstringspaces=false,%
-  captionpos=b,%
-  basicstyle=\ttfamily,%
-  keywordstyle=\color{keywordcolor}\slshape,%
-  commentstyle=\color{commentcolor}\itshape,%
-  stringstyle=\color{stringcolor}}
+        upquote=true,%
+        showstringspaces=false,%
+        captionpos=b,%
+        basicstyle=\ttfamily,%
+        keywordstyle=\color{keywordcolor}\slshape,%
+        commentstyle=\color{commentcolor}\itshape,%
+        stringstyle=\color{stringcolor}}
 \renewcommand{\lstlistingname}{Quelltext}
 \renewcommand{\lstlistlistingname}{Quelltextverzeichnis}
 
@@ -143,11 +172,11 @@ literate={ö}{{\"o}}1
 
 % define style for pseudo code
 \lstdefinestyle{pseudo}{language={},%
-  basicstyle=\normalfont,%
-  morecomment=[l]{//},%
-  morekeywords={for,to,while,do,if,then,else},%
-  mathescape=true,%
-  columns=fullflexible}
+        basicstyle=\normalfont,%
+        morecomment=[l]{//},%
+        morekeywords={for,to,while,do,if,then,else},%
+        mathescape=true,%
+        columns=fullflexible}
 
 % load the AMS math library to typeset formulas
 \usepackage{amsmath}
@@ -170,10 +199,10 @@ literate={ö}{{\"o}}1
 
 % setup hyperref
 \hypersetup{breaklinks=true,
-  pdfborder={0 0 0},
-  ngerman,
-  pdfhighlight={/N},
-  pdfdisplaydoctitle=true}
+        pdfborder={0 0 0},
+        ngerman,
+        pdfhighlight={/N},
+        pdfdisplaydoctitle=true}
 
 % Fix bugs in some package, e.g. listings and hyperref
 \usepackage{scrhack}
