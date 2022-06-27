@@ -470,11 +470,11 @@ realitätsnah festgelegt.
                 verläuft einheitlich.                                                           \\
                 \anfrow                         & Ausleihbare Assets des \ac{imis} sind allen
                 Studierenden und Mitarbeitenden bekannt und werden von beiden Gruppen genutzt.  \\
-                \sffamily\color{maincolor}/V30/ & Der SnipeIT Companion unterstützt Ausleihende
+                \anfrow & Der SnipeIT Companion unterstützt Ausleihende
                 effizient mit individuellen und anwendungsspezifischen Assetvorschlägen.        \\
-                \sffamily\color{maincolor}/V40/ & Die Planung und Kommunikation zwischen
+                \anfrow & Die Planung und Kommunikation zwischen
                 Verleihenden und Ausleihenden verläuft reibungsloser.                           \\
-                \sffamily\color{maincolor}/V50/ & Verleihende fühlen sich durch den SnipeIT
+                \anfrow & Verleihende fühlen sich durch den SnipeIT
                 Companion unterstützt.                                                          \\
                 \arrayrulecolor{maincolor}\hline
         \end{longtable}
@@ -485,27 +485,28 @@ Basierend auf diese Visionen lassen sich die Ziele formulieren, welche die Visio
 operationalisieren. Diese folgen dabei den standardisierten Regeln zur Formulierung von Zielen
 \cite{pohl_requirements_2008}.
 
+\setanf{Z}
 \begin{center}
         \renewcommand{\arraystretch}{1.5}
         \begin{longtable}{lp{0.85\textwidth}} \arrayrulecolor{maincolor}\hline
-                \sffamily\color{maincolor}/Z10/ & Verleihende und Ausleihende sollen jederzeit in
+                \anfrow & Verleihende und Ausleihende sollen jederzeit in
                 der Lage sein, ein gebrauchstaugliches, niedrigschwelliges Interface zum Ausleihen
                 von Assets verwenden.                                                                \\
-                \sffamily\color{maincolor}/Z20/ & Ausleihende sollen jederzeit standortunabhängig in
+                \anfrow & Ausleihende sollen jederzeit standortunabhängig in
                 der Lage sein, die Verfügbarkeit von Assets einsehen zu können und diese zu buchen,
                 (damit die direkt und ohne Umwege für den Ausleihenden effizient innerhalb einer
                 Anwendung erledigt werden kann).                                                     \\
-                \sffamily\color{maincolor}/Z30/ & Ausleihende eines Assets sollen jederzeit
+                \anfrow & Ausleihende eines Assets sollen jederzeit
                 zielgerichtete und aktuelle Informationen zum Asset erhalten.                        \\
-                \sffamily\color{maincolor}/Z40/ & Ausleihende sollen jederzeit in der Lage sein,
+                \anfrow & Ausleihende sollen jederzeit in der Lage sein,
                 sich über Assets zu informieren, um initiale Nutzungsbarrieren zu überwinden und auf
                 die Nutzung des Assets vorzubereiten.                                                \\
-                \sffamily\color{maincolor}/Z50/ & Verleihende sollen jederzeit in der Lage sein, vom
+                \anfrow & Verleihende sollen jederzeit in der Lage sein, vom
                 System gesammelte Daten übersichtlich und strukturiert einzusehen.                   \\
-                \sffamily\color{maincolor}/Z51/ & Verleihende sollen jederzeit standortunabhängig in
+                \anfrow & Verleihende sollen jederzeit standortunabhängig in
                 der Lage sein, alle vorhandenen Assets am \ac{imis} einzusehen, sodass es zu keinen
                 unbeabsichtigten Doppelbeschaffungen kommen kann.                                    \\
-                \sffamily\color{maincolor}/Z60/ & Das System soll Informationen zugänglich
+                \anfrow & Das System soll Informationen zugänglich
                 präsentieren.                                                                        \\
                 \arrayrulecolor{maincolor}\hline
         \end{longtable}
@@ -516,25 +517,25 @@ operationalisieren. Diese folgen dabei den standardisierten Regeln zur Formulier
 Die Rahmenbedingungen legen organisatorische und technische Restriktionen für das System oder den
 Entwicklungsprozess fest \cite{balzert2009}. Die Bedingungen wurden aus der Benutzer- und
 Kontextanalyse abgeleitet.
-
+\setanf{R}
 \begin{center}
         \renewcommand{\arraystretch}{1.5}
         \begin{longtable}{lp{0.85\textwidth}} \arrayrulecolor{maincolor}\hline
-                \sffamily\color{maincolor}/R10/ & Das System ist eine informative Web-Anwendung
+                \anfrow & Das System ist eine informative Web-Anwendung
                 (\secref{section:kontext}).                                                        \\
-                \sffamily\color{maincolor}/R20/ & Die Zielgruppe sind Mitarbeitende des \ac{imis}
+                \anfrow & Die Zielgruppe sind Mitarbeitende des \ac{imis}
                 und Studierende (\secref{section:benutzer}).                                       \\
-                \sffamily\color{maincolor}/R21/ & Die Zielgruppe teilt sich in zwei Nutzergruppen:
+                \anfrow & Die Zielgruppe teilt sich in zwei Nutzergruppen:
                 die Verleihenden und Ausleihende von Assets. Die Definitionen der Nutzergruppen sind
                 in \secref{section:benutzer} zu finden.                                            \\
-                \sffamily\color{maincolor}/R30/ & Das System wird von Verleihenden in einem
+                \anfrow & Das System wird von Verleihenden in einem
                 Arbeitsplatzsystemkontext und mobilen Kontext genutzt. Von Ausleihenden vorwiegend
                 nur im mobilen Kontext (\secref{section:kontext}).                                 \\
-                \sffamily\color{maincolor}/R40/ & Das System soll sich vorwiegend im Dauerbetrieb
+                \anfrow & Das System soll sich vorwiegend im Dauerbetrieb
                 befinden (\secref{section:zeit}).                                                  \\
-                \sffamily\color{maincolor}/R50/ & Das System muss unbeaufsichtigt zuverlässig
+                \anfrow & Das System muss unbeaufsichtigt zuverlässig
                 lauffähig sein.                                                                    \\
-                \sffamily\color{maincolor}/R60/ & Die eingesetzte Software ist clientseitig ein
+                \anfrow & Die eingesetzte Software ist clientseitig ein
                 Webbrowser. Die marktführenden Webbrowser müssen unterstützt werden: Chrome,
                 Firefox, Safari \cite{noauthor_browser_nodate}.                                    \\
                 \arrayrulecolor{maincolor}\hline
@@ -546,17 +547,17 @@ Kontextanalyse abgeleitet.
 \label{section:kontextueberblick}
 Ein System ist in einer technischen Umgebung eingebettet \cite{balzert2009}. Es wurde im folgenden
 Bezug auf das aktuelle Vorgehen mithilfe des \secref{section:iststand} geschlossen.
-
+\setanf{K}
 \begin{center}
         \renewcommand{\arraystretch}{1.5}
         \begin{longtable}{lp{0.85\textwidth}} \arrayrulecolor{maincolor}\hline
-                \sffamily\color{maincolor}/K10/ & Der aktuelle Ausleihprozess umfasst keine
+                \anfrow & Der aktuelle Ausleihprozess umfasst keine
                 vollständige Liste der Assets für Verleihende und Ausleihende.                    \\
-                \sffamily\color{maincolor}/K20/ & Es existieren von Forschungsgruppe zu
+                \anfrow & Es existieren von Forschungsgruppe zu
                 Forschungsgruppe unterschiedliche Ausleihprozesse.                                \\
-                \sffamily\color{maincolor}/K30/ & Es existieren Formular, mit denen das Verleihen
+                \anfrow & Es existieren Formular, mit denen das Verleihen
                 dokumentiert wird.                                                                \\
-                \sffamily\color{maincolor}/K40/ & Im Rahmen eines Pilotprojekts existiert das
+                \anfrow & Im Rahmen eines Pilotprojekts existiert das
                 Asset-Management-System SnipeIT.                                                  \\
                 \arrayrulecolor{maincolor}\hline
         \end{longtable}
@@ -578,55 +579,55 @@ verwendet, um natürlichsprachliche Anforderungen zu definieren \cite{balzert200
         \caption[Anforderungsschablone]{Anforderungsschablone \cite{balzert2009}}
 \end{figure}
 
-
+\setanf{F}
 \begin{center}
         \renewcommand{\arraystretch}{1.5}
         \begin{longtable}{lp{0.85\textwidth}} \arrayrulecolor{maincolor}\hline
-                \sffamily\color{maincolor}/F10/  & Das System \textit{muss} Verleihenden und
+                \anfrow & Das System \textit{muss} Verleihenden und
                 Ausleihenden die Möglichkeit bieten, alle Assets jederzeit mittels einer Übersicht
                 einsehen zu können \textit{(Ag-Vt-1, /Z10/)}.                                           \\
-                \sffamily\color{maincolor}/F20/  & Das System \textit{muss} Verleihenden und
+                \anfrow & Das System \textit{muss} Verleihenden und
                 Ausleihenden die Möglichkeit bieten, die Verfügbarkeit eines Assets einsehen zu
                 können \textit{(Ag-Vt-2, /Z20/)}.                                                       \\
-                \sffamily\color{maincolor}/F30/  & Das System \textit{muss} Verleihenden und
+                \anfrow & Das System \textit{muss} Verleihenden und
                 Ausleihenden die Möglichkeit bieten, nach Assets zu Filtern und zu Suchen.              \\
-                \sffamily\color{maincolor}/F40/  & Das System \textit{muss}  Verleihenden und
+                \anfrow & Das System \textit{muss}  Verleihenden und
                 Ausleihenden relevante Informationen zu den Assets anzeigen (Bild, Name,
                 Beschreibung und Seriennummer) \textit{(Ag-Vt-4, Ag-Au-2, /Z20/, /Z40/)}.               \\
-                \sffamily\color{maincolor}/F50/  & Das System \textit{muss}  Ausleihenden relevante
+                \anfrow & Das System \textit{muss}  Ausleihenden relevante
                 Informationen zu Ansprechpartner:innen anzeigen \textit{(Ag-Vt-4)}.                     \\
-                \sffamily\color{maincolor}/F60/  & Das System \textit{muss} Verleihenden und
+                \anfrow & Das System \textit{muss} Verleihenden und
                 Ausleihenden die Möglichkeit bieten, Reservierungen von Assets vornehme zu können \textit{(Ag-Vt-3)}.
                 \\
-                \sffamily\color{maincolor}/F61/  & Das System \textit{muss} Verleihenden und
+                \anfrow & Das System \textit{muss} Verleihenden und
                 Ausleihenden die Möglichkeit bieten, die verfügbaren Zeitslots der Assets einsehen
                 zu können \textit{(Ag-Vt-2)}.                                                           \\
-                \sffamily\color{maincolor}/F70/  & Das System \textit{muss} Verleihenden und
+                \anfrow & Das System \textit{muss} Verleihenden und
                 Ausleihenden die Möglichkeit bieten, sich mit dem vorhanden IDM (LDAP) Account
                 einzuloggen.                                                                            \\
-                \sffamily\color{maincolor}/F80/  & Das System \textit{soll} Ausleihenden die
+                \anfrow & Das System \textit{soll} Ausleihenden die
                 Möglichkeit bieten, mittels eines Assistenten individuelle und personalisierte
                 Asset-Vorschläge zu erhalten \textit{(Ag-Vt-3, Ag-Au-2)}.                               \\
-                \sffamily\color{maincolor}/F90/  & Das System \textit{soll} Ausleihende daran
+                \anfrow & Das System \textit{soll} Ausleihende daran
                 erinnern, die ausgeliehenen Assets abzuholen, zurückzubringen oder zu verlängern
                 sind \textit{(Ag-Au-1, Ag-Rg-1)}.                                                       \\
-                \sffamily\color{maincolor}/F100/ & Das System \textit{soll} Verleihende
+                \anfrow & Das System \textit{soll} Verleihende
                 automatisch kontaktieren, wenn ein Asset reserviert wurde (\textit{Ag-Vt-1}).           \\
-                \sffamily\color{maincolor}/F110/ & Das System \textit{soll} Verleihende
+                \anfrow & Das System \textit{soll} Verleihende
                 automatisch erinnern, wenn der Zugriff zu einem Asset benötigt wird (\textit{Ag-Au-1}). \\
-                \sffamily\color{maincolor}/F120/ & Das System \textit{soll} Verleihenden und
+                \anfrow & Das System \textit{soll} Verleihenden und
                 Ausleihenden die Möglichkeit bieten, Mängel, Schäden oder Macken am Asset zu
                 Kennzeichen.                                                                            \\
-                \sffamily\color{maincolor}/F130/ & Das System \textit{soll} Verleihenden die
+                \anfrow & Das System \textit{soll} Verleihenden die
                 Möglichkeit geben administrative Aufgaben zu erledigen und an Wartungen zu
                 erinnern (\textit{Ag-Rg-2}).                                                            \\
-                \sffamily\color{maincolor}/F140/ & Das System \textit{sollte in Zukunft}
+                \anfrow & Das System \textit{sollte in Zukunft}
                 Verleihenden und Ausleihenden die Möglichkeit bieten, Assets mithilfe eines
                 QR-Scans in den Warenkorb zu packen.                                                    \\
-                \sffamily\color{maincolor}/F150/ & Das System \textit{sollte in Zukunft}
+                \anfrow & Das System \textit{sollte in Zukunft}
                 Verleihenden und Ausleihenden die Möglichkeit bieten, Kommentare und
                 Erfahrungsberichte unter Assets zu schreiben.                                           \\
-                \sffamily\color{maincolor}/F160/ & Das System \textit{sollte in Zukunft}
+                \anfrow & Das System \textit{sollte in Zukunft}
                 Kommunikation mit Verleihenden ermöglichen, sodass keine extra Instanz benötigt
                 wird.                                                                                   \\
                 \arrayrulecolor{maincolor}\hline
@@ -639,24 +640,24 @@ verwendet, um natürlichsprachliche Anforderungen zu definieren \cite{balzert200
 Im letzten Schritt werden die nicht-funktionalen Anforderungen festgelegt, welche die qualitativen
 oder quantitativen Eigenschaften eines Systems darstellen \cite{balzert2009}. Auch hier wird, falls
 möglich, die Anforderungsschablone aus \ref{fig:schablone} verwendet.
-
+\setanf{Q}
 \begin{center}
         \renewcommand{\arraystretch}{1.5}
         \begin{longtable}{lp{0.85\textwidth}} \arrayrulecolor{maincolor}\hline
-                \sffamily\color{maincolor}/Q10/ & Das System \textit{muss} den Grundsätzen der DIN
+                \anfrow & Das System \textit{muss} den Grundsätzen der DIN
                 EN ISO 9241-110:2019-09 (Ergonomie der Mensch-System-Interaktion - Teil 110:
                 Interaktionsprinzipien) folgen (\textit{DIN EN ISO 9241-110}, 2019).               \\
-                \sffamily\color{maincolor}/Q20/ & Das System \textit{muss} die definierten
+                \anfrow & Das System \textit{muss} die definierten
                 Nutzungsklassen aus \ref{section:benutzer} unterscheiden und die dazugehörigen
                 Zugriffsrechte sicherstellen.                                                      \\
-                \sffamily\color{maincolor}/Q30/ & Das System \textit{muss} zuverlässig und ohne
+                \anfrow & Das System \textit{muss} zuverlässig und ohne
                 Störung im Dauerbetrieb laufen (\nameref{section:zeit}).                           \\
-                \sffamily\color{maincolor}/Q40/ & Das System \textit{soll} modular strukturiert
+                \anfrow & Das System \textit{soll} modular strukturiert
                 sein, damit Inhalte und Funktionalitäten effizient eingebunden werden können und das
                 System einfach erweiterbar ist.                                                    \\
-                \sffamily\color{maincolor}/Q50/ & Das System \textit{soll} beim Zugriff über das
+                \anfrow & Das System \textit{soll} beim Zugriff über das
                 Internet eine gesicherte Übertragung (bspw. \ac{HTTPS}) ermöglichen.               \\
-                \sffamily\color{maincolor}/Q60/ & Das System \textit{soll} alle
+                \anfrow & Das System \textit{soll} alle
                 Benutzerinteraktionen in unter fünf Sekunden ausführen.                            \\
                 \arrayrulecolor{maincolor}\hline
         \end{longtable}
