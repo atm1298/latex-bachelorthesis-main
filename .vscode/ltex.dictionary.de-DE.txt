@@ -5,3 +5,5 @@ Ausleihprozesse
 Ausleihprozess
 SnipeIT
 Companion
+GAT-Transkript-Systems
+Transkriptionssystems
