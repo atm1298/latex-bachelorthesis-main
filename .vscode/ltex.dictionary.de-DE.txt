@@ -7,3 +7,5 @@ SnipeIT
 Companion
 GAT-Transkript-Systems
 Transkriptionssystems
+Reservierungstool
+Ausleihprozessen
