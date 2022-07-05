@@ -1,6 +1,6 @@
 %Wie eingangs er-wähnt, definieren die Anforderungen, was das System zu
 %leisten hat, während die Funktionalitä-ten definieren, wie das System diese gewährleistet.
-\chapter{Konzept}
+\chapter{Konzeption}
 \label{chapter-konzept}
 
 In diesem Kapitel wird die eigentliche Erkenntnis dieser Arbeit beschrieben. Der Aufbau dieses
@@ -16,19 +16,20 @@ Folgenden näher erläutert.
 \begin{table}[h]
     \centering
     \caption{Funktionalitäten im Bereich der Vorbereitung}
-    \begin{tabular}{lll}
+    \begin{longtable}{lll}
             \arrayrulecolor{maincolor}\hline
             \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Titel &
             \sffamily\color{maincolor}Anforderungen \\
             \arrayrulecolor{maincolor}\hline
-            Ft-Vt-1 & Übersicht über ausleihbare Assets                         & ?? \\
+            Ft-Vt-1 & Übersicht über ausleihbare Assets                         & \anfref{V20},
+            \anfref{Z20}, \anfref{K10}, \anfref{F10}, \anfref{F30} \\
             Ft-Vt-2 & Dialog für Vorschläge (Use Case)                          & ?? \\
-            Ft-Vt-3 & Verfügbarkeit von Assets einsehen                         & ?? \\
-            Ft-Vt-4 & Reservierungen von Assets                                 & ?? \\
+            Ft-Vt-3 & Verfügbarkeit von Assets einsehen                         & \anfref{F70} \\
+            Ft-Vt-4 & Reservierungen von Assets                                 & \anfref{F60} \\
             Ft-Vt-5 & Kalenderübersicht                                         & ?? \\
-            Ft-Vt-6 & Sichtbarkeit von Ansprechpartner:innen                    & ?? \\
+            Ft-Vt-6 & Sichtbarkeit von Ansprechpartner:innen                    & \anfref{F50} \\
             \arrayrulecolor{maincolor}\hline
-    \end{tabular}
+    \end{longtable}
     \label{table:ft-vt}
 \end{table}
 
@@ -50,7 +51,7 @@ ob Assets Verfügbar sind
 
 Durch die Verfügbarkeit können wir Reservieren
 
-Anknüpfend an Ag-Vt-3 und Ag-Vt-4 ist eine ... sinnvoll.
+Anknüpfend an FT-Vt-3 und Ft-Vt-4 ist eine ... sinnvoll.
 
 Nicht ersichtlich aktuell, Fragen im Voraus 
 
@@ -166,9 +167,3 @@ Funktionalitäten können zudem über eine REST-API programmatisch genutzt werde
 
 
 \section{Systemarchitektur}
-
-\section{Interface-Design}
-
-\subsection{Low-Fidelity-Prototyp}
-
-\subsection{High-Fidelity-Prototyp}
