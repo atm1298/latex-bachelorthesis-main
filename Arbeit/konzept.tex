@@ -146,24 +146,37 @@ Bei Neuanschaffung, keinen Überblick über die Erneuerungen, ...
 \section{Frameworks} 
 
 \subsection{Relevante Anforderung an ein Framework}
-\subsection{Wahl des genutzten Frameworks}
+Die eingangs beschriebenen Anforderungen schränken die Wahl des Frameworks ein.
+
+\todo[]{Anforderungen referenzieren}
+
+\subsection{Snipe-IT API}
 Ziel dieser Arbeit ist es, abgeleitet aus den eingangs beschriebenen Anforderungen, ein wirksames
 Reservierungstool für Assets zu konzipieren, implementieren und evaluieren. Die Basis für ein
-solches Tool schafft die Asset Managementsoftware \textit{SnipeIT} \cite{noauthor_home_nodate},
-welche bereits am \ac{imis} eingesetzt wird.
+solches Tool schafft die Asset Managementsoftware \textit{Snipe-IT} \cite{noauthor_home_nodate},
+welche bereits am \ac{imis} eingesetzt wird. \textit{Snipe-IT} ist eine kostenlose, quelloffene
+IT-Asset-Verwaltungs-Plattform, welche das Nachverfolgen von Software-Lizenzen, Hardware und
+Verbrauchsgegenständen ermöglicht. Genannte Assets können über ein Dashboard hinzugefügt, verwaltet
+und gelöscht werden. Über Labels können Assets zur Übersichtlichkeit in verschiedene Kategorien
+eingeordnet werden, während Tags ein Asset eindeutig identifizieren (z. B. Seriennummer). Zudem
+ermöglicht das „Checkin/Checkout“-System die Nachverfolgung aller Assets, falls diese zum Beispiel
+an Person ausgeliehen werden. Zu jedem Zeitpunkt kann ein Asset maximal einer Person zugeordnet
+werden, wodurch das mehrfache gleichzeitige Ausleihen eines Assets verhindert wird. Darüber hinaus
+beschreiben Status-Label den Zustands eines Assets und ob dieses ausgeliehen werden kann. Alle
+Funktionalitäten können zudem über eine REST-API programmatisch genutzt werden. Die API wurde auch im
+Rahmen dieser Arbeit genutzt. 
 
-Snipe-IT ist eine kostenlose, quelloffene IT-Asset-Verwaltungs-Plattform,
-welche das Nachverfolgen von Software-Lizenzen, Hardware und
-Verbrauchsgegenständen ermöglicht. Genannte Assets können über ein Dashboard
-hinzugefügt, verwaltet und gelöscht werden. Über Labels können Assets zur
-Übersichtlichkeit in verschiedene Kategorien eingeordnet werden, während
-Tags ein Asset eindeutig identifizieren (z. B. Seriennummer). Zudem ermöglicht
-das „Checkin/Checkout“-System die Nachverfolgung aller Assets, falls diese
-z. B.  an Person ausgeliehen werden. Zu jedem Zeitpunkt kann ein Asset
-maximal einer Person zugeordnet werden, wodurch das mehrfache gleichzeitige
-Ausleihen eines Assets verhindert wird. Darüber hinaus beschreiben Status-Label
-den Zustands eines Assets und ob dieses ausgeliehen werden kann. Alle
-Funktionalitäten können zudem über eine REST-API programmatisch genutzt werden.
-
+\subsubsection{Vue.js}
 
 \section{Systemarchitektur}
+Aufbau der 3 Bausteine
+
+\subsection{Server}
+
+
+\subsection{API Snipe-IT}
+
+
+\subsection{Vue}
+
+\todo[]{nodejs?}
