@@ -13,22 +13,62 @@ auch nur als Vorschlag und auf keinen Fall als verbindlich zu verstehen.
 Um ein Asset ausleihen zu können, müssen bestimmte Vorbereitungen getroffen werden, diese werden im
 Folgenden näher erläutert.
 
+
 \begin{table}[h]
     \centering
-    \caption{Funktionalitäten im Bereich der Vorbereitung}
+    \caption{Funktionalitäten im Bereich der (A)usleihenden}
     \begin{longtable}{lll}
-            \arrayrulecolor{maincolor}\hline
-            \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Titel &
-            \sffamily\color{maincolor}Anforderungen \\
-            \arrayrulecolor{maincolor}\hline
-            Ft-Vt-1 & Übersicht über ausleihbare Assets                         & \anfref{V20},
-            \anfref{Z20}, \anfref{K10}, \anfref{F10}, \anfref{F30} \\
-            Ft-Vt-2 & Dialog für Vorschläge (Use Case)                          & ?? \\
-            Ft-Vt-3 & Verfügbarkeit von Assets einsehen                         & \anfref{F70} \\
-            Ft-Vt-4 & Reservierungen von Assets                                 & \anfref{F60} \\
-            Ft-Vt-5 & Kalenderübersicht                                         & ?? \\
-            Ft-Vt-6 & Sichtbarkeit von Ansprechpartner:innen                    & \anfref{F50} \\
-            \arrayrulecolor{maincolor}\hline
+        \arrayrulecolor{maincolor}\hline
+        \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Titel &
+        \sffamily\color{maincolor}Anforderungen                                                                              \\
+        \arrayrulecolor{maincolor}\hline
+        Ft-A-1                       & Material-Suche                  & \anfref{V20}
+        \anfref{Z20} \anfref{K10} \anfref{F10} \anfref{F30}                                                                  \\
+        Ft-A-2                       & Filtern und Sortieren           & \anfref{V30} \anfref{F30} \anfref{F70}              \\
+        Ft-A-3                       & Ausleihhilfe/Nutzensuche        & \anfref{V30}\anfref{F70}                            \\
+        Ft-A-4                       & Stautsseite                     & \anfref{F60}                                        \\
+        Ft-A-5                       & Reservierungs-Checkout          & \anfref{F60} \anfref{F150}                          \\
+        Ft-A-6                       & Informationsfluss               & \anfref{V50} \anfref{Z30} \anfref{F40} \anfref{F50} \\
+        \arrayrulecolor{maincolor}\hline
+    \end{longtable}
+    \label{table:ft-A}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \caption{Funktionalitäten im Bereich der (V)erleihenden}
+    \begin{longtable}{lll}
+        \arrayrulecolor{maincolor}\hline
+        \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Titel      &
+        \sffamily\color{maincolor}Anforderungen                                             \\
+        \arrayrulecolor{maincolor}\hline
+        Ft-V-1                       & Kalenderübersicht                    & \anfref{V20}
+        \anfref{Z20} \anfref{F50} \anfref{K10} \anfref{F10} \anfref{F30}                    \\
+        Ft-V-2                       & Zuständigkeitsbereich                & \anfref{F50}  \\
+        Ft-V-3                       & Verfügbarkeit von Assets             & \anfref{F70}  \\
+        Ft-V-3                       & Assetstatus                          & \anfref{F150} \\
+        Ft-V-4                       & Einollgen mit IDM Account            & \anfref{F70}  \\
+        Ft-Wt-1                      & Pflege von Assets                    & \anfref{F130} \\
+        Ft-Wt-2                      & Pflege der Datenbank/Übersicht/Liste & \anfref{F140} \\
+        \arrayrulecolor{maincolor}\hline
+    \end{longtable}
+    \label{table:ft-v}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \caption{Funktionalitäten für alle}
+    \begin{longtable}{lll}
+        \arrayrulecolor{maincolor}\hline
+        \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Titel        &
+        \sffamily\color{maincolor}Anforderungen                                                                           \\
+        \arrayrulecolor{maincolor}\hline
+        Ft-VA-1                      & Übersicht über ausleihbare Assets      & \anfref{V20}
+        \anfref{Z20} \anfref{F50} \anfref{K10} \anfref{F10} \anfref{F30}                                                  \\
+        Ft-VA-2                      & Benachrichtigungen \& Erinnerungen     & \anfref{F100} \anfref{F110} \anfref{F120} \\
+        Ft-VA-3                      & Sichtbarkeit von Ansprechpartner:innen & \anfref{F50}                              \\
+        Ft-V-4                       & Einollgen mit IDM Account              & \anfref{F80}                              \\
+        \arrayrulecolor{maincolor}\hline
     \end{longtable}
     \label{table:ft-vt}
 \end{table}
@@ -39,7 +79,7 @@ geschieht meist per E-Mail. Ausleihende fragen, aufgrund des mangelnden Wissen, 
 Asset, welches über bspw. den Flurfunk an diese gelang. Wie bereits in der Problemanalyse geschildet
 (\ref{section:probleme-allgemein}) gibt es keine Übersicht, über ausleihbare Assets. Dies zeigt die
 Dringlichkeit des SnipeIT Companion für eine besser Vorbereitung. So können Ausleihende mit mehr
-Wissen eine Anfrage zum Ausleihen stellen. 
+Wissen eine Anfrage zum Ausleihen stellen.
 
 Die zuvor erhaltene Anfrage aus \nameref{subsubsection:Ag-Vt-1} wird von Verleihenden verarbeitet.
 Um den Ausleihprozess für Verleihende zu erleichtern, kann der vorangestellt Use Case mittels eines
@@ -53,7 +93,7 @@ Durch die Verfügbarkeit können wir Reservieren
 
 Anknüpfend an FT-Vt-3 und Ft-Vt-4 ist eine ... sinnvoll.
 
-Nicht ersichtlich aktuell, Fragen im Voraus 
+Nicht ersichtlich aktuell, Fragen im Voraus
 
 % Funktionalitäten der Ausgabe 
 \subsection{Funktionalitäten im Bereich der Ausgabe}
@@ -63,17 +103,17 @@ Verleihnden zu Ausleihnden umfasst.
     \centering
     \caption{Funktionalitäten im Bereich der Ausgabe}
     \begin{tabular}{lll}
-            \arrayrulecolor{maincolor}\hline
-            \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Titel &
-            \sffamily\color{maincolor}Anforderungen \\
-            \arrayrulecolor{maincolor}\hline
-            Ft-Au-1 & Zugang zu Assets                              & ?? \\
-            Ft-Au-2 & Kommunikationsmöglichkeit bieten              & ?? \\
-            Ft-Au-3 & Vermittlung/Nutzung von Assets erläutern      & ?? \\
-            Ft-Au-4 & Ausgeliehene Assets dokumentieren             & ?? \\
-            Ft-Au-5 & Rechtliche Rahmenbedingungen                  & ?? \\
-            Ft-Au-6 & Sichtbarkeit von Ansprechpartner:innen        & ?? \\
-            \arrayrulecolor{maincolor}\hline
+        \arrayrulecolor{maincolor}\hline
+        \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Titel          &
+        \sffamily\color{maincolor}Anforderungen                                      \\
+        \arrayrulecolor{maincolor}\hline
+        Ft-Au-1                      & Zugang zu Assets                         & ?? \\
+        Ft-Au-2                      & Kommunikationsmöglichkeit bieten         & ?? \\
+        Ft-Au-3                      & Vermittlung/Nutzung von Assets erläutern & ?? \\
+        Ft-Au-4                      & Ausgeliehene Assets dokumentieren        & ?? \\
+        Ft-Au-5                      & Rechtliche Rahmenbedingungen             & ?? \\
+        Ft-Au-6                      & Sichtbarkeit von Ansprechpartner:innen   & ?? \\
+        \arrayrulecolor{maincolor}\hline
     \end{tabular}
     \label{table:ft-Au}
 \end{table}
@@ -103,13 +143,13 @@ Die Nachfolgenden Funktionalitäten umfassen die Rückgabe der Ausgeliehenen Ass
     \centering
     \caption{Funktionalitäten im Bereich der Rückgabe}
     \begin{tabular}{lll}
-            \arrayrulecolor{maincolor}\hline
-            \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Titel &
-            \sffamily\color{maincolor}Anforderungen \\
-            \arrayrulecolor{maincolor}\hline
-            Ft-Wt-1 & Erinnerungen erhalten                     & ?? \\
-            Ft-Wt-2 & Assets korrekt zurückgebracht             & ?? \\
-            \arrayrulecolor{maincolor}\hline
+        \arrayrulecolor{maincolor}\hline
+        \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Titel &
+        \sffamily\color{maincolor}Anforderungen                             \\
+        \arrayrulecolor{maincolor}\hline
+        Ft-Wt-1                      & Erinnerungen erhalten           & ?? \\
+        Ft-Wt-2                      & Assets korrekt zurückgebracht   & ?? \\
+        \arrayrulecolor{maincolor}\hline
     \end{tabular}
     \label{table:Ft-Rg}
 \end{table}
@@ -122,18 +162,18 @@ Akkus voll, SD karte leeren, Ursprüngliche Einstellungen,...
 \subsection{Funktionalitäten im Bereich der Wartung}
 \label{subsec:ft-wartung}
 Im Folgenden werden Funktionalitäten, welche für Verleihende auf Administariver Ebene von Bedeutung sind
-näher erläutert. 
+näher erläutert.
 \begin{table}[h]
     \centering
     \caption{Funktionalitäten im Bereich der Wartung}
     \begin{tabular}{lll}
-            \arrayrulecolor{maincolor}\hline
-            \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Titel &
-            \sffamily\color{maincolor}Anforderungen \\
-            \arrayrulecolor{maincolor}\hline
-            Ft-Wt-1 & Pflege von Assets                  & ?? \\
-            Ft-Wt-2 & Pflege der Datenbank/Übersicht/Liste            & ?? \\
-            \arrayrulecolor{maincolor}\hline
+        \arrayrulecolor{maincolor}\hline
+        \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Titel      &
+        \sffamily\color{maincolor}Anforderungen                                  \\
+        \arrayrulecolor{maincolor}\hline
+        Ft-Wt-1                      & Pflege von Assets                    & ?? \\
+        Ft-Wt-2                      & Pflege der Datenbank/Übersicht/Liste & ?? \\
+        \arrayrulecolor{maincolor}\hline
     \end{tabular}
     \label{table:Ft-Wt}
 \end{table}
@@ -143,7 +183,7 @@ Updates nach langer Nicht Nutzung, Akuus entladen,...
 Bei Neuanschaffung, keinen Überblick über die Erneuerungen, ...
 
 
-\section{Frameworks} 
+\section{Frameworks}
 
 \subsection{Relevante Anforderung an ein Framework}
 Die eingangs beschriebenen Anforderungen schränken die Wahl des Frameworks ein.
@@ -164,7 +204,7 @@ an Person ausgeliehen werden. Zu jedem Zeitpunkt kann ein Asset maximal einer Pe
 werden, wodurch das mehrfache gleichzeitige Ausleihen eines Assets verhindert wird. Darüber hinaus
 beschreiben Status-Label den Zustands eines Assets und ob dieses ausgeliehen werden kann. Alle
 Funktionalitäten können zudem über eine REST-API programmatisch genutzt werden. Die API wurde auch im
-Rahmen dieser Arbeit genutzt. 
+Rahmen dieser Arbeit genutzt.
 
 \subsubsection{Vue.js}
 
@@ -174,9 +214,10 @@ Aufbau der 3 Bausteine
 \subsection{Server}
 
 
-\subsection{API Snipe-IT}
+\subsection{Backend und Datenbank API Snipe-IT}
 
+\subsection{Schnittstelle Verleihende}
 
-\subsection{Vue}
+\subsection{Web-App}
 
 \todo[]{nodejs?}
