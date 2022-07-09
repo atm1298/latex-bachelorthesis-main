@@ -25,7 +25,7 @@ näher erläutert (\ref{table:ft-va}).
         \anfref{Z20} \anfref{F50} \anfref{K10} \anfref{F10} \anfref{F30}                                                  \\
         Ft-VA-2                      & Benachrichtigungen \& Erinnerungen     & \anfref{F100} \anfref{F110} \anfref{F120} \\
         Ft-VA-3                      & Sichtbarkeit von Ansprechpartner:innen & \anfref{F50}                              \\
-        Ft-VA-4                      & Einloggen mit IDM Account              & \anfref{F80}                              \\
+        Ft-VA-4                      & Authentifizierung per IDM Account      & \anfref{F70} \anfref{F80}                 \\
         \arrayrulecolor{maincolor}\hline
     \end{longtable}
     \label{table:ft-va}
@@ -70,8 +70,7 @@ näher erläutert (\ref{table:ft-v}).
         \anfref{Z20} \anfref{F50} \anfref{K10} \anfref{F10} \anfref{F30}                    \\
         Ft-V-2                       & Zuständigkeitsbereich                & \anfref{F50}  \\
         Ft-V-3                       & Verfügbarkeit von Assets             & \anfref{F70}  \\
-        Ft-V-3                       & Assetstatus                          & \anfref{F150} \\
-        Ft-V-4                       & Einollgen mit IDM Account            & \anfref{F70}  \\
+        Ft-V-4                       & Bearbeiten des Assetstatus           & \anfref{F150} \\
         Ft-V-5                       & Pflege von Assets                    & \anfref{F130} \\
         Ft-V-6                       & Pflege der Datenbank/Übersicht/Liste & \anfref{F140} \\
         \arrayrulecolor{maincolor}\hline
@@ -101,7 +100,7 @@ näher erläutert (\ref{table:ft-A}).
         \anfref{Z20} \anfref{K10} \anfref{F10} \anfref{F30}                                                                  \\
         Ft-A-2                       & Filtern und Sortieren           & \anfref{V30} \anfref{F30} \anfref{F70}              \\
         Ft-A-3                       & Ausleihhilfe/Nutzensuche        & \anfref{V30}\anfref{F70}                            \\
-        Ft-A-4                       & Stautsseite                     & \anfref{F60}                                        \\
+        Ft-A-4                       & Statusseite                     & \anfref{F60}                                        \\
         Ft-A-5                       & Reservierungs-Checkout          & \anfref{F60} \anfref{F150}                          \\
         Ft-A-6                       & Informationsfluss               & \anfref{V50} \anfref{Z30} \anfref{F40} \anfref{F50} \\
         Ft-A-7                       & Rückgabe-Checkliste             & ???                                                 \\
@@ -143,7 +142,7 @@ Die eingangs beschriebenen Anforderungen schränken die Wahl des Frameworks ein.
 
 \todo[]{Anforderungen referenzieren}
 
-\subsection{Snipe-IT API}
+\subsection{Snipe-IT}
 Ziel dieser Arbeit ist es, abgeleitet aus den eingangs beschriebenen Anforderungen, ein wirksames
 Reservierungstool für Assets zu konzipieren, implementieren und evaluieren. Die Basis für ein
 solches Tool schafft die Asset Managementsoftware \textit{Snipe-IT} \cite{noauthor_home_nodate},
@@ -159,18 +158,35 @@ beschreiben Status-Label den Zustands eines Assets und ob dieses ausgeliehen wer
 Funktionalitäten können zudem über eine REST-API programmatisch genutzt werden. Die API wurde auch im
 Rahmen dieser Arbeit genutzt.
 
-\subsubsection{Vue.js}
+\subsection{Schnittstellenbackend}
+- Noch nicht klar
+
+\subsection{Vue.js}
+- erläutern
+
 
 \section{Systemarchitektur}
 Aufbau der 3 Bausteine
 
-\subsection{Server}
+\subsection{Snipe-IT Server}
+- Für das Verwalten der Assets selbst, also Was ist vorhanden, und alle
+Eigenschaften dazu
 
+- Bietet API, welche vom Schnittstellenbackend verwendet wird, jedoch fehlt eine
+relevante Funktion, daher das Schnittstellenbackend
 
-\subsection{Backend und Datenbank API Snipe-IT}
+--> Anderer weg erläutern?
 
-\subsection{Schnittstelle Verleihende}
+- Oder Snipe IT erweitern?
+
+\subsection{Schnittstellenbackend}
+- Reservierung in zukunft möglich mit SnipeIT
+
+- Logik muss selbst eingebaut werden
+
+- Haupaufgabe: Reservierung, den rest übernimmt es auch als Schnittstelle
 
 \subsection{Web-App}
+- Zur Darstellung, zum suchen, buchen und so der Assets, umgesetzt mit vue.js
 
-\todo[]{nodejs?}
+\todo[]{UML-Sequenzdiagrams}
