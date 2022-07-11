@@ -9,3 +9,7 @@ GAT-Transkript-Systems
 Transkriptionssystems
 Reservierungstool
 Ausleihprozessen
+Ag-Au
+Ag-Rg
+Ag-Wt
+Ag-Vt
