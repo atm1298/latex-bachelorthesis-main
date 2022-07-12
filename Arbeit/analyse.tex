@@ -1,5 +1,3 @@
-%!TEX root = thesis.tex
-
 \chapter{Anforderungen}
 \label{chapter-analyse}
 
@@ -12,37 +10,43 @@ und Ausleihende) festgehalten. Mittels einer Benutzeranalyse (\ref{section:benut
 Zuhilfenahme der durchgeführten Interviews konnten diese weiter klassifiziert und eingegrenzt
 werden. Daraufhin wurden die Probleme und Herausforderungen des aktuellen Vorgehens und den
 unterschiedlichen Ausleihprozessen (\ref{section:iststand}) geschildert. Anschließend wurden die
-Aufgaben, die Verleihende und Ausleihende mithilfe der Anwendung bewältigen möchten, diskutiert
-(\ref{section:aufgaben}) und der organisatorische und zeitlich-räumliche Kontext des Verleihens und
-Ausleihens am \ac{imis} (\ref{section:kontext}) untersucht. Aufbauend auf den Resultaten der
-vorangestellten Untersuchungen wurden die objektiven Anforderungen an den SnipeIT Companion
-formalisiert (\ref{section:anforderung}).
+Aufgaben, die Verleihende und Ausleihende mithilfe der Anwendung bewältigen sollten, diskutiert
+(\ref{section:aufgaben}). Abschließend wurde der organisatorische und zeitlich-räumliche Kontext des
+Verleihens und Ausleihens am \ac{imis} (\ref{section:kontext}) untersucht. Aufbauend auf den
+Resultaten der vorangestellten Untersuchungen wurden die objektiven Anforderungen an den Snipe-IT
+Companion formalisiert (\ref{section:anforderung}).
 
 \section{Datenquellen}
 \label{section:daten}
-Im Rahmen der Analyse wurden Stakeholder-Interviews durchgeführt und ein vergleichbares Projekt,
-welches im Rahmen eines Interviews genannt wurde, als weitere Quelle genutzt. Die Befragten wurden
-durch ein semi-strukturiertes Interview geführt. Im Vorfeld wurde dafür ein Interviewleitfaden
-entwickelt (Anhang Verlinken). Es wurde eine Unterteilung in Verleihende und Ausleihende von Assets
-vorgenommen (genauere Definition der Benutzergruppen in \ref{section:benutzer}). Bei den
-Teilnehmenden handelt es sich um Mitarbeitende, welche am \ac{imis} tätig sind und Studierende der
-Medieninformatik an der Universität zu Lübeck. In \ref{table:v} ist der jeweilige
-(Haupt-)Zuständigkeitsbereich der Verleihenden aufgeführt. Verleihende der Assets können
-gleichzeitig die Position eines Ausleihenden einnehmen. Die Ausleihenden umfassen außerdem
-Studierende, welche in \ref{table:a} dargestellt sind. Durch den geplanten Einsatz am \ac{imis}
-wurde sich zunächst ausschließlich auf \ac{wimi} des \ac{imis} und Studierenden der Medieninformatik
-begrenzt. Hierbei wurde insbesondere der Fokus auf die Probleme am \ac*{imis} gelegt (genauere
-Untersuchungen in der Problemanalyse in \ref{section:iststand}). Die IDs der Teilnehmenden werden
-als Verweise in den folgenden Abschnitten verwendet.
+Im Rahmen der Analyse wurden Stakeholder-Interviews durchgeführt (\nameref{subsection:interview}).
+Darauffolgend wurde nach vergleichbaren Projekten und Systemen recherchiert
+(\nameref{subsection:interview}).
 
-Die Interviews wurden aufgezeichnet und anschließend in Teilen, mithilfe eines vereinfachten
-Transkriptionssystems, verschriftlicht. Daraufhin wurde eine qualitative Inhaltsanalyse
-durchgeführt. Hierfür wurden die Transkripte erneut gelesen und für die Arbeit und Forschungsfragen
-relevante Textstellen kommentiert. Infolgedessen wurden die erarbeiteten Kommentare in ein
-Ordnungssystem strukturiert und unter den einzelnen Analysen zusammengefasst
-\cite{dresing_praxisbuch_2016}. Des Weiteren wurde mithilfe des \ac{ati} das technische Interesse
-und Verständnis der Teilnehmenden festgestellt (\ref{table:ati}), sodass das Reservierungstool
-entsprechend an die Benutzergruppen angepasst werden kann \cite{attig_assessing_2017}.
+\subsection{Stakeholder-Interviews}
+\label{subsection:interview}
+Die Befragten wurden durch ein semi-strukturiertes Interview geführt. Im Vorfeld wurde dafür ein
+Interviewleitfaden entwickelt (Anhang Verlinken). Die Interviews wurden aufgezeichnet und
+anschließend in Teilen, mithilfe eines vereinfachten Transkriptionssystems, verschriftlicht.
+Daraufhin wurde eine qualitative Inhaltsanalyse durchgeführt. Hierfür wurden die Transkripte erneut
+gelesen und für die Arbeit und Forschungsfragen relevante Textstellen kommentiert. Infolgedessen
+wurden die erarbeiteten Kommentare in ein Ordnungssystem strukturiert und unter den einzelnen
+Analysen zusammengefasst \cite{dresing_praxisbuch_2016}. 
+
+Es wurde eine Unterteilung in Verleihende und Ausleihende von Assets vorgenommen (genauere
+Definition der Benutzergruppen in \ref{section:benutzer}). Bei den Teilnehmenden handelt es sich um
+Mitarbeitende, welche am \ac{imis} tätig sind und Studierende der Medieninformatik an der
+Universität zu Lübeck. In \ref{table:v} ist der jeweilige (Haupt-)Zuständigkeitsbereich der
+Verleihenden aufgeführt. Verleihende der Assets können gleichzeitig die Position eines Ausleihenden
+einnehmen. Die Ausleihenden umfassen außerdem Studierende, welche in \ref{table:a} dargestellt sind.
+Durch den geplanten Einsatz am \ac{imis} wurde sich zunächst ausschließlich auf \ac{wimi} des
+\ac{imis} und Studierende der Medieninformatik begrenzt. Hierbei wurde insbesondere der Fokus auf
+die Probleme am \ac*{imis} gelegt (genauere Untersuchungen in der Problemanalyse in
+\ref{section:iststand}). Die IDs der Teilnehmenden werden als Verweise in den folgenden Abschnitten
+verwendet.
+
+Des Weiteren wurde mithilfe des \ac{ati} das technische Interesse und Verständnis der Teilnehmenden
+festgestellt (\ref{table:ati}), sodass das Reservierungstool entsprechend an die Benutzergruppen
+angepasst werden kann \cite{attig_assessing_2017}.
 
 \begin{table}[h]
         \centering
@@ -112,14 +116,29 @@ entsprechend an die Benutzergruppen angepasst werden kann \cite{attig_assessing_
         \label{table:ati}
 \end{table}
 
+\subsection{Recherche vergleichbare Systeme}
+\label{subsection:system}
+Für die Recherche wurden die digitalen Bibliotheken ACM Digital Library und Google Scholar genutzt.
+Es wurden Begriffe aus den Bereichen Managementsystem \textit{(WÖRTER AUFZÄHLEN)} und Reservation \textit{(Lending, lend,
+borrow, )} zur Suche verwendet. Die Recherche sollte dem bessern vergleichen und abwägen der
+analysierten Interview-Ergebnisse dienen und vergleichbare Systeme und Projekte eruieren. Des
+Weiteren sollte die Recherche dazu dienen mögliche Fehlerquellen zu erörtern, um diese umgehen zu
+können. Durch den speziellen Einsatzort am \ac{imis}, stellte sich zeitnah heraus, dass wenige bis
+keine vergleichbaren Systeme gefunden werden konnten. Folglich boten die vorhanden Vergleiche keinen
+hilfreichen Aufschluss für den Rahmen dieser Arbeit, daher wurde die Recherche nicht abgeschlossen.
+
+Der vollständige werden im Folgenden 2 Systeme aufgeführt.
+
+
+
 \section{Benutzeranalyse}
 \label{section:benutzer}
-Um eine zielgruppengerechte Gestaltung des SnipeIT Companion voraussetzen zu können, werden in
+Um eine zielgruppengerechte Gestaltung des Snipe-IT Companion voraussetzen zu können, werden in
 diesem Abschnitt die Benutzergruppen des Reservierungstools eruiert und näher untersucht.
 Resultierend aus den Stakeholder-Interviews wurden zwei Benutzergruppen, zu denen Verleihende sowie
 Ausleihende eines Assets gehören, für das System erarbeitet. Die Zielgruppe beschränkt sich im
 Rahmen dieser Arbeit auf die Mitarbeitenden des \ac{imis} sowie die Studierenden der
-Medieninformatik an der Universität zu Lübeck. Für den SnipeIT Companion konnte eine Zielgruppe mit
+Medieninformatik an der Universität zu Lübeck. Für den Snipe-IT Companion konnte eine Zielgruppe mit
 einer Alterspanne von 17 - 35 Jahren festgelegt werden. Aus den Interviews (\ref{section:daten})
 konnte entnommen werden, dass beide Benutzergruppen täglich ein Smartphone, Tablet, Laptop oder
 Desktop PC nutzen und somit ein grundlegendes technisches Verständnis vorausgesetzt werden kann.
@@ -146,9 +165,9 @@ Wert so bei anderen Studien war. Und wenn dann der eigene Wert darüber liegt, d
 sagen, dass man eine hohe Technikaffinität hat. :D Schaue mal in das Paper rein, da sind viele
 Vergleichsstichproben}
 
-Die \ac{wimi} mit einem Zuständigkeitsbereich für Assets des \ac{imis} lagen im Großteil bei einer
+Die \ac{wimi} mit einem Zuständigkeitsbereich für Assets lagen im Großteil bei einer
 Alterspanne von 25 - 35 Jahren. Folglich lässt sich eine Alterspanne von 25 - 35 Jahren aufseiten
-der \ac{wimi} für den SnipeIT Companion festlegen.
+der \ac{wimi} für den Snipe-IT Companion festlegen.
 
 Verleihende umfassen ausschließlich Mitarbeitende, sowie administratives Personal des \ac{imis},
 welche verantwortlich für die Ausgabe von Assets sind (\ref{table:v}). Allerdings haben nicht alle
@@ -166,26 +185,26 @@ Mit $N=6$ und einem durchschnittlichen Alter von XX lag der Wert der \ac{ati}-Sk
 Ausleihenden, bei $M=5,13$ mit $SD=0,48$. Dies weist auf eine hohe Technikaffinität hin
 (\ref{table:ati}).
 
-Das Alter der studierenden Deutschen betrug im Sommersemester 2012 im Durchschnitt 24,4 Jahre.
+Das Alter der studierenden Deutschen betrug im Sommersemester 2012 im Durchschnitt 24,4 Jahre
 \cite{middendorff2017wirtschaftliche}. In den Jahren 2019/20 lag das Durchschnittsalter der
 insgesamt 2,9 Millionen Studierenden bei 23,4 Jahren \cite{noauthor_studierende_nodate}. Mit einem
 durchschnittlichen Alter von XX der befragten Personen lässt sich eine Alterspanne von 17 - 25
-Jahren aufseiten der Studierenden für den SnipeIT Companion festlegen.
+Jahren aufseiten der Studierenden für den Snipe-IT Companion festlegen.
 
 Bei den Ausleihenden handelt es sich insbesondere um Studierende, welche keinen direkten Zugang zu
 den Assets haben (\ref{table:a}). Ausleihende suchen Verleihende (Mitarbeitende) aktiv auf oder
 kontaktieren jene, um Informationen über ausleihbare Assets zu erhalten. Wie bereits geschildert,
-können durch die Forschungsgruppen auch Verleihende (Mitarbeitende) zu Ausleihenden werden, wobei
+können durch die Forschungsgruppen auch Verleihende zu Ausleihenden werden, wobei
 für diese häufig ein anderer Ausleihprozess als für Studierende vorliegt (\ref{section:iststand}).
 
 
 \section{Problemanalyse}
 \label{section:iststand}
 
-Um die Relevanz des Verleihens am \ac{imis} sowie die Prozesse und damit einhergehenden
+Um die Relevanz des Verleihens am \ac{imis} sowie die Prozesse und die damit einhergehenden
 Problematiken besser nachvollziehen zu können, wurde eine Problemanalyse auf Basis des aktuellen
 Vorgehens durchgeführt. Hierfür wurde sich auf die in \ref{section:daten} aufgeführten
-Interview-Teilnehmenden referenziert.  Der Übersichtlichkeit wegen werden im Folgenden Probleme,
+Interview-Teilnehmenden referenziert. Der Übersichtlichkeit wegen werden zunächst Probleme,
 welche Verleihende und Ausleihende betreffen, thematisiert. Daraufhin werden Probleme der einzelnen
 Benutzergruppen näher erläutert. 
 
@@ -196,15 +215,15 @@ für Studierende, über die ausleihbare Assets eingesehen werden können. Auch a
 Verleihenden ist keine vollständige interne Übersicht vorhanden (V1-5, A1-6). Dies führt dazu, dass
 aufgrund von Unwissenheit wenig Assets ausgeliehen werden können (V1-5). Durch die verschiedenen
 Forschungsgruppen am \ac{imis} und die damit verbundenen Labore, gibt es verschiedene
-Ansprechpartner:innen für die jeweiligen Assets in den Laboren. Die Zuständigkeit dieser
+Ansprechpartner:innen für die jeweiligen Assets in den Laboren. Die Verantwortlichkeiten dieser
 Ansprechpartner:innen ist jedoch nicht ausreichend ersichtlich, sodass es häufig zu Weiterverweisen
-an andere Ansprechpartner:innen kommt, wobei auch hier unter den \ac{wimi} nicht immer
-Ansprechpartner:innen bekannt sind (V1,V3, V4, A1, A2, A3).
+an andere Ansprechpartner:innen kommt, wobei auch unter den \ac{wimi} nicht immer
+die Verantwortlichkeiten bekannt sind (V1,V3, V4, A1, A2, A3).
 
 Studierende, welche als \ac{hiwi} am \ac{imis} angestellt sind, haben beim Ausleihen häufig einen
 Vertrauensvorschuss, sodass bei kurzer Ausleihe für Tätigkeiten im Gebäude Assets verliehen oder
 entnommen werden, ohne dies zu Vermerken. Diese Praxis gilt auch für \ac{wimi} (A1, V1, V2), wobei
-die Planung der Assets hierdurch erschwert wird (A3, A6).
+das Planen mit Assets dadurch erschwert wird (A3, A6).
 
 Beim Verleihen von Assets kommt es häufig vor, dass insbesondere Studierende ohne Erfahrungen und
 Expertise ein Asset ausleihen wollen (V2, A3, A6). Folglich kann dies schnell zu Problemen führen.
@@ -213,7 +232,8 @@ Use Case der Nutzung zu verstehen und die damit verbundenen Einstellungen der As
 Zubehör zu empfehlen (V1, V2, V4, V5). Somit ist die Nutzung der Assets durch das Ungleichgewicht
 aufseiten der Verleihenden nicht kontrollierbar. Dies führt untereinander dazu, dass Beschädigungen,
 Gebrauchsspuren und Mängel von Assets nicht festgehalten werden können. Ausleihende erfahren den
-Zustand und die Mängel eines Assets erst zum Zeitpunkt der Abholung (A1, V1, V5).
+Zustand und die Mängel eines Assets erst zum Zeitpunkt der Abholung, was die Nutzung beeinträchtigen
+kann (A1, V1, V5).
 
 \subsection{Probleme: Verleihende}
 \label{section:probleme-verleihende}
@@ -234,17 +254,19 @@ einen anderen Ausleihprozess als Studierende, da der Vertrauens- und Bekanntheit
 unterscheidet (V1,V2,V3). Durch die mangelnde und uneinsichtige Dokumentation des Ausleihens kann
 ein spontanes Planen erschwert werden (V1, V2, V3).
 
-Da auch eine interne Übersicht der verfügbaren Assets für Verleihende nicht vorhanden ist, kann es
-durch Unwissenheit zu Doppelbeschaffung kommen (V1, V2, V3). Folglich kann es zu Anschaffungen
-kommen, welche mit dem vorhandenen Assets nicht kompatibel sind (V2, V3). Eine Schwachstelle liegt
-im Beschaffen von Assets, ohne dass diese vermerkt werden. Dies führt zu Assets, welche in einzelnen
-Büros liegen oder vergessen werden, obwohl diese für laufende Studien oder Ähnliches sinnvoll sein können
-(V1, V3). Interviewte führten einen konkreten Fall an, in welchem verschwunden geglaubte Assets nach
-zwei Jahren wieder aufgefunden wurden (V3).
+Da auch eine interne Übersicht der verfügbaren Assets für Verleihende fehlt, kann es durch
+Unwissenheit zu Doppelbeschaffung kommen (V1, V2, V3). Folglich kann es zu Anschaffungen kommen,
+welche mit bereits vorhandenen Assets nicht kompatibel sind (V2, V3). Eine Schwachstelle liegt im
+Beschaffen von Assets, ohne dass diese vermerkt werden. Dies führt zu Assets, welche in einzelnen
+Büros liegen oder vergessen werden, obwohl diese für laufende Studien oder Ähnliches sinnvoll sein
+können (V1, V3). Interviewte führten einen konkreten Fall an, in welchem verschwunden geglaubte
+Assets nach zwei Jahren wieder aufgefunden wurden (V3).
 
 Eine weitere Schwachstelle lässt sich in der Wartung von Assets feststellen. Mitarbeitende sind für
-von ihnen angeschaffte Assets zuständig. Jedoch fehlen Übersichten und Erinnerungen für Wartungen
-und Updates der Assets, sodass es bspw. zur Entladung von Akkus kommen kann (V1, V2, V5).
+die von ihnen angeschaffte Assets zuständig. Jedoch fehlen Übersichten und Erinnerungen für
+Wartungen und Updates der Assets, sodass es beispielsweise zur Entladung von Akkus kommen kann oder
+Assets nicht spontan genutzt werden können, weil keine Software-Updates durchgeführt wurden (V1, V2,
+V5).
 
 \subsection{Probleme: Ausleihende}
 \label{section:probleme-Ausleihende}
@@ -262,8 +284,7 @@ Herankommen ermöglicht werden (A3). Des Weiteren wird das Nachfragen als nervig
 \ac{wimi} in ihrer Arbeit gestört werden, obwohl eine Liste der Assets ausreichen würde (A6). Ein
 weiterer Kritikpunkt ist, dass Ausleihende nicht über alle Geräte Kenntnis besitzen, sodass es durch
 fehlende Auskunft beispielsweise zu Kompatibilitätsfehlern kommen kann (A3). Dies führte dazu, dass
-Projekte nicht mit dem ausgeliehenen Asset umgesetzt werden konnten (A3). Folglich können
-Ausleihende nur bedingt mit den Geräten umgehen.
+Projekte nicht mit dem ausgeliehenen Asset umgesetzt werden konnten (A3). 
 
 \section{Aufgabenanalyse}
 \label{section:aufgaben}
@@ -289,38 +310,40 @@ Folgenden näher erläutert werden (\ref{table:Ag-Vt}).
                 \arrayrulecolor{maincolor}\hline
                 Ag-Vt-1                      & Nachfragen ob Assets vorhanden \\
                 Ag-Vt-2                      & Abfragen der Verfügbarkeit \\
-                Ag-Vt-3                      & Einsehen der Verfügabrkeit \\
+                Ag-Vt-3                      & Einsehen der Verfügbarkeit \\
                 Ag-Vt-4                      & Reservierung der Assets \\
                 Ag-Vt-5                      & Beratung der Ausleihenden \\
                 \arrayrulecolor{maincolor}\hline
         \end{tabular}
         \label{table:Ag-Vt}
 \end{table}
-(\textit{Ag-Vt-1 |  Nachfragen ob Assets vorhanden}) \todo[]{erläutern}
+{\sffamily\color{maincolor}{Ag-Vt-1 |  Nachfragen ob Assets vorhanden}}\\
+erläutern
 
+{\sffamily\color{maincolor}{Ag-Vt-2 | Abfragen der Verfügbarkeit}}\\
 Um ein Asset ausleihen zu können, muss eine Anfrage an die Verantwortlichen gesendet werden. Dies
 geschieht meist per E-Mail. Ausleihende fragen nach konkreten Assets, dessen Existenz sie bspw.
-durch die institutsinterne Kommunikation erfahren haben (\textit{Ag-Vt-2 | Abfragen der
-Verfügbarkeit}). Wie bereits in der Problemanalyse geschildert
+durch die institutsinterne Kommunikation erfahren haben. Wie bereits in der Problemanalyse geschildert
 (\nameref{section:probleme-allgemein}), gibt es keine Übersicht über ausleihbare Assets. Dies zeigt
-die Dringlichkeit des SnipeIT Companion für eine bessere Vorbereitung.
+die Dringlichkeit des Snipe-IT Companion für eine bessere Vorbereitung.
 
-Um ein Asset ausleihen zu können ist es sowohl für Verleihende als auch Ausleihende von Bedeutung,
-ob Assets verfügbar sind. Verleihende überprüfen, ob das angefragte Asset im Schrank vorhanden ist.
-Hierbei ist zu berücksichtigen, dass keine langfristige Planung gewährleistet werden kann
-(\textit{Ag-Vt-3 | Einsehen der Verfügabrkeit}). Dies kann durch den SnipeIT Companion mittels eines
+{\sffamily\color{maincolor}{Ag-Vt-3 | Einsehen der Verfügbarkeit}}\\
+Um ein Asset ausleihen zu können muss das gewünschte Asset verfügbar sein. Verleihende überprüfen,
+ob das angefragte Asset im Schrank vorhanden ist. Hierbei ist zu berücksichtigen, dass keine
+langfristige Planung gewährleistet werden kann. Dies kann durch den Snipe-IT Companion mittels eines
 Kalenders und einer Reservierungsfunktion ermöglicht werden.
 
+{\sffamily\color{maincolor}{Ag-Vt-4 | Reservierung der Assets}}\\
 Wie in \textit{Ag-Vt-3} bereits geschildert, kann eine langfristige Planung
 in die Zukunft nicht gewährleistet werden. Liegt eine Anfrage in der Zukunft vor, wird diese mittels
 eines Klebezettels am gewünschten Asset vermerkt. Die Verfügbarkeit des Assets zum reservierten
-Zeitraum hängt somit davon ab, ob die Notiz von anderen \ac{wimi} berücksichtigt wird
-(\textit{Ag-Vt-4 | Reservierung der Assets}). 
+Zeitraum hängt somit davon ab, ob die Notiz von anderen \ac{wimi} berücksichtigt wird. 
 
-Die zuvor erhaltene Anfrage aus \textit{Ag-Vt-2 | Abfragen der Verfügbarkeit} wird von Verleihenden
+{\sffamily\color{maincolor}{Ag-Vt-5 | Beratung der Ausleihenden}}\\
+Die zuvor erhaltene Anfrage aus \textit{Ag-Vt-2} wird von Verleihenden
 bearbeitet, wobei in einigen Fällen der Use Case des Ausleihens erfragt wird, um den Ausleihenden
-Empfehlungen zu geben (\textit{Ag-Vt-5 | Beratung der Ausleihenden}). Um den Ausleihprozess für
-Verleihende zu erleichtern, kann der vorangestellte Use Case mittels eines Dialogs im SnipeIT
+Empfehlungen zu geben. Um den Ausleihprozess für
+Verleihende zu erleichtern, kann der vorangestellte Use Case mittels eines Dialogs im Snipe-IT
 Companion ermöglicht werden. So können aufbauend auf dem Dialog, direkt Vorschläge an Ausleihende
 gegeben werden.
 
@@ -345,20 +368,22 @@ relevant sind (\ref{table:Ag-Au}).
         \label{table:Ag-Au}
 \end{table}
 
+{\sffamily\color{maincolor}{Ag-Au-1 | Abholung der Assets}}\\
 Ausleihende holen die Assets zum besprochenen Zeitpunkt in den Laboren des \ac{imis} ab. Verleihende
-schaffen hierfür Zugriff zum Labor oder Schrank (\textit{Ag-Au-1 | Abholung der Assets}). 
+schaffen hierfür Zugriff zum Labor oder Schrank. 
 
-Hierbei wissen Ausleihende vorher häufig nicht genau um was für ein Gerät es sich genau handelt,
-sodass es zu Kompatiblitätsfehlern kommen kann und das Asset für den ursprünglichen Gebrauch nicht
-nutzbar ist. Daher kann in einigen Fällen die \textit{Ag-Au-2 | Erläuterung der Assetnutzung} für
-den Ausleihenden hilfreich sein. Im besten Fall ist eine Übersicht mit Informationen wie Name,
-Seriennummer, etc. sowie die dazugehörige Anleitung bereits vor dem Ausleihprozesse verfügbar,
-sodass Ausleihende sich im Vorhinein selbständig besser informieren können.
+{\sffamily\color{maincolor}{Ag-Au-2 | Erläuterung der Assetnutzung}}\\
+Hierbei wissen Ausleihende vorher häufig nicht genau um was für ein Gerät es sich handelt, sodass es
+zu Kompatiblitätsfehlern kommen kann und das Asset für den ursprünglichen Gebrauch nicht nutzbar
+ist. Daher kann in einigen Fällen die für den Ausleihenden hilfreich sein. Im besten Fall ist eine
+Übersicht mit Informationen wie Name, Seriennummer, Stückzahl und die dazugehörige Anleitung bereits
+vor dem Ausleihprozesse verfügbar, sodass Ausleihende sich im Vorhinein selbständig besser
+informieren können.
 
+{\sffamily\color{maincolor}{Ag-Au-3 | Unterschreiben des Formulars}}\\
 Im Idealfall werden die ausgeliehenen Assets in einem Formular dokumentiert, welches von den
 Ausleihenden unterzeichnet wird. Das Formular wird bis zur Rückgabe aufbewahrt. Durch die
-unterschiedlichen Vorgänge ist insbesondere diese Aufgabe nicht einheitlich (\textit{Ag-Au-3
-| Unterschreiben des Formulars}).
+unterschiedlichen Vorgänge ist insbesondere diese Aufgabe nicht einheitlich.
 
 % Aufgaben der Rückgabe
 \subsection{Aufgaben im Bereich der Rückgabe}
@@ -377,16 +402,18 @@ Die nachfolgenden Aufgaben umfassen die Rückgabe der ausgeliehenen Assets (\ref
         \label{table:Ag-Rg}
 \end{table}
 
-Für \textit{Ag-Rg-1 | Rückgabe der Assets} der ausgeliehenen Assets wird auf dem Formular dokumentiert, wann
+{\sffamily\color{maincolor}{Ag-Rg-1 | Rückgabe der Assets}} \\
+Für die Rückgabe der ausgeliehenen Assets wird auf dem Formular dokumentiert, wann
 und was zurückgegeben wurde. Die Rückgabe wird meist während der Abholung oder per E-Mail
 besprochen. Sollte die Ausleihe ohne Formular erfolgt sein, wird der Klebezettel mit der
 Unterschrift entsorgt oder die Assets ohne weitere Dokumentation in die Schränke und Räume
 zurückgebracht.
 
-Für einige Verleihende fällt \textit{Ag-Rg-2 | Überprüfung der Assets} der Assets nach einer Rückgabe an. Die
+{\sffamily\color{maincolor}{Ag-Rg-2 | Überprüfung der Assets}}\\
+Für einige Verleihende fällt das Überprüfen der Assets nach einer Rückgabe an. Die
 Überprüfung umfasst bspw. das Formatieren von SD-Karten und Laden von Akkus. Außerdem sollten
 Einstellungen an den Assets zurückgesetzt werden. Idealerweise würde diese Aufgabe von Ausleihenden
-übernommen werden, jedoch fehlt auch hier die Aufklärung, welche vom SnipeIT Companion übernommen
+übernommen werden, jedoch fehlt auch hier die Aufklärung, welche vom Snipe-IT Companion übernommen
 werden kann.
 % Aufgaben der Wartung
 \subsection{Aufgaben im Bereich der Wartung}
@@ -408,10 +435,13 @@ näher erläutert (\ref{table:Ag-Wt}).
         \label{table:Ag-Wt}
 \end{table}
 
+{\sffamily\color{maincolor}{Ag-Wt-1 | Pflege von Assets}}\\
 Assets, die längere Zeit nicht genutzt werden, müssen von Verleihenden gewartet werden
-\textit{(Ag-Wt-1)}. Jedoch wird diese Aufgabe in manchen Fällen vergessen. Bei Neuanschaffungen
-sollten \ac{wimi} über diese informiert werden. Innerhalb von Forschungsgruppen gerät dies häufig in
-Vergessenheit, da keine Übersicht vorhanden ist \textit{(Ag-Wt-2)}.
+\textit. Jedoch wird diese Aufgabe in manchen Fällen vergessen. 
+
+{\sffamily\color{maincolor}{Ag-Wt-2 | Pflege von Assets}} \\
+Bei Neuanschaffungen sollten \ac{wimi} über diese informiert werden. Innerhalb von
+Forschungsgruppen gerät dies häufig in Vergessenheit, da keine Übersicht vorhanden ist.
 
 \todo[]{zuordnung der Aufgaben zu den relevanten Nutzungsphasen}
 
@@ -433,8 +463,8 @@ wissenschaftlichen Mitarbeitenden und Professor:innen unterschieden werden kann.
 weisen teilweise verschiedene Zugriffe auf Labor und Schränke auf, welche die Assets beinhalten.
 
 Um die \nameref{subsec:wartung} berücksichtigen zu können, sollten Verleihende einen administrativen
-Zugang zum System erhalten, zum Eintragen neuer Assets \textit{(Ag-Wt-2)}. Des Weiteren sollte so
-ein Überblick über Updates oder Ähnliches  gegeben werden können \textit{(Ag-Wt-1)}.
+Zugang zum System erhalten, zum Eintragen neuer Assets \textit{(Ag-Wt-2)}. Des Weiteren sollte ein
+Überblick über Updates oder Ähnliches  gegeben werden können \textit{(Ag-Wt-1)}.
 
 
 \subsection{Zeitlich-Räumlicher Kontext}
@@ -457,13 +487,11 @@ investieren möchten (V1, V2, V3). Das System sollte einen pragmatischen Zweck e
 großes Konzept umfassen, sodass womöglich neue Anläufe dazu kommen und sich die Arbeit zweckmäßig
 erhört als reduziert wird (V2).
 
-\todo[inline]{Außerdem sollte durch das Reservieren...}
-
 \subsubsection{Ausleihende}
-Studierende arbeiten viel im Homeoffice und selten im \ac{imis}. Daher sollte das Buchen jederzeit
-und ortsunabhängig möglich sein. Das Buchen von Assets sollte auch in spontanen Momenten möglich
-sein. Daher liegt ein mobiler Nutzungskontext vor, welcher beispielsweise durch die Nutzung einer
-Web-App auf dem Smartphone ermöglicht werden kann (A1, A3, A6).
+Studierende arbeiten Flexible zum Beispiel von Zuhause aus oder in der Bibliothek. Es wird jedoch
+selten im \ac{imis} direkt gearbeitet. Daher sollte das Buchen spontan, jederzeit und ortsunabhängig
+möglich sein. Daher liegt ein mobiler Nutzungskontext vor, welcher beispielsweise durch die Nutzung
+einer Web-App auf dem Smartphone ermöglicht werden kann (A1, A3, A6).
 
 
 \section{Formalisierte Anforderungen}
@@ -492,15 +520,15 @@ realitätsnah festgelegt.
         \begin{longtable}{lp{0.85\textwidth}} \arrayrulecolor{maincolor}\hline
                 \anfrow & Der Ausleihprozess von Assets am \ac{imis} verläuft einheitlich.
                 \\
-                \anfrow & Ausleihbare Assets des \ac{imis} sind allen Studierenden und
+                \anfrow & Assets des \ac{imis} sind allen Studierenden und
                 Mitarbeitenden bekannt und werden von beiden Gruppen genutzt.
                 \\
-                \anfrow & Der SnipeIT Companion unterstützt Ausleihende effizient mit individuellen
+                \anfrow & Der Snipe-IT Companion unterstützt Ausleihende effizient mit individuellen
                 und anwendungsspezifischen Assetvorschlägen.
                 \\
                 \anfrow & Die Planung und Kommunikation zwischen Verleihenden und Ausleihenden
                 verläuft reibungslos. \\
-                \anfrow & Verleihende fühlen sich durch den SnipeIT Companion unterstützt.
+                \anfrow & Verleihende fühlen sich durch den Snipe-IT Companion unterstützt.
                 \\
                 \arrayrulecolor{maincolor}\hline
         \end{longtable}
@@ -519,9 +547,7 @@ operationalisieren. Diese folgen dabei den standardisierten Regeln zur Formulier
                 gebrauchstaugliches, niedrigschwelliges Interface zum Ausleihen von Assets
                 verwenden. \\
                 \anfrow & Ausleihende sollen jederzeit standortunabhängig in der Lage sein, die
-                Verfügbarkeit von Assets einsehen zu können und diese zu buchen, (damit die direkt
-                und ohne Umwege für den Ausleihenden effizient innerhalb einer Anwendung erledigt
-                werden kann). \\
+                Verfügbarkeit von Assets einsehen zu können und diese zu buchen. \\
                 \anfrow & Ausleihende eines Assets sollen jederzeit zielgerichtete und aktuelle
                 Informationen zum Asset erhalten. \\
                 \anfrow & Ausleihende sollen jederzeit in der Lage sein, sich über Assets zu
@@ -585,7 +611,7 @@ Bezug auf das aktuelle Vorgehen mithilfe des \secref{section:iststand} geschloss
                 \anfrow & Es existieren Formular, mit denen das Verleihen dokumentiert wird.
                 \\
                 \anfrow & Im Rahmen eines Pilotprojekts existiert das Asset-Management-System
-                SnipeIT. \\
+                Snipe-IT. \\
                 \arrayrulecolor{maincolor}\hline
         \end{longtable}
 \end{center}
@@ -606,6 +632,7 @@ verwendet, um natürlichsprachliche Anforderungen zu definieren \cite{balzert200
         \caption[Anforderungsschablone]{Anforderungsschablone \cite{balzert2009}}
 \end{figure}
 
+\newpage
 \setanf{F}
 \begin{center}
         \renewcommand{\arraystretch}{1.5}
