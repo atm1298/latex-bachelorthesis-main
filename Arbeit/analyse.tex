@@ -1,20 +1,25 @@
 \chapter{Anforderungen}
 \label{chapter-analyse}
 
-Um Benutzende, Aufgaben und Kontext des Projektes genauer zu verstehen wurde eine Analyse nach dem
-menschenzentrierten Gestaltungsprozess durchgeführt. Hierbei wurden relevante Anforderungen, die
-Einfluss auf die Entwicklung und die spätere Nutzung des Reservierungstools nehmen, identifiziert
-und eingeordnen. Mit der Durchführung einer Recherche, welche in den Datenquellen
-(\ref{section:daten}) genauer präsentiert wird, wurden zunächst zwei Benutzergruppen (Verleihende
-und Ausleihende) festgehalten. Mittels einer Benutzeranalyse (\ref{section:benutzer}) unter der
-Zuhilfenahme der durchgeführten Interviews konnten diese weiter klassifiziert und eingegrenzt
-werden. Daraufhin wurden die Probleme und Herausforderungen des aktuellen Vorgehens und den
-unterschiedlichen Ausleihprozessen (\ref{section:iststand}) geschildert. Anschließend wurden die
-Aufgaben, die Verleihende und Ausleihende mithilfe der Anwendung bewältigen sollten, diskutiert
-(\ref{section:aufgaben}). Abschließend wurde der organisatorische und zeitlich-räumliche Kontext des
-Verleihens und Ausleihens am \ac{imis} (\ref{section:kontext}) untersucht. Aufbauend auf den
-Resultaten der vorangestellten Untersuchungen wurden die objektiven Anforderungen an den Snipe-IT
-Companion formalisiert (\ref{section:anforderung}).
+Um Benutzende, Aufgaben und Kontext des Projektes genauer zu verstehen wurde
+eine Analyse nach dem menschenzentrierten Gestaltungsprozess durchgeführt.
+Hierbei wurden relevante Anforderungen, die Einfluss auf die Entwicklung und die
+spätere Nutzung des Reservierungstools nehmen, identifiziert und eingeordnen.
+Mit der Durchführung einer Recherche, welche in den Datenquellen
+(\ref{section:daten}) genauer präsentiert wird, wurden zunächst zwei
+Benutzergruppen (Verleihende und Ausleihende) festgehalten. Mittels einer
+Benutzeranalyse (\ref{section:benutzer}) unter der Zuhilfenahme der
+durchgeführten Interviews konnten diese weiter klassifiziert und eingegrenzt
+werden. Daraufhin wurden die Probleme und Herausforderungen des aktuellen
+Vorgehens und den unterschiedlichen Ausleihprozessen (\ref{section:iststand})
+geschildert. Anschließend wurden die Aufgaben, die Verleihende und Ausleihende
+mithilfe der Anwendung bewältigen sollten, diskutiert (\ref{section:aufgaben}).
+Abschließend wurde der organisatorische und zeitlich-räumliche Kontext des
+Verleihens und Ausleihens am \ac{imis} (\ref{section:kontext}) untersucht.
+Aufbauend auf den Resultaten der vorangestellten Untersuchungen wurden die
+objektiven Anforderungen an den Snipe-IT Companion nach \citeA{balzert2009}
+formalisiert (\ref{section:anforderung}). Diese dienen als Grundlage für das gesamte
+Konzept der Arbeit.
 
 \section{Datenquellen}
 \label{section:daten}
@@ -30,7 +35,7 @@ anschließend in Teilen, mithilfe eines vereinfachten Transkriptionssystems, ver
 Daraufhin wurde eine qualitative Inhaltsanalyse durchgeführt. Hierfür wurden die Transkripte erneut
 gelesen und für die Arbeit und Forschungsfragen relevante Textstellen kommentiert. Infolgedessen
 wurden die erarbeiteten Kommentare in ein Ordnungssystem strukturiert und unter den einzelnen
-Analysen zusammengefasst \cite{dresing_praxisbuch_2016}. 
+Analysen zusammengefasst \cite{dresing_praxisbuch_2016}.
 
 Es wurde eine Unterteilung in Verleihende und Ausleihende von Assets vorgenommen (genauere
 Definition der Benutzergruppen in \ref{section:benutzer}). Bei den Teilnehmenden handelt es sich um
@@ -44,9 +49,10 @@ die Probleme am \ac*{imis} gelegt (genauere Untersuchungen in der Problemanalyse
 \ref{section:iststand}). Die IDs der Teilnehmenden werden als Verweise in den folgenden Abschnitten
 verwendet.
 
-Des Weiteren wurde mithilfe des \ac{ati} das technische Interesse und Verständnis der Teilnehmenden
-festgestellt (\ref{table:ati}), sodass das Reservierungstool entsprechend an die Benutzergruppen
-angepasst werden kann \cite{attig_assessing_2017}.
+Des Weiteren wurde mithilfe des \ac{ati} das technische Interesse und
+Verständnis der Teilnehmenden festgestellt (\ref{table:ati}), sodass das
+Reservierungstool entsprechend an die Benutzergruppen angepasst werden kann
+\cite{attig_assessing_2017}.
 
 \begin{table}[h]
         \centering
@@ -54,16 +60,16 @@ angepasst werden kann \cite{attig_assessing_2017}.
         \begin{tabular}{lll}
                 \arrayrulecolor{maincolor}\hline
                 \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Alter &
-                \sffamily\color{maincolor}Zuständigkeitsbereich \\
+                \sffamily\color{maincolor}Zuständigkeitsbereich                                   \\
                 \arrayrulecolor{maincolor}\hline
                 V1                           & 25 - 35 J.                      & Keine direkte
-                Zuständigkeit, Zugänge zu verschiedenen Laboren \\
+                Zuständigkeit, Zugänge zu verschiedenen Laboren                                   \\
                 V2                           & 25 - 35 J.                      & Multimedialabor
                 \\
                 V3                           & 25 - 35 J.                      & VR-Labor
                 \\
                 V4                           & 40 - 59 J.                      & Administratives
-                Personal \\
+                Personal                                                                          \\
                 V5                           & 25 - 35 J.                      & Innovationslabor
                 \\
                 \arrayrulecolor{maincolor}\hline
@@ -74,25 +80,25 @@ angepasst werden kann \cite{attig_assessing_2017}.
 \begin{table}[h]
         \centering
         \caption{Teilnehmende der Interviews, Ausleihende \\
-        (die mit * gekennzeichneten Personen wurden gemeinsam interviewt)}
+                (die mit * gekennzeichneten Personen wurden gemeinsam interviewt)}
         \begin{tabular}{lll}
                 \arrayrulecolor{maincolor}\hline
                 \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Alter &
-                \sffamily\color{maincolor}Rolle \\
+                \sffamily\color{maincolor}Rolle                                                     \\
                 \arrayrulecolor{maincolor}\hline
                 A1                           & 19 - 25 J.                      & Bachelorstudentin,
-                Hilfswissenschaftlerin \\
+                Hilfswissenschaftlerin                                                              \\
                 A2                           & 19 - 25 J.                      & Bachelorstudent
                 \\
                 A3                           & 19 - 25 J.                      & Masterstudent,
-                Hilfswissenschaftler \\
+                Hilfswissenschaftler                                                                \\
                 A4*                          & 19 - 25 J.                      & Bachelorstudentin
                 \\
                 A5*                          & 19 - 25 J.                      & Bachelorstudentin
                 \\
                 A6                           & 19 - 25 J.                      & Masterstudentin
                 \\
-                \arrayrulecolor{maincolor}\hline 
+                \arrayrulecolor{maincolor}\hline
         \end{tabular}
         \label{table:a}
 \end{table}
@@ -104,13 +110,13 @@ angepasst werden kann \cite{attig_assessing_2017}.
         \begin{tabular}{lccc}
                 \arrayrulecolor{maincolor}\hline
                 \sffamily\color{maincolor}Benutzergruppe & \sffamily\color{maincolor}Mittelwert
-                $(M)$ & \sffamily\color{maincolor}Standardabweichung $(SD)$ &
-                \sffamily\color{maincolor}Teilnehmende $(N)$ \\
+                $(M)$                                    & \sffamily\color{maincolor}Standardabweichung $(SD)$ &
+                \sffamily\color{maincolor}Teilnehmende $(N)$                                                          \\
                 \arrayrulecolor{maincolor}\hline
-                Verleihende                              & 5,00 & 0,58
-                                                         & 3 \\
-                Ausleihende                              & 5,13 & 0,48
-                                                         & 6 \\
+                Verleihende                              & 5,00                                                & 0,58
+                                                         & 3                                                          \\
+                Ausleihende                              & 5,13                                                & 0,48
+                                                         & 6                                                          \\
                 \arrayrulecolor{maincolor}\hline
         \end{tabular}
         \label{table:ati}
@@ -120,7 +126,7 @@ angepasst werden kann \cite{attig_assessing_2017}.
 \label{subsection:system}
 Für die Recherche wurden die digitalen Bibliotheken ACM Digital Library und Google Scholar genutzt.
 Es wurden Begriffe aus den Bereichen Managementsystem \textit{(WÖRTER AUFZÄHLEN)} und Reservation \textit{(Lending, lend,
-borrow, )} zur Suche verwendet. Die Recherche sollte dem bessern vergleichen und abwägen der
+        borrow, )} zur Suche verwendet. Die Recherche sollte dem bessern vergleichen und abwägen der
 analysierten Interview-Ergebnisse dienen und vergleichbare Systeme und Projekte eruieren. Des
 Weiteren sollte die Recherche dazu dienen mögliche Fehlerquellen zu erörtern, um diese umgehen zu
 können. Durch den speziellen Einsatzort am \ac{imis}, stellte sich zeitnah heraus, dass wenige bis
@@ -157,13 +163,13 @@ Verleihenden, bei $M=5,00$ mit $SD=0,58$. Dies weist auf eine hohe Technikaffini
 
 \cite{franke_personal_2019}
 https://doi.org/10.1080/10447318.2018.1456150 \todo[inline]{Ohne Vergleich kann man bei einer Skala
-immer schwer sagen, ob der Wert nun hoch oder niedrig ist. Denn eine Skala muss nicht
-notwendigerweise normiert sein, das heißt, dass der theoretische Mittelwert einer Skala nicht dem
-Durchschnittswert der Normalbevölkerung widerspiegelt. Deshalb gibt es in der Psychologie, wenn
-einem Vergleiche fehlen, oftmals Vergleichsstichproben, die ein Gefühl dafür geben sollen, wie der
-Wert so bei anderen Studien war. Und wenn dann der eigene Wert darüber liegt, dann kann man fundiert
-sagen, dass man eine hohe Technikaffinität hat. :D Schaue mal in das Paper rein, da sind viele
-Vergleichsstichproben}
+        immer schwer sagen, ob der Wert nun hoch oder niedrig ist. Denn eine Skala muss nicht
+        notwendigerweise normiert sein, das heißt, dass der theoretische Mittelwert einer Skala nicht dem
+        Durchschnittswert der Normalbevölkerung widerspiegelt. Deshalb gibt es in der Psychologie, wenn
+        einem Vergleiche fehlen, oftmals Vergleichsstichproben, die ein Gefühl dafür geben sollen, wie der
+        Wert so bei anderen Studien war. Und wenn dann der eigene Wert darüber liegt, dann kann man fundiert
+        sagen, dass man eine hohe Technikaffinität hat. :D Schaue mal in das Paper rein, da sind viele
+        Vergleichsstichproben}
 
 Die \ac{wimi} mit einem Zuständigkeitsbereich für Assets lagen im Großteil bei einer
 Alterspanne von 25 - 35 Jahren. Folglich lässt sich eine Alterspanne von 25 - 35 Jahren aufseiten
@@ -206,7 +212,7 @@ Problematiken besser nachvollziehen zu können, wurde eine Problemanalyse auf Ba
 Vorgehens durchgeführt. Hierfür wurde sich auf die in \ref{section:daten} aufgeführten
 Interview-Teilnehmenden referenziert. Der Übersichtlichkeit wegen werden zunächst Probleme,
 welche Verleihende und Ausleihende betreffen, thematisiert. Daraufhin werden Probleme der einzelnen
-Benutzergruppen näher erläutert. 
+Benutzergruppen näher erläutert.
 
 \subsection{Probleme: Allgemein}
 \label{section:probleme-allgemein}
@@ -284,7 +290,7 @@ Herankommen ermöglicht werden (A3). Des Weiteren wird das Nachfragen als nervig
 \ac{wimi} in ihrer Arbeit gestört werden, obwohl eine Liste der Assets ausreichen würde (A6). Ein
 weiterer Kritikpunkt ist, dass Ausleihende nicht über alle Geräte Kenntnis besitzen, sodass es durch
 fehlende Auskunft beispielsweise zu Kompatibilitätsfehlern kommen kann (A3). Dies führte dazu, dass
-Projekte nicht mit dem ausgeliehenen Asset umgesetzt werden konnten (A3). 
+Projekte nicht mit dem ausgeliehenen Asset umgesetzt werden konnten (A3).
 
 \section{Aufgabenanalyse}
 \label{section:aufgaben}
@@ -308,11 +314,11 @@ Folgenden näher erläutert werden (\ref{table:Ag-Vt}).
                 \arrayrulecolor{maincolor}\hline
                 \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Aufgabe \\
                 \arrayrulecolor{maincolor}\hline
-                Ag-Vt-1                      & Nachfragen ob Assets vorhanden \\
-                Ag-Vt-2                      & Abfragen der Verfügbarkeit \\
-                Ag-Vt-3                      & Einsehen der Verfügbarkeit \\
-                Ag-Vt-4                      & Reservierung der Assets \\
-                Ag-Vt-5                      & Beratung der Ausleihenden \\
+                Ag-Vt-1                      & Nachfragen ob Assets vorhanden    \\
+                Ag-Vt-2                      & Abfragen der Verfügbarkeit        \\
+                Ag-Vt-3                      & Einsehen der Verfügbarkeit        \\
+                Ag-Vt-4                      & Reservierung der Assets           \\
+                Ag-Vt-5                      & Beratung der Ausleihenden         \\
                 \arrayrulecolor{maincolor}\hline
         \end{tabular}
         \label{table:Ag-Vt}
@@ -327,19 +333,19 @@ durch die institutsinterne Kommunikation erfahren haben. Wie bereits in der Prob
 (\nameref{section:probleme-allgemein}), gibt es keine Übersicht über ausleihbare Assets. Dies zeigt
 die Dringlichkeit des Snipe-IT Companion für eine bessere Vorbereitung.
 
-{\sffamily\color{maincolor}{Ag-Vt-3 | Einsehen der Verfügbarkeit}}\\
+        {\sffamily\color{maincolor}{Ag-Vt-3 | Einsehen der Verfügbarkeit}}\\
 Um ein Asset ausleihen zu können muss das gewünschte Asset verfügbar sein. Verleihende überprüfen,
 ob das angefragte Asset im Schrank vorhanden ist. Hierbei ist zu berücksichtigen, dass keine
 langfristige Planung gewährleistet werden kann. Dies kann durch den Snipe-IT Companion mittels eines
 Kalenders und einer Reservierungsfunktion ermöglicht werden.
 
-{\sffamily\color{maincolor}{Ag-Vt-4 | Reservierung der Assets}}\\
+        {\sffamily\color{maincolor}{Ag-Vt-4 | Reservierung der Assets}}\\
 Wie in \textit{Ag-Vt-3} bereits geschildert, kann eine langfristige Planung
 in die Zukunft nicht gewährleistet werden. Liegt eine Anfrage in der Zukunft vor, wird diese mittels
 eines Klebezettels am gewünschten Asset vermerkt. Die Verfügbarkeit des Assets zum reservierten
-Zeitraum hängt somit davon ab, ob die Notiz von anderen \ac{wimi} berücksichtigt wird. 
+Zeitraum hängt somit davon ab, ob die Notiz von anderen \ac{wimi} berücksichtigt wird.
 
-{\sffamily\color{maincolor}{Ag-Vt-5 | Beratung der Ausleihenden}}\\
+        {\sffamily\color{maincolor}{Ag-Vt-5 | Beratung der Ausleihenden}}\\
 Die zuvor erhaltene Anfrage aus \textit{Ag-Vt-2} wird von Verleihenden
 bearbeitet, wobei in einigen Fällen der Use Case des Ausleihens erfragt wird, um den Ausleihenden
 Empfehlungen zu geben. Um den Ausleihprozess für
@@ -360,9 +366,9 @@ relevant sind (\ref{table:Ag-Au}).
                 \arrayrulecolor{maincolor}\hline
                 \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Aufgabe \\
                 \arrayrulecolor{maincolor}\hline
-                Ag-Au-1                      & Abholung der Assets \\
-                Ag-Au-2                      & Erläuterung der Assetnutzung \\
-                Ag-Au-3                      & Unterschreiben des Formulars \\
+                Ag-Au-1                      & Abholung der Assets               \\
+                Ag-Au-2                      & Erläuterung der Assetnutzung      \\
+                Ag-Au-3                      & Unterschreiben des Formulars      \\
                 \arrayrulecolor{maincolor}\hline
         \end{tabular}
         \label{table:Ag-Au}
@@ -370,9 +376,9 @@ relevant sind (\ref{table:Ag-Au}).
 
 {\sffamily\color{maincolor}{Ag-Au-1 | Abholung der Assets}}\\
 Ausleihende holen die Assets zum besprochenen Zeitpunkt in den Laboren des \ac{imis} ab. Verleihende
-schaffen hierfür Zugriff zum Labor oder Schrank. 
+schaffen hierfür Zugriff zum Labor oder Schrank.
 
-{\sffamily\color{maincolor}{Ag-Au-2 | Erläuterung der Assetnutzung}}\\
+        {\sffamily\color{maincolor}{Ag-Au-2 | Erläuterung der Assetnutzung}}\\
 Hierbei wissen Ausleihende vorher häufig nicht genau um was für ein Gerät es sich handelt, sodass es
 zu Kompatiblitätsfehlern kommen kann und das Asset für den ursprünglichen Gebrauch nicht nutzbar
 ist. Daher kann in einigen Fällen die für den Ausleihenden hilfreich sein. Im besten Fall ist eine
@@ -395,8 +401,8 @@ Die nachfolgenden Aufgaben umfassen die Rückgabe der ausgeliehenen Assets (\ref
                 \arrayrulecolor{maincolor}\hline
                 \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Aufgabe \\
                 \arrayrulecolor{maincolor}\hline
-                Ag-Rg-1                      & Rückgabe der Assets \\
-                Ag-Rg-2                      & Überprüfung der Assets \\
+                Ag-Rg-1                      & Rückgabe der Assets               \\
+                Ag-Rg-2                      & Überprüfung der Assets            \\
                 \arrayrulecolor{maincolor}\hline
         \end{tabular}
         \label{table:Ag-Rg}
@@ -428,8 +434,8 @@ näher erläutert (\ref{table:Ag-Wt}).
                 \arrayrulecolor{maincolor}\hline
                 \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Aufgabe \\
                 \arrayrulecolor{maincolor}\hline
-                Ag-Wt-1                      & Pflege von Assets \\
-                Ag-Wt-2                      & Pflege von Neuanschaffung \\
+                Ag-Wt-1                      & Pflege von Assets                 \\
+                Ag-Wt-2                      & Pflege von Neuanschaffung         \\
                 \arrayrulecolor{maincolor}\hline
         \end{tabular}
         \label{table:Ag-Wt}
@@ -437,9 +443,9 @@ näher erläutert (\ref{table:Ag-Wt}).
 
 {\sffamily\color{maincolor}{Ag-Wt-1 | Pflege von Assets}}\\
 Assets, die längere Zeit nicht genutzt werden, müssen von Verleihenden gewartet werden
-\textit. Jedoch wird diese Aufgabe in manchen Fällen vergessen. 
+\textit. Jedoch wird diese Aufgabe in manchen Fällen vergessen.
 
-{\sffamily\color{maincolor}{Ag-Wt-2 | Pflege von Assets}} \\
+        {\sffamily\color{maincolor}{Ag-Wt-2 | Pflege von Assets}} \\
 Bei Neuanschaffungen sollten \ac{wimi} über diese informiert werden. Innerhalb von
 Forschungsgruppen gerät dies häufig in Vergessenheit, da keine Übersicht vorhanden ist.
 
@@ -527,7 +533,7 @@ realitätsnah festgelegt.
                 und anwendungsspezifischen Assetvorschlägen.
                 \\
                 \anfrow & Die Planung und Kommunikation zwischen Verleihenden und Ausleihenden
-                verläuft reibungslos. \\
+                verläuft reibungslos.                                                                \\
                 \anfrow & Verleihende fühlen sich durch den Snipe-IT Companion unterstützt.
                 \\
                 \arrayrulecolor{maincolor}\hline
@@ -545,14 +551,14 @@ operationalisieren. Diese folgen dabei den standardisierten Regeln zur Formulier
         \begin{longtable}{lp{0.85\textwidth}} \arrayrulecolor{maincolor}\hline
                 \anfrow & Verleihende und Ausleihende sollen jederzeit in der Lage sein, ein
                 gebrauchstaugliches, niedrigschwelliges Interface zum Ausleihen von Assets
-                verwenden. \\
+                verwenden.                                                                           \\
                 \anfrow & Ausleihende sollen jederzeit standortunabhängig in der Lage sein, die
-                Verfügbarkeit von Assets einsehen zu können und diese zu buchen. \\
+                Verfügbarkeit von Assets einsehen zu können und diese zu buchen.                     \\
                 \anfrow & Ausleihende eines Assets sollen jederzeit zielgerichtete und aktuelle
-                Informationen zum Asset erhalten. \\
+                Informationen zum Asset erhalten.                                                    \\
                 \anfrow & Ausleihende sollen jederzeit in der Lage sein, sich über Assets zu
                 informieren, um initiale Nutzungsbarrieren zu überwinden und auf die Nutzung des
-                Assets vorzubereiten. \\
+                Assets vorzubereiten.                                                                \\
                 \anfrow & Verleihende sollen jederzeit in der Lage sein, vom System gesammelte Daten
                 übersichtlich und strukturiert einzusehen.
                 \\
@@ -560,7 +566,7 @@ operationalisieren. Diese folgen dabei den standardisierten Regeln zur Formulier
                 vorhandenen Assets am \ac{imis} einzusehen, sodass es zu keinen unbeabsichtigten
                 Doppelbeschaffungen kommen kann.
                 \\
-                \anfrow & Das System soll Informationen zugänglich präsentieren. \\
+                \anfrow & Das System soll Informationen zugänglich präsentieren.                     \\
                 \arrayrulecolor{maincolor}\hline
         \end{longtable}
 \end{center}
@@ -577,20 +583,20 @@ Kontextanalyse abgeleitet.
                 \anfrow & Das System ist eine informative Web-Anwendung (\secref{section:kontext}).
                 \\
                 \anfrow & Die Zielgruppe sind Mitarbeitende des \ac{imis} und Studierende
-                (\secref{section:benutzer}). \\
+                (\secref{section:benutzer}).                                                        \\
                 \anfrow & Die Zielgruppe teilt sich in zwei Nutzergruppen: die Verleihenden und
                 Ausleihende von Assets. Die Definitionen der Nutzergruppen sind in
-                \secref{section:benutzer} zu finden. \\
+                \secref{section:benutzer} zu finden.                                                \\
                 \anfrow & Das System wird von Verleihenden in einem Arbeitsplatzsystemkontext und
                 mobilen Kontext genutzt. Von Ausleihenden vorwiegend nur im mobilen Kontext
-                (\secref{section:kontext}). \\
+                (\secref{section:kontext}).                                                         \\
                 \anfrow & Das System soll sich vorwiegend im Dauerbetrieb befinden
-                (\secref{section:zeit}). \\
+                (\secref{section:zeit}).                                                            \\
                 \anfrow & Das System muss unbeaufsichtigt zuverlässig lauffähig sein.
                 \\
                 \anfrow & Die eingesetzte Software ist clientseitig ein Webbrowser. Die
                 marktführenden Webbrowser müssen unterstützt werden: Chrome, Firefox, Safari
-                \cite{noauthor_browser_nodate}. \\
+                \cite{noauthor_browser_nodate}.                                                     \\
                 \arrayrulecolor{maincolor}\hline
         \end{longtable}
 \end{center}
@@ -605,13 +611,13 @@ Bezug auf das aktuelle Vorgehen mithilfe des \secref{section:iststand} geschloss
         \renewcommand{\arraystretch}{1.5}
         \begin{longtable}{lp{0.85\textwidth}} \arrayrulecolor{maincolor}\hline
                 \anfrow & Zur Anmeldung und Abruf von Informationen existiert eine Schnittstelle zum
-                IDM LDAP. \\
+                IDM LDAP.                                                                            \\
                 \anfrow & Es existieren von Forschungsgruppe zu Forschungsgruppe unterschiedliche
-                Ausleihprozesse. \\
+                Ausleihprozesse.                                                                     \\
                 \anfrow & Es existieren Formular, mit denen das Verleihen dokumentiert wird.
                 \\
                 \anfrow & Im Rahmen eines Pilotprojekts existiert das Asset-Management-System
-                Snipe-IT. \\
+                Snipe-IT.                                                                            \\
                 \arrayrulecolor{maincolor}\hline
         \end{longtable}
 \end{center}
@@ -639,12 +645,12 @@ verwendet, um natürlichsprachliche Anforderungen zu definieren \cite{balzert200
         \begin{longtable}{lp{0.85\textwidth}} \arrayrulecolor{maincolor}\hline
                 \anfrow & Das System \textit{muss} Verleihenden und Ausleihenden die Möglichkeit
                 bieten, alle Assets jederzeit mittels einer Übersicht einsehen zu können
-                \textit{(Ag-Vt-1, \anfref{Z10})}. \\
+                \textit{(Ag-Vt-1, \anfref{Z10})}.                                                  \\
                 \anfrow & Das System \textit{muss} Verleihenden und Ausleihenden die Möglichkeit
                 bieten, die Verfügbarkeit eines Assets einsehen zu können \textit{(Ag-Vt-2,
-                \anfref{Z20})}.                      \\
+                \anfref{Z20})}.                                                                    \\
                 \anfrow & Das System \textit{muss} Verleihenden und Ausleihenden die Möglichkeit
-                bieten, nach Assets zu Filtern und zu Suchen. \\
+                bieten, nach Assets zu Filtern und zu Suchen.                                      \\
                 \anfrow & Das System \textit{muss}  Verleihenden und Ausleihenden relevante
                 Informationen zu den Assets anzeigen (Bild, Name, Beschreibung und Seriennummer)
                 \textit{(Ag-Vt-4, Ag-Au-2, \anfref{Z20}, \anfref{Z40})}.
@@ -660,7 +666,7 @@ verwendet, um natürlichsprachliche Anforderungen zu definieren \cite{balzert200
                 \\
                 \anfrow & Das System \textit{muss} Ausleihende daran erinnern, die ausgeliehenen
                 Assets abzuholen, zurückzubringen oder zu verlängern sind \textit{(Ag-Au-1,
-                Ag-Rg-1)}.                     \\
+                Ag-Rg-1)}.                                                                         \\
                 \anfrow & Das System \textit{soll} Verleihenden und Ausleihenden die Möglichkeit
                 bieten, sich mit dem vorhanden IDM (LDAP) Account einzuloggen.
                 \\
@@ -679,10 +685,10 @@ verwendet, um natürlichsprachliche Anforderungen zu definieren \cite{balzert200
                 \\
                 \anfrow & Das System \textit{sollte in Zukunft} Verleihenden die Möglichkeit geben
                 administrative Aufgaben zu erledigen und an Wartungen zu erinnern
-                (\textit{Ag-Rg-2}).                                     \\
+                (\textit{Ag-Rg-2}).                                                                \\
                 \anfrow & Das System \textit{sollte in Zukunft} Verleihenden und Ausleihenden die
                 Möglichkeit bieten, Assets mithilfe eines QR-Scans in den Reservierung-Checkout zu
-                packen.                             \\
+                packen.                                                                            \\
                 \anfrow & Das System \textit{sollte in Zukunft} Verleihenden und Ausleihenden die
                 Möglichkeit bieten, Kommentare und Erfahrungsberichte unter Assets zu schreiben.
                 \\
@@ -709,17 +715,17 @@ möglich, die Anforderungsschablone aus \ref{fig:schablone} verwendet.
                 \\
                 \anfrow & Das System \textit{muss} die definierten Nutzungsklassen aus
                 \ref{section:benutzer} unterscheiden und die dazugehörigen Zugriffsrechte
-                sicherstellen. \\
+                sicherstellen.                                                                       \\
                 \anfrow & Das System \textit{muss} zuverlässig und ohne Störung im Dauerbetrieb
-                laufen (\nameref{section:zeit}). \\
+                laufen (\nameref{section:zeit}).                                                     \\
                 \anfrow & Das System \textit{soll} modular strukturiert sein, damit Inhalte und
                 Funktionalitäten effizient eingebunden werden können und das System einfach
-                erweiterbar ist. \\
+                erweiterbar ist.                                                                     \\
                 \anfrow & Das System \textit{soll} beim Zugriff über das Internet eine gesicherte
                 Übertragung (bspw. \ac{HTTPS}) ermöglichen.
                 \\
                 \anfrow & Das System \textit{soll} alle Benutzerinteraktionen in unter fünf Sekunden
-                ausführen. \\
+                ausführen.                                                                           \\
                 \arrayrulecolor{maincolor}\hline
         \end{longtable}
 \end{center}

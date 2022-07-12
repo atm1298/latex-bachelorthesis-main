@@ -31,28 +31,33 @@ näher erläutert (\ref{table:ft-va}).
     \label{table:ft-va}
 \end{table}
 
-Die Übersicht \textit{(Ft-AV-1)}, der am IMIS vorhandenen Assets, wurde mittels Kategorien
-umgesetzt. Dazu gibt es eine Übersicht, bei der alle Assets eingesehen werden
-können. Die einzelnen Kategorien beeinhalten Unterkategorien. In der Übersicht
-werden Informationen, wie Name, Seriennummer, Marke und Status eines Assets
-angezeigt. Wie bereits in der Problemanalyse geschildet
+{\sffamily\color{maincolor}{Ft-VA-1 | Übersicht über ausleihbare Assets }}\\
+Die Übersicht, der am IMIS vorhandenen Assets, wurde mittels
+Kategorien umgesetzt. Dazu gibt es eine Übersicht, bei der alle Assets
+eingesehen werden können. Die einzelnen Kategorien beeinhalten Unterkategorien.
+In der Übersicht werden Informationen, wie Name, Seriennummer, Marke und Status
+eines Assets angezeigt. Wie bereits in der Problemanalyse geschildet
 (\ref{section:probleme-allgemein}) gibt es keine Übersicht, über ausleihbare
 Assets. Dies zeigt die Dringlichkeit des SnipeIT Companion für eine besser
 Vorbereitung.
 
+{\sffamily\color{maincolor}{Ft-VA-2 | Benachrichtigungen \& Erinnerungen   }}\\
 Verleihende werden nach dem Abschluss eines von ihnen verantwortlichen Assets
 benachrichtigt. Die Benachrichtigung umfasst Informationen, wer das Asset, wann
 rserviert hat, und wann die Abholung für das Assets stattfinden soll. Außerdem
 wird es eine direkte weiterleitungs möglichkeit geben, sollten Verleihenden nich
 können. Deweiterne Erhalten Ausleihende Erinnerungen, sobald die Abholung und
-Rückgabe eines Assets ansteht \textit{(Ft-VA-2)}.
+Rückgabe eines Assets ansteht.
 
+{\sffamily\color{maincolor}{Ft-VA-3 | Sichtbarkeit von Ansprechpartner:innen}}\\
 Für Rückfragen zu einem Asset sind Kontaktinformation zu Ansprechpartner:innen
-(Verleihende) sowie deren E-Mail-Adresse direkt ersichtlich \textit{(Ft-VA-3)}.
+(Verleihende) sowie deren E-Mail-Adresse direkt ersichtlich.
 
-Mit hilfe einer Verknüpfung über den LDAP Account der Universität zu Lübeck, können sich
-Nutzende mit ihrem bereits existierenden IDM Account einloggen, so muss kein Neues Konto erstellt werden
-und die Zuständigkeit, sowie sicherheit, wer sich einloggt ist gegeben \textit{(Ft-VA-4)}.
+{\sffamily\color{maincolor}{Ft-VA-4 | Authentifizierung per IDM Account}}\\
+Mit hilfe einer Verknüpfung über den LDAP Account der Universität zu Lübeck,
+können sich Nutzende mit ihrem bereits existierenden IDM Account einloggen, so
+muss kein Neues Konto erstellt werden und die Zuständigkeit, sowie sicherheit,
+wer sich einloggt ist gegeben.
 
 \subsection{Funktionalitäten für Verleihende}
 Im Folgenden werden Funktionalitäten, welche für Verleihende von Bedeutung sind
@@ -78,10 +83,12 @@ näher erläutert (\ref{table:ft-v}).
     \label{table:ft-v}
 \end{table}
 
-% Funktionalitäten der Wartung
-Im Folgenden werden Funktionalitäten, welche für Verleihende auf Administariver Ebene von Bedeutung sind
-näher erläutert.
-
+{\sffamily\color{maincolor}{Ft-V-1 | Kalenderübersicht }}\\
+{\sffamily\color{maincolor}{Ft-V-2 | Zuständigkeitsbereich }}\\
+{\sffamily\color{maincolor}{Ft-V-3 | Verfügbarkeit von Assets  }}\\
+{\sffamily\color{maincolor}{Ft-V-4 | Bearbeiten des Assetstatu }}\\
+{\sffamily\color{maincolor}{Ft-V-5 | Pflege von Assets   }}\\
+{\sffamily\color{maincolor}{Ft-V-6 | Pflege der Datenbank/Übersicht/Liste }}\\
 
 \subsection{Funktionalitäten für Ausleihende}
 Im Folgenden werden Funktionalitäten, welche für Ausleihenden von Bedeutung sind
@@ -109,64 +116,77 @@ näher erläutert (\ref{table:ft-A}).
     \label{table:ft-A}
 \end{table}
 
-
-Damit Ausleihen die gewünschten Assets aus den Laboren entnehmen können, müssen Verleihende die
-Entsprechenden Räumlichkeiten aufschließen. Hierbei ist zu berücksichtigen, dass die
-Forschungsgruppe untereinander auch nicht immer Zugriff haben (Verweis:Ansprechpartner Ag-Vt-6).
-
-
-Ausleihene wissen vorher häufig nicht genau um was für ein Gerät es genau handelt, so kann es zu
-kompatiblitätsfehlern kommen und das Asset ist für den Usprübglichen Gebauch nicht nutzbar. Daher
-ist eine Übersicht mit Informationen wie: Seriennummer,... sowie der dazugehörigen Anleitung
-sinnvoll.
-
-
-
-Durch die uneinheitlichen Vorgänge, sind die Verantwortlichkeiten häufig nicht immer klar.
-(Forschungsgruppe..) Daher... Da die Assets nicht versichert sind, läuft das Ausleihen auf
-Vertrauenbasis. Sollten Krasser oder weitere Schäden entstehen vereinbaren Nutzenden somit, diese
-direkt zu melden.
-
-
-Kann ja vorkommen, dass mal was vergessen wird...
-
-Akkus voll, SD karte leeren, Ursprüngliche Einstellungen,...
-\todo[]{--> Todo bei der Rückgabe!! Dialog}
-
+{\sffamily\color{maincolor}{Ft-A-1 | Material-Suche }}\\
+{\sffamily\color{maincolor}{Ft-A-2 | Filtern und Sortieren }}\\
+{\sffamily\color{maincolor}{Ft-A-3 | Ausleihhilfe/Nutzensuche  }}\\
+{\sffamily\color{maincolor}{Ft-A-4 | Statusseite }}\\
+{\sffamily\color{maincolor}{Ft-A-5 | Reservierungs-Checkout }}\\
+{\sffamily\color{maincolor}{Ft-A-6 | Informationsfluss }}\\
+{\sffamily\color{maincolor}{Ft-A-7 | Rückgabe-Checkliste   }}\\
 
 %Frameworks
 \section{Frameworks}
+\label{section:frameworks}
+Die Frameworkwahl nimmt, durch die unterschiedlichen Arbeitsweisen und Funktionen
+der Frameworks, enormen Einfluss auf den Entwurf eines Systems und wird daher im
+folgenden näher erläutert. Zunächst wird auf die Anforderungen der vorliegenden
+Arbeit und die damit einhergehenden relevanten Anforderungen an die Frameworks
+eingeggangen. Resultierend daraus, werden die nutzenden Frameworks definiert.
 
 \subsection{Relevante Anforderung an ein Framework}
-Die eingangs beschriebenen Anforderungen schränken die Wahl des Frameworks ein.
+Die Grundlage der Auswahl, die im Rahmen der dieser Arbeit eingesetzten
+Frameworks, bilden die eingangs beschriebenen Anforderungen
+(\nameref{section:anforderung}). Dem Sysem wird vorausgesetzt, dass es sich um
+eine Web-Anwendung mit mobilen Anwendung im Fokus handelt
+(\anfref{R10}\anfref{R40}). Aus diesem Grund muss das Framework eine gute
+Möglichkeit bieten responsive Gestaltung von Web-Oberflächen umzusetzen. Für
+Nutzende ist es wichtig, dass das System dauerhaft erreichbar ist
+(\anfref{R50}). Aus funktionaler Sicht müssen die Frameworks eine Unterstützung
+für progressive Web-Applikationen bieten. Folglich ist auch eine Unterstützung
+für HTTPS notwendig (\anfref{Q50}). Außerdem sollte es einfache Möglichkeiten
+zur Verknüpfung des LDAP-Systems bieten (\anfref{K10} \anfref{F90}).
 
-\todo[]{Anforderungen referenzieren}
+\subsection{Wahl der genutzten Frameworks}
+Aufbauend auf den Anforderungen und der am \ac{imis} bereits eingesetzen Asset
+Managementsoftware \textit{Snipe-IT} werden im folgen die gewählten Frameworks definiert.
 
-\subsection{Snipe-IT}
-Ziel dieser Arbeit ist es, abgeleitet aus den eingangs beschriebenen Anforderungen, ein wirksames
-Reservierungstool für Assets zu konzipieren, implementieren und evaluieren. Die Basis für ein
-solches Tool schafft die Asset Managementsoftware \textit{Snipe-IT} \cite{noauthor_home_nodate},
-welche bereits am \ac{imis} eingesetzt wird. \textit{Snipe-IT} ist eine kostenlose, quelloffene
-IT-Asset-Verwaltungs-Plattform, welche das Nachverfolgen von Software-Lizenzen, Hardware und
-Verbrauchsgegenständen ermöglicht. Genannte Assets können über ein Dashboard hinzugefügt, verwaltet
-und gelöscht werden. Über Labels können Assets zur Übersichtlichkeit in verschiedene Kategorien
-eingeordnet werden, während Tags ein Asset eindeutig identifizieren (z. B. Seriennummer). Zudem
-ermöglicht das „Checkin/Checkout“-System die Nachverfolgung aller Assets, falls diese zum Beispiel
-an Person ausgeliehen werden. Zu jedem Zeitpunkt kann ein Asset maximal einer Person zugeordnet
-werden, wodurch das mehrfache gleichzeitige Ausleihen eines Assets verhindert wird. Darüber hinaus
-beschreiben Status-Label den Zustands eines Assets und ob dieses ausgeliehen werden kann. Alle
-Funktionalitäten können zudem über eine REST-API programmatisch genutzt werden. Die API wurde auch im
-Rahmen dieser Arbeit genutzt.
+\subsubsection{Asset Managementsoftware Snipe-IT}
+Die Basis für das in dieser Arbeit umgesetzte System schafft die Asset
+Managementsoftware \textit{Snipe-IT} \cite{noauthor_home_nodate}, welche bereits
+am \ac{imis} eingesetzt wird. \textit{Snipe-IT} ist eine kostenlose, quelloffene
+IT-Asset-Verwaltungs-Plattform, welche das Nachverfolgen von Software-Lizenzen,
+Hardware und Verbrauchsgegenständen ermöglicht. Genannte Assets können über ein
+Dashboard hinzugefügt, verwaltet und gelöscht werden. Über Labels können Assets
+zur Übersichtlichkeit in verschiedene Kategorien eingeordnet werden, während
+Tags ein Asset eindeutig identifizieren (z. B. Seriennummer). Zudem ermöglicht
+das „Checkin/Checkout“-System die Nachverfolgung aller Assets, falls diese zum
+Beispiel an Person ausgeliehen werden. Zu jedem Zeitpunkt kann ein Asset maximal
+einer Person zugeordnet werden, wodurch das mehrfache gleichzeitige Ausleihen
+eines Assets verhindert wird. Darüber hinaus beschreiben Status-Label den
+Zustands eines Assets und ob dieses ausgeliehen werden kann. Alle
+Funktionalitäten können zudem über eine REST-API programmatisch genutzt werden.
 
-\subsection{Schnittstellenbackend}
+\subsubsection{Schnittstellenbackend}
 - Noch nicht klar
 
-\subsection{Vue.js}
-- erläutern
+\subsubsection{Vue.js}
+Achtung von Raimund geklaut: Die Grundlage des Frontends bildet der progressive
+JavaScript Frame- work Vue.js. Bei der Nutzung von Vue CLI kann die
+PWA-Funktionalität mithilfe des @vue/cli- plugin-pwa Pakets schnell eingebunden
+werden. Zudem ist Vue.js mit 33.6kB ein kompaktes Framework und kleiner als die
+zwei größten Konkurrenten Angular und React. Ebenfalls schnei- det Vue.js in
+Leistungs-Benchmarks besser ab (Krause, 2022). Weiterhin ist Vue.js mit 192.814
+GitHub-Sternen3 das beliebteste Framework.
 
+An der Stelle bietet sich das Vue.js Framework an (You, o. J.). Dieses
+ermöglicht es, komponen- tenbasierte, dynamische Webseiten zu generieren.
 
 \section{Systemarchitektur}
-Aufbau der 3 Bausteine
+Mit Hilfe der bereits festgelegten Frameworks (\ref{section:frameworks}) wurde
+die Systemarchitektur entwickelt. Die Systemarchitektur gibt eine Übersicht über
+die technische Umsetztung des Systems, welches im Wesentlichen aus den folgenden
+drei Komponenten besteht: dem Snipe-IT Server, dem Schnittstellenbackend und dem
+Front-End, welches mit Vue.js realisiert wurde.
 
 \subsection{Snipe-IT Server}
 - Für das Verwalten der Assets selbst, also Was ist vorhanden, und alle
