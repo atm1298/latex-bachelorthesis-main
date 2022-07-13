@@ -41,7 +41,7 @@ eines Assets angezeigt. Wie bereits in der Problemanalyse geschildet
 Assets. Dies zeigt die Dringlichkeit des SnipeIT Companion für eine besser
 Vorbereitung.
 
-{\sffamily\color{maincolor}{Ft-VA-2 | Benachrichtigungen \& Erinnerungen   }}\\
+    {\sffamily\color{maincolor}{Ft-VA-2 | Benachrichtigungen \& Erinnerungen   }}\\
 Verleihende werden nach dem Abschluss eines von ihnen verantwortlichen Assets
 benachrichtigt. Die Benachrichtigung umfasst Informationen, wer das Asset, wann
 rserviert hat, und wann die Abholung für das Assets stattfinden soll. Außerdem
@@ -49,11 +49,17 @@ wird es eine direkte weiterleitungs möglichkeit geben, sollten Verleihenden nic
 können. Deweiterne Erhalten Ausleihende Erinnerungen, sobald die Abholung und
 Rückgabe eines Assets ansteht.
 
-{\sffamily\color{maincolor}{Ft-VA-3 | Sichtbarkeit von Ansprechpartner:innen}}\\
+    {\sffamily\color{maincolor}{Ft-VA-3 | Sichtbarkeit von Ansprechpartner:innen}}\\
 Für Rückfragen zu einem Asset sind Kontaktinformation zu Ansprechpartner:innen
 (Verleihende) sowie deren E-Mail-Adresse direkt ersichtlich.
 
-{\sffamily\color{maincolor}{Ft-VA-4 | Authentifizierung per IDM Account}}\\
+Nachdem der Checkout stattgefunden hat, erhalten Verleihende eine
+Zusammenfassung über die Ausleihdaten und eine  Hinweis, wann die Abholung
+stattfindet. Außerdem werden Kontaktinformation des Verleihenden angezeigt
+(Name, E-Mail und Lageort des Assets).
+
+
+    {\sffamily\color{maincolor}{Ft-VA-4 | Authentifizierung per IDM Account}}\\
 Mit hilfe einer Verknüpfung über den LDAP Account der Universität zu Lübeck,
 können sich Nutzende mit ihrem bereits existierenden IDM Account einloggen, so
 muss kein Neues Konto erstellt werden und die Zuständigkeit, sowie sicherheit,
@@ -107,9 +113,9 @@ näher erläutert (\ref{table:ft-A}).
         \anfref{Z20} \anfref{K10} \anfref{F10} \anfref{F30}                                                                  \\
         Ft-A-2                       & Filtern und Sortieren           & \anfref{V30} \anfref{F30} \anfref{F70}              \\
         Ft-A-3                       & Ausleihhilfe/Nutzensuche        & \anfref{V30}\anfref{F70}                            \\
-        Ft-A-4                       & Statusseite                     & \anfref{F60}                                        \\
+        Ft-A-4                       & Startseite                      & \anfref{F60}                                        \\
         Ft-A-5                       & Reservierungs-Checkout          & \anfref{F60} \anfref{F150}                          \\
-        Ft-A-6                       & Informationsfluss               & \anfref{V50} \anfref{Z30} \anfref{F40} \anfref{F50} \\
+        Ft-A-6                       & Detailansicht                   & \anfref{V50} \anfref{Z30} \anfref{F40} \anfref{F50} \\
         Ft-A-7                       & Rückgabe-Checkliste             & ???                                                 \\
         \arrayrulecolor{maincolor}\hline
     \end{longtable}
@@ -117,12 +123,59 @@ näher erläutert (\ref{table:ft-A}).
 \end{table}
 
 {\sffamily\color{maincolor}{Ft-A-1 | Material-Suche }}\\
-{\sffamily\color{maincolor}{Ft-A-2 | Filtern und Sortieren }}\\
+Die Material-Suche dient zum einen einer simplen aber unterstütztende
+Kategorieneinteilung, zum anderen für das gezielte Suchen nach Verfügbarkeiten
+(verfügbar, Nicht verfügbar und Hinweis). Das gezielte Suchen nach Verfügbarkeit
+wird durch die AUfforderung den Ausleihzeitraum auszuwählen ermöglicht.
+Daraufhin gibt es die Möglichkeit gewünschtest Material in einem Suchfeld
+einzugeben oder über die Kategorien nach dem Asset zu suchen. Das Suchenfeld
+gibt bereits beim eintippen Vorschläge. Die Vorschläge können das Assets direkt,
+die Kategorie oder ... sein. Bei mehreren Assets gibt die Suche mithilfe einer
+Aufzählung alle Elemente an, die bereits afür die Reservierung ausgewählt
+wurden.
+
+    {\sffamily\color{maincolor}{Ft-A-2 | Filtern und Sortieren }}\\
+Um das Finden für Assets leichter zu gestalten sollen Nutzende sets nach
+Kategorie, Nutzen und Verfügbarkeit filtern können. Außerdem ist das sortieren
+von A-Z oder Z-A, sowie nach den Verfügbarkeiten möglich.
+
 {\sffamily\color{maincolor}{Ft-A-3 | Ausleihhilfe/Nutzensuche  }}\\
-{\sffamily\color{maincolor}{Ft-A-4 | Statusseite }}\\
-{\sffamily\color{maincolor}{Ft-A-5 | Reservierungs-Checkout }}\\
-{\sffamily\color{maincolor}{Ft-A-6 | Informationsfluss }}\\
-{\sffamily\color{maincolor}{Ft-A-7 | Rückgabe-Checkliste   }}\\
+Die Ausleihhilfe ist eine vereinfachte Form eines Assistenten. Die Suche nach
+Nutzen, wie Videodreh mit Ton und draußen, soll dem Nutzenden Vorschläge geben
+können. Dies soll insbesondere Ausleihende unterscützen, die in den bereichen
+noch nicht viel Expertise mitbringen können. Außerdem soll es Verleihenden den
+Ausleihprozess erleichtern, weil das Beratunggespräch (Aufgabe Ref) wegfallen
+kann.
+
+    {\sffamily\color{maincolor}{Ft-A-4 | Startseite }}\\
+Die Startseite soll nutzenden helfen, eine  Überblick zu erlangen. Für
+erstnutzende, sind hinweise für die Materal-Suche und Ausleihhilfe in Form von
+Button gegebn. Für Nutzende, die bereits etwas ausgeliehen haben, wird eine
+Übersicht über Ausleihe und vergangenes Material angezeigt. wichtige
+Informationen, wie der Zeitraum werden direkt auf einen Blick ersichtlich.
+
+    {\sffamily\color{maincolor}{Ft-A-5 | Reservierungs-Checkout }}\\
+Mit Hilfe des Reservierungs-Checkouts können alle ausgewählten Assets im
+Überblick eingesehen werdenn. Außerdem werden alle Ausleihdaten, wie Zeitraum
+der Ausleihe, Abholung und Rückgabe aufgeführt. Desweiteren sollte es die
+Möglichkeit, alle Ausleihdaten bearbeiten zu können, sollte ein Datum oder eine
+Uhrzeit nicht passen. Abschließend werden die Regeln und SIcherheitshinwweise
+aufgeführt. Mithilfe einer AGB Bla erklärung, gilt die Materialausleihe als
+vertraglich abgeschlossen.
+
+    {\sffamily\color{maincolor}{Ft-A-6 | Detailsansicht }}\\
+In der Detailansicht werden die Assets und deren Eigenschaften dargestellt.
+Hierbei werden Informationen wie: Name, Seriennummer, Artikelbeschreibung,
+Technischedetaisl, Kontaktinformation der Verleihenden, ... dargestellt.
+Außerdem wird hier die Möglichkeit gegebn, Den Ausleihzeitraum einzustellen und
+einzusehen, wann ein Asset verfügbar ist. In Form eines Button wird sichtbar,
+dass das Asset zur Ausleihe hinzugefügt werden kann.
+
+    {\sffamily\color{maincolor}{Ft-A-7 | Rückgabe-Checkliste}}\\
+Bevor die ausgeliehenen Assets an Verlehende zurückgeben werden, wird eine
+Checkliste für das jeweilige Asset angezeigt, bei der Hinweise stehen wie:
+SD-Karte geleert, Assets auf Ursprungseinstellungen zurückgestellt, Akkus
+geladen. Diese Funktionalität soll insbesondere dafür sorgen, dass....
 
 %Frameworks
 \section{Frameworks}
@@ -134,10 +187,10 @@ Arbeit und die damit einhergehenden relevanten Anforderungen an die Frameworks
 eingeggangen. Resultierend daraus, werden die nutzenden Frameworks definiert.
 
 \subsection{Relevante Anforderung an ein Framework}
-Die Grundlage der Auswahl, die im Rahmen der dieser Arbeit eingesetzten
+Die Grundlage der Auswahl, die im Rahmen dieser Arbeit eingesetzten
 Frameworks, bilden die eingangs beschriebenen Anforderungen
-(\nameref{section:anforderung}). Dem Sysem wird vorausgesetzt, dass es sich um
-eine Web-Anwendung mit mobilen Anwendung im Fokus handelt
+(\ref{section:anforderung}). Dem Sysem wird vorausgesetzt, dass es sich um
+eine Web-Anwendung mit mobilen Anwendung/Fokus im Fokus handelt
 (\anfref{R10}\anfref{R40}). Aus diesem Grund muss das Framework eine gute
 Möglichkeit bieten responsive Gestaltung von Web-Oberflächen umzusetzen. Für
 Nutzende ist es wichtig, dass das System dauerhaft erreichbar ist
