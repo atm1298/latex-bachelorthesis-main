@@ -187,21 +187,20 @@ Arbeit und die damit einhergehenden relevanten Anforderungen an die Frameworks
 eingeggangen. Resultierend daraus, werden die nutzenden Frameworks definiert.
 
 \subsection{Relevante Anforderung an ein Framework}
-Die Grundlage der Auswahl, die im Rahmen dieser Arbeit eingesetzten
-Frameworks, bilden die eingangs beschriebenen Anforderungen
-(\ref{section:anforderung}). Dem Sysem wird vorausgesetzt, dass es sich um
-eine Web-Anwendung mit mobilen Anwendung/Fokus im Fokus handelt
-(\anfref{R10}\anfref{R40}). Aus diesem Grund muss das Framework eine gute
-Möglichkeit bieten responsive Gestaltung von Web-Oberflächen umzusetzen. Für
-Nutzende ist es wichtig, dass das System dauerhaft erreichbar ist
-(\anfref{R50}). Aus funktionaler Sicht müssen die Frameworks eine Unterstützung
-für progressive Web-Applikationen bieten. Folglich ist auch eine Unterstützung
-für HTTPS notwendig (\anfref{Q50}). Außerdem sollte es einfache Möglichkeiten
-zur Verknüpfung des LDAP-Systems bieten (\anfref{K10} \anfref{F90}).
+Die Grundlage der Auswahl, der im Rahmen dieser Arbeit eingesetzten Frameworks,
+bilden die eingangs beschriebenen Anforderungen (\ref{section:anforderung}). Dem
+System wird vorausgesetzt, dass es sich um eine Web-Anwendung mit Fokus auf den
+Einsatz im mobilen Kontext (\anfref{R10}\anfref{R40}). Für Nutzende ist es
+wichtig, dass das System dauerhaft erreichbar ist (\anfref{R50}). Aus
+funktionaler Sicht müssen die Frameworks eine Unterstützung für progressive
+Web-Applikationen bieten. Folglich ist auch eine Unterstützung für HTTPS
+notwendig (\anfref{Q50}). Außerdem sollte es einfache Möglichkeiten zur
+Verknüpfung von LDAP bieten (\anfref{K10} \anfref{F90}).
 
 \subsection{Wahl der genutzten Frameworks}
 Aufbauend auf den Anforderungen und der am \ac{imis} bereits eingesetzen Asset
-Managementsoftware \textit{Snipe-IT} werden im folgen die gewählten Frameworks definiert.
+Managementsoftware \textit{Snipe-IT} werden im folgen die gewählten Frameworks
+erläutert.
 
 \subsubsection{Asset Managementsoftware Snipe-IT}
 Die Basis für das in dieser Arbeit umgesetzte System schafft die Asset
@@ -219,6 +218,8 @@ eines Assets verhindert wird. Darüber hinaus beschreiben Status-Label den
 Zustands eines Assets und ob dieses ausgeliehen werden kann. Alle
 Funktionalitäten können zudem über eine REST-API programmatisch genutzt werden.
 
+Des Weiteren verfügt \textit{Snipe-It} über eine Schnittstelle, welche die
+Integration von LDAP stark vereinfacht.
 \subsubsection{Schnittstellenbackend}
 - Noch nicht klar
 
@@ -231,8 +232,10 @@ zwei größten Konkurrenten Angular und React. Ebenfalls schnei- det Vue.js in
 Leistungs-Benchmarks besser ab (Krause, 2022). Weiterhin ist Vue.js mit 192.814
 GitHub-Sternen3 das beliebteste Framework.
 
-An der Stelle bietet sich das Vue.js Framework an (You, o. J.). Dieses
-ermöglicht es, komponen- tenbasierte, dynamische Webseiten zu generieren.
+- Quellen von: Stack overflow und State of js 2022 wie populer,...
+
+Zusätzlich zu den bereits aufgeführten Eigenschaften wird Vue.js aufgrund
+der begrenzten Implementierungszeit und bestehende Erfahrung gewählt.
 
 \section{Systemarchitektur}
 Mit Hilfe der bereits festgelegten Frameworks (\ref{section:frameworks}) wurde
@@ -242,6 +245,7 @@ drei Komponenten besteht: dem Snipe-IT Server, dem Schnittstellenbackend und dem
 Front-End, welches mit Vue.js realisiert wurde.
 
 \subsection{Snipe-IT Server}
+
 - Für das Verwalten der Assets selbst, also Was ist vorhanden, und alle
 Eigenschaften dazu
 
