@@ -10,72 +10,8 @@ Frameworks und darausfolgend auf die Systemarchitektur eingeggangen.
 \section{Funktionalität}
 \label{section:funktionalitaeten}
 Im folgenden werden die für das System relevanten Funktionalitäten aufgeführt.
-ZUr besseren Lesbakeit wurden die Funktionalitäten nach Benutzergruppen
+Zur besseren Lesbakeit wurden die Funktionalitäten nach Benutzergruppen
 aufgeteilt.
-
-% Funktionalitäten für Verleihende und Ausleihende
-\subsection{Funktionalitäten für Verleihende und Ausleihende}
-Im Folgenden werden Funktionalitäten, welche für Verleihende und Ausleihenden
-von Bedeutung sind näher erläutert (\ref{table:ft-va}).
-
-\begin{table}[h]
-    \centering
-    \caption{Funktionalitäten für Verleihende und Ausleihende}
-    \begin{longtable}{lll}
-        \arrayrulecolor{maincolor}\hline
-        \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Titel        &
-        \sffamily\color{maincolor}Anforderungen
-        \\
-        \arrayrulecolor{maincolor}\hline
-        Ft-VA-1                      & Übersicht über ausleihbare Assets      &
-        \anfref{V20} \anfref{Z20} \anfref{F50} \anfref{K10} \anfref{F10}
-        \anfref{F30}                                                            \\
-        Ft-VA-2                      & Benachrichtigungen \& Erinnerungen     &
-        \anfref{F100} \anfref{F110} \anfref{F120}                               \\
-        Ft-VA-3                      & Sichtbarkeit von Ansprechpartner:innen &
-        \anfref{F50}                                                            \\
-        Ft-VA-4                      & Authentifizierung per IDM Account      &
-        \anfref{F70} \anfref{F80}                                               \\
-        \arrayrulecolor{maincolor}\hline
-    \end{longtable}
-    \label{table:ft-va}
-\end{table}
-
-{\sffamily\color{maincolor}{Ft-VA-1 | Übersicht über ausleihbare Assets }}\\
-Die Übersicht, der am IMIS vorhandenen Assets, wurde mittels Kategorien
-umgesetzt. Dazu gibt es eine Übersicht, bei der alle Assets eingesehen werden
-können. Die einzelnen Kategorien beeinhalten Unterkategorien. In der Übersicht
-werden Informationen, wie Name, Seriennummer, Marke und Status eines Assets
-angezeigt. Wie bereits in der Problemanalyse geschildet
-(\ref{section:probleme-allgemein}) gibt es keine Übersicht, über ausleihbare
-Assets. Dies zeigt die Dringlichkeit des SnipeIT Companion für eine besser
-Vorbereitung.
-
-    {\sffamily\color{maincolor}{Ft-VA-2 | Benachrichtigungen \& Erinnerungen
-        }}\\
-Verleihende werden nach dem Abschluss eines von ihnen verantwortlichen Assets
-benachrichtigt. Die Benachrichtigung umfasst Informationen, wer das Asset, wann
-rserviert hat, und wann die Abholung für das Assets stattfinden soll. Außerdem
-wird es eine direkte weiterleitungs möglichkeit geben, sollten Verleihenden nich
-können. Deweiterne Erhalten Ausleihende Erinnerungen, sobald die Abholung und
-Rückgabe eines Assets ansteht.
-
-    {\sffamily\color{maincolor}{Ft-VA-3 | Sichtbarkeit von
-            Ansprechpartner:innen}}\\
-Für Rückfragen zu einem Asset sind Kontaktinformation zu Ansprechpartner:innen
-(Verleihende) sowie deren E-Mail-Adresse direkt ersichtlich.
-
-Nachdem der Checkout stattgefunden hat, erhalten Verleihende eine
-Zusammenfassung über die Ausleihdaten und eine  Hinweis, wann die Abholung
-stattfindet. Außerdem werden Kontaktinformation des Verleihenden angezeigt
-(Name, E-Mail und Lageort des Assets).
-
-
-    {\sffamily\color{maincolor}{Ft-VA-4 | Authentifizierung per IDM Account}}\\
-Mit hilfe einer Verknüpfung über den LDAP Account der Universität zu Lübeck,
-können sich Nutzende mit ihrem bereits existierenden IDM Account einloggen, so
-muss kein Neues Konto erstellt werden und die Zuständigkeit, sowie sicherheit,
-wer sich einloggt ist gegeben.
 
 \subsection{Funktionalitäten für Verleihende}
 Im Folgenden werden Funktionalitäten, welche für Verleihende von Bedeutung sind
@@ -86,27 +22,40 @@ näher erläutert (\ref{table:ft-v}).
     \caption{Funktionalitäten für (V)erleihenden}
     \begin{longtable}{lll}
         \arrayrulecolor{maincolor}\hline
-        \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Titel &
+        \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Titel    &
         \sffamily\color{maincolor}Anforderungen
         \\
         \arrayrulecolor{maincolor}\hline
-        Ft-V-1                       & Verfügbarkeit von Assets        &
+        Ft-VA-1                      & Übersicht über ausleihbare Assets  &
+        \anfref{V20} \anfref{Z20} \anfref{F50} \anfref{K10} \anfref{F10} \anfref{F30} \\
+        Ft-V-2                       & Verfügbarkeit von Assets           &
         \anfref{V20} \anfref{Z20} \anfref{F50} \anfref{K10} \anfref{F10}
-        \anfref{F30}                                                     \\
-        Ft-V-2                       & Zuständigkeitsbereich           &
-        \anfref{F50}                                                     \\
-        Ft-V-3                       & Bearbeiten des Assetstatus      &
-        \anfref{F150}                                                    \\
-        Ft-V-4                       & Pflege von Assets               &
-        \anfref{F130}                                                    \\
-        Ft-V-5                       & Pflege der Datenbank            &
-        \anfref{F140}                                                    \\
+        \anfref{F30}                                                                  \\
+        Ft-V-3                       & Zuständigkeitsbereich              &
+        \anfref{F50}                                                                  \\
+        Ft-V-4                       & Bearbeiten des Assetstatus         &
+        \anfref{F150}                                                                 \\
+        Ft-V-5                       & Pflege von Assets                  &
+        \anfref{F130}                                                                 \\
+        Ft-V-6                       & Pflege der Datenbank               &
+        \anfref{F140}                                                                 \\
+        Ft-VA-7                      & Benachrichtigungen \& Erinnerungen &
+        \anfref{F100} \anfref{F110} \anfref{F120}                                     \\
+        Ft-VA-8                      & Authentifizierung per IDM Account  &
+        \anfref{F70} \anfref{F80}                                                     \\
         \arrayrulecolor{maincolor}\hline
     \end{longtable}
     \label{table:ft-v}
 \end{table}
 
-{\sffamily\color{maincolor}{Ft-V-1 |  Verfügbarkeit von Assets }}\\
+{\sffamily\color{maincolor}{Ft-V-1 | Übersicht über ausleihbare Assets }}\\
+Die Übersicht, der am IMIS vorhandenen Assets, wurde mittels Kategorien
+umgesetzt. Dazu gibt es eine Übersicht, bei der alle Assets eingesehen werden
+können. Die einzelnen Kategorien beeinhalten Unterkategorien. In der Übersicht
+werden Informationen, wie Name, Seriennummer, Marke und Status eines Assets
+angezeigt.
+
+    {\sffamily\color{maincolor}{Ft-V-1 |  Verfügbarkeit von Assets }}\\
 Verleihende benötigen einen Überblick, über den Status der Assets. Dies wird
 untereinandem durch einen Kalender mit Filter- und Suchfunktion ermöglicht.
 
@@ -137,7 +86,34 @@ sichtbar gemacht werden. Wichtig hierbei ist, dass das Einpflgen nicht nur für
 das Ausleihen hilfreich ist, sondern auch für eine generelle Übersicht des
 bestands am \ac{imis}.
 
+%----------------
 
+
+{\sffamily\color{maincolor}{Ft-VA-2 | Benachrichtigungen \& Erinnerungen
+}}\\
+Verleihende werden nach dem Abschluss eines von ihnen verantwortlichen Assets
+benachrichtigt. Die Benachrichtigung umfasst Informationen, wer das Asset, wann
+rserviert hat, und wann die Abholung für das Assets stattfinden soll. Außerdem
+wird es eine direkte weiterleitungs möglichkeit geben, sollten Verleihenden nich
+können. Deweiterne Erhalten Ausleihende Erinnerungen, sobald die Abholung und
+Rückgabe eines Assets ansteht.
+
+    {\sffamily\color{maincolor}{Ft-VA-3 | Sichtbarkeit von
+            Ansprechpartner:innen}}\\
+Für Rückfragen zu einem Asset sind Kontaktinformation zu Ansprechpartner:innen
+(Verleihende) sowie deren E-Mail-Adresse direkt ersichtlich.
+
+Nachdem der Checkout stattgefunden hat, erhalten Verleihende eine
+Zusammenfassung über die Ausleihdaten und eine  Hinweis, wann die Abholung
+stattfindet. Außerdem werden Kontaktinformation des Verleihenden angezeigt
+(Name, E-Mail und Lageort des Assets).
+
+
+    {\sffamily\color{maincolor}{Ft-VA-4 | Authentifizierung per IDM Account}}\\
+Mit hilfe einer Verknüpfung über den LDAP Account der Universität zu Lübeck,
+können sich Nutzende mit ihrem bereits existierenden IDM Account einloggen, so
+muss kein Neues Konto erstellt werden und die Zuständigkeit, sowie sicherheit,
+wer sich einloggt ist gegeben.
 
 \subsection{Funktionalitäten für Ausleihende}
 Im Folgenden werden Funktionalitäten, welche für Ausleihenden von Bedeutung sind
@@ -149,25 +125,32 @@ näher erläutert (\ref{table:ft-A}).
     \caption{Funktionalitäten für (A)usleihenden}
     \begin{longtable}{lll}
         \arrayrulecolor{maincolor}\hline
-        \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Titel &
+        \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Titel    &
         \sffamily\color{maincolor}Anforderungen
         \\
         \arrayrulecolor{maincolor}\hline
-        Ft-A-1                       & Material-Suche                  &
+        Ft-A-1                       & Übersicht über ausleihbare Assets  &
+        \anfref{V20} \anfref{Z20} \anfref{F50} \anfref{K10} \anfref{F10}
+        \anfref{F30}                                                            \\
+        Ft-A-1                       & Material-Suche                     &
         \anfref{V20} \anfref{Z20} \anfref{K10} \anfref{F10} \anfref{F30}
         \\
-        Ft-A-2                       & Filtern und Sortieren           &
-        \anfref{V30} \anfref{F30} \anfref{F70}                               \\
-        Ft-A-3                       & Ausleihhilfe                    &
-        \anfref{V30}\anfref{F70}                                             \\
-        Ft-A-4                       & Startseite                      &
-        \anfref{F60}                                                         \\
-        Ft-A-5                       & Reservierungs-Checkout          &
-        \anfref{F60} \anfref{F150}                                           \\
-        Ft-A-6                       & Detailansicht                   &
-        \anfref{V50} \anfref{Z30} \anfref{F40} \anfref{F50}                  \\
-        Ft-A-7                       & Rückgabe-Checkliste             & ???
+        Ft-A-2                       & Filtern und Sortieren              &
+        \anfref{V30} \anfref{F30} \anfref{F70}                                  \\
+        Ft-A-3                       & Ausleihhilfe                       &
+        \anfref{V30}\anfref{F70}                                                \\
+        Ft-A-4                       & Startseite                         &
+        \anfref{F60}                                                            \\
+        Ft-A-5                       & Reservierungs-Checkout             &
+        \anfref{F60} \anfref{F150}                                              \\
+        Ft-A-6                       & Detailansicht                      &
+        \anfref{V50} \anfref{Z30} \anfref{F40} \anfref{F50}                     \\
+        Ft-A-7                       & Rückgabe-Checkliste                & ???
         \\
+        Ft-A-2                       & Benachrichtigungen \& Erinnerungen &
+        \anfref{F100} \anfref{F110} \anfref{F120}                               \\
+        Ft-A-4                       & Authentifizierung per IDM Account  &
+        \anfref{F70} \anfref{F80}                                               \\
         \arrayrulecolor{maincolor}\hline
     \end{longtable}
     \label{table:ft-A}
@@ -228,6 +211,42 @@ Checkliste für das jeweilige Asset angezeigt, bei der Hinweise stehen wie:
 SD-Karte geleert, Assets auf Ursprungseinstellungen zurückgestellt, Akkus
 geladen. Diese Funktionalität soll insbesondere dafür sorgen, dass....
 
+    %----------------------
+    {\sffamily\color{maincolor}{Ft-VA-1 | Übersicht über ausleihbare Assets }}\\
+Die Übersicht, der am IMIS vorhandenen Assets, wurde mittels Kategorien
+umgesetzt. Dazu gibt es eine Übersicht, bei der alle Assets eingesehen werden
+können. Die einzelnen Kategorien beeinhalten Unterkategorien. In der Übersicht
+werden Informationen, wie Name, Seriennummer, Marke und Status eines Assets
+angezeigt. Wie bereits in der Problemanalyse geschildet
+(\ref{section:probleme-allgemein}) gibt es keine Übersicht, über ausleihbare
+Assets. Dies zeigt die Dringlichkeit des SnipeIT Companion für eine besser
+Vorbereitung.
+
+    {\sffamily\color{maincolor}{Ft-VA-2 | Benachrichtigungen \& Erinnerungen
+        }}\\
+Verleihende werden nach dem Abschluss eines von ihnen verantwortlichen Assets
+benachrichtigt. Die Benachrichtigung umfasst Informationen, wer das Asset, wann
+rserviert hat, und wann die Abholung für das Assets stattfinden soll. Außerdem
+wird es eine direkte weiterleitungs möglichkeit geben, sollten Verleihenden nich
+können. Deweiterne Erhalten Ausleihende Erinnerungen, sobald die Abholung und
+Rückgabe eines Assets ansteht.
+
+    {\sffamily\color{maincolor}{Ft-VA-3 | Sichtbarkeit von
+            Ansprechpartner:innen}}\\
+Für Rückfragen zu einem Asset sind Kontaktinformation zu Ansprechpartner:innen
+(Verleihende) sowie deren E-Mail-Adresse direkt ersichtlich.
+
+Nachdem der Checkout stattgefunden hat, erhalten Verleihende eine
+Zusammenfassung über die Ausleihdaten und eine  Hinweis, wann die Abholung
+stattfindet. Außerdem werden Kontaktinformation des Verleihenden angezeigt
+(Name, E-Mail und Lageort des Assets).
+
+
+    {\sffamily\color{maincolor}{Ft-VA-4 | Authentifizierung per IDM Account}}\\
+Mit hilfe einer Verknüpfung über den LDAP Account der Universität zu Lübeck,
+können sich Nutzende mit ihrem bereits existierenden IDM Account einloggen, so
+muss kein Neues Konto erstellt werden und die Zuständigkeit, sowie sicherheit,
+wer sich einloggt ist gegeben.
 %Frameworks
 \section{Frameworks}
 \label{section:frameworks}
