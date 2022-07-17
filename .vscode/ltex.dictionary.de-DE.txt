@@ -14,3 +14,11 @@ Ag-Rg
 Ag-Wt
 Ag-Vt
 Snipe-IT
+Deweiterne
+Ausleihdaten
+Ausleihzeitraum
+Ft-V
+Ft-A
+Ft-B
+Reservierungsinterface
+Assetstatus
