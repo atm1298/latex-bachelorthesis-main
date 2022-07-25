@@ -12,7 +12,7 @@ Im Folgenden werden die für das System relevanten Funktionalitäten aufgeführt
 Lesbarkeit wurden die Funktionalitäten nach Benutzergruppen aufgeteilt.
 
 \subsection{Funktionalitäten für (B)eide}
-Im Folgenden werden Funktionalitäten, welche für Verleihende und Ausleihende von Bedeutung sind
+Zu Beginn werden Funktionalitäten, welche für Verleihende und Ausleihende von Bedeutung sind
 näher erläutert (\ref{table:ft-b}).
 
 \begin{table}[h]
@@ -51,14 +51,14 @@ unbefugter Personen.
 
 
     {\sffamily\color{maincolor}{Ft-B-2 | Übersicht über ausleihbare Assets }}\\
-Die Übersicht, der am \ac{imis} vorhandenen Assets, wurde mittels Kategorien umgesetzt. Dazu gibt es
+Die Übersicht, der am \ac{imis} vorhandenen Assets, wurde mittels Kategorien umgesetzt. Dafür gibt es
 eine Übersicht, bei der alle Assets eingesehen werden können. Die einzelnen Kategorien beinhalten
 Unterkategorien. In der Übersicht werden Informationen, wie Name, Seriennummer, Marke und Status
 eines Assets angezeigt.
 
     {\sffamily\color{maincolor}{Ft-B-3 |  Verfügbarkeit von Assets }}\\
-Der Status eines Asset \textit{(Verfügbar, Nicht verfügbar Hinweis)} muss klar ersichtlich sein. Dies
-geschieht mittels Color-Coding.  
+Der Status eines Asset \textit{(Verfügbar, Nicht verfügbar, Hinweis)} muss klar ersichtlich sein.
+Dies geschieht mittels Color-Coding.  
 
 
 {\sffamily\color{maincolor}{Ft-B-4 | Zuständigkeitsbereich }}\\
@@ -66,7 +66,7 @@ Um für Ausleihende Kontaktinformationen anzeigen zu können \textit{(Ft-A-6)}, 
 Zuständigkeitsbereiche eingetragen werden können. Außerdem sollten alternative Ansprechpartner:innen
 kenntlich gemacht werden, um Abholtermine aufgrund von Krankheit oder Homeoffice nicht verschieben
 zu müssen. Für Rückfragen zu einem Asset sind Kontaktinformation zu Ansprechpartner:innen
-(Verleihende) sowie deren E-Mail-Adresse direkt ersichtlich.
+(Verleihende) sowie E-Mail-Adressen hinterlegt.
 
 {\sffamily\color{maincolor}{Ft-B-5 | Benachrichtigungen \& Erinnerungen }}\\
 Verleihende werden nach dem Abschluss eines von ihnen verantwortlichen Assets benachrichtigt. Die
@@ -75,18 +75,19 @@ das Asset stattfinden soll. Außerdem wird es eine direkte Weiterleitungsmöglic
 Verleihenden nicht können. Nachdem die Reservierung eines Assets stattgefunden hat, erhalten
 Ausleihende eine Zusammenfassung über die Ausleihdaten und einen Hinweis, wann die Abholung
 stattfindet. Außerdem werden Kontaktinformation des Verleihenden angezeigt (Name, E-Mail und
-Lagerort des Assets). Zusätzlich erhalten Ausleihende eine Erinnerung, sobald die Abholung oder
-Rückgabe eines Assets ansteht.
+Lagerort des Assets). Zusätzlich erhalten Verleihende und Ausleihende eine Erinnerung, sobald die
+Abholung oder Rückgabe eines Assets ansteht.
 
 
     {\sffamily\color{maincolor}{Ft-B-6 | Material-Suche }}\\
 Die Material-Suche dient zum einen einer simplen aber unterstützenden Kategorieneinteilung, zum
 anderen für das gezielte Suchen nach Verfügbarkeiten (verfügbar, Nicht verfügbar und Hinweis). Das
-gezielte Suchen nach Verfügbarkeit wird durch die Aufforderung den Ausleihzeitraum auszuwählen
-ermöglicht. Daraufhin gibt es die Möglichkeit gewünschtest Material in einem Suchfeld einzugeben
+gezielte Suchen nach Verfügbarkeit wird durch die Aufforderung den Ausleihzeitraum anzugeben
+ermöglicht. Daraufhin gibt es die Möglichkeit gewünschte Materialien in einem Suchfeld einzugeben
 oder über die Kategorien nach dem Asset zu suchen. Das Suchefeld gibt bereits beim eintippen
-Vorschläge. Die Vorschläge umfassen Assets direkt, Kategorien oder XXX. Bei mehreren Assets werden
-mithilfe einer Aufzählung alle Elemente angezeigt, die bereits dafür die Reservierung ausgewählt wurden.
+Vorschläge. Die Vorschläge umfassen Assets direkt oder Kategorien. Bei mehreren Assets werden
+mithilfe einer Aufzählung alle Elemente angezeigt, die bereits für eine Reservierung ausgewählt
+wurden.
 
     {\sffamily\color{maincolor}{Ft-B-7 | Filtern und Sortieren }}\\
 Um das Finden für Assets leichter zu gestalten sollen Nutzende stets nach Kategorie, Nutzen und
@@ -99,7 +100,8 @@ In der Detailansicht werden die Assets und deren Eigenschaften dargestellt. Hier
 Informationen wie: Name, Seriennummer, Artikelbeschreibung, technische Details und
 Kontaktinformation der Verleihenden dargestellt. Des Weiteren kann der Ausleihzeitraum eingestellt
 und eingesehen werden, wann ein Asset verfügbar ist. In Form eines Button wird sichtbar, dass das
-Asset zur Ausleihe hinzugefügt werden kann. Das hinzufügen wird durch eine Pop-Up-Mitteilung bestätigt.
+Asset zur Ausleihe hinzugefügt werden kann. Das hinzufügen wird durch eine Pop-Up-Mitteilung
+bestätigt.
 
 
 \subsection{Funktionalitäten für Verleihende}
@@ -142,15 +144,19 @@ sein.
 {\sffamily\color{maincolor}{Ft-B-4 | Kalenderansicht für Verleihende}}\\
 Die Kalenderansicht für Verleihende beinhaltet eine Übersicht, über alle Assets, welche gerade
 Verliehen sind. Mithilfe einer Monatsübersicht werden Termin zur Asset-Abholung, Rückgabe oder zur
-Wartung angezeigt. In einer Wochenansicht auf dem Dashboard gibt es eine Detailreichere Ansicht eines
-jeweiligen Tages.
+Wartung angezeigt. In einer Wochenansicht auf dem Dashboard gibt es eine detailreichere Ansicht
+eines jeweiligen Tages.
+
 
     {\sffamily\color{maincolor}{Ft-V-3 | Pflege von Assets   }}\\
+    \todo[]{baue ich eigentlich nict mit ein}
 Mit Hilfe der Zuständigkeitsbereich \textit{(Ft-V-2)} kann die Pflege der Assets besser kontrolliert
 werden. Außerdem können durch Erinnerungen und Checkliste Wartungen weniger leicht vergessen werden
 und besser aufgeteilt werden.
 
+
     {\sffamily\color{maincolor}{Ft-V-4 | Pflege der Datenbank }}\\
+    \todo[]{Läuft über Snipe-IT}
 Das Prinzip des Reservierungstools kann nur funktionieren, wenn Neuanschaffung in die Datenbank
 eingepflegt werden. Hierfür soll eine Anleitung für Verleihende sichtbar gemacht werden. Wichtig
 hierbei ist, dass das Eintragen nicht nur für das Ausleihen hilfreich ist, sondern auch für eine
@@ -182,18 +188,17 @@ Im Folgenden werden Funktionalitäten, welche für Ausleihenden von Bedeutung si
 
 
 {\sffamily\color{maincolor}{Ft-A-1 | Startübersicht }}\\
-Die Startseite soll nutzenden helfen, einen Überblick zu erlangen. Für Erstnutzende, sind Hinweise
-für die Materal-Suche  in Form von Button gegeben. Für Nutzende, die bereits Assets
-ausgeliehen haben, wird eine Übersicht über Ausleihe und vergangenes Material angezeigt. Wichtige
+Die Startseite soll Nutzenden helfen, einen Überblick zu erlangen. Für Erstnutzende, sind Hinweise
+für die Materal-Suche  in Form von Button gegeben. Für Nutzende, die bereits Assets ausgeliehen
+haben, wird eine Übersicht über Laufende, Kommende und Vergangene Reservierungen angezeigt. Wichtige
 Informationen, wie der Zeitraum werden direkt auf einen Blick ersichtlich.
 
     {\sffamily\color{maincolor}{Ft-A-2 | Reservierungs-Checkout }}\\
-Mithilfe des Reservierungs-Checkouts können alle ausgewählten Assets im Überblick eingesehen
-werden. Außerdem werden alle Ausleihdaten, wie Zeitraum der Ausleihe, Abholung und Rückgabe
-aufgeführt. Des Weiteren gibt es die Möglichkeit, alle Ausleihdaten bearbeiten zu können, sollte
-ein Datum oder eine Uhrzeit nicht passen. Abschließend werden die Regeln und Sicherheitshinweise
-aufgeführt. Mithilfe einer AGB Bla erklärung, gilt die Reservierungstools als vertraglich
-abgeschlossen.
+Mithilfe des Reservierungs-Checkouts können alle ausgewählten Assets im Überblick eingesehen werden.
+Außerdem werden alle Ausleihdaten, wie Zeitraum der Ausleihe, Abholung und Rückgabe aufgeführt. Des
+Weiteren gibt es die Möglichkeit, alle Ausleihdaten bearbeiten zu können, sollte ein Datum oder eine
+Uhrzeit unpassend sein. Abschließend werden die Regeln und Sicherheitshinweise aufgeführt. Mithilfe
+einer AGB Bla erklärung, gilt die Reservierungstools als vertraglich abgeschlossen.
 
     {\sffamily\color{maincolor}{Ft-A-3 | Rückgabe-Checkliste}}\\
 Bevor die ausgeliehenen Assets an Verleihende zurückgeben werden, wird eine Checkliste für das
@@ -202,6 +207,7 @@ Ursprungseinstellungen zurückgestellt, Akkus geladen. Diese Funktionalität sol
 sorgen, dass nachfolgende Ausleihende Assets direkt nutzen können.
 
 {\sffamily\color{maincolor}{Ft-B-4 | Kalenderansicht für Ausleihende}}\\
+\todo[]{Mehr arbeit.. eher raus nehmen?}
 Die Kalenderansicht für Ausleihende beinhaltet eine Übersicht, über alle Assets, welche gerade
 ausgeliehen sind. Mithilfe einer Monatsübersicht werden Termin zur Asset-Abholung oder Rückgabe
 angezeigt. 
@@ -247,20 +253,27 @@ programmatisch genutzt werden. Des Weiteren verfügt \textit{Snipe-It} über ein
 welche die Integration von LDAP stark vereinfacht.
 
 \subsubsection{Reservierungsinterface}
-- Noch nicht klar
+Das Reservierungsinterface wird mit Fastify\footnote{\url{https://www.fastify.io/}},
+Prisma\footnote{\url{https://www.prisma.io/}} und
+PostgreSQL\footnote{\url{https://www.postgresql.org/}} umgesetzt. 
 
 \subsubsection{Vue.js}
-Aus Raimunds BA: Die Grundlage des Frontends bildet der progressive JavaScript Frame-
-work Vue.js. Bei der Nutzung von Vue CLI kann die PWA-Funktionalität mithilfe des @vue/cli-
-plugin-pwa Pakets schnell eingebunden werden. Zudem ist Vue.js mit 33.6kB ein kompaktes Framework
-und kleiner als die zwei größten Konkurrenten Angular und React. Ebenfalls schnei- det Vue.js in
-Leistungs-Benchmarks besser ab (Krause, 2022). Weiterhin ist Vue.js mit 192.814 GitHub-Sternen3 das
-beliebteste Framework.
+Für Grundlage des Frontends wird Vue.js\footnote{\url{https://vuejs.org/}} verwendet. Vue.js ist
+eine progressive JavaScript Framework. Bei der Nutzung von Vue
+CLI\footnote{\url{https://cli.vuejs.org/}} kann eine PWA-Funktionalität mithilfe des
+\inlinecode{@vue/cli- plugin-pwa}-Pakets schnell eingebunden werden. Zudem steigt das Framework in
+der Zufriedenheit und Verwendung laut \citeA{noauthor_state} im Vergleich zu Angular über die Jahre
+stetig an (\ref{fig:vue}). Außerdem zeigt Vue.js in den Leistungs-Benchmarks positive Merkmale
+\todo[]{(Krause, 2022)}. Zusätzlich zu den bereits aufgeführten Eigenschaften wird Vue.js aufgrund der
+begrenzten Implementierungszeit und bestehende Erfahrung gewählt.
 
-- Quellen von: Stack overflow und State of js 2022 wie populer,...
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.22]{Bilder/vuejs.png}
+    \caption[Vue.js A progressive, incrementally-adoptable framework for building UI on the web]{Vue.js - A progressive, incrementally-adoptable framework for building UI on the web}
+    \label{fig:vue}
+\end{figure}
 
-Zusätzlich zu den bereits aufgeführten Eigenschaften wird Vue.js aufgrund der begrenzten
-Implementierungszeit und bestehende Erfahrung gewählt.
 
 \section{Systemarchitektur}
 Mithilfe der bereits festgelegten Frameworks (\ref{section:frameworks}) wurde die Systemarchitektur
@@ -278,7 +291,11 @@ Reservierungsinterface benötigt.
 
 \subsection{Reservierungsinterface}
 Das Reservierungsinterface nutzt die von Snipe-IT bereitgestellten Daten. Die Hauptaufgabe der
-Schnittstelle ist das Reservieren von Assets in die Zukunft. Die Oberfläche wird mit ... umgesetzt.
+Schnittstelle ist das Reservieren von Assets in die Zukunft. Das Back-End wird mit Fastify, Prisma
+und PostgreSQLumgesetzt. Fastify ist ein Webserver-Framework, welcher das Routing erleichtert.
+Prisma ist ein ORM (Object-Relational-Mapper) welches die Nutzung der PostgreSQL-Datenbank im
+Webserver erleichtert. Die Weboberfläche läuft über die Web-App, hierbei wird mithilfe der LDAP
+Authentifizierung die jeweilige Ansicht bestimmt.
 
 \subsection{Web-App}
 Über die Web-App bildet die Oberfläche für Ausleihende und ermöglicht es die Assets einsehen zu
@@ -286,17 +303,17 @@ können, zu suchen, zu buchen. Außerdem laufen über die Web-Oberfläche alle a
 für Verleihende, wie das Aktualisieren eines Assetstatus. Folglich greift die Web-App ebenso wie die
 anderen Komponenten auf Snipe-IT zu, um die Assetinformationen anzeigen zu können. 
 
-Aus Raimunds BA: Die Web-App wird separat von Snipe-IT bereitgestellt und statisch gehostet. Das
-Generieren der Web-App findet somit nur einmalig statt, im Gegensatz zum Server-Rendering-Ansatz,
-bei welchem die Seite für jeden Aufruf neu generiert werden muss.
+Beim Server-Rendering-Ansatz muss die Seite für jeden Aufruf neu generiert. Daher wird die Web-App
+separat von Snipe-IT bereitgestellt und statisch gehostet. Das Generieren der Web-App findet somit
+nur einmalig statt.
 
-\subsection{Integration der Komponenten}
-Um ein besseres Verständnis der Integration von einzelnen Komponenten vorausgesetzt zu können wurde
+\subsection{Interaktion der Komponenten}
+Um ein besseres Verständnis der Interaktion von einzelnen Komponenten voraussetzen zu können wurde
 ein UML-Sequenzdiagramm erstellt (\ref{fig:uml}). Bei der vierten Komponente handelt es sich um das
 LDAP der Universität zu Lübeck. Mithilfe der Integration können Nutzende sich mit dem bereits
 bestehenden IDM Account anmelden. Zum einen kann somit sichergestellt werden, dass nur befugte
 Personen Assets einsehen und ausleihen können. Zum anderen erleichtert es den Nutzenden den
-Ausleihprozess.
+Ausleihprozess, da kein neuer Account erstellt werden muss.
 
 \begin{figure}[h]
     \centering
