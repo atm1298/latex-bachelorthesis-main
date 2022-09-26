@@ -1,18 +1,22 @@
 
 \chapter{Implementierung}
 \label{chapter-implementierung}
+Das folgende Kapitel beschreibt die Implementierung des Backends, Reservierungsinterfaces sowie des
+Fontends. Zunächst wird ... beschreiben. Daraufhin wird ... beschreiben. Abschließend wird auf die
+Inbetriebnahme des Systems eingegangen.
 
-In der Evaluierung wird das Ergebnis dieser Arbeit bewertet. Eine praktische Evaluation eines neuen Algorithmus kann zum Beispiel durch eine Implementierung geschehen. Je nach Thema der Arbeit kann sich natürlich auch die gesamte Arbeit eher im praktischen Bereich mit einer Implementierung beschäftigen. In diesem Fall gilt es am Ende der Arbeit insbesondere die Implementierung selber zu evaluieren. Wesentliche Fragen dabei können sein:
-\begin{compactitem}[--]
-  \item Was funktioniert jetzt besser als vor meiner Arbeit?
-  \item Wie kann das praktisch eingesetzt werden?
-  \item Was sagen potenzielle Anwender zu meiner Lösung?
-\end{compactitem}
-
-\section{Implementierung des Frontends}
 
 \section{Implementierung des Backends}
+Bild: Verzeichnisstruktur des Backends
 
+\subsection{Implementierung der Kernfunktionalität}
+Dieser Abschnitt präsentiert die Implementierung der Kernfunktionalität des Zwischenbackends,
+welche aus den Anforderungen aus \ref{section:anforderung} bestimmt wurden. Bei der Funktionalität
+handelt es sich um das Reservieren in die Zukunft, sowie das Speichern dieser Vorgänge und die
+damit einhergehende Bestätigung für die Aktualisierung in Snipe-IT.
+
+
+\subsection{Sackgassen}
 LDAP hat Probleme aufgeworfen, weil:
 
 \begin{itemize}
@@ -20,7 +24,16 @@ LDAP hat Probleme aufgeworfen, weil:
   \item Token nur manuell im Dashboard generierbar
   \item 
 \end{itemize}
-Statuseingabe/Ausleihen schwer und komisch
+Statuseingabe/Ausleihen schwer und komisch -> rumarbeiten
+
+\section{Implementierung des Frontends}
+
+Indi: Bei der Implementierung wurde den best practices der Vue.js-Dokumentation gefolgt (Vue.js, 2021a).
+Zunächst wurde für jede der in Kapitel 7.1 beschriebenen Components eine eigene View erstellt, wobei
+zunächst die Studiensteuerung implementiert wurde. Über sie werden Eingaben durch die Studienleitung
+getätigt, welche zu Logging-Zwecken an den
+
+
 \section{Nutzung des Systems}
 
 \section{Fazit der Implementierung}
