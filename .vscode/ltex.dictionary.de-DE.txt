@@ -24,3 +24,4 @@ Reservierungsinterface
 Assetstatus
 Object-Relational-Mapper
 ORM
+entstspechend
