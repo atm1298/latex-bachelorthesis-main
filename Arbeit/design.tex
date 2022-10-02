@@ -5,86 +5,22 @@
 Neben den inhaltlichen Funktionalitäten ist im menschzentrierten Gestaltungsprozess vor allem die
 Gestaltung des Interface-Designs und -Komponenten von zentraler Bedeutung (DIN EN ISO 9241-210,
 2011). Das Design sollte so entwickelt werden, dass es möglichst optimal die aus
-\ref{chapter-konzept} entwickelten Funktionalitäten berücksichtigt. Folglich sollten die in 
-\ref*{section:benutzer} erarbeiteten Nutzenden die Gestaltungslösungen verstehen und bedienen können. Hierbei
-spielen insbesondere Komponenten wie Ein- und Ausgabemöglichkeiten, Systemfeedback sowie Farben,
-Formen und Anordnungen eine Rolle. Daher wurden die acht goldenen Regeln nach
-\citeA{shneiderman_designing_1997} und die Zehn Usability Heuristiken nach \citeA{nielsen_enhancing_1994}
-bei der Entwicklung stets mit eingearbeitet und zur Begründung herangezogen.
+\ref{chapter-konzept} entwickelten Funktionalitäten berücksichtigt. Folglich sollten die in
+\ref{section:benutzer} erarbeiteten Nutzenden die Gestaltungslösungen verstehen und bedienen können.
 
 Die Medieninformatik beinhaltet viele Methoden und Vorgehensweisen zur menschzentrierten Gestaltung
 \todo{(Herczeg, 2006)}. Im Rahmen der Arbeit wurde vor allem Prototyping in verschiedenen Formen
-eingesetzt \todo{(Herczeg, 2009a)}.
+eingesetzt \todo{(Herczeg, 2009a)}. Des Weiteren wurden die Zehn Usability Heuristiken nach
+\citeA{nielsen_enhancing_1994} bei der Entwicklung stets mit eingearbeitet und zur Begründung
+herangezogen.
 
-Im Folgenden wird auf den Gestaltungsprozess genauer eingegangen und gezeigt, wie die Komponenten für
-das entwickelte System konzipiert und ausgestaltet wurden.
+Im Rahmen dieses Kapitels werden die zentralen Ansichten und Design Entscheidungen erläutert. Eine
+Übersicht aller Entwürfe befindet sich im Anhang \todo{Anhang}.
 
-\section{Erste Iteration: Skizzen}
-Die erste Iteration des Interface-Designs umfasst Skizzen. Diese sollen die grobe Anordnung der
-Komponenten veranschaulichen. Daher wurde sich entstspechend auf diese fokussiert und das Farbschema zunächst
-vernachlässigt. Die Skizzen wurden in Mockup\footnote{\url{https://getmockup.app/}} umgesetzt. 
-
-In der Gestaltung wurde nach der \enquote{Mobile First}-Strategie gearbeitet (\anfref{R40}). Dieser
-besagt die Nutzung der Bildschirmfläche zur schrittweisen Verbesserung von Darstellung und Inhalt
-\cite{kim_chapter_2013}.
-
-
-Bei der Anordnung der Komponenten wurde sich an aus den Iterviews orientieren Apps, wie
-Airbnb\footnote{\url{https://www.airbnb.de/}} und Otto\footnote{\url{https://www.otto.de/}}
-orientieren. Des Weiteren wurden Tailwind UI\footnote{\url{https://tailwindui.com/components}} und
-Headless UI\footnote{\url{https://headlessui.com/}} als
-Inspirationsquelle genutzt, um die Realisierung des Systems zu erleichtern. 
-
-\ref{fig:m0} zeigt die Anmeldung (Ft-VA-1). Mitte ist das Dashboard der Anwendung
-zu sehen (Ft-VA-1, Ft-VA-6). Rechts zeigt die Navigation (Ft-VA-1).
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.37]{Bilder/Mockups/Login.jpg}
-    \includegraphics[scale=0.37]{Bilder/Mockups/Hom.jpg}
-    \includegraphics[scale=0.37]{Bilder/Mockups/Navbar.jpg}
-    \label{fig:m0}
-\caption[Mockup: Anmeldung, Dashboard, Navigation]{Anmeldung (l), Dashboard (m), Navigation (r)}
-\end{figure}
-
-
-\ref{fig:m0} zeigt die Kategorien (Ft-VA-2). Mitte zeigt die Assets im Überblick, mit Status
-(Ft-VA-2, Ft-VA-3, Ft-VA-7). Rechts zeigt die Assetdetails der Anwendung zu sehen (Ft-VA-4,
-Ft-VA-8). 
-
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.37]{Bilder/Mockups/Kategorien.jpg}
-    \includegraphics[scale=0.37]{Bilder/Mockups/Kacheln.jpg}
-    \includegraphics[scale=0.37]{Bilder/Mockups/Details.jpg}
-    \label{fig:m1}
-    \caption[Mockup: Kategorien, Assets, Assetdetails]{Kategorien (l), Assets (m), Assetdetails (r)}
-\end{figure}
-
-
-\ref{fig:m0} zeigt das Reservierungs-Checkout (Ft-A-2). Rechts ist der Kalender der Anwendung
-zu sehen (Ft-A-4). 
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.3]{Bilder/Mockups/Reservierung abschlie0en.jpg}
-    \includegraphics[scale=0.3]{Bilder/Mockups/Kalender.jpg}
-    \label{fig:m3}
-    \caption[Mockup: Check out, Kalender]{Check out (l), Kalender (r)}
-\end{figure}
-
-\section{Weitere Iterationen: High-Fidelity-Interface-Design}
-Während des Interface-Designs wurde aus den Skizzen ein High-Fidelity-Prototyp mit
-Figma\footnote{\url{https://www.figma.com/de/}} entwickelt. Der Prototyp wurden in Form einer
-Usability Evaluation direkt getestet (\ref{table:e}). 
-
-
-
-\subsection{Zwischenergebnisse}
+\section{Evaluation}
 Für die Tests wurden Usability Spezifikationen aus Szenarien abgeleitet. Die Szenarien beschreiben
-Aufgaben die als Vorlage dienen. Um repetitive Evaluationsergebnisse zu verhindern, wurden die
-Evaluationsergebnisse kontinuierlich in die weitere Entwicklung eingearbeitet.
+Aufgaben die als Vorlage dienen \todo{Anhang}. Um repetitive Evaluationsergebnisse zu verhindern, wurden die
+Evaluationsergebnisse kontinuierlich in die weitere Entwicklung eingearbeitet (\ref{table:e}).
 
 \begin{table}[h]
     \centering
@@ -107,6 +43,23 @@ Evaluationsergebnisse kontinuierlich in die weitere Entwicklung eingearbeitet.
     \label{table:e}
 \end{table}
 
+Im Folgenden wird auf den Gestaltungsprozess genauer eingegangen und gezeigt, wie die Komponenten
+für das entwickelte System konzipiert und ausgestaltet wurden. In der Gestaltung wurde nach der
+\enquote{Mobile First}-Strategie gearbeitet (\anfref{R40}). Dieser besagt die Nutzung der
+Bildschirmfläche zur schrittweisen Verbesserung von Darstellung und Inhalt \cite{kim_chapter_2013}.
+
+Bei der Anordnung der Komponenten wurde sich an, aus den Interviews, orientieren Apps, wie
+Airbnb\footnote{\url{https://www.airbnb.de/}} und Otto\footnote{\url{https://www.otto.de/}}
+orientieren. Des Weiteren wurden Tailwind UI\footnote{\url{https://tailwindui.com/components}} und
+Headless UI\footnote{\url{https://headlessui.com/}} als Inspirationsquelle genutzt, um die
+Realisierung des Systems zu erleichtern. 
+
+Die erste Iteration des Interface-Designs umfasst Skizzen. Die Skizzen wurden erstellt, um einen
+groben Überblick, der verschiedenen Ansichten zu erhalten und in
+Mockup\footnote{\url{https://getmockup.app/}} umgesetzt. Während des Interface-Designs wurden die
+Skizzen mit Figma\footnote{\url{https://www.figma.com/de/}} zu einem High-Fidelity-Prototyp weiterentwickelt.
+
+\subsection{Wortlaut}
 Ein zentrales Problem des Prototyps war einen Konsistenten Wortlaut zu finden. Insbesondere der
 Begriff \textit{Assets} hat zu Verwirrungen geführt, da nicht klar war, was der Begriff definiert
 (E1, E2). Daraufhin wurden Vorschläge geliefert, wie \textit{Material, Hardware, Systeme, Geräte}. Im
@@ -121,25 +74,27 @@ vorbeugen zu können und Parallelen ermöglichen zu können.
 
 Positiv wurde stets erwähnt, dass die Anwendung sauber und nicht überladen wirkt (R8) (E1-6).
 
-
-Warum Ausleihzeitraum separat zu Abholung und Rückgabe -> Impliziert das bereits
-
 --> Anhang der Ausleihhilfe,...
-\subsection{Designsprache}
+
+\section{Designsprache}
 Mit den gesammelten Ergebnissen wurde eine konsistente Designsprache für die Anwendung festgehalten.
 
-\subsubsection{???}
+\subsection{Schrift}
+Allgemein wurde die Schriftart und Schriftgröße so gewählt, dass die Lesbarkeit nach dem Deutscher
+Blinden- und Sehbehindertenverband (2022) gewährleistet ist. Als Schriftart wurde
+XXX gewählt, welche durch XXX (ca. 0.7,
+eigene Messung) besser lesbar ist. Weiterhin wurde darauf geachtet, dass die Schriftgröße
+16px nicht unterschritten wird.
 
 Für die spätere Realisierung wurde sich für die Typografie direkt an Tailwind
 UI\footnote{\url{https://tailwindui.com/components}} orientiert.
 
-\subsubsection{Farbschema}
-
-Die Farben der Anwendung (\ref{fig:farben}) werden nach dem 60-30-10 Prinzip angeordnet \cite{experience_using}. Wobei Grau
-die Hauptfarbe darstellt, Weiß die Sekundär Farbe und Organe die Akzentfarbe. Als Akzentfarbe wurde
-sich für Orange entschieden, da die Anwendung eine Software am \ac{imis} ist und die IMIS Farben
-Orange und Blau umfassen. Nach Protypischen vergliechen und umfragen wurde sich dann für das Orange
-entschieden.
+\subsection{Farbschema}
+Die Farben der Anwendung (\ref{fig:farben}) werden nach dem 60-30-10 Prinzip angeordnet
+\cite{experience_using}. Wobei Grau die Hauptfarbe darstellt, Weiß die Sekundär Farbe und Organe die
+Akzentfarbe. Als Akzentfarbe wurde sich für Orange entschieden, da die Anwendung eine Software am
+\ac{imis} ist und die IMIS Farben Orange und Blau umfassen. Nach Protypischen vergliechen und
+umfragen wurde sich dann für das Orange entschieden.
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.23]{Bilder/farben.png}
@@ -147,9 +102,29 @@ entschieden.
     \label{fig:farben}
 \end{figure}
 
-\subsection{MIR FEHLT HIER EIN GUTER TITEL}
+\section{Dashboard}
+Aufgrund des zu Beginn geringen Inhalts auf der Startseite ist eine ansprechende und fokussierte
+Anordnungen der Komponenten wichtig (H8). Sobald ein Asset ausgeliehen wurde, sollten die
+entsprechenden Informationen (Status, Zeitraum, Ort) übersichtlich und schnell eingesehen werden
+können (H1) (F-A-1).
 
-\subsubsection{Navigation und Suche}
+Die Verwaltungsansicht, in welcher die Möglichkeit zum Aktualisieren des Status entspricht zum
+Großteil dem Dashboard (H6) (F-V-1, F-V-2).
+
+\ref{fig:home} zeigt die Entwicklung des Dashboards. Ein wichtiger Punkt, war die im ersten Screen
+fehlende Orientierung. Außerdem kann der Screen durch die vielen einzelnen Elemente schnell
+überladen wirken (H8) (E1-2). Zudem hat das Wording für Verwirrungen gesorgt, sodass aus \textit{aktuell}
+\textit{laufende} gemacht wurde (E1-4). 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.4]{Bilder/Prototyp/Start.png}\hspace{3em}
+    \includegraphics[scale=0.4]{Bilder/Prototyp/Neu/V2.png}
+    \caption[Farbpalette]{Navigationsmüglichkeiten}
+    \label{fig:home}
+\end{figure}
+
+\section{Navigation und Suchleiste}
 In der Interface-Gestaltung gibt es verschiedene Möglichkeiten Navigation bereitzustellen. Für die
 Anwendung wurde für den Mobilen Kontext eine Navigationsleiste am unteren Bildschirmrand und ein
 Burgermenü oben Links oder Rechts in Erwägung gezogen. Für die Desktop-Navigation wurde zwischen
@@ -158,42 +133,41 @@ Navigationsleiste auf der linken Seite entscheiden. Orientiert wurde sich hierbe
 Anwendungen mit ähnlichen Funktionen und dem Material Design \cite{google_material_2022}. Die
 Umgangsweise mit diesen Gestaltungslösungen ist bereits bekannt und somit übertragbar (\textit{4
 Beständigkeit und Standards} und \textit{6 Wiedererkennung statt Erinnerung} nach
-\citeA{nielsen_enhancing_1994}).
-
-Suche wie Google Drive, um Platz sinnvoll zu nutzen
+\citeA{nielsen_enhancing_1994}). Daran Anknüpfend wurde sich für eine integrierte Suchleiste
+entschieden, sodass Nutzende jederzeit die Möglichkeit haben, nach Assets zu suchen.
 
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.3]{Bilder/Prototyp/Property 1=Variant2.png}
     \includegraphics[scale=0.4]{Bilder/Prototyp/Menu.png}
+    \includegraphics[scale=0.4]{Bilder/Prototyp/Neu/Suche V2.png}
     \caption[Farbpalette]{Navigationsmüglichkeiten}
     \label{fig:nav}
 \end{figure}
 
+\section{Kategorien und Suche}
+Die Übersicht der Kategorien sind auch hier wieder an bekannten
+Anwendungen mit ähnlichen Funktionen angelehnt (H4, H8). Dies führt unteren auch dazu, dass Fehler 
+vermieden werden können (H9). 
+
+Die Suche ist durch die Anwendung Airbnb\footnote{\url{https://www.airbnb.de/}} entstanden, das
+viele Nutzende beim Reservieren von Dingen die Anwendung assoziieren (H2, H4). Die Suche sollte
+durch das direkte einstellen eines Ausleihzeitraums Fehler vorbeugen und Verfügbarkeit anzeigen
+(H5) (F-VA-6). \ref{fig:p1} zeigt die erste Version des High-Fidelity-Prototypen, bei welcher zum einen ein
+Suchbutton fehlte und die Vorschläge der angezeigten Kategorien weniger genutzt wurden, sondern
+direkt auf die Suche oder alle Anzeigen geklickt wurde, daher wurden diese Elemente entsprechenden 
+angepasst (E1, E2, E4).
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.3]{Bilder/Prototyp/Kategorein 1.png}
     \includegraphics[scale=0.3]{Bilder/Prototyp/Suche.png}
+    \includegraphics[scale=0.3]{Bilder/Prototyp/Neu/Suche V2.png}
+    \includegraphics[scale=0.3]{Bilder/Prototyp/Neu/Kategorein 1.png}
     \label{fig:p1}
     \caption[Mockup: Kategorien, Assets, Assetdetails]{Kategorien (l), Assets (m), Assetdetails (r)}
 \end{figure}
 
-
-\subsubsection{Kalender}
-Bei der Kalenderkomponente wurde sich direkt an dem Framework
-V-Calendar\footnote{\url{https://vcalendar.io/layouts.html}} orientiert.
-
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.3]{Bilder/Prototyp/Datailansicht.png}
-    \includegraphics[scale=0.1]{Bilder/Prototyp/Kalender.jpg}
-    \includegraphics[scale=0.3]{Bilder/Prototyp/Reservierung abschließen 3.png}
-    \label{fig:p3}
-    \caption[Mockup: Kategorien, Assets, Assetdetails]{Kategorien (l), Assets (m), Assetdetails (r)}
-\end{figure}
-
+Kartenansicht einer Unterkategorie (H4, H8) (F-VA-3).
 
 \begin{figure}[h]
     \centering
@@ -202,4 +176,48 @@ V-Calendar\footnote{\url{https://vcalendar.io/layouts.html}} orientiert.
     \label{fig:p4}
     \caption[Mockup: Kategorien, Assets, Assetdetails]{Kategorien (l), Assets (m), Assetdetails (r)}
 \end{figure}
+
+
+\section{Kalender}
+Die Kalenderkomponente wurde lediglich als Skizze veranschaulicht. In den High-Fidelity-Prototyp
+wurde sich bereits an der Komponenten V-Calendar\footnote{\url{https://vcalendar.io/layouts.html}}
+orientiert, welche die wichtigsten Funktionen mitbrachte und so die Realisierung erleichtert.
+
+Bei dem Kalender war es unteranderem wichtig, dass Wochenenden ausgeblendet werden können, da zu
+diesen Zeitpunkten keine Ausleihe möglich ist, außerdem sollten vergangene Tage nicht auswählbar
+sein. Weitere Punkte wurden auch hier wieder von der Anwendung Airbnb angeschaut (H1,4,7,8) (E2-4)
+(F-VA-3). Für Verleihende ist eine Todolistenansicht, was den Tag über ansteht wichtig
+gewesen (F-V-4). \ref{fig:kalender}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.37]{Bilder/Mockups/Kalender.jpg}
+    \includegraphics[scale=0.37]{Bilder/Mockups/Kategorien.jpg}
+    \label{fig:kalender}
+\caption[Kalenderkomponente]{Kalender (l), Navigation (r)}
+\end{figure}
+
+
+\section{Asset-Detailansicht und Reservierungen}
+Die Ansicht der einzelnen Assets sollte insbesondere Assetverfügbarkeit, Funktionalitäten sowie
+Verleihende enthalten (F-VA-3, F-VA-4, F-VA-8). \ref{fig:p3} zeigt ..
+
+Es ergab sich, dass eine Beschreibung des Artikels erstmal nicht von Bedeutung ist (E6).
+
+Die Reservierung eines Assets ... der Zeitraum einzelnt unnötig, daher geändert (E5). Wording auch
+hier überarbeitet (F-A-2) 
+
+Warum Ausleihzeitraum separat zu Abholung und Rückgabe -> Impliziert das bereits
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.3]{Bilder/Prototyp/Neu/Datailansicht-1.png}
+    \includegraphics[scale=0.3]{Bilder/Prototyp/Neu/Suche.png}
+    \includegraphics[scale=0.3]{Bilder/Prototyp/Reservierung abschließen 3.png}
+    \label{fig:p3}
+    \caption[Mockup: Kategorien, Assets, Assetdetails]{Kategorien (l), Assets (m), Assetdetails (r)}
+\end{figure}
+
+
+
 
