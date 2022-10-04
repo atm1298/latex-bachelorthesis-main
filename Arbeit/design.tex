@@ -10,8 +10,8 @@ Funktionalitäten berücksichtigt. Folglich sollten die in \ref{section:benutzer
 Nutzenden die Gestaltungslösungen verstehen und bedienen können.
 
 Die Medieninformatik beinhaltet viele Methoden und Vorgehensweisen zur menschzentrierten Gestaltung
-\todo{(Herczeg, 2006)}. Im Rahmen der Arbeit wurde vor allem Prototyping in verschiedenen Formen
-eingesetzt \todo{(Herczeg, 2009a)}. Des Weiteren wurden die Zehn Usability Heuristiken nach
+\cite{Herczeg2009}. Im Rahmen der Arbeit wurde vor allem Prototyping in verschiedenen Formen
+eingesetzt \cite{herczeg_einfuhrung_2009}. Des Weiteren wurden die Zehn Usability Heuristiken nach
 \citeA{nielsen_enhancing_1994} bei der Entwicklung stets mit eingearbeitet, um Kriterien der
 Gebrauchstauglichkeit zu addressieren \todo{(Ausführliche Aufzählung der Heuristiken im Anhang)}. In
 der Gestaltung wurde nach der \enquote{Mobile First}-Strategie gearbeitet (\anfref{R40}). Diese
@@ -21,7 +21,7 @@ Anwendungen, wie Airbnb\footnote{\url{https://www.airbnb.de/}} und
 Otto\footnote{\url{https://www.otto.de/}} orientieren. Des Weiteren wurden Tailwind
 UI\footnote{\url{https://tailwindui.com/components}} und Headless
 UI\footnote{\url{https://headlessui.com/}} als Inspirationsquelle herangezogen, um die Realisierung
-des Systems zu erleichtern. 
+des Systems zu erleichtern.
 
 Die erste Iteration des Interface-Designs umfasst Skizzen. Die Skizzen wurden erstellt, um einen
 groben Überblick, der verschiedenen Ansichten zu erhalten und in
@@ -35,8 +35,8 @@ Im Rahmen dieses Kapitels werden die zentralen Ansichten und Design Entscheidung
 \section{Iteratives Vorgehen}
 Für die Tests wurden Usability Spezifikationen aus Szenarien abgeleitet. Die Szenarien beschreiben
 Aufgaben die als Vorlage dienen können \todo{Anhang, Quelle Scenario Based Design einfügen - auch,
-wenn nicht nach dem Prozess vorgegangen, ist es doch sicherlich eine gute Quelle, die man für die
-Entwicklung von Szenarien zitieren kann}. Um repetitive Evaluationsergebnisse zu verhindern, wurden
+    wenn nicht nach dem Prozess vorgegangen, ist es doch sicherlich eine gute Quelle, die man für die
+    Entwicklung von Szenarien zitieren kann}. Um repetitive Evaluationsergebnisse zu verhindern, wurden
 die Evaluationsergebnisse kontinuierlich in die weitere Entwicklung eingearbeitet. \ref{table:e}
 stellt die Interviewteilnehmenden  mit IDs dar, welche in den folgenden Abschnitten als Verweise
 verwendet werden.
@@ -45,19 +45,19 @@ verwendet werden.
     \centering
     \caption{Teilnehmende der Evaluation}
     \begin{tabular}{lll}
-            \arrayrulecolor{maincolor}\hline
-            \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Alter &
-            \sffamily\color{maincolor}Rolle \\
-            \arrayrulecolor{maincolor}\hline
-            E1                           & 19 - 25 J.                      &
-            Medieninformatikerin                     \\
-            E2                           & 19 - 25 J.                      & Robotikerin \\
-            E3                           & 19 - 25 J.                      & Medieninformatiker, Hilfswissenschaftler        \\
-            E4                          & 19 - 25 J.                      & Medieninformatiker \\
-            E5                           & 19 - 25 J.                      &
-            Medieninformatikerinnen, Hilfswissenschaftlerin \\
-            E6                           & 25 - 30 J.                      & Wissenschaftlicher Mitarbeiter        \\
-            \arrayrulecolor{maincolor}\hline
+        \arrayrulecolor{maincolor}\hline
+        \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Alter &
+        \sffamily\color{maincolor}Rolle                                                                           \\
+        \arrayrulecolor{maincolor}\hline
+        E1                           & 19 - 25 J.                      &
+        Medieninformatikerin                                                                                      \\
+        E2                           & 19 - 25 J.                      & Robotikerin                              \\
+        E3                           & 19 - 25 J.                      & Medieninformatiker, Hilfswissenschaftler \\
+        E4                           & 19 - 25 J.                      & Medieninformatiker                       \\
+        E5                           & 19 - 25 J.                      &
+        Medieninformatikerinnen, Hilfswissenschaftlerin                                                           \\
+        E6                           & 25 - 30 J.                      & Wissenschaftlicher Mitarbeiter           \\
+        \arrayrulecolor{maincolor}\hline
     \end{tabular}
     \label{table:e}
 \end{table}
@@ -71,7 +71,7 @@ Interfacegestaltung eingegangen.
 Ein zentrales Problem des Prototyps war einen Konsistenten Wortlaut zu erlangen (H2, H4, H5).
 Insbesondere der Begriff \textit{Assets} hat zu Verwirrungen geführt, da nicht klar war, was der
 Begriff definiert (E1, E2). Daraufhin wurden Vorschläge geliefert, wie \textit{Material, Hardware,
-Systeme, Geräte}. Im weiteren Verlauf hat sich \textit{Material} als am verständlichsten
+    Systeme, Geräte}. Im weiteren Verlauf hat sich \textit{Material} als am verständlichsten
 herausgestellt (E3-E5). Des Weiteren hat das \textit{Suchen nach Kriterien} für Missverständnisse
 und der Parallelen \textit{Suche} ergeben (E1, E2). Daher wurden auch hier verschiedene Begriffe wie
 \textit{Auswahlhilfe, Suchhilfe, Kriterien-Suche, Kriterien-Hilfe, Auswahl nach Kriterien, Ausleih-Hilfe}
@@ -82,7 +82,7 @@ weitere Entscheidung getroffen\todo{Ausblick}.
 Allgemein wurde die Schriftart nach Kriterien für eine gute Lesbarkeit, wie: Erkennbarkeit,
 Unterscheidbarkeit und Offenheit betrachtet \cite{kommunikationsdesign_leserlichinfo}. Außerdem
 wurde sich für die spätere Realisierung wurde sich für die Typografie direkt an Tailwind
-UI\footnote{\url{https://tailwindui.com/components}} orientiert und daher Segul UI gewählt. 
+UI\footnote{\url{https://tailwindui.com/components}} orientiert und daher Segul UI gewählt.
 
 
 \subsection{Farbschema}
@@ -144,8 +144,8 @@ die Möglichkeit haben, nach Assets zu suchen \cite{google_material_2022} (E4).
 
 \subsection{Kategorien und Suche}
 Die Übersicht der Kategorien sind auch hier wieder an bekannten
-Anwendungen mit ähnlichen Funktionen angelehnt (H4, H8). Dies führt unteren auch dazu, dass Fehler 
-vermieden werden können (H9). 
+Anwendungen mit ähnlichen Funktionen angelehnt (H4, H8). Dies führt unteren auch dazu, dass Fehler
+vermieden werden können (H9).
 
 Die Suche ist durch die Anwendung Airbnb\footnote{\url{https://www.airbnb.de/}} entstanden, da viele
 Nutzende beim Reservieren die Anwendung assoziieren (H2, H4). Die Suche sollte durch das direkte
@@ -164,7 +164,7 @@ Elemente entsprechenden angepasst (E1, E2, E4).
     \caption[Mockup: Kategorien, Assets, Assetdetails]{Kategorien (l), Assets (m), Assetdetails (r)}
 \end{figure}
 
-Für eine Unteransicht wurde sich für eine Kartenansicht entscheiden (ref{fig:p4}). Diese ergab sich aus dem 
+Für eine Unteransicht wurde sich für eine Kartenansicht entscheiden (ref{fig:p4}). Diese ergab sich aus dem
 bereits bekannten Prinzipen von Online-Einkäufen. Dem Nutzenden wird mithilfe eines Bildes direkt
 gezeigt, um was für ein Asset es sich handelt. Außerdem wird auch hier die Assetverfügbarkeit mit
 eingebunden (H4, H8) (F-VA-3).
@@ -186,17 +186,17 @@ orientiert, welche die wichtigsten Funktionen mitbrachte und so die Realisierung
 Bei dem Kalender war es unter anderem wichtig, dass Wochenenden ausgeblendet werden können, da zu
 diesen Zeitpunkten keine Ausleihe möglich ist (H1) (F-VA-3). Außerdem sollten vergangene Tage nicht
 auswählbar sein. Weitere Punkte wurden auch hier wieder von der Anwendung Airbnb berachtet (H4, H7,
-H8) (E2-4). 
+H8) (E2-4).
 
 Für Verleihende ist eine generelle Übersicht, über einzelne Tage wichtig, um Abholungen und
-Rückgaben von Assets besser planen zu können (F-V-4). 
+Rückgaben von Assets besser planen zu können (F-V-4).
 
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.4]{Bilder/Mockups/Kalender.jpg}\hspace{2em}
     \includegraphics[scale=0.4]{Bilder/Mockups/Kategorien.jpg}
     \label{fig:kalender}
-\caption[Kalenderkomponente]{Kalender (l), Navigation (r)}
+    \caption[Kalenderkomponente]{Kalender (l), Navigation (r)}
 \end{figure}
 
 \subsection{Asset-Detailansicht und Reservierungen}
