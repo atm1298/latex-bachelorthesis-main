@@ -7,32 +7,53 @@ Inbetriebnahme des Systems eingegangen.
 
 
 \section{Implementierung des Reservierungsinterfaces}
-Der Abschnitt beschreibt die Struktur des Reservierungsinterface und die Implementierung der
-Funktionalitäten (\ref{section:funktionale}).  
+Der Abschnitt beschreibt die Struktur des Reservierungsinterface mit seinen technischen Aspekten
+und die Implementierung der Funktionalitäten (\ref{section:funktionale}). Zunächst wird die
+Implementierung der Kernfunktionalitäten erläutert. Daraufhin werden Sackgassen thematisiert.
 
-Bild: Verzeichnisstruktur des Backends
+
+\subsection{Struktur des Reservierungsinterface}
+Das folgende Unterkapitel geht auf die Strukturen und Teilkomponenten des Reservierungsinterface
+ein. In \ref{fig:db} wird die Verzeichnisstruktur präsentiert. Das Reservierungsinterface teilt sich
+in drei wesentliche Bausteine: \textit{node, SQLit(prisma)} und \textit{server.ts} . 
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.7]{Bilder/Db.jpg}
+  \caption[Verzeichnisstruktur des Reservierungsinterfaces]{Verzeichnisstruktur des Reservierungsinterfaces}
+  \label{fig:db}
+\end{figure}
+
+Der \textit{node} Ordner gibt... .
+
+\textit{prisma} macht Dinge 
+
+\textit{server.ts} für Routen
 
 \subsection{Implementierung der Kernfunktionalität}
 Dieser Abschnitt präsentiert die Implementierung der Kernfunktionalität des Zwischenbackends,
-welche aus den Anforderungen aus \ref{section:anforderung} bestimmt wurden. Bei der Funktionalität
+welche aus den Anforderungen  bestimmt wurden (\ref{section:anforderung}). Bei der Funktionalität
 handelt es sich um das Reservieren in die Zukunft, sowie das Speichern dieser Vorgänge und die
 damit einhergehende Bestätigung für die Aktualisierung in Snipe-IT.
-\begin{itemize}
-  \item API von Snipe IT -> Aufbau der API -> API Autentifizierung -> LDAP Sackgassen
-  \item FÜR FRONTEND benötigte Ressourcen: Routen angelegt -> Fastify genutzt, für vereinfachung
-  \item Reservierung in der Zukunft: Daten zwischenspeichern, weil Snipe IT doof -> SQLite -> Prisma
+
+Um auf die Assets zugreifen zu können wurde mit der Snipe-IT JSON REST API gearbeitet. 
+Die api HIER AUFBAU ERKLÄREN.
+
+Um mit der api arbeiten zu können muss ein \textit{API key} generiert werden. ERKLÄREN WIE MAN DEN
+GENERIERT.
+
+Durch die Nutzung von API key durch Snipe-IT lässt sich die  API nur per Token nutzbar, da die Token
+nur manuell im Dashboard generierbar sind kann LDAP nicht ohne mega aufwand eingebunden werden.
+Snipe-IT gibt zwar die möglichkeit, das LDAP Formular auszufüllen.. WEITER ERKLÄREN.
+
+
+FÜR FRONTEND benötigte Ressourcen: Routen angelegt -> Fastify genutzt, für vereinfachung
+
+
+Reservierung in der Zukunft: Daten zwischenspeichern, weil Snipe IT doof -> SQLite -> Prisma
   (für einfache verwaltung -> Beispeil und wie es Funktioniert) 
-\end{itemize}
 
 
-\subsection{Sackgassen}
-LDAP hat Probleme aufgeworfen, weil:
-
-\begin{itemize}
-  \item API nur per Token nutzbar
-  \item Token nur manuell im Dashboard generierbar
-  \item
-\end{itemize}
 Statuseingabe/Ausleihen schwer und komisch -> rumarbeiten
 
 \section{Implementierung des Frontends}
