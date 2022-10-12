@@ -37,17 +37,24 @@ Der \textit{node} Ordner gibt... .
 \textit{server.ts} für Routen
 
 
-Die für das Reservierungsinterface entwickelte api lässt sich in drei Bereiche teilen:
+Die für das Reservierungsinterface entwickelte API lässt sich in drei Bereiche teilen:
 \textit{Assets}, \textit{Kategorien} und \textit{Reservierungen} (\ref{table:impl-backend-routes}).
-Um ein Asset zu reservieren, wird eine POST-Anfrage an \textit{/reservation/id} abgeschickt. Für die
-Anfrage in Snipe-IT wird wiederum eine \textit{/reservation/receive} POST-Anfrage gesendet.
+In der angelegten API werden die verschiedenen Routen des Inhaltstypen festgelegt. Für jede Route
+wird die HTTP-Methode, der entsprechende Pfad (z. B. \textit{/assets/:id}) zugewiesen. Die von
+\citeA{fielding_hypertext_2014} beschriebenen Semantik für HTTP-Methode sollte bei der Wahl je nach
+Funktion der Route zu Betracht gezogen werden. Folglich sollte die \textit{GET}-Methode verwendet
+werden, um ausschließlich Daten zurückzuerhalten. Während eine Anfrage mit übermittelnden Daten die
+\textit{POST}-Methode verwendet, welche Daten einen neuen Eintrag im System erschaffen.
+
+Um ein Asset zu reservieren, wird eine \textit{POST}-Anfrage an \textit{/reservation/id} abgeschickt. Für die
+Anfrage in Snipe-IT wird wiederum eine \textit{/reservation/receive} \textit{POST}-Anfrage gesendet.
 \ref{fig:orm} stellt die mit \textit{prisma} entwickelte Datenbank als Object Relational Mapper
 (ORM) mit folgendem Schema dar. \textit{User} können \textit{Reservierungen} aufgeben.
 
 
 \begin{table}[h]
   \centering
-  \caption{api des Reservierungsinterfaces}
+  \caption{API des Reservierungsinterfaces}
   \begin{tabular}{lll}
     \arrayrulecolor{maincolor}\hline
     \sffamily\color{maincolor}Methode & \sffamily\color{maincolor}Route           & \sffamily\color{maincolor}Funktion             \\
@@ -84,53 +91,58 @@ Anfrage in Snipe-IT wird wiederum eine \textit{/reservation/receive} POST-Anfrag
 
 
 \subsection{Implementierung der Kernfunktionalität}
-Dieser Abschnitt präsentiert die Implementierung der Kernfunktionalität des
-Zwischenbackends, welche aus den Anforderungen  bestimmt wurden
-(\ref{section:anforderung}). Bei der Funktionalität handelt es sich um das
-Reservieren in die Zukunft, sowie das Speichern dieser Vorgänge und die damit
-einhergehende Bestätigung für die Aktualisierung in Snipe-IT.
+Dieser Abschnitt präsentiert die Implementierung der Kernfunktionalität des Zwischenbackends, welche
+aus den Anforderungen bestimmt wurden (\ref{section:anforderung}). Bei der Funktionalität handelt es
+sich um das Reservieren in die Zukunft, sowie das Speichern dieser Vorgänge und die damit
+einhergehende Bestätigung für die Aktualisierung in Snipe-IT. Konkret wird auf das LDAP-System und
+das Reservieren von Assts eingegangen. 
 
-Um auf die Assets zugreifen zu können wurde mit der Snipe-IT JSON REST API gearbeitet. Die snipe-it
-api umfasst viele Befehle. Relevante Befehle für diese Arbeit waren \textit{/hardware,
+Um auf die Assets zugreifen zu können wurde mit der Snipe-IT JSON REST API gearbeitet. Die Snipe-IT
+API umfasst viele Ressourcen. Relevante Ressourcen für die Umsetzung der Arbeit waren \textit{/hardware,
 /statuslabels, /users, /categories}. Mithilfe dieser konnten die Assets der Beispieldatenbank
-genutzt werden. Ein /statuslabel ist im ausgeliehenen zustand immer an einen /user gebunden.
-\ref{fig:snipe} zeigt einen Ausschnitt der Komplexität und der Möglichkeiten, die die api bietet.
+verwendet werden. \ref{fig:snipe} zeigt die Beziehungen der API, beispielsweise ist ein
+\textit{/statuslabel} immer an einen \textit{/user} gebunden. 
 
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.3]{Bilder/snipe.jpg}
-  \caption[UML Snipe-IT api]{UML Snipe-IT api}
+  \includegraphics[scale=0.2]{Bilder/drawSQL-export-2022-10-12_17 27.png}
+  \caption[UML Snipe-IT API]{UML Snipe-IT API}
   \label{fig:snipe}
 \end{figure}
 
-Um mit der api arbeiten zu können muss ein \textit{API
-  key}\footnote{\url{https://snipe-it.readme.io/reference/generating-api-tokens}}
+Um mit der API arbeiten zu können muss ein \textit{API
+  key}\footnote{\url{https://snipe-it.readme.io/reference/generating-API-tokens}}
   generiert werden. Da persönliche Zugriffstoken verwendet werden, spiegeln die
   Berechtigungen des API-Tokens die Berechtigungen des Nutzenden wider. Das
-  bedeutet auch, das die Token lediglich manuell im Dashboard generierbar sind.
-  Was zur folge hat, dass das geplante LDAP-System der Universität zu Lübeck
-  nicht ohne umstände eingebunden und entsprechend genutzt werden kann. Snipe-IT
-  gibt unter anderem die Möglihkeit, das LDAP
+  bedeutet, dass die Token lediglich manuell im Dashboard generierbar sind.
+  Was zur Folge hat, dass das geplante LDAP-System der Universität zu Lübeck
+  nicht ohne Umstände eingebunden und entsprechend genutzt werden kann. Snipe-IT
+  gibt unter anderem die Möglichkeit, das LDAP
   Formular\footnote{\url{https://snipe-it.readme.io/docs/ldap-sync-login}}
-  einfach einzubinden, trotzdessen besteht das Problem, der Autentifizierung
-  sowie generierung der Tokens offen, da die Daten im Reservierungsinterface bis
-  dato nicht übertragen wurdne.
+  simpel einzubinden, trotz dessen besteht das Problem, der Authentifizierung
+  sowie Generierung der Tokens, da die Daten im Reservierungsinterface bis
+  dato nicht übertragen werden können. Dies führt zu einem Datenschutzproblem.
 
+Die für das Frontend benötigten Ressourcen wurden über den angelegten Routen erstellt. Zur
+Unterstützung wurde \textit{Fastify} verwendet. \textit{Fastify} ist ein Webframework für
+\textit{Node.js}. Das Framework verfügt über vielerlei Plugins und ist daher gut erweiterbar,
+außerdem erleichter es DINGE.
 
-FÜR FRONTEND benötigte Ressourcen: Routen angelegt -> Fastify genutzt, für
-vereinfachung
+Der eigentliche Kern der Anwendung befasst sich mit dem Reservieren der Assets. Hierfür müssen die
+Daten (Assetname, Datum, Uhrzeit, Ort, \dots) gespeichert werden. Bevor ein Status eines Assets in
+Snipe-IT von \textit{verfügbar} zu \textit{herausgegeben} geändert wird, werden die Daten für eine
+Reservierung im Reservierungsinterfaces zwischengespeichert. Für diesen Schritt wurde SQLite
+verwendet. Zusätzlich wurde für eine leichtere Verwaltung der angelegten Datenbank Prisma genutzt.
+Die von Snipe-IT zur Verfügung gestellten Möglichkeiten des der Statuseingabe/Ausleihen schwer und
+komisch -> rumarbeiten.
 
-
-Reservierung in der Zukunft: Daten zwischenspeichern, weil Snipe IT doof ->
-SQLite -> Prisma (für einfache verwaltung -> Beispeil und wie es Funktioniert)
-
-
-Statuseingabe/Ausleihen schwer und komisch -> rumarbeiten
+\todo[inline]{Gibt es sonst etwas Wichtiges, was man hier erwähnen sollte? Code beispeile?}
 
 \section{Implementierung des Frontends}
 Das kommende Unterkapitel beschreibt die Client-seitige Realisierung der Arbeit. Zunächst wird der
-Aufbau betrachtet (\ref{fig:vue}), daraufhin wird die Nutzung von vue und XXX erläutert. Des Weiteren wird auf die
-Struktur der Komponenten eingegangen (\ref{fig:komponenten}). Abschließend wird das native App-Erlebnis thematisiert.
+Aufbau betrachtet (\ref{fig:vue}), daraufhin wird die Nutzung von vue und XXX erläutert. Des
+Weiteren wird auf die Struktur der Komponenten eingegangen (\ref{fig:komponenten}). Abschließend
+wird das native App-Erlebnis thematisiert.
 
 \begin{figure}[h]
   \centering
@@ -139,66 +151,44 @@ Struktur der Komponenten eingegangen (\ref{fig:komponenten}). Abschließend wird
   \label{fig:vue}
 \end{figure}
 
-Für den Aufbau des Projektes wurde vue.js verwendet. Um das Styling zu vereinfachen wurde
-Tailwindcss verwendet. Die Kalenderkomponente wurde durch v-calender ergänzt. Der Kalender stellt
-einen wichtigen Bestandteil für das Reservieren dar. Durch die Möglichkeiten der Komponente ...??.
-Außerdem bietet diese viele Ausbaumöglichkeiten für folgende Funktionalitäten.
-
-Um bessere Vorschläge in der Entwicklungsumgebung zu ermöglichen und vorzeitige Fehler zu minimieren
-wurde ergänzt zu JavaScript TypeScript verwendet.
-
-
-
-Bei der Implementierung wurde sich an den best practices der Vue.js-Dokumentation orientiert
-\todo{(Vue.js, 2021a)}. Für sich wiederholende Elemente wurden eigene Views erstellt.
+Für den Aufbau des Projektes wurde aus den in \ref{chapter-konzept} festgestellten Anforderungen
+\textit{vue.js} verwendet. Bei der Implementierung wurde sich an den best practices der
+Vue.js-Dokumentation orientiert \todo{(Vue.js, 2021a)}. Für sich wiederholende Elemente wurden
+eigene Views erstellt. Dadurch ergibt sich eine hierarchisch geschachtelte Client-Anwendung der
+Vue-Komponenten. \ref{fig:Komponenten} stellt die Komponenten-Struktur vereinfacht dar. Um
+konkretere Vorschläge in der Entwicklungsumgebung zu ermöglichen und vorzeitige Fehler zu minimieren
+wurde ergänzt zu \textit{JavaScript} \textit{TypeScript} verwendet.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.7]{Bilder/Db.jpg}
-  \caption[Verzeichnisstruktur des Reservierungsinterfaces]{Verzeichnisstruktur des Reservierungsinterfaces}
+  \includegraphics[scale=0.5]{Bilder/struktur.pdf}
+  \caption[Vereinfachte Struktur der Komponenten]{Vereinfachte Struktur der Komponenten}
   \label{fig:Komponenten}
 \end{figure}
 
+Um das Styling zu vereinfachen wurde \textit{Tailwindcss} genutzt. Ergänzend dazu wurde
+\textit{Preline} für UI verwendet. -> Nicht empfehlenswert (Sackgassen).
+Für Animationen und Transitionen wurde \textit{HeadlessUi} genutzt.
 
+Der Kalender stellt einen wichtigen Bestandteil für das Reservieren von Assets dar. Die
+Kalenderkomponente wurde durch \textit{v-calender} ergänzt. Durch die Möglichkeiten der Komponente
+...??. Außerdem bietet diese viele Ausbaumöglichkeiten für folgende Funktionalitäten.
 
+Die im Rahmen dieser Arbeit verwendete Beispieldatenbank beinhaltete eine Vielzahl an Kategorien und
+Unterkategorien, welche wie folgt, eingetragen wurde: \enquote{Kategorie - Unterkategorie}. Da das
+Anzeigen von den Kategorien unübersichtlich ist, sollten zunächst nur die Kategorien und dann die
+Unterkategorien angezeigt werden. \ref{fig:categoriecode} stellt den Entwickelten Algorithmus als
+Pseudocode dar. Der \enquote*{-} wurde dazu als Trennsymbol verwendet. Daraufhin wurden der
+Vorderteil als Kategorie verwendet und der Hintere Als Unterkategorie. Um die Kategorien und
+Unterkategorien nicht doppelt anzeigen zulassen, wurde eine abfragen gemacht, bei welcher diese dann
+abgeglichen wurden bis keine Gleichheit mehr bestand und die nächste Kategorie angezeigt werden
+kann, bis alle Kategorien und Unterkategorien verglichen wurden.
 
-\begin{itemize}
-  \item Preline für UI -> Nicht empfehlenswert (Sackgassen)
-  \item Headless ui für animation
-  \item 
-\end{itemize}
-
-Aufteilung mit dem Bindestrich: Kategorien im Frontend
-
-\begin{lstlisting}
-fetch(import.meta.env.VITE_SERVER_URL + "/categories", options)
-.then(res => res.json())
-.then(data => (categories.value = data.categories.rows))
-.then(() => {
-	categories.value = categories.value
-		.map(category => {
-			const catSplit = category.name.split(" - ");
-			return {
-				id: category.id,
-				category: catSplit[0],
-				subcategory: catSplit[1],
-			};
-		})
-		.reduce((acc, category) => {
-			return {
-				...acc,
-				[category.category]: [
-					...(acc[category.category] ?? []),
-					{
-						id: category.id,
-						subcategory: category.subcategory,
-					},
-				],
-			};
-		}, {});
+\begin{lstlisting}[style=pseudo,gobble=2,caption={Pseudocode: Kategorien anzeigen},label=fig:categoriecode]
+  // Trennung am Strich
+    for $- \gets Kategorie$ to $Unterkapitel$ do
+      ICH BIN DUMM
 \end{lstlisting}
-
-
 
 
 \section{Nutzung des Systems}
@@ -208,17 +198,25 @@ des Systems.
 
 \subsection{Installation}
 Für die Nutzung des Systemes wird eine Installation von \textit{Node.js} sowie der Paket-Manager
-\textit{npm} benötigt. Anschließend, kann das System auf\dots
+\textit{npm} benötigt. Anschließend, kann das System auf \dots
 
 \subsection{Konfiguration}
+.env Datei angelegen
 
+Code einfügen
 
 \subsection{Ausführung von Snipe-IT}
 Um das System Nutzen und weiterentwicklen zu können muss... API KEy generieren
 lassen.
 
 \subsection{Ausführung der Web-App}
-
+\todo[inline]{Zum Ausführen oder Bereitstellen der Web-App muss diese vorher noch „gebaut“ werden.
+Hierbei handelt es sich um einen Prozess, in dem der Quellcode auf ein Minimum
+reduziert wird. Externe Pakete werden eingebunden und ungenutzter Code, soweit möglich,
+entfernt. Um diesen Prozess anzustoßen, muss im Stammverzeichnis der Web-App
+der Befehl yarn␣build ausgeführt werden. Nachdem der Bau-Prozess erfolgreich abgeschlossen
+ist, sollte ein neues ist Verzeichnis generiert wurden sein. Dieses Verzeichnis
+kann nun zum statischen Hosting verwendet werden.}
 
 
 \section{Fazit der Implementierung}
