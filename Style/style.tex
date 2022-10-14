@@ -26,6 +26,7 @@
 \usepackage{etoolbox}
 \usepackage{longtable}
 
+
 \newcommand\anfletter{Q}
 
 \newcommand\setanf[1]{\renewcommand\anfletter{#1}}
@@ -128,6 +129,9 @@
 
 % German guillemets quotes
 \usepackage[german=guillemets]{csquotes}
+\SetBlockThreshold{0}
+\renewcommand{\mkblockquote}[4]{{\emph{#1}}#2#3#4}
+
 
 % load TikZ to draw diagrams
 \usepackage{tikz}
