@@ -50,14 +50,14 @@ Eindringen unbefugter Personen.
 
 
     {\sffamily\color{maincolor}{Ft-VA-2 | Übersicht über ausleihbare Assets }}\\
-Die Übersicht, der am \ac{imis} vorhandenen Assets, wurde mittels Kategorien umgesetzt. Dafür gibt es
+Die Übersicht, der am \ac{imis} vorhandenen Assets wurde mittels Kategorien umgesetzt. Dafür gibt es
 eine Übersicht, bei der alle Assets eingesehen werden können. Die einzelnen Kategorien beinhalten
 Unterkategorien. In der Übersicht werden Informationen wie Name, Seriennummer, Marke und Status
 eines Assets angezeigt.
 
     {\sffamily\color{maincolor}{Ft-VA-3 |  Verfügbarkeit von Assets }}\\
 Der Status eines Asset \textit{(Verfügbar, Nicht verfügbar, Hinweis)} muss klar ersichtlich sein.
-Dies geschieht mittels Color-Coding.  
+Dies geschieht mittels Color-Coding.  \todo{Design-Entscheidungen begründen und nicht nur darstellen. D.h. hier vielleicht einen Satz dazu, warum du Color Coding als geeignete Variante dafür identifiziert hast }
 
 
 {\sffamily\color{maincolor}{Ft-VA-4 | Zuständigkeitsbereich }}\\
@@ -80,11 +80,11 @@ Abholung oder Rückgabe eines Assets ansteht.
 
     {\sffamily\color{maincolor}{Ft-VA-6 | Material-Suche }}\\
 Die Material-Suche umfasst eine Einteilung der Assets nach Kategorie, sowie die gezielte Suche nach
-der Verfügbarkeit der Assets (verfügbar, Nicht verfügbar und Hinweis). Das gezielte Suchen nach
-Verfügbarkeit wird durch die Aufforderung, den Ausleihzeitraum anzugeben, ermöglicht. Daraufhin gibt
+der Verfügbarkeit der Assets (verfügbar und nicht verfügbar). Das gezielte Suchen nach
+Verfügbarkeit wird durch die Aufforderung den Ausleihzeitraum anzugeben ermöglicht. Daraufhin gibt
 es die Möglichkeit gewünschte Materialien in einem Suchfeld einzugeben oder über die Kategorien nach
 dem Asset zu suchen. Das Suchfeld unterstützt bereits während der Eingabe mithilfe von
-Assetvorschlägen. Die Vorschläge umfassen Assets direkt oder Kategorien. 
+Assetvorschlägen. Die Vorschläge umfassen Assets oder Kategorien. 
 
     {\sffamily\color{maincolor}{Ft-VA-7 | Filtern und Sortieren }}\\
 Um das Finden der Assets leichter zu gestalten, sollen Nutzende stets nach Kategorie, Nutzen und
@@ -98,7 +98,7 @@ Informationen wie Name, Seriennummer, Artikelbeschreibung, technische Details un
 Kontaktinformation der Verleihenden dargestellt. Des Weiteren kann der Ausleihzeitraum eingestellt
 und die Zeiträume der Verfügbarkeit eines Assets eingesehen werden. In Form eines Button wird sichtbar, dass das
 Asset zur Ausleihe hinzugefügt werden kann. Das Hinzufügen wird durch eine Pop-Up-Mitteilung
-bestätigt.
+bestätigt. \todo{Auch hier wieder die Frage - warum hast du diese Umsetzung gewählt? }
 
 
 \subsection{Funktionalitäten für Verleihende}
@@ -126,7 +126,7 @@ Im Folgenden werden Funktionalitäten, welche für Verleihende von Bedeutung sin
 
 {\sffamily\color{maincolor}{Ft-V-1 | Dashboard }}\\
 Die Dashboard-Ansicht umfasst eine Aufgabenliste des ausgewählten Tages. Die Aufgaben umfassen
-Abholungs- oder Rückgabeterminen sowie Wartungserinnerungen. Durch einer Wochenliste kann zwischen
+Abholungs- oder Rückgabeterminen sowie Wartungserinnerungen. Über eine Wochenliste kann zwischen
 den Tagen gewechselt werden. Außerdem werden die aktuellsten Benachrichtigungen angezeigt.
 
 {\sffamily\color{maincolor}{Ft-V-2 | Bearbeiten des Assetstatus }}\\
@@ -152,9 +152,9 @@ und besser aufgeteilt werden.
 
     {\sffamily\color{maincolor}{Ft-V-4 | Pflege der Datenbank }}\\
     Diese Funktionalität wird bereits durch SnipeIT bereitgestellt. Jedoch sollten Anleitungen
-erstellt werden, um die Pflege zu erleichtern. 
+erstellt werden, um die Pflege zu erleichtern. \todo{Das hier verstehe ich noch nicht so ganz. Hier wären glaube ich zwei drei Sätze mehr ganz hilfreich}
 
-\subsection{Funktionalitäten für (A)usleihende}
+\subsection{Funktionalitäten für Ausleihende}
 Im Folgenden werden Funktionalitäten, welche für Ausleihende von Bedeutung sind, näher erläutert
 (\ref{table:ft-A}).
 
@@ -181,21 +181,21 @@ Im Folgenden werden Funktionalitäten, welche für Ausleihende von Bedeutung sin
 
 {\sffamily\color{maincolor}{Ft-A-1 | Startübersicht }}\\
 Die Startseite soll Nutzenden helfen, einen Überblick zu erlangen. Für Erstnutzende sind Hinweise
-für die Materal-Suche  in Form von Buttons gegeben. Für Nutzende, die bereits Assets ausgeliehen
+für die Material-Suche in Form von Buttons gegeben. Für Nutzende, die bereits Assets ausgeliehen
 haben, wird eine Übersicht über laufende, kommende und vergangene Reservierungen angezeigt. Wichtige
 Informationen, wie der Zeitraum, werden direkt auf einen Blick ersichtlich.
 
     {\sffamily\color{maincolor}{Ft-A-2 | Reservierungs-Checkout }}\\
 Mithilfe des Reservierungs-Checkouts können alle ausgewählten Assets überblickt werden. Außerdem
 werden alle Ausleihdaten, wie Zeitraum der Ausleihe, Abholung und Rückgabe aufgeführt. Des Weiteren
-gibt es die Möglichkeit, alle Ausleihdaten bearbeiten zu können, sollte ein Datum oder eine Uhrzeit
+gibt es die Möglichkeit alle Ausleihdaten bearbeiten zu können, sollte ein Datum oder eine Uhrzeit
 unpassend sein. Abschließend werden die Regeln und Sicherheitshinweise aufgeführt. Nach Bestätigung
 einer Erklärung zur Reservierung, gilt die Reservierung des Assets als abgeschlossen.
 
     {\sffamily\color{maincolor}{Ft-A-3 | Rückgabe-Checkliste}}\\
 Bevor die ausgeliehenen Assets an Verleihende zurückgeben werden, wird eine Checkliste für das
 jeweilige Asset angezeigt. Dort werden einige Hinweise angezeigt, wie zum Beispiel SD-Karte geleert, Assets auf
-Ursprungseinstellungen zurückgestellt, Akkus geladen. Diese Funktionalität soll insbesondere dafür
+Ursprungseinstellungen zurückgestellt oder Akkus geladen. Diese Funktionalität soll insbesondere dafür
 sorgen, dass nachfolgende Ausleihende die Assets direkt nutzen können.
 
 {\sffamily\color{maincolor}{Ft-B-4 | Kalenderansicht für Ausleihende}}\\
@@ -208,20 +208,20 @@ angezeigt.
 \section{Systemarchitektur}
 Die Systemarchitektur gibt eine Übersicht über die technische Umsetzung des Systems und
 bildet die Basis der Realisierung von Software-Systemen \cite{dumke_software-metriken_2000}. Diese besteht im
-Wesentlichen aus den folgenden drei Komponenten (\ref{fig:uml}): dem Snipe-IT Server, dem
+Wesentlichen aus den folgenden drei Komponenten (\ref{fig:uml}): dem \textit{Snipe-IT Server}, dem
 Reservierungsinterface und dem Front-End.
 
 Aufbauend auf den Anforderungen und der am \ac{imis} bereits eingesetzten Asset Managementsoftware
 \textit{Snipe-IT} werden im Folgenden die gewählten Frameworks erläutert. Um ein besseres
 Verständnis für die Architektur des entwickelten Software-Systemes voraussetzen zu können, wird nach
-dem C4-Modell zur Visualisierung von Softwarearchitektur, der Aufbau der Architektur mit den
+dem C4-Modell zur Visualisierung von Softwarearchitektur der Aufbau der Architektur mit den
 Teilkomponenten detaillierter dargestellt \cite{brown2013software}. 
 
 \subsection{Frameworkwahl}
-Die Frameworkwahl nimmt, durch die unterschiedlichen Arbeitsweisen und Funktionen der Frameworks,
+Die Frameworkwahl nimmt durch die unterschiedlichen Arbeitsweisen und Funktionen der Frameworks
 enormen Einfluss auf den Entwurf eines Systems und wird daher im Folgenden näher erläutert. 
  
-Die Grundlage der Auswahl, der im Rahmen dieser Arbeit eingesetzten Frameworks, bilden die eingangs
+Die Grundlage der Auswahl der im Rahmen dieser Arbeit eingesetzten Frameworks bilden die eingangs
 beschriebenen Anforderungen (\ref{section:anforderung}). Dem System wird vorausgesetzt, dass es sich
 um eine Web-Anwendung mit Fokus auf den Einsatz im mobilen Kontext (\anfref{R10}\anfref{R40}) handelt. Für
 Nutzende ist es wichtig, dass das System dauerhaft erreichbar ist (\anfref{R50}). Aus funktionaler
@@ -240,15 +240,14 @@ Systems in vier Kategorien gegliedert:
     \item \textbf{Person}: Stellt Nutzende eines Software-Systems dar.
     \item \textbf{Software-System}: Stellt die höchste Abstraktionsebene der Software dar.
     \item \textbf{Container}: Stellt einzeln, ausführbare Teilkomponenten des Software Systems dar. 
-    \item \textbf{Component}: Stellt z.B. die Datenbank oder Awendung dar.
+    \item \textbf{Component}: Stellt z.B. die Datenbank oder Anwendung dar.
 \end{itemize}
 
 {\sffamily\color{maincolor}{Level 1: Context}} 
 
-Das erste Level der Architekturvisualisierung nach dem C4-Modell stellt mithilfe eines
-Systemkontextdiagramms die entwickelte Software dar. \ref{fig:level1} zeigt die zwei Komponenten
-des im Rahmen der Arbeit entwickelten Systems im Zusammenhang mit der Asset Managementsoftware
-\textit{Snipe-IT}.
+Das erste Level der Architekturvisualisierung, nach dem C4-Modell, stellt die entwickelte Software
+mithilfe eines Systemkontextdiagramms dar. \ref{fig:level1} zeigt die zwei Komponenten des im Rahmen
+der Arbeit entwickelten Systems im Zusammenhang mit der Asset Managementsoftware \textit{Snipe-IT}.
 
 \begin{figure}[h]
     \centering
@@ -260,18 +259,18 @@ des im Rahmen der Arbeit entwickelten Systems im Zusammenhang mit der Asset Mana
 Der Kontext umfasst zwei Software-Systeme: das Reservierungstool und die Asset Managementsoftware
 Snipe-IT. Das Reservierungstool, bildet die Oberfläche für Ausleihende und ermöglicht es, die Assets
 einzusehen, zu suchen und zu buchen. Außerdem laufen über die Web-Oberfläche alle administrativen
-Aufgaben für Verleihende, wie das Aktualisieren eines Assetstatus. Hierzu nutzt die Web-App das
-Reservierungsinterface, um auf die SnipeIT Funktionalitäten zuzugreifen.  
+Aufgaben für Verleihende, wie das Aktualisieren eines Asset-Status. Hierzu nutzt die Web-App das
+Reservierungsinterface, um auf die \textit{Snipe-IT} Funktionalitäten zuzugreifen.  
 \todo[inline]{Referenzierungen hinzufügen}
 Die Basis für das in dieser Arbeit umgesetzte System schafft die Asset Managementsoftware
 \textit{Snipe-IT} \cite{noauthor_home_nodate}, welche bereits am \ac{imis} eingesetzt wird.
 \textit{Snipe-IT} ist eine kostenlose, quelloffene IT-Asset-Verwaltungs-Plattform, welche das
 Nachverfolgen von Software-Lizenzen, Hardware und Verbrauchsgegenständen ermöglicht. Genannte Assets
-können über ein Dashboard hinzugefügt, verwaltet und gelöscht werden. Über Labels können Assets zur
+können über ein Dashboard hinzugefügt, verwaltet und gelöscht werden. Über Labels können Assets für die
 Übersichtlichkeit in verschiedene Kategorien eingeordnet werden, während Tags ein Asset eindeutig
 identifizieren (z. B. Seriennummer). Zudem ermöglicht das „Checkin/Checkout“-System die
 Nachverfolgung aller Assets, falls diese zum Beispiel an Person ausgeliehen werden. Zu jedem
-Zeitpunkt kann ein Asset maximal einer Person zugeordnet werden, wodurch das mehrfache gleichzeitige
+Zeitpunkt kann ein Asset maximal einer Person zugeordnet werden, wodurch das mehrfache oder gleichzeitige
 Ausleihen eines Assets verhindert wird. Darüber hinaus beschreiben Status-Label den Zustands eines
 Assets und ob dieses ausgeliehen werden kann. Alle Funktionalitäten können zudem über eine REST-API
 programmatisch genutzt werden. Des Weiteren verfügt \textit{Snipe-IT} über eine Schnittstelle,
@@ -280,7 +279,7 @@ welche die Integration von LDAP stark vereinfacht.
 {\sffamily\color{maincolor}{Level 2: Container}}
 
 Im zweiten Level werden die Container des Software-Systems gezeigt. Hierbei werden Verantwortlichkeiten und
-Kommunikation zwischen den Bestandteilen des Software-Systems dargestellt (Brown, 2021). \ref{fig:level2}
+die Kommunikation zwischen den Bestandteilen des Software-Systems dargestellt (\ref{fig:level2})(Brown, 2021). 
 
 \begin{figure}[h]
     \centering
@@ -289,14 +288,13 @@ Kommunikation zwischen den Bestandteilen des Software-Systems dargestellt (Brown
     \label{fig:level2}
 \end{figure}
 
-Für Grundlage des Frontends wird Vue.js\footnote{\url{https://vuejs.org/}} verwendet. Vue.js ist
-eine progressive JavaScript Framework. Bei der Nutzung von Vue
-CLI\footnote{\url{https://cli.vuejs.org/}} kann eine PWA-Funktionalität mithilfe des
-\inlinecode{@vue/cli- plugin-pwa}-Pakets schnell eingebunden werden. Zudem steigt das Framework in
-der Zufriedenheit und Verwendung laut \citeA{noauthor_state} im Vergleich zu Angular über die Jahre
-stetig an (\ref{fig:vue}). Außerdem zeigt Vue.js in den Leistungs-Benchmarks positive Merkmale
-\todo[]{(Krause, 2022)}. Zusätzlich zu den bereits aufgeführten Eigenschaften wird Vue.js aufgrund der
-begrenzten Implementierungszeit und bestehende Erfahrung gewählt.
+Für die Grundlage des Frontends wird Vue.js\footnote{\url{https://vuejs.org/}} verwendet. Vue.js ist
+ein progressiver JavaScript Framework. Durch das Vite\footnote{\url{https://vitejs.dev/}}
+Plugin-System kann eine PWA-Funktionalität mithilfe des
+\inlinecode{vite-plugin-pwa}-Plugins\footnote{\url{https://github.com/vite-pwa/vite-plugin-pwa}}
+schnell eingebunden werden. Außerdem zeigt Vue.js in den Leistungs-Benchmarks positive Merkmale
+\todo[]{(Krause, 2022)}. Zusätzlich zu den bereits aufgeführten Eigenschaften wird Vue.js aufgrund
+der begrenzten Implementierungszeit und bestehenden Erfahrung gewählt.
 
 Das Reservierungsinterface nutzt die von Snipe-IT bereitgestellten Daten. Die Hauptaufgabe der
 Schnittstelle ist das Reservieren von Assets in die Zukunft. Da Snipe-IT selbst die zukünftige
@@ -305,11 +303,9 @@ gespeichert. Die gesamte Kommunikation zwischen Frontend und SnipeIT wird somit 
 Reservierungsinterface stattfinden, um auch alle zukünftigen Reservierungen zu berücksichtigen. Die
 Datenbank und API von Snipe-IT bilden die Ausgangsposition des Systems. Folglich wird die Verwaltung
 und Speicherung der vorhandenen Assets über Snipe-IT direkt abgewickelt. Über die bereitgestellte
-API werden die gespeicherten Daten für alle weiteren Komponenten bereitgestellt. Durch die
-eingeschränkten Funktionen der Kalender-Funktion und die fehlende Möglichkeit Termine in der Zukunft
-auswählen zu können, wird das Reservierungsinterface benötigt.
+API werden die gespeicherten Daten für alle weiteren Komponenten bereitgestellt. 
 
-Um unteranderem ein besseres Verständnis der Interaktion von einzelnen Komponenten voraussetzen zu können wurde
+Um unter anderem ein besseres Verständnis der Interaktion von einzelnen Komponenten voraussetzen zu können, wurde
 ein UML-Sequenzdiagramm erstellt (\ref{fig:uml}). Bei der vierten Komponente handelt es sich um das
 LDAP-System der Universität zu Lübeck. Mithilfe der Integration können Nutzende sich mit ihrem bereits
 bestehenden IDM Account anmelden. Zum einen kann somit sichergestellt werden, dass nur befugte
@@ -325,9 +321,9 @@ Ausleihprozess, da kein neuer Account erstellt werden muss.
 
 {\sffamily\color{maincolor}{Level 3: Components}}
 
-Das dritte Level stellt die Container aus Level 2 genauer dar, um die elementaren strukturellen
+Das dritte Level stellt die Container aus Level 2 genauer dar, um die elementaren, strukturellen
 Bestandteile und Wechselwirkungen zwischen diesen aufzuzeigen (Brown, 2021). Im Folgenden werden die
-Container Web-Application und Web Server genauer betrachtet \ref{fig:level3}.
+Container \textit{Web-Application} und \textit{Web Server} genauer betrachtet (\ref{fig:level3}).
 
 \begin{figure}[h]
     \centering
@@ -343,6 +339,6 @@ Nutzung\footnote{\url{https://www.fastify.io/organisations/}} wird
 Fastify\footnote{\url{https://www.fastify.io/}} als Serverframework eingesetzt. Als relationale
 Datenbank wird die quelloffene Software SQLite\footnote{\url{https://www.sqlite.org/index.html}}
 eingesetzt. Um den Zugriff und die Verwaltung der Daten zu vereinfachen wird zudem die
-ORM-Bibliothek Prisma verwendet.
+ORM-Bibliothek Prisma\footnote{\url{https://www.prisma.de/}}  verwendet.
 
 

@@ -1,41 +1,38 @@
 \chapter{Anforderungen}
 \label{chapter-analyse}
 
-Um Benutzende, Aufgaben und Kontext des Projektes genauer zu verstehen wurde
-eine Analyse nach dem menschenzentrierten Gestaltungsprozess durchgeführt.
-Hierbei wurden relevante Anforderungen, die Einfluss auf die Entwicklung und die
-spätere Nutzung des Reservierungstools nehmen, identifiziert und eingeordnen.
-Mit der Durchführung einer Recherche, welche in den Datenquellen
-(\ref{section:daten}) genauer präsentiert wird, wurden zunächst zwei
-Benutzergruppen (Verleihende und Ausleihende) festgehalten. Mittels einer
-Benutzeranalyse (\ref{section:benutzer}) unter der Zuhilfenahme der
-durchgeführten Interviews konnten diese weiter klassifiziert und eingegrenzt
-werden. Daraufhin wurden die Probleme und Herausforderungen des aktuellen
-Vorgehens und den unterschiedlichen Ausleihprozessen (\ref{section:iststand})
-geschildert. Anschließend wurden die Aufgaben, die Verleihende und Ausleihende
-mithilfe der Anwendung bewältigen sollten, diskutiert (\ref{section:aufgaben}).
-Abschließend wurde der organisatorische und zeitlich-räumliche Kontext des
-Verleihens und Ausleihens am \ac{imis} (\ref{section:kontext}) untersucht.
-Aufbauend auf den Resultaten der vorangestellten Untersuchungen wurden die
-objektiven Anforderungen an den Snipe-IT Companion nach \citeA{balzert2009}
-formalisiert (\ref{section:anforderung}). Diese dienen als Grundlage für das gesamte
-Konzept der Arbeit.
+Um Benutzende, Aufgaben und Kontext des Projektes genauer zu verstehen wurde eine Analyse nach dem
+menschenzentrierten Gestaltungsprozess durchgeführt \cite{din_en_iso_9421-2102020-03_din_nodate}.
+Hierbei wurden relevante Anforderungen, die Einfluss auf die Entwicklung und die spätere Nutzung des
+Reservierungstools nehmen, identifiziert und eingeordnet. Mit der Durchführung einer Recherche,
+welche in den Datenquellen (\ref{section:daten}) genauer präsentiert wird, wurden zunächst zwei
+Benutzergruppen (Verleihende und Ausleihende) festgehalten. Mittels einer Benutzeranalyse
+(\ref{section:benutzer}) unter der Zuhilfenahme von durchgeführten Interviews konnten diese weiter
+klassifiziert und eingegrenzt werden. Daraufhin wurden die Probleme und Herausforderungen des
+aktuellen Vorgehens und den unterschiedlichen Ausleihprozessen (\ref{section:iststand}) hergeleitet.
+Anschließend wurden die Aufgaben, die Verleihende und Ausleihende mithilfe der Anwendung bewältigen
+sollten, diskutiert (\ref{section:aufgaben}). Abschließend wurde der organisatorische und
+zeitlich-räumliche Kontext des Verleihens und Ausleihens am \ac{imis} (\ref{section:kontext})
+untersucht. Aufbauend auf den Resultaten der vorangestellten Untersuchungen wurden die objektiven
+Anforderungen an den Snipe-IT Companion nach \citeA{balzert2009} formalisiert
+(\ref{section:anforderung}). Diese dienen als Grundlage für das gesamte Konzept der Arbeit.
 
 \section{Datenquellen}
 \label{section:daten}
-Im Rahmen der Analyse wurden Stakeholder-Interviews durchgeführt (\nameref{subsection:interview}).
+Im Rahmen der Analyse wurden \nameref{subsection:interview} durchgeführt (\ref{subsection:interview}).
 Darauffolgend wurde nach vergleichbaren Projekten und Systemen recherchiert
-(\nameref{subsection:interview}).
+(\ref{subsection:system}).
 
 \subsection{Stakeholder-Interviews}
 \label{subsection:interview}
-Die Befragten wurden durch ein semi-strukturiertes Interview geführt. Im Vorfeld wurde dafür ein
-Interviewleitfaden entwickelt (Anhang Verlinken). Die Interviews wurden aufgezeichnet und
-anschließend in Teilen, mithilfe eines vereinfachten Transkriptionssystems, verschriftlicht.
-Daraufhin wurde eine qualitative Inhaltsanalyse durchgeführt. Hierfür wurden die Transkripte erneut
-gelesen und für die Arbeit und Forschungsfragen relevante Textstellen kommentiert. Infolgedessen
-wurden die erarbeiteten Kommentare in ein Ordnungssystem strukturiert und unter den einzelnen
-Analysen zusammengefasst \cite{dresing_praxisbuch_2016}.
+Zunächst wurde anhand der zu untersuchenden Gesichtspunkte ein Interviewleitfaden für ein
+semi-strukturiertes Interview entwickelt \todo{Anhang}. Mithilfe dieses Leitfadens wurden die Befragten
+durch das Interview geführt. Die Interviews wurden aufgezeichnet und anschließend in Teilen,
+mithilfe eines vereinfachten Transkriptionssystems, verschriftlicht \cite{dresing_praxisbuch_2016}. Daraufhin wurde eine
+qualitative Inhaltsanalyse durchgeführt. Hierfür wurden die Transkripte erneut gelesen und für die
+Arbeit und Forschungsfragen relevante Textstellen kommentiert. Infolgedessen wurden die erarbeiteten
+Kommentare in ein Ordnungssystem strukturiert und unter den einzelnen Analysepunkten zusammengefasst
+\cite{dresing_praxisbuch_2016}.
 
 Es wurde eine Unterteilung in Verleihende und Ausleihende von Assets vorgenommen (genauere
 Definition der Benutzergruppen in \ref{section:benutzer}). Bei den Teilnehmenden handelt es sich um
@@ -45,14 +42,12 @@ Verleihenden aufgeführt. Verleihende der Assets können gleichzeitig die Positi
 einnehmen. Die Ausleihenden umfassen außerdem Studierende, welche in \ref{table:a} dargestellt sind.
 Durch den geplanten Einsatz am \ac{imis} wurde sich zunächst ausschließlich auf \ac{wimi} des
 \ac{imis} und Studierende der Medieninformatik begrenzt. Hierbei wurde insbesondere der Fokus auf
-die Probleme am \ac*{imis} gelegt (genauere Untersuchungen in der Problemanalyse in
+die Probleme am \ac{imis} gelegt (genauere Untersuchungen in der Problemanalyse in
 \ref{section:iststand}). Die IDs der Teilnehmenden werden als Verweise in den folgenden Abschnitten
 verwendet.
 
-Des Weiteren wurde mithilfe des \ac{ati} das technische Interesse und
-Verständnis der Teilnehmenden festgestellt (\ref{table:ati}), sodass das
-Reservierungstool entsprechend an die Benutzergruppen angepasst werden kann
-\cite{attig_assessing_2017}.
+Des Weiteren wurde mithilfe des \ac{ati} das technische Interesse und Verständnis der Teilnehmenden
+festgestellt (\ref{table:ati}) \cite{attig_assessing_2017}.
 
 \begin{table}[h]
         \centering
@@ -125,16 +120,18 @@ Reservierungstool entsprechend an die Benutzergruppen angepasst werden kann
 \subsection{Recherche vergleichbare Systeme}
 \label{subsection:system}
 Für die Recherche wurden die digitalen Bibliotheken ACM Digital
-Library\footnote{\url{https://dl.acm.org/} und Google
+Library\footnote{\url{https://dl.acm.org/}} und Google
 Scholar\footnote{\url{https://scholar.google.de/}} genutzt. Es wurden Begriffe aus den Bereichen
 Managementsystem \textit{(Assets, Assetmanagement, schedule)} und Reservation \textit{(reservation,
-Lending, lend, borrow)} zur Suche verwendet. Die Recherche sollte dem bessern vergleichen und
-abwägen der analysierten Interview-Ergebnisse dienen und vergleichbare Systeme und Projekte
+Lending, lend, borrow)} zur Suche verwendet. Die Recherche sollte dem besseren Vergleichen und
+Abwägen der analysierten Interview-Ergebnisse dienen und vergleichbare Systeme und Projekte
 eruieren. Des Weiteren sollte die Recherche dazu dienen mögliche Fehlerquellen zu erörtern, um diese
-umgehen zu können. Durch den speziellen Einsatzort am \ac{imis}, stellte sich zeitnah heraus, dass
+umgehen zu können. Durch den speziellen Einsatzort am \ac{imis} stellte sich zeitnah heraus, dass
 wenige bis keine vergleichbaren Systeme gefunden werden konnten. Folglich boten die vorhanden
 Vergleiche keinen hilfreichen Aufschluss für den Rahmen dieser Arbeit, daher wurde die Recherche
-nicht fortgeführt.
+nicht fortgeführt.\todo{Systeme schildern}
+
+% Vielleicht schilderst du lieber erst die zwei Beispiele und leitest dann ab, dass diese deinem Nutzungskontext nicht entsprechen und du demzufolge nur jene und solche Ableitungen treffen konntest?  Denke nur ans Kolloquium und mit so einer Aussage machst du dich relativ angreifbar, glaube ich 
 
 \section{Benutzeranalyse}
 \label{section:benutzer}
@@ -176,13 +173,13 @@ der \ac{wimi} für den Snipe-IT Companion festlegen.
 
 Verleihende umfassen ausschließlich Mitarbeitende, sowie administratives Personal des \ac{imis},
 welche verantwortlich für die Ausgabe von Assets sind (\ref{table:v}). Allerdings haben nicht alle
-Verleihenden auf alle Assets den gleichen Zugriff, da dies von Forschungsgruppe zu Forschungsgruppe
+Verleihende auf alle Assets den gleichen Zugriff, da dies von Forschungsgruppe zu Forschungsgruppe
 unterschiedlich ist. Zudem liegen in den Forschungsgruppen unterschiedliche Vorgänge vor (genauere
 Unterschiede zu den Vorgängen in \ref{section:iststand}). Folglich können Verleihende der Assets
 gleichzeitig die Position der Ausleihenden einnehmen.
 
 \subsection{Ausleihende}
-Die Ausleihenden eines Assets unterscheiden sich, aus Sicht der Web-App, in ihren
+Die Ausleihenden eines Assets unterscheiden sich systemseitig in ihren
 soziodemografischen Daten kaum. Im Kontext der vorliegenden Arbeit sind besonders Technikaffinität
 und Alter zu beachten.
 \todo[]{Alle, also N 9}
@@ -218,7 +215,7 @@ Benutzergruppen näher erläutert.
 Eines der größten Probleme im derzeitigen Ablauf ist das Nichtvorhandensein einer öffentlichen Liste
 für Studierende, über die ausleihbare Assets eingesehen werden können. Auch aufseiten der
 Verleihenden ist keine vollständige interne Übersicht vorhanden (V1-5, A1-6). Dies führt dazu, dass
-aufgrund von Unwissenheit wenig Assets ausgeliehen werden können (V1-5). Durch die verschiedenen
+aufgrund von fehlender Information wenig Assets ausgeliehen werden können (V1-5). Durch die verschiedenen
 Forschungsgruppen am \ac{imis} und die damit verbundenen Labore, gibt es verschiedene
 Ansprechpartner:innen für die jeweiligen Assets in den Laboren. Die Verantwortlichkeiten dieser
 Ansprechpartner:innen ist jedoch nicht ausreichend ersichtlich, sodass es häufig zu Weiterverweisen
@@ -455,7 +452,7 @@ Forschungsgruppen gerät dies häufig in Vergessenheit, da keine Übersicht vorh
 
 Für die Ermittlung der Nutzungsumgebung, in der das System verwendet werden soll, wurde eine
 Kontextanalyse, basierend auf den vorangehenden Analysen und Interviews durchgeführt. Zunächst wurde
-der organisatorische Kontext des Systems festgehalten. Anschließend wird der zeitlich-räumliche
+der organisatorische Kontext des Systems festgehalten. Anschließend wurde der zeitlich-räumliche
 Kontext eruiert \cite{herczeg_software-ergonomie_2018}.
 
 \subsection{Organisatorischer Kontext}
@@ -489,12 +486,12 @@ liegt ein mobiler Nutzungskontext vor, welcher beispielsweise durch die Nutzung 
 dem Smartphone ermöglicht werden kann (V1, V2, V3, V5). Die Bedienung der Anwendung sollte
 niedrigschwellig sein, da Mitarbeitende häufig nicht viel Zeit für die Bedienung haben oder
 investieren möchten (V1, V2, V3). Das System sollte einen pragmatischen Zweck erfüllen und kein zu
-großes Konzept umfassen, sodass womöglich neue Anläufe dazu kommen und sich die Arbeit zweckmäßig
-erhört als reduziert wird (V2).
+großes Konzept umfassen, sodass womöglich neue Anläufe dazu kommen und die Arbeit zweckmäßig
+erhöht statt reduziert wird (V2).
 
 \subsubsection{Ausleihende}
-Studierende arbeiten Flexible zum Beispiel von Zuhause aus oder in der Bibliothek. Es wird jedoch
-selten im \ac{imis} direkt gearbeitet. Daher sollte das Buchen spontan, jederzeit und ortsunabhängig
+Studierende arbeiten flexibel zum Beispiel von Zuhause aus oder in der Bibliothek. Es wird jedoch
+selten am \ac{imis} direkt gearbeitet. Daher sollte das Buchen spontan, jederzeit und ortsunabhängig
 möglich sein. Daher liegt ein mobiler Nutzungskontext vor, welcher beispielsweise durch die Nutzung
 einer Web-App auf dem Smartphone ermöglicht werden kann (A1, A3, A6).
 
