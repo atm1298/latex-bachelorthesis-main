@@ -56,7 +56,7 @@ Unterkategorien. In der Übersicht werden Informationen wie Name, Seriennummer, 
 eines Assets angezeigt.
 
     {\sffamily\color{maincolor}{Ft-VA-3 |  Verfügbarkeit von Assets }}\\
-Der Status eines Asset \textit{(Verfügbar, Nicht verfügbar, Hinweis)} muss klar ersichtlich sein.
+Der Status eines Asset (verfügbar und nicht verfügbar) muss klar ersichtlich sein.
 Dies geschieht mittels Color-Coding.  \todo{Design-Entscheidungen begründen und nicht nur darstellen. D.h. hier vielleicht einen Satz dazu, warum du Color Coding als geeignete Variante dafür identifiziert hast }
 
 
@@ -126,7 +126,7 @@ Im Folgenden werden Funktionalitäten, welche für Verleihende von Bedeutung sin
 
 {\sffamily\color{maincolor}{Ft-V-1 | Dashboard }}\\
 Die Dashboard-Ansicht umfasst eine Aufgabenliste des ausgewählten Tages. Die Aufgaben umfassen
-Abholungs- oder Rückgabeterminen sowie Wartungserinnerungen. Über eine Wochenliste kann zwischen
+Abholungs- oder Rückgabetermine sowie Wartungserinnerungen. Über eine Wochenliste kann zwischen
 den Tagen gewechselt werden. Außerdem werden die aktuellsten Benachrichtigungen angezeigt.
 
     {\sffamily\color{maincolor}{Ft-V-2 | Bearbeiten des Assetstatus }}\\
@@ -137,8 +137,8 @@ hat, eine Benachrichtigung an Verleihende senden, sollte der Status nicht bereit
 sein.
 
     {\sffamily\color{maincolor}{Ft-B-4 | Kalenderansicht für Verleihende}}\\
-Die Kalenderansicht für Verleihende beinhaltet eine Übersicht, über alle Assets, welche in diesem Moment
-verliehen sind. Mithilfe einer Monatsübersicht werden Termin zur Asset-Abholung, Rückgabe oder zur
+Die Kalenderansicht für Verleihende beinhaltet eine Übersicht über alle Assets, welche in diesem Moment
+verliehen sind. Mithilfe einer Monatsübersicht werden Termine zur Asset-Abholung, Rückgabe oder zur
 Wartung angezeigt. In einer Wochenansicht auf dem Dashboard gibt es eine detailreichere Ansicht
 eines jeweiligen Tages.
 
@@ -239,7 +239,7 @@ Systems in vier Kategorien gegliedert:
 \begin{itemize}
     \item \textbf{Person}: Stellt Nutzende eines Software-Systems dar.
     \item \textbf{Software-System}: Stellt die höchste Abstraktionsebene der Software dar.
-    \item \textbf{Container}: Stellt einzeln, ausführbare Teilkomponenten des Software Systems dar.
+    \item \textbf{Container}: Stellt einzeln ausführbare Teilkomponenten des Software Systems dar.
     \item \textbf{Component}: Stellt z.B. die Datenbank oder Anwendung dar.
 \end{itemize}
 
@@ -251,13 +251,13 @@ der Arbeit entwickelten Systems im Zusammenhang mit der Asset Managementsoftware
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.4]{Bilder/level1.pdf}
+    \includegraphics[scale=0.4]{Bilder/C4_1.pdf}
     \caption[Architektur Level 1]{Architektur Level 1 nach \citeA{brown2013software}}
     \label{fig:level1}
 \end{figure}
 
 Der Kontext umfasst zwei Software-Systeme: das Reservierungstool und die Asset Managementsoftware
-Snipe-IT. Das Reservierungstool, bildet die Oberfläche für Ausleihende und ermöglicht es, die Assets
+Snipe-IT. Das Reservierungstool bildet die Oberfläche für Ausleihende und ermöglicht es, die Assets
 einzusehen, zu suchen und zu buchen. Außerdem laufen über die Web-Oberfläche alle administrativen
 Aufgaben für Verleihende, wie das Aktualisieren eines Asset-Status. Hierzu nutzt die Web-App das
 Reservierungsinterface, um auf die \textit{Snipe-IT} Funktionalitäten zuzugreifen.
@@ -269,7 +269,7 @@ Nachverfolgen von Software-Lizenzen, Hardware und Verbrauchsgegenständen ermög
 können über ein Dashboard hinzugefügt, verwaltet und gelöscht werden. Über Labels können Assets für die
 Übersichtlichkeit in verschiedene Kategorien eingeordnet werden, während Tags ein Asset eindeutig
 identifizieren (z. B. Seriennummer). Zudem ermöglicht das „Checkin/Checkout“-System die
-Nachverfolgung aller Assets, falls diese zum Beispiel an Person ausgeliehen werden. Zu jedem
+Nachverfolgung aller Assets, falls diese zum Beispiel an Personen ausgeliehen werden. Zu jedem
 Zeitpunkt kann ein Asset maximal einer Person zugeordnet werden, wodurch das mehrfache oder gleichzeitige
 Ausleihen eines Assets verhindert wird. Darüber hinaus beschreiben Status-Label den Zustands eines
 Assets und ob dieses ausgeliehen werden kann. Alle Funktionalitäten können zudem über eine REST-API
@@ -283,7 +283,7 @@ die Kommunikation zwischen den Bestandteilen des Software-Systems dargestellt (\
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.47]{Bilder/level2.pdf}
+    \includegraphics[scale=0.47]{Bilder/C4_2.pdf}
     \caption[Architektur Level 2]{Architektur Level 2 nach \citeA{brown2013software}}
     \label{fig:level2}
 \end{figure}
@@ -327,7 +327,7 @@ Container \textit{Web-Application} und \textit{Web Server} genauer betrachtet (\
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.9]{Bilder/level3.pdf}
+    \includegraphics[scale=0.9]{Bilder/C4_3.pdf}
     \caption[Architektur Level 3]{Architektur Level 3 nach \citeA{brown2013software}}
     \label{fig:level3}
 \end{figure}
@@ -338,7 +338,7 @@ Pluginauswahl\footnote{\url{https://www.fastify.io/ecosystem/}} und breiten
 Nutzung\footnote{\url{https://www.fastify.io/organisations/}} wird
 Fastify\footnote{\url{https://www.fastify.io/}} als Serverframework eingesetzt. Als relationale
 Datenbank wird die quelloffene Software SQLite\footnote{\url{https://www.sqlite.org/index.html}}
-eingesetzt. Um den Zugriff und die Verwaltung der Daten zu vereinfachen wird zudem die
+eingesetzt. Um den Zugriff und die Verwaltung der Daten zu vereinfachen, wird zudem die
 ORM-Bibliothek Prisma\footnote{\url{https://www.prisma.de/}}  verwendet.
 
 
