@@ -1,5 +1,5 @@
-%Wie eingangs er-wähnt, definieren die Anforderungen, was das System zu
-%leisten hat, während die Funktionalitä-ten definieren, wie das System diese gewährleistet.
+% Wie eingangs erwähnt, definieren die Anforderungen, was das System zu
+% leisten hat, während die Funktionalitä-ten definieren, wie das System diese gewährleistet.
 \chapter{Interface-Design}
 \label{chapter-design}
 Neben den inhaltlichen Funktionalitäten ist im menschzentrierten Gestaltungsprozess vor allem das
@@ -13,18 +13,18 @@ Die Medieninformatik beinhaltet viele Methoden und Vorgehensweisen zur menschzen
 \cite{Herczeg2009}. Im Rahmen der Arbeit wurde vor allem Prototyping in verschiedenen Formen
 eingesetzt \cite{herczeg_einfuhrung_2009}. Des Weiteren wurden die Zehn Usability Heuristiken nach
 \citeA{nielsen_enhancing_1994} bei der Entwicklung stets mit eingearbeitet, um Kriterien der
-Gebrauchstauglichkeit zu addressieren \todo{(Ausführliche Aufzählung der Heuristiken im Anhang)}. In
+Gebrauchstauglichkeit zu addressieren \todo{Ausführliche Aufzählung der Heuristiken im Anhang}. In
 der Gestaltung wurde nach der \enquote{Mobile First}-Strategie gearbeitet (\anfref{R40}). Diese
 besagt die Nutzung der Bildschirmfläche zur schrittweisen Verbesserung von Darstellung und Inhalt
 \cite{kim_chapter_2013}. Bei der Anordnung der Komponenten wurde sich an, aus den \ref{subsection:interview}, genannten
 Anwendungen, wie Airbnb\footnote{\url{https://www.airbnb.de/}} und
-Otto\footnote{\url{https://www.otto.de/}} orientieren. Des Weiteren wurden Tailwind
+Otto\footnote{\url{https://www.otto.de/}} orientiert. Des Weiteren wurden Tailwind
 UI\footnote{\url{https://tailwindui.com/components}} und Headless
 UI\footnote{\url{https://headlessui.com/}} als Inspirationsquelle herangezogen, um die Realisierung
 des Systems zu erleichtern.
 
 Die erste Iteration des Interface-Designs umfasst Skizzen. Die Skizzen wurden erstellt, um einen
-groben Überblick, der verschiedenen Ansichten zu erhalten und in
+groben Überblick der verschiedenen Ansichten zu erhalten und in
 Mockup\footnote{\url{https://getmockup.app/}} umgesetzt. Während des Interface-Designs wurden die
 Skizzen mit Figma\footnote{\url{https://www.figma.com/de/}} zu einem High-Fidelity-Prototyp
 weiterentwickelt.
@@ -34,7 +34,7 @@ Im Rahmen dieses Kapitels werden die zentralen Ansichten und Design Entscheidung
 
 \section{Iteratives Vorgehen}
 Für die Tests wurden Usability Spezifikationen aus Szenarien abgeleitet. Die Szenarien beschreiben
-Aufgaben die als Vorlage dienen können \todo{Anhang, Quelle Scenario Based Design einfügen - auch,
+Aufgaben, welche als Vorlage dienen können \todo{Anhang, Quelle Scenario Based Design einfügen - auch,
     wenn nicht nach dem Prozess vorgegangen, ist es doch sicherlich eine gute Quelle, die man für die
     Entwicklung von Szenarien zitieren kann}. Um repetitive Evaluationsergebnisse zu verhindern, wurden
 die Evaluationsergebnisse kontinuierlich in die weitere Entwicklung eingearbeitet. \ref{table:e}
@@ -68,7 +68,7 @@ Im Folgenden wird auf die Entwicklung der wichtigsten Komponenten und Ansichten 
 Interfacegestaltung eingegangen.
 
 \subsection{Wortlaut}
-Ein zentrales Problem des Prototyps war einen Konsistenten Wortlaut zu erlangen (H2, H4, H5).
+Ein zentrales Problem des Prototyps war einen konsistenten Wortlaut zu erlangen (H2, H4, H5).
 Insbesondere der Begriff \textit{Assets} hat zu Verwirrungen geführt, da nicht klar war, was der
 Begriff definiert (E1, E2). Daraufhin wurden Vorschläge geliefert, wie \textit{Material, Hardware,
     Systeme, Geräte}. Im weiteren Verlauf hat sich \textit{Material} als am verständlichsten
@@ -81,16 +81,16 @@ weitere Entscheidung getroffen\todo{Ausblick}.
 \subsection{Schrift}
 Allgemein wurde die Schriftart nach Kriterien für eine gute Lesbarkeit, wie: Erkennbarkeit,
 Unterscheidbarkeit und Offenheit betrachtet \cite{kommunikationsdesign_leserlichinfo}. Außerdem
-wurde sich für die spätere Realisierung wurde sich für die Typografie direkt an Tailwind
+wurde sich für die spätere Realisierung für die Typografie direkt an Tailwind
 UI\footnote{\url{https://tailwindui.com/components}} orientiert und daher Segul UI gewählt.
 
 
 \subsection{Farbschema}
 Die Farben der Anwendung (\ref{fig:farben}) werden nach dem 60-30-10 Prinzip genutzt
-\cite{experience_using}. Wobei Grau die Hauptfarbe darstellt, Weiß die Sekundär Farbe und Organe die
+\cite{experience_using}. Wobei grau die Hauptfarbe darstellt, weiß die Sekundär Farbe und organe die
 Akzentfarbe. Da die Anwendung eine Software am \ac{imis} ist und die Farben des Instituts sich auf
 Orange und das Universitäts-Blau beschränken, wurde sich nach einigen Vergleichen für das Orange
-entschieden (E4,E5). Der Dunkle Ton stellt die Textfarbe der Anwendung dar.
+entschieden (E4,E5). Der dunkle Ton stellt die Textfarbe der Anwendung dar.
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.23]{Bilder/farben.png}
@@ -99,10 +99,10 @@ entschieden (E4,E5). Der Dunkle Ton stellt die Textfarbe der Anwendung dar.
 \end{figure}
 
 \subsection{Dashboard}
-Positiv wurde stets angemerkt, dass die Anwendung im allgemein sauber und nicht überladen wirkt (H8)
+Positiv wurde stets angemerkt, dass die Anwendung im allgemeinen sauber und nicht überladen wirkt (H8)
 (E1-6). Aufgrund des zu Beginn geringen Inhalts auf der Startseite ist eine ansprechende und
 fokussierte Anordnungen der Komponenten wichtig (H8). \ref{fig:home} zeigt die Entwicklung des
-Dashboards. Ein wichtiger Punkt, war die im Linken Bild fehlende Orientierung (E1-4). Außerdem
+Dashboards. Ein wichtiger Punkt war die im linken Bild fehlende Orientierung (E1-4). Außerdem
 wirkte die Ansicht durch die vielen einzelnen Elemente schnell überladen (H8) (E1-2). Daher wurde
 sich für eine simple Tab-Leiste entschieden. Folglich ist die Seite auch bei mehr als drei
 Reservierungen übersichtlich (E4). Sobald ein Asset ausgeliehen wurde, sollten die entsprechenden
@@ -110,7 +110,7 @@ Informationen (Status, Zeitraum, Ort) übersichtlich und schnell eingesehen werd
 (F-A-1). Dies ermöglicht die Kartenansicht, wobei eine Möglichkeit zum Löschen und das Bearbeiten
 des Zeitraums erwünscht war und in der Realisierung integriert wurde (E6).
 
-Die Verwaltungsansicht, in welcher die Möglichkeit zum Aktualisieren des Status entspricht zum
+Die Verwaltungsansicht, in welcher die Möglichkeit zum Aktualisierendes Status besteht, entspricht zum
 Großteil dem Dashboard (H6) (F-V-1, F-V-2).
 
 \begin{figure}[h]
@@ -129,7 +129,7 @@ Navigationsleiste links und einer Leiste oben abgewägt (\ref{fig:nav}). An Ende
 Navigationsleiste auf der linken Seite entscheiden. Orientiert wurde sich hierbei an bekannten
 Anwendungen mit ähnlichen Funktionen und dem Material Design \cite{google_material_2022}. Die
 Umgangsweise mit diesen Gestaltungslösungen ist bereits bekannt und somit übertragbar (H4, H6).
-Daran Anknüpfend wurde sich für eine integrierte Suchleiste entschieden, sodass Nutzende jederzeit
+Daran anknüpfend wurde sich für eine integrierte Suchleiste entschieden, sodass Nutzende jederzeit
 die Möglichkeit haben, nach Assets zu suchen \cite{google_material_2022} (E4).
 
 
@@ -143,15 +143,14 @@ die Möglichkeit haben, nach Assets zu suchen \cite{google_material_2022} (E4).
 \end{figure}
 
 \subsection{Kategorien und Suche}
-Die Übersicht der Kategorien sind auch hier wieder an bekannten
-Anwendungen mit ähnlichen Funktionen angelehnt (H4, H8). Dies führt unteren auch dazu, dass Fehler
-vermieden werden können (H9).
+Die Übersicht der Kategorien sind auch hier wieder an bekannten Anwendungen mit ähnlichen Funktionen
+angelehnt (H4, H8). Dies führt unter anderem auch dazu, dass Fehler vermieden werden können (H9).
 
 Die Suche ist durch die Anwendung Airbnb\footnote{\url{https://www.airbnb.de/}} entstanden, da viele
 Nutzende beim Reservieren die Anwendung assoziieren (H2, H4). Die Suche sollte durch das direkte
 Einstellen eines Ausleihzeitraums Fehler vorbeugen und Verfügbarkeit anzeigen (H5) (F-VA-6).
 \ref{fig:p1} zeigt die erste Version des High-Fidelity-Prototypen, bei welcher zum einen ein
-Suchbutton fehlte zudem wurden die Vorschläge der angezeigten Kategorien weniger genutzt wurden und
+Suchbutton fehlte, zudem wurden die Vorschläge der angezeigten Kategorien weniger genutzt wurden und
 direkt auf die Suche oder \textit{alle Ketegoreien Anzeigen} geklickt wurde, daher wurden diese
 Elemente entsprechenden angepasst (E1, E2, E4).
 
