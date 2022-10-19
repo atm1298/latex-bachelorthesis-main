@@ -4,14 +4,14 @@
 \label{chapter-design}
 Neben den inhaltlichen Funktionalitäten ist im menschzentrierten Gestaltungsprozess vor allem das
 Interface-Design und die Gestaltung der Komponenten von zentraler Bedeutung
-\cite{din_en_iso_9421-2102020-03_din_nodate} (DIN EN ISO 9241-210, 2011). Das Design sollte so
+\cite{DINISO9241} (DIN EN ISO 9241-210, 2011). Das Design sollte so
 entwickelt werden, dass es möglichst optimal die aus \ref{chapter-konzept} entwickelten
 Funktionalitäten berücksichtigt. Folglich sollten die in \ref{section:benutzer} erarbeiteten
 Nutzenden die Gestaltungslösungen verstehen und bedienen können.
 
 Die Medieninformatik beinhaltet viele Methoden und Vorgehensweisen zur menschzentrierten Gestaltung
-\cite{Herczeg2009}. Im Rahmen der Arbeit wurde vor allem Prototyping in verschiedenen Formen
-eingesetzt \cite{herczeg_einfuhrung_2009}. Des Weiteren wurden die Zehn Usability Heuristiken nach
+\cite{HerczegIDE2009}. Im Rahmen der Arbeit wurde vor allem Prototyping in verschiedenen Formen
+eingesetzt \cite{HerczegMDI2009}. Des Weiteren wurden die Zehn Usability Heuristiken nach
 \citeA{nielsen_enhancing_1994} bei der Entwicklung stets mit eingearbeitet, um Kriterien der
 Gebrauchstauglichkeit zu addressieren \todo{Ausführliche Aufzählung der Heuristiken im Anhang}. In
 der Gestaltung wurde nach der \enquote{Mobile First}-Strategie gearbeitet (\anfref{R40}). Diese
@@ -38,12 +38,12 @@ Aufgaben, welche als Vorlage dienen können \todo{Anhang, Quelle Scenario Based 
     wenn nicht nach dem Prozess vorgegangen, ist es doch sicherlich eine gute Quelle, die man für die
     Entwicklung von Szenarien zitieren kann}. Um repetitive Evaluationsergebnisse zu verhindern, wurden
 die Evaluationsergebnisse kontinuierlich in die weitere Entwicklung eingearbeitet. \ref{table:e}
-stellt die Interviewteilnehmenden  mit IDs dar, welche in den folgenden Abschnitten als Verweise
+stellt die Evaluationsteilnehmenden mit IDs dar, welche in den folgenden Abschnitten als Verweise
 verwendet werden.
 
 \begin{table}[h]
     \centering
-    \caption{Teilnehmende der Evaluation}
+    \caption{Teilnehmende der Zwischenevaluation}
     \begin{tabular}{lll}
         \arrayrulecolor{maincolor}\hline
         \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Alter &
@@ -82,7 +82,15 @@ weitere Entscheidung getroffen\todo{Ausblick}.
 Allgemein wurde die Schriftart nach Kriterien für eine gute Lesbarkeit, wie: Erkennbarkeit,
 Unterscheidbarkeit und Offenheit betrachtet \cite{kommunikationsdesign_leserlichinfo}. Außerdem
 wurde sich für die spätere Realisierung für die Typografie direkt an Tailwind
-UI\footnote{\url{https://tailwindui.com/components}} orientiert und daher Segul UI gewählt.
+UI\footnote{\url{https://tailwindui.com/components}} orientiert und daher Segul UI gewählt (\ref{fig:schrift}).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.2]{Bilder/Prototyp/Screenshot 2022-09-27 at 15-07-24 Font Size - Tailwind CSS.png}
+    \includegraphics[scale=0.2]{Bilder/Prototyp/Screenshot 2022-09-27 at 15-07-37 Font Size - Tailwind CSS.png}
+    \caption[Typografie von Tailwind UI]{Typografie von Tailwind UI}
+    \label{fig:schrift}
+\end{figure}
 
 
 \subsection{Farbschema}
@@ -94,7 +102,7 @@ entschieden (E4,E5). Der dunkle Ton stellt die Textfarbe der Anwendung dar.
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.23]{Bilder/farben.png}
-    \caption[Farbpalette]{Farbpalette}
+    \caption[Primärfarben des Systems]{Primärfarben des Systems}
     \label{fig:farben}
 \end{figure}
 
@@ -115,9 +123,9 @@ Großteil dem Dashboard (H6) (F-V-1, F-V-2).
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.4]{Bilder/Prototyp/Start.png}\hspace{2em}
-    \includegraphics[scale=0.4]{Bilder/Prototyp/Neu/V2.png}
-    \caption[-]{Navigationsmöglichkeiten}
+    \includegraphics[scale=0.3]{Bilder/Prototyp/Start.png}\hspace{2em}
+    \includegraphics[scale=0.3]{Bilder/Prototyp/Neu/V2.png}
+    \caption[-]{Dashboard}
     \label{fig:home}
 \end{figure}
 
@@ -136,9 +144,9 @@ die Möglichkeit haben, nach Assets zu suchen \cite{google_material_2022} (E4).
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.3]{Bilder/Prototyp/Property 1=Variant2.png} \hspace{2em}
-    \includegraphics[scale=0.4]{Bilder/Prototyp/Menu.png} \hspace{2em}
-    \includegraphics[scale=0.4]{Bilder/Prototyp/Neu/Suche V2.png}
-    \caption[-]{Navigationsmöglichkeiten}
+    \includegraphics[scale=0.3]{Bilder/Prototyp/Menu.png} \hspace{2em}
+    \includegraphics[scale=0.3]{Bilder/Prototyp/Neu/Suche V2.png}
+    \caption[-]{Navigationsmöglichkeiten und Suchleiste}
     \label{fig:nav}
 \end{figure}
 
@@ -157,10 +165,9 @@ Elemente entsprechend angepasst (E1, E2, E4).
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.3]{Bilder/Prototyp/Suche.png}\hspace{2em}
-    \includegraphics[scale=0.3]{Bilder/Prototyp/Neu/Suche V2.png}\hspace{2em}
-    \includegraphics[scale=0.3]{Bilder/Prototyp/Neu/Kategorein 1.png}
+    \includegraphics[scale=0.3]{Bilder/Prototyp/Neu/Suche V2.png}
     \label{fig:p1}
-    \caption[Mockup: Kategorien, Assets, Assetdetails]{Kategorien (l), Assets (m), Assetdetails (r)}
+    \caption[Materialsuche]{Materialsuche}
 \end{figure}
 
 Für eine Unteransicht wurde sich für eine Kartenansicht entscheiden (ref{fig:p4}). Diese ergab sich aus dem
@@ -173,7 +180,7 @@ eingebunden (H4, H8) (F-VA-3).
     \includegraphics[scale=0.3]{Bilder/Prototyp/Übersicht.png}\hspace{2em}
     \includegraphics[scale=0.3]{Bilder/Prototyp/Übersicht1.png}
     \label{fig:p4}
-    \caption[Mockup: Kategorien, Assets, Assetdetails]{Kategorien (l), Assetdetails (r)}
+    \caption[Materialansicht (Kacheln)]{Materialansicht (Kacheln)}
 \end{figure}
 
 
@@ -193,9 +200,8 @@ Rückgaben von Assets besser planen zu können (F-V-4).
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.4]{Bilder/Mockups/Kalender.jpg}\hspace{2em}
-    \includegraphics[scale=0.4]{Bilder/Mockups/Kategorien.jpg}
     \label{fig:kalender}
-    \caption[Kalenderkomponente]{Kalender (l), Navigation (r)}
+    \caption[Kalenderkomponente]{Kalenderkomponente}
 \end{figure}
 
 \subsection{Asset-Detailansicht und Reservierungen}
@@ -208,8 +214,7 @@ Verwirrung, daher wurden die zeitlichen Daten auf die Abholung und Rückgabe bes
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.3]{Bilder/Prototyp/Neu/Datailansicht-1.png}\hspace{2em}
-    \includegraphics[scale=0.3]{Bilder/Prototyp/Neu/Suche.png}\hspace{2em}
     \includegraphics[scale=0.3]{Bilder/Prototyp/Reservierung abschließen 3.png}
     \label{fig:p3}
-    \caption[Mockup: Kategorien, Assets, Assetdetails]{Kategorien (l), Assets (m), Assetdetails (r)}
+    \caption[Reservierung und Check-out]{Reservierung und Check-out}
 \end{figure}

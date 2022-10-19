@@ -68,7 +68,7 @@ werden Informationen wie Name, Seriennummer, Marke und Status eines Assets
 angezeigt.
 
     {\sffamily\color{maincolor}{Ft-VA-3 |  Verfügbarkeit von Assets }}\\
-Der Status eines Asset (verfügbar und nicht verfügbar) muss klar ersichtlich
+Der Status eines Asset (verfügbar und herausgegeben) muss klar ersichtlich
 sein. Dies geschieht mittels Color-Coding.  \todo{Design-Entscheidungen
     begründen und nicht nur darstellen. D.h. hier vielleicht einen Satz dazu, warum
     du Color Coding als geeignete Variante dafür identifiziert hast }
@@ -97,13 +97,12 @@ ansteht.
 
 
     {\sffamily\color{maincolor}{Ft-VA-6 | Material-Suche }}\\
-Die Material-Suche umfasst eine Einteilung der Assets nach Kategorie, sowie die
-gezielte Suche nach der Verfügbarkeit der Assets (verfügbar und nicht
-verfügbar). Das gezielte Suchen nach Verfügbarkeit wird durch die Aufforderung
-den Ausleihzeitraum anzugeben ermöglicht. Daraufhin gibt es die Möglichkeit
-gewünschte Materialien in einem Suchfeld einzugeben oder über die Kategorien
-nach dem Asset zu suchen. Das Suchfeld unterstützt bereits während der Eingabe
-mithilfe von Assetvorschlägen. Die Vorschläge umfassen Assets oder Kategorien.
+Die Material-Suche umfasst eine Einteilung der Assets nach Kategorie, sowie die gezielte Suche nach
+der Verfügbarkeit der Assets (verfügbar und herausgegeben). Das gezielte Suchen nach Verfügbarkeit
+wird durch die Aufforderung den Ausleihzeitraum anzugeben ermöglicht. Daraufhin gibt es die
+Möglichkeit gewünschte Materialien in einem Suchfeld einzugeben oder über die Kategorien nach dem
+Asset zu suchen. Das Suchfeld unterstützt bereits während der Eingabe mithilfe von Assetvorschlägen.
+Die Vorschläge umfassen Assets oder Kategorien.
 
     {\sffamily\color{maincolor}{Ft-VA-7 | Filtern und Sortieren }}\\
 Um das Finden der Assets leichter zu gestalten, sollen Nutzende stets nach
@@ -183,7 +182,7 @@ Wartungen weniger leicht vergessen werden und besser aufgeteilt werden.
 
 
     {\sffamily\color{maincolor}{Ft-V-4 | Pflege der Datenbank }}\\
-Diese Funktionalität wird bereits durch SnipeIT bereitgestellt. Jedoch sollten
+Diese Funktionalität wird bereits durch Snipe-IT bereitgestellt. Jedoch sollten
 Anleitungen erstellt werden, um die Pflege zu erleichtern. \todo{Das hier
     verstehe ich noch nicht so ganz. Hier wären glaube ich zwei drei Sätze mehr ganz
     hilfreich}
@@ -360,7 +359,7 @@ Das Reservierungsinterface nutzt die von Snipe-IT bereitgestellten Daten. Die
 Hauptaufgabe der Schnittstelle ist das Reservieren von Assets in die Zukunft. Da
 Snipe-IT selbst die zukünftige Reservierung nicht unterstützt, werden diese
 Reservierungen stattdessen im Reservierungsinterface gespeichert. Die gesamte
-Kommunikation zwischen Frontend und SnipeIT wird somit über das
+Kommunikation zwischen Frontend und Snipe-IT wird somit über das
 Reservierungsinterface stattfinden, um auch alle zukünftigen Reservierungen zu
 berücksichtigen. Die Datenbank und API von Snipe-IT bilden die Ausgangsposition
 des Systems. Folglich wird die Verwaltung und Speicherung der vorhandenen Assets

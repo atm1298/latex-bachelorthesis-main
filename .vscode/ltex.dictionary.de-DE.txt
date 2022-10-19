@@ -3,7 +3,7 @@ Reservierungenstools
 Reservierungstools
 Ausleihprozesse
 Ausleihprozess
-SnipeIT
+Snipe-IT
 Companion
 GAT-Transkript-Systems
 Transkriptionssystems

@@ -141,15 +141,13 @@ Mapper (ORM) mit folgendem Schema dar. \textit{User} können
 \end{figure}
 
 
-\subsection{Implementierung der Kernfunktionalität} \todo{vielleicht Probleme in
-  einem Kapitel Zweiter Ordnung am Ende des Implementierungskapitels zusammen,
-  das wäre insgesamt stimmiger? } Dieser Abschnitt präsentiert die
-Implementierung der Kernfunktionalität des Zwischenbackends, welche aus den
-Anforderungen bestimmt wurden (\ref{section:anforderung}). Bei der
-Funktionalität handelt es sich um das Reservieren in die Zukunft, sowie das
-Speichern dieser Vorgänge und die damit einhergehende Bestätigung für die
-Aktualisierung in Snipe-IT. Konkret wird auf das LDAP-System und das
-Reservieren von Assts eingegangen.
+\subsection{Implementierung der Kernfunktionalität} \todo{vielleicht Probleme in einem Kapitel
+  Zweiter Ordnung am Ende des Implementierungskapitels zusammen, das wäre insgesamt stimmiger? }
+  Dieser Abschnitt präsentiert die Implementierung der Kernfunktionalität des
+  Reservierungsinterfaces, welche aus den Anforderungen bestimmt wurden (\ref{section:anforderung}).
+  Bei der Funktionalität handelt es sich um das Reservieren in die Zukunft, sowie das Speichern
+  dieser Vorgänge und die damit einhergehende Bestätigung für die Aktualisierung in Snipe-IT.
+  Konkret wird auf das LDAP-System und das Reservieren von Assts eingegangen.
 
 Um auf die Assets zugreifen zu können, wurde mit der Snipe-IT JSON REST API
 gearbeitet. Die Snipe-IT API umfasst viele Ressourcen. Relevante Ressourcen für
@@ -202,7 +200,7 @@ Plugins und ist daher gut erweiterbar, außerdem erleichter es DINGE.
 
 Der eigentliche Kern der Anwendung befasst sich mit dem Reservieren der Assets.
 Hierfür müssen die Daten (Assetname, Datum, Uhrzeit, Ort, \dots) gespeichert
-werden. Bevor ein Status eines Assets in Snipe-IT von \textit{verfügbar} zu
+werden. Bevor ein Status eines Assets in Snipe-IT von \textit{ausleihbar} zu
 \textit{herausgegeben} geändert wird, werden die Daten für eine Reservierung im
 Reservierungsinterfaces zwischengespeichert. Für diesen Schritt wurde SQLite
 verwendet. Zusätzlich wurde für eine leichtere Verwaltung der angelegten
