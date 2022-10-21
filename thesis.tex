@@ -43,6 +43,11 @@
 
 \cleardoublepage
 \phantomsection
+\addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
+\include{Verzeichnisse/abkuerzungen}
+
+\cleardoublepage
+\phantomsection
 \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
 \listoffigures
 
@@ -53,20 +58,15 @@
 
 \cleardoublepage
 \phantomsection
-\addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
+\addcontentsline{toc}{chapter}{Quellcodeverzeichnis}
 \lstlistoflistings
-
-\include{Verzeichnisse/abkuerzungen}
 
 \cleardoublepage
 \phantomsection
 \bibliography{Verzeichnisse/literature}
-%\pdfbookmark{\bibname}{bibliography}
-%\bibliography{literature}
 
 \appendix
-
-\include{Verzeichnisse/appendix}
+\include{Arbeit/appendix}
 
 \include{Verzeichnisse/declaration}
 \end{document}
