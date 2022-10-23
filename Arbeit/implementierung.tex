@@ -8,21 +8,19 @@ Kernfunktionalitäten sowie Sackgassen\todo{ugs.? herausforderungen? oder kursiv
 näher erläutert. Daraufhin wird die Umsetzung des Frontends erläutert. Abschließend wird auf die
 Inbetriebnahme des Systems eingegangen.
 
-Um ein besseres Verständnis für die Interaktion der einzelnen Komponenten zu erlangen, wurde ein
-UML-Sequenzdiagramm erstellt (\ref{fig:uml}). Bei der vierten Komponente handelt es sich um das
-LDAP-System der Universität zu Lübeck. Mithilfe der Integration können Nutzende sich mit ihrem
-bereits bestehenden IDM Account anmelden. Zum einen kann somit sichergestellt werden, dass nur
-befugte Personen Assets einsehen und ausleihen können. Zum anderen erleichtert es den Nutzenden den
-Ausleihprozess, da kein neuer Account erstellt werden muss.
+% Um ein besseres Verständnis für die Interaktion der einzelnen Komponenten zu erlangen, wurde ein
+% UML-Sequenzdiagramm erstellt (\ref{fig:uml}). Bei der vierten Komponente handelt es sich um das
+% LDAP-System der Universität zu Lübeck. Mithilfe der Integration können Nutzende sich mit ihrem
+% bereits bestehenden IDM Account anmelden. Zum einen kann somit sichergestellt werden, dass nur
+% befugte Personen Assets einsehen und ausleihen können. Zum anderen erleichtert es den Nutzenden den
+% Ausleihprozess, da kein neuer Account erstellt werden muss.
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[scale=0.45]{Bilder/uml.pdf}
-  \caption[UML-Sequenzdiagramm]{UML-Sequenzdiagramm}
-  \label{fig:uml}
-\end{figure}
-
-
+% \begin{figure}[h]
+%   \centering
+%   \includegraphics[scale=0.45]{Bilder/uml.pdf}
+%   \caption[UML-Sequenzdiagramm]{UML-Sequenzdiagramm}
+%   \label{fig:uml}
+% \end{figure}
 
 
 \section{Implementierung des Reservierungsinterfaces}
@@ -167,19 +165,23 @@ Um mit der API arbeiten zu können, muss ein \textit{persönliches
   wider. 
 
 \subsection{Herausforderungen in der Einbindung von LDAP}
-Da die Token lediglich manuell im Dashboard generierbar sind, kann das geplante LDAP-System der
-  Universität zu Lübeck nicht ohne Umstände eingebunden und entsprechend genutzt werden. Snipe-IT
-  gibt unter anderem die Möglichkeit, das LDAP
-  Formular\footnote{\url{https://snipe-it.readme.io/docs/ldap-sync-login}} simpel einzubinden, trotz
-  dessen besteht das Problem der Authentifizierung sowie Generierung der Tokens, da die Daten im
-  Reservierungsinterface bis dato nicht übertragen werden können. Dies führt zu einem
-  Datenschutzproblem.
+Snipe-IT bietet bereits eine integrierte Lösung zur Synchronisation und Login mit
+LDAP\footnote{\url{https://snipe-it.readme.io/docs/ldap-sync-login}}. Da die \textit{persönlichen
+Zugriffstoken} jedoch die einzige Authentifizierungsmöglichkeit der API sind und lediglich manuell
+im Dashboard generiert werden können, kann das LDAP-System der Universität zu Lübeck nicht ohne
+Umstände eingebunden und entsprechend genutzt werden. 
 
+Ein möglicher Lösungsansatz wäre das programmatische Nutzen eines Browsers aufseiten des
+Reservierungsinterfaces, welcher die Angaben von Nutzenden in der Wep-App verwendet, um mit diesen
+den LDAP-Login in Snipe-IT durchzuführen. Sollte der Snipe-IT Login erfolgreich sein, könnten
+Nutzende für den Rest der Sitzung als authentifiziert gelten. Im Reservierungsinterface selbst
+würde ein speziell für das Reservierungsinterface generierte Token für die Kommunikation mit
+Snipe-IT genutzt werden. 
 
 \todo[inline]{Gibt es sonst etwas Wichtiges, was man hier erwähnen sollte? Code Beispiele?}
 
 \section{Implementierung des Frontends} \todo{Verweis auf die Dokumentationen, Hier unbedingt
-  Rückbezug auf Konzeption nehmen} Das kommende Unterkapitel beschreibt die Client-seitige
+  Rückbezug auf Konzeption nehmen} Das kommende Kapitel beschreibt die Client-seitige
   Realisierung der Arbeit. Zunächst wird der Aufbau betrachtet (\ref{fig:vue}), daraufhin wird die
   Nutzung von vue und XXX erläutert. Des Weiteren wird auf die Struktur der Komponenten eingegangen
   (\ref{fig:komponenten}). Abschließend wird das native App-Erlebnis thematisiert.
