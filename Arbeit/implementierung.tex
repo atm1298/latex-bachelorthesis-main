@@ -180,60 +180,63 @@ Snipe-IT genutzt werden.
 
 \todo[inline]{Gibt es sonst etwas Wichtiges, was man hier erwähnen sollte? Code Beispiele?}
 
-\section{Implementierung des Frontends} \todo{Verweis auf die Dokumentationen, Hier unbedingt
-  Rückbezug auf Konzeption nehmen} Das kommende Kapitel beschreibt die Client-seitige
-  Realisierung der Arbeit. Zunächst wird der Aufbau betrachtet (\ref{fig:vue}), daraufhin wird die
-  Nutzung von vue und XXX erläutert. Des Weiteren wird auf die Struktur der Komponenten eingegangen
-  (\ref{fig:komponenten}). 
+\section{Implementierung des Frontends} 
+Das kommende Kapitel beschreibt die Client-seitige Realisierung der Arbeit. Zunächst wird der Aufbau
+  betrachtet, daraufhin wird die Nutzung von vue und XXX erläutert. Des Weiteren wird auf die
+  Struktur der Komponenten eingegangen (\ref{fig:vue}). 
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[scale=0.7]{Bilder/Db.jpg}
-  \caption[Verzeichnisstruktur des Reservierungsinterfaces]{Verzeichnisstruktur des Reservierungsinterfaces}
-  \label{fig:vue}
-\end{figure}
 
 Für den Aufbau des Projektes wurde aus den in \ref{chapter-konzept} festgestellten Anforderungen
 \textit{vue.js} verwendet. Bei der Implementierung wurde sich an den best practices der
 Vue.js-Dokumentation orientiert \todo{(Vue.js, 2021a)}. Für sich wiederholende Elemente wurden
 eigene Views erstellt. Dadurch ergibt sich eine hierarchisch geschachtelte Client-Anwendung der
-Vue-Komponenten. \ref{fig:Komponenten} stellt die Komponenten-Struktur vereinfacht dar. Um
+Vue-Komponenten. \ref{fig:vue} stellt die Komponenten-Struktur vereinfacht dar. Um
 konkretere Vorschläge in der Entwicklungsumgebung zu ermöglichen und vorzeitige Fehler zu
 minimieren, wurde ergänzt zu \textit{JavaScript} \textit{TypeScript} verwendet.
 
-\ref{fig:Komponenten} zeigt den Aufbau der Routen und Komponentenstruktur. Für die Realsisierung der
-Routen wurde der File-Based-Routing Ansatz verwendet, welcher die Routen aufgrund der
-Verzeichnisstruktur generiert. Hierfür wurde das Vite-Plugin
+\subsection{Aufbau der Routen und Komponentenstruktur}
+Für die Realsisierung der Routen wurde der File-Based-Routing Ansatz verwendet, welcher die Routen
+aufgrund der Verzeichnisstruktur generiert. Hierfür wurde das Vite-Plugin
 \textit{vite-plugin-pages}\footnote{\url{https://github.com/hannoeru/vite-plugin-pages}} genutzt.
 Vue-Komponenten, welche sich im \textit{/pages}-Verzeichnis des Projekts befinden, werden in eine,
 dem Dateinamen gleichende, Route umgewandelt. Ordner können hierbei verwendet werden, um Unterrouten
 zu erstellen, während die Verwendung von eckigen Klammern zur Kennzeichnung von Parametern genutzt
 wird\todo{Der vorherige Statz=DOOF}. Beispielsweise wird eine \textit{[id].vue}-Datei, welche sich
 in dem Ordner \textit{categories} befindet, in die \textit{/categories/<id>}-Route umgewandelt,
-welche die angegebene ID in der Komponente als Parameter nutzen kann. 
+welche die angegebene ID in der Komponente als Parameter nutzen kann (\ref{fig:vue}). 
  
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.5]{Bilder/struktur.pdf}
-  \caption[Vereinfachte Struktur der Komponenten]{Vereinfachte Struktur der Komponenten}
-  \label{fig:Komponenten}
+  \includegraphics[scale=0.7]{Bilder/Db.jpg}
+  \caption[Verzeichnisstruktur des Clients]{Verzeichnisstruktur des Clients}
+  \label{fig:vue}
 \end{figure}
 
-
+\subsection{Einbindung der Kalenderfunktionaliät}
 Der Kalender stellt einen wichtigen Bestandteil für das Reservieren von Assets dar. Die
 Kalenderkomponente wurde durch \textit{v-calender} ergänzt. Durch die Möglichkeiten der Komponente
 ...??. Außerdem bietet diese viele Ausbaumöglichkeiten für folgende Funktionalitäten.
 
+\subsection{Extrahieren von Unterkategorien}
 Die im Rahmen dieser Arbeit verwendete Beispieldatenbank beinhaltete eine Vielzahl an Kategorien und
-Unterkategorien, welche wie folgt, eingetragen wurde: \enquote{Kategorie - Unterkategorie}. Da das
-Anzeigen von den Kategorien unübersichtlich ist, sollten zunächst nur die Kategorien und dann die
-Unterkategorien angezeigt werden. \ref{fig:categoriecode} stellt den Entwickelten Algorithmus als
-Pseudocode dar. Der \enquote*{-} wurde dazu als Trennsymbol verwendet. Daraufhin wurden der
-Vorderteil als Kategorie verwendet und der Hintere als Unterkategorie. Um die Kategorien und
-Unterkategorien nicht doppelt anzeigen zulassen, wurde eine Abfragen gemacht, bei welcher diese
-abgeglichen wurde bis keine Gleichheit mehr bestand und die nächste Kategorie angezeigt werden kann,
-bis alle Kategorien und Unterkategorien verglichen wurden.
+Unterkategorien, welche nach folgendem Format benannt wurden: \enquote{Kategorie - Unterkategorie}.
+Das verwendete Format ergibt sich aus der fehlenden Funktionalität Snipe-Its, einem Asset mehrere
+Kategorien zuweisen zu können. Da das Anzeigen der Kategorien in diesem Format unübersichtlich ist,
+sollten zunächst nur die Oberkategorien und anschließend die Unterkategorien angezeigt werden.
+\ref{fig:categoriecode} stellt eine vereinfachte Form des verwendeten Quellcodes dar. 
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.4]{Bilder/screenshot(5).png}
+  \caption[Quellcode: server.ts]{Quellcode: server.ts}
+  \label{fig:categoriecode}
+\end{figure}
+
+Zur Extrahierung werden die erhaltenen Kategorien, anhand eines Trennsymbols (\enquote{-}), in Ober- und
+Unterkategoriepaare getrennt. Anschließend werden alle Paare mit der gleichen Oberkategorie zu einem
+Eintrag zusammengefasst, welcher alle zugehöhrigen Unterkategorien beinhaltet. Hierbei wird für jede
+Unterkategorie die hinterlegte Kategorie-ID gespeichert. Somit ergibt sich eine Baumstruktur, welche
+in der Anwendung schrittweise durchlaufen werden kann. 
 
 
 \section{Nutzung des Systems}
