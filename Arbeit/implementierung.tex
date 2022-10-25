@@ -184,7 +184,7 @@ Snipe-IT genutzt werden.
   Rückbezug auf Konzeption nehmen} Das kommende Kapitel beschreibt die Client-seitige
   Realisierung der Arbeit. Zunächst wird der Aufbau betrachtet (\ref{fig:vue}), daraufhin wird die
   Nutzung von vue und XXX erläutert. Des Weiteren wird auf die Struktur der Komponenten eingegangen
-  (\ref{fig:komponenten}). Abschließend wird das native App-Erlebnis thematisiert.
+  (\ref{fig:komponenten}). 
 
 \begin{figure}[h]
   \centering
@@ -201,6 +201,17 @@ Vue-Komponenten. \ref{fig:Komponenten} stellt die Komponenten-Struktur vereinfac
 konkretere Vorschläge in der Entwicklungsumgebung zu ermöglichen und vorzeitige Fehler zu
 minimieren, wurde ergänzt zu \textit{JavaScript} \textit{TypeScript} verwendet.
 
+\ref{fig:Komponenten} zeigt den Aufbau der Routen und Komponentenstruktur. Für die Realsisierung der
+Routen wurde der File-Based-Routing Ansatz verwendet, welcher die Routen aufgrund der
+Verzeichnisstruktur generiert. Hierfür wurde das Vite-Plugin
+\textit{vite-plugin-pages}\footnote{\url{https://github.com/hannoeru/vite-plugin-pages}} genutzt.
+Vue-Komponenten, welche sich im \textit{/pages}-Verzeichnis des Projekts befinden, werden in eine,
+dem Dateinamen gleichende, Route umgewandelt. Ordner können hierbei verwendet werden, um Unterrouten
+zu erstellen, während die Verwendung von eckigen Klammern zur Kennzeichnung von Parametern genutzt
+wird\todo{Der vorherige Statz=DOOF}. Beispielsweise wird eine \textit{[id].vue}-Datei, welche sich
+in dem Ordner \textit{categories} befindet, in die \textit{/categories/<id>}-Route umgewandelt,
+welche die angegebene ID in der Komponente als Parameter nutzen kann. 
+ 
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.5]{Bilder/struktur.pdf}
@@ -208,9 +219,6 @@ minimieren, wurde ergänzt zu \textit{JavaScript} \textit{TypeScript} verwendet.
   \label{fig:Komponenten}
 \end{figure}
 
-Um das Styling zu vereinfachen wurde \textit{Tailwindcss} genutzt. Ergänzend dazu wurde
-\textit{Preline} für UI verwendet. -> Nicht empfehlenswert (Sackgassen). Für Animationen und
-Transitionen wurde \textit{HeadlessUi} genutzt.
 
 Der Kalender stellt einen wichtigen Bestandteil für das Reservieren von Assets dar. Die
 Kalenderkomponente wurde durch \textit{v-calender} ergänzt. Durch die Möglichkeiten der Komponente
@@ -226,9 +234,6 @@ Unterkategorien nicht doppelt anzeigen zulassen, wurde eine Abfragen gemacht, be
 abgeglichen wurde bis keine Gleichheit mehr bestand und die nächste Kategorie angezeigt werden kann,
 bis alle Kategorien und Unterkategorien verglichen wurden.
 
-\begin{lstlisting}[style=pseudo,gobble=2,caption={Pseudocode: Kategorien anzeigen},label=fig:categoriecode]
-  // Trennung am Strich for $- \gets Kategorie$ to $Unterkapitel$ do ICH BIN DUMM
-\end{lstlisting}
 
 
 \section{Nutzung des Systems}
