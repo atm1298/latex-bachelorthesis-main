@@ -212,11 +212,6 @@ welche die angegebene ID in der Komponente als Parameter nutzen kann (\ref{fig:v
   \label{fig:vue}
 \end{figure}
 
-\subsection{Einbindung der Kalenderfunktionaliät}
-Der Kalender stellt einen wichtigen Bestandteil für das Reservieren von Assets dar. Die
-Kalenderkomponente wurde durch \textit{v-calender} ergänzt. Durch die Möglichkeiten der Komponente
-...??. Außerdem bietet diese viele Ausbaumöglichkeiten für folgende Funktionalitäten.
-
 \subsection{Extrahieren von Unterkategorien}
 Die im Rahmen dieser Arbeit verwendete Beispieldatenbank beinhaltete eine Vielzahl an Kategorien und
 Unterkategorien, welche nach folgendem Format benannt wurden: \enquote{Kategorie - Unterkategorie}.
@@ -244,15 +239,24 @@ Der folgende Abschnitt führt die nötigen Schritte auf, um das System in Betrie
 Zuerst wird die Installation erklärt, gefolgt von der Konfiguration und Ausführung des Systems.
 
 \subsection{Installation}
-Für die Nutzung des Systems wird eine Installation von \textit{Node.js} sowie der Paket-Manager
-\textit{npm} benötigt. Anschließend, kann das System auf \dots
+Für die Nutzung des Systems wird eine Installation von \textit{Node.js} vorausgesetzt. Zunächst
+müssen alle eingebundenen Pakete des \textit{npm} Paketverzeichnis mit \lstinline{npm install}
+installiert werden. Dies muss für Server (\lstinline{\server}) und Client (\lstinline{\client})
+jeweils im entsprechenden Verzeichnis ausgeführt werden. Zusätzlich sollte die Datenbank im
+Server-Verzeichnis mithilfe des Befehls \lstinline{npx prisma install }\todo{war das so :D?}
+erstellt und vorbereitet werden. Abschließend sollte \lstinline{npx prisma generate} ausgeführt
+werden, um die benötigten Datein des Prisma-Clients zu generieren. 
+
+
 
 \subsection{Konfiguration}
 .env Datei angelegen
+\todo{Inhalte der .env Datei}
 
-Code einfügen
+\subsection{Ausführung des Reservierungsinterfaces}
 
-\subsection{Ausführung von Snipe-IT}
+
+\subsection{Einrichtung des Snipe-IT API-Zugangs}
 Um das System nutzen und weiterentwickeln zu können muss... API KEy generieren lassen.
 
 \subsection{Ausführung der Web-App}
@@ -266,6 +270,6 @@ Um das System nutzen und weiterentwickeln zu können muss... API KEy generieren 
 
 \section{Fazit der Implementierung}
 
-Sackgassen YEAH
-
-\todo[inline]{Probleme schildern, dann wirkt es nicht so komisch,  mitten in deiner Arbeit auf "Sackgassen" einzugehen, sondern dann hier einfach darauf eingehen, dass Probleme aufgetreten sind, welche mit diesen und jenen Workarounds gelöst wurden}
+Die in der Implementierung realisierten Funktionalitäten umfassen das \textit{muss} der in der
+\nameref{section:anforderung} erarbeiteten Funktionen. 
+\todo{Was schreibt man hier?}
