@@ -247,25 +247,34 @@ Server-Verzeichnis mithilfe des Befehls \lstinline{npx prisma install }\todo{Bef
 erstellt und vorbereitet werden. Abschließend sollte \lstinline{npx prisma generate} ausgeführt
 werden, um die benötigten Datein des Prisma-Clients zu generieren. 
 
-
-
 \subsection{Konfiguration}
-.env Datei angelegen
-\todo{Inhalte der .env Datei}
-
-\subsection{Ausführung des Reservierungsinterfaces}
+Zur Festlegung von umgebungsabhängigen Variablen werden für Server und Client je eine
+\textit{.env}-Datei verwendet. Diese müssen vor der Inbetriebnahme angelegt werden und sind nach dem
+Schema in BILD aufgebaut. Der Server benötigt die URL der zuverwendenden Snipe-IT Instanz, den
+API-Key zur Authentifizierung (\ref{section:api}) und den Pfad der SQLite Datenbankdatei.
+Aufseiten des Clients wird lediglich die URL des Reservierungsinterfaces benötigt.
+\todo{Bild: Inhalte der .env Datei}
 
 
 \subsection{Einrichtung des Snipe-IT API-Zugangs}
-Um das System nutzen und weiterentwickeln zu können muss... API KEy generieren lassen.
+\label{section:api}
+Um die gewünschte Datenbank(en) aus Snipe-IT nutzen zu können, wird ein Account in Snipe-IT
+benötigt, welcher von Administrierenden angelegt werden muss. Daraufhin muss über die
+Profileinstellung \textit{Manage API Keys} ein API-Key generiert werden. Der generierte API kann nun
+in der Konfiguration genutzt werden. Außerdem sollte beachtet werden, dass der API Key nur einmalig
+nach der Generierung einsehbar ist.
+\todo{Abbildung: Ja Nein Vielleicht}
+
+\subsection{Ausführung des Reservierungsinterfaces}
+\begin{itemize}
+  \item Ausführung per \lstinline{npm run serve}
+\end{itemize}
+\todo{ausformulieren}
 
 \subsection{Ausführung der Web-App}
-\todo[inline]{Zum Ausführen oder Bereitstellen der Web-App muss diese vorher noch „gebaut“ werden.
-  Hierbei handelt es sich um einen Prozess, in dem der Quellcode auf ein Minimum reduziert wird.
-  Externe Pakete werden eingebunden und ungenutzter Code, soweit möglich, entfernt. Um diesen
-  Prozess anzustoßen, muss im Stammverzeichnis der Web-App der Befehl yarn␣build ausgeführt werden.
-  Nachdem der Bau-Prozess erfolgreich abgeschlossen ist, sollte ein neues ist Verzeichnis generiert
-  wurden sein. Dieses Verzeichnis kann nun zum statischen Hosting verwendet werden.}
+Das Ausführen und "bauen" der Web-App geschieht über den Befehl \lstinline{npm run build-only}.
+Nachdem der Prozess erfolgreich abgeschlossen ist, sollte ein neues \textit{dist}-Verzeichnis
+generiert wurden sein. Das \textit{dist}-Verzeichnis kann zum statischen Hosting genutzt werden.
 
 
 \section{Fazit der Implementierung}
