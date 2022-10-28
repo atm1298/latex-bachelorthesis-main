@@ -4,7 +4,7 @@
 Das folgende Kapitel beschreibt die Implementierung des Reservierungsinterfaces sowie des Frontends.
 Zunächst wird die Implementierung des Reservierungsinterfaces und die damit einhergehenden
 technischen Aspekte beschrieben. Dabei wird Aufschluss über die Struktur gegeben und die
-Kernfunktionalitäten sowie Sackgassen\todo{ugs.? herausforderungen? oder kursiv} in der Realisierung
+Kernfunktionalitäten sowie Herausforderungen in der Realisierung
 näher erläutert. Daraufhin wird die Umsetzung des Frontends erläutert. Abschließend wird auf die
 Inbetriebnahme des Systems eingegangen.
 
@@ -62,28 +62,29 @@ Reservierung bestätigen.
   \begin{tabular}{lll}
     \arrayrulecolor{maincolor}\hline
     \sffamily\color{maincolor}Methode & \sffamily\color{maincolor}Route &
-    \sffamily\color{maincolor}Funktion \\
+    \sffamily\color{maincolor}Funktion                                                              \\
     \arrayrulecolor{maincolor}\hline
-    GET                               & \textit{/assets}                & Erhalte alle Assets \\
+    GET                               & \textit{/assets}                & Erhalte alle Assets       \\
     GET                               & \textit{/assets/:id}            & Erhalte ein Asset mit der
-    entsprechende ID                            \\
-    GET                               & \textit{/categories}            & Erhalte alle Kategorien \\
-    GET                               & \textit{/reservation}           & Erhalte Reservierungen \\
-    POST                              & \textit{/reservation}           & Erstellen Reservierung \\
-    POST                              & \textit{/reservation/receive}   & Erstellen Reservierung \\
-    POST                              & \textit{/reservation/return}    & Erstellen Reservierung \\
+    entsprechende ID                                                                                \\
+    GET                               & \textit{/categories}            & Erhalte alle Kategorien   \\
+    GET                               & \textit{/reservation}           & Erhalte Reservierungen    \\
+    POST                              & \textit{/reservation}           & Erstellen Reservierung    \\
+    POST                              & \textit{/reservation/receive}   & Erstellen Reservierung    \\
+    POST                              & \textit{/reservation/return}    & Erstellen Reservierung    \\
     POST                              & \textit{/reservation/id}        & Erstellen Erstellen
-    Reservierung                                      \\
-    DELETE                            & \textit{/reservation/delete}    & Löschen Reservierungen \\
-    PATCH                             & \textit{/reservation/patch}     & Verändern Reservierung \\
+    Reservierung                                                                                    \\
+    DELETE                            & \textit{/reservation/delete}    & Löschen Reservierungen    \\
+    PATCH                             & \textit{/reservation/patch}     & Verändern Reservierung    \\
     \arrayrulecolor{maincolor}\hline
   \end{tabular}
   \label{table:impl-backend-routes}
 \end{table}
 
-Die mit SQLite bereitgestellte Datenbank speichert die Reservierungen sowie die Nutzenden. Hierfür
-wurde das in \ref{fig:orm} dargestellte Datenbankschema erarbeitet. Zur Umsetzung dieses Schemas
-wurde das ORM Prisma genutzt, welches drei zentrale Funktionen bietet.
+Die mit SQLite bereitgestellte Datenbank speichert die Reservierungen sowie die
+Profile. Hierfür wurde das in \ref{fig:orm} dargestellte Datenbankschema
+erarbeitet. Zur Umsetzung dieses Schemas wurde das ORM Prisma genutzt, welches
+drei zentrale Funktionen bietet.
 
 \begin{figure}[ht]
   \centering
@@ -95,10 +96,9 @@ wurde das ORM Prisma genutzt, welches drei zentrale Funktionen bietet.
 
 \begin{enumerate}
   \item Beschreibung des Schemas durch eigene \ac{dsl} (\ref{fig:prisma})
-  \item Automatisierte Migration bei Schemaänderung 
+  \item Automatisierte Migration bei Schemaänderung
   \item JavaScript-Client mit generierten TypeScript-Typen (\ref{fig:mig})
 \end{enumerate}
-\todo{Muss ich die Punkte noch ausführen oder reicht das so?}
 
 \begin{figure}[h]
   \centering
@@ -116,27 +116,27 @@ wurde das ORM Prisma genutzt, welches drei zentrale Funktionen bietet.
 
 
 \subsection{Implementierung der Kernfunktionalität}
-  Dieser Abschnitt präsentiert die Implementierung der Kernfunktionalität des
-  Reservierungsinterfaces, welche aus den Anforderungen bestimmt wurde (\ref{section:anforderung}).
-  Bei der Funktionalität handelt es sich um das Reservieren in die Zukunft, sowie das Speichern
-  dieser Vorgänge und die damit einhergehende Bestätigung für die Aktualisierung in Snipe-IT.
+Dieser Abschnitt präsentiert die Implementierung der Kernfunktionalität des
+Reservierungsinterfaces, welche aus den Anforderungen bestimmt wurde (\ref{section:anforderung}).
+Bei der Funktionalität handelt es sich um das Reservieren in die Zukunft, sowie das Speichern
+dieser Vorgänge und die damit einhergehende Bestätigung für die Aktualisierung in Snipe-IT.
 
 
- Sobald ein Asset über die Web-App ausgeliehen wird, werden die relevanten Daten mit einer
- \textit{POST}-Anfrage an die \textit{/reservation}-Route des Reservierungsinterfaces gesendet.
- Diese relevanten Daten (Assetname, Datum, Uhrzeit, Ort, etc.) werden im Reservierungsinterfaces
- gespeichert. Sobald Verleihende die Ausleihe bestätigen, wird der Ausleihstatus mit einer
- \textit{POST}-Anfrage an \textit{/reservation/receive} intern und in Snipe-IT von
- \textit{ausleihbar} zu \textit{herausgegeben} aktualisiert. Zur Kommunikation zwischen dem
- Reservierungsinterface und Snipe-IT wird das Paket \textit{node-fetch} genutzt, welches die
- Fetch-API des Browsers in \textit{Node.js} bereitstellt. Für das Aktualisieren des Status eines
- Assets mit der \textit{assetId} wird beispielsweise eine \textit{POST}-Anfrage an
- \textit{<SnipeIt\_URL>/api/v1/hardware/<assetId>/checkout} versendet, welche die ID des
- \textit{herausgegeben}-Status und die ID des ausleihenden Nutzenden beinhaltet (\ref{fig:server}).
- Analog geschieht dies für das Zurückgeben eines Assets mit einer \textit{POST}-Anfrage an
- \textit{/reservation/return}. 
+Sobald ein Asset über die Web-App ausgeliehen wird, werden die relevanten Daten mit einer
+\textit{POST}-Anfrage an die \textit{/reservation}-Route des Reservierungsinterfaces gesendet.
+Diese relevanten Daten (Assetname, Datum, Uhrzeit, Ort, etc.) werden im Reservierungsinterfaces
+gespeichert. Sobald Verleihende die Ausleihe bestätigen, wird der Ausleihstatus mit einer
+\textit{POST}-Anfrage an \textit{/reservation/receive} intern und in Snipe-IT von
+\textit{ausleihbar} zu \textit{herausgegeben} aktualisiert. Zur Kommunikation zwischen dem
+Reservierungsinterface und Snipe-IT wird das Paket \textit{node-fetch} genutzt, welches die
+Fetch-API des Browsers in \textit{Node.js} bereitstellt. Für das Aktualisieren des Status eines
+Assets mit der \textit{assetId} wird beispielsweise eine \textit{POST}-Anfrage an
+\textit{<SnipeIt\_URL>/api/v1/hardware/<assetId>/checkout} versendet, welche die ID des
+\textit{herausgegeben}-Status und die ID des ausleihenden Nutzenden beinhaltet (\ref{fig:server}).
+Analog geschieht dies für das Zurückgeben eines Assets mit einer \textit{POST}-Anfrage an
+\textit{/reservation/return}.
 
- \begin{figure}[h]
+\begin{figure}[h]
   \centering
   \includegraphics[scale=0.3]{Bilder/apisnipeit.png}
   \caption[UML Snipe-IT API]{UML Snipe-IT API}
@@ -159,31 +159,29 @@ Aufbau und die Beziehungen der genutzten Snipe-IT API Ressourcen, wobei die Ress
 
 Um mit der API arbeiten zu können, muss ein \textit{persönliches
   Zugriffstoken}\footnote{\url{https://snipe-it.readme.io/reference/generating-API-tokens}} für die
-  Nutzung generiert werden. Das persönliche Zugriffstoken muss mit jeder Anfrage an die API, in Form
-  eines \lstinline{Bearer <Token>} HTTP-Headers, mitgeschickt werden. Da persönliche Zugriffstoken
-  verwendet werden, spiegeln die Berechtigungen des API-Tokens die Berechtigungen des Nutzenden
-  wider. 
+Nutzung generiert werden. Das persönliche Zugriffstoken muss mit jeder Anfrage an die API, in Form
+eines \lstinline{Bearer <Token>} HTTP-Headers, mitgeschickt werden. Da persönliche Zugriffstoken
+verwendet werden, spiegeln die Berechtigungen des API-Tokens die Berechtigungen des Nutzenden
+wider.
 
 \subsection{Herausforderungen in der Einbindung von LDAP}
 Snipe-IT bietet bereits eine integrierte Lösung zur Synchronisation und Login mit
 LDAP\footnote{\url{https://snipe-it.readme.io/docs/ldap-sync-login}}. Da die \textit{persönlichen
-Zugriffstoken} jedoch die einzige Authentifizierungsmöglichkeit der API sind und lediglich manuell
+  Zugriffstoken} jedoch die einzige Authentifizierungsmöglichkeit der API sind und lediglich manuell
 im Dashboard generiert werden können, kann das LDAP-System der Universität zu Lübeck nicht ohne
-Umstände eingebunden und entsprechend genutzt werden. 
+Umstände eingebunden und entsprechend genutzt werden.
 
 Ein möglicher Lösungsansatz wäre das programmatische Nutzen eines Browsers aufseiten des
 Reservierungsinterfaces, welcher die Angaben von Nutzenden in der Wep-App verwendet, um mit diesen
 den LDAP-Login in Snipe-IT durchzuführen. Sollte der Snipe-IT Login erfolgreich sein, könnten
 Nutzende für den Rest der Sitzung als authentifiziert gelten. Im Reservierungsinterface selbst
 würde ein speziell für das Reservierungsinterface generierte Token für die Kommunikation mit
-Snipe-IT genutzt werden. 
+Snipe-IT genutzt werden.
 
-\todo[inline]{Gibt es sonst etwas Wichtiges, was man hier erwähnen sollte? Code Beispiele?}
-
-\section{Implementierung des Frontends} 
+\section{Implementierung des Frontends}
 Das kommende Kapitel beschreibt die Client-seitige Realisierung der Arbeit. Zunächst wird der Aufbau
-  betrachtet, daraufhin wird die Nutzung von vue und XXX erläutert. Des Weiteren wird auf die
-  Struktur der Komponenten eingegangen (\ref{fig:vue}). 
+betrachtet, daraufhin wird die Nutzung von vue und XXX erläutert. Des Weiteren wird auf die
+Struktur der Komponenten eingegangen (\ref{fig:vue}).
 
 
 Für den Aufbau des Projektes wurde aus den in \ref{chapter-konzept} festgestellten Anforderungen
@@ -203,8 +201,8 @@ dem Dateinamen gleichende, Route umgewandelt. Ordner können hierbei verwendet w
 zu erstellen, während die Verwendung von eckigen Klammern zur Kennzeichnung von Parametern genutzt
 wird\todo{Der vorherige Statz=DOOF}. Beispielsweise wird eine \textit{[id].vue}-Datei, welche sich
 in dem Ordner \textit{categories} befindet, in die \textit{/categories/<id>}-Route umgewandelt,
-welche die angegebene ID in der Komponente als Parameter nutzen kann (\ref{fig:vue}). 
- 
+welche die angegebene ID in der Komponente als Parameter nutzen kann (\ref{fig:vue}).
+
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.7]{Bilder/Db.jpg}
@@ -218,7 +216,7 @@ Unterkategorien, welche nach folgendem Format benannt wurden: \enquote{Kategorie
 Das verwendete Format ergibt sich aus der fehlenden Funktionalität Snipe-Its, einem Asset mehrere
 Kategorien zuweisen zu können. Da das Anzeigen der Kategorien in diesem Format unübersichtlich ist,
 sollten zunächst nur die Oberkategorien und anschließend die Unterkategorien angezeigt werden.
-\ref{fig:categoriecode} stellt eine vereinfachte Form des verwendeten Quellcodes dar. 
+\ref{fig:categoriecode} stellt eine vereinfachte Form des verwendeten Quellcodes dar.
 
 \begin{figure}[h]
   \centering
@@ -231,7 +229,7 @@ Zur Extrahierung werden die erhaltenen Kategorien, anhand eines Trennsymbols (\e
 Unterkategoriepaare getrennt. Anschließend werden alle Paare mit der gleichen Oberkategorie zu einem
 Eintrag zusammengefasst, welcher alle zugehöhrigen Unterkategorien beinhaltet. Hierbei wird für jede
 Unterkategorie die hinterlegte Kategorie-ID gespeichert. Somit ergibt sich eine Baumstruktur, welche
-in der Anwendung schrittweise durchlaufen werden kann. 
+in der Anwendung schrittweise durchlaufen werden kann.
 
 
 \section{Nutzung des Systems}
@@ -245,7 +243,7 @@ installiert werden. Dies muss für Server (\lstinline{\server}) und Client (\lst
 jeweils im entsprechenden Verzeichnis ausgeführt werden. Zusätzlich sollte die Datenbank im
 Server-Verzeichnis mithilfe des Befehls \lstinline{npx prisma install }\todo{Befehl raussuchen}
 erstellt und vorbereitet werden. Abschließend sollte \lstinline{npx prisma generate} ausgeführt
-werden, um die benötigten Datein des Prisma-Clients zu generieren. 
+werden, um die benötigten Datein des Prisma-Clients zu generieren.
 
 \subsection{Konfiguration}
 Zur Festlegung von umgebungsabhängigen Variablen werden für Server und Client je eine
@@ -287,5 +285,5 @@ generiert wurden sein. Das \textit{dist}-Verzeichnis kann zum statischen Hosting
 \section{Fazit der Implementierung}
 
 Die in der Implementierung realisierten Funktionalitäten umfassen das \textit{muss} der in der
-\nameref{section:anforderung} erarbeiteten Funktionen. 
+\nameref{section:anforderung} erarbeiteten Funktionen.
 \todo{Was schreibt man hier?}
