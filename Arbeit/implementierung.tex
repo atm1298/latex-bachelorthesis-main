@@ -2,7 +2,7 @@
 \chapter{Implementierung}
 \label{chapter-implementierung}
 Das folgende Kapitel beschreibt die Implementierung des Reservierungsinterfaces sowie des Frontends.
-Zunächst wird die Implementierung des Reservierungsinterfaces und die damit einhergehenden
+Zunächst werden die Implementierung des Reservierungsinterfaces und die damit einhergehenden
 technischen Aspekte beschrieben. Dabei wird Aufschluss über die Struktur gegeben und die
 Kernfunktionalitäten sowie Herausforderungen in der Realisierung
 näher erläutert. Daraufhin wird die Umsetzung des Frontends erläutert. Abschließend wird auf die
@@ -211,7 +211,7 @@ welche die angegebene ID in der Komponente als Parameter nutzen kann (\ref{fig:v
 
 \subsection{Extrahieren von Unterkategorien}
 Die im Rahmen dieser Arbeit verwendete Beispieldatenbank beinhaltete eine Vielzahl an Kategorien und
-Unterkategorien, welche nach folgendem Format benannt wurden: \enquote{Kategorie - Unterkategorie}.
+Unterkategorien welche nach folgendem Format benannt wurden: \enquote{Kategorie - Unterkategorie}.
 Das verwendete Format ergibt sich aus der fehlenden Funktionalität Snipe-Its, einem Asset mehrere
 Kategorien zuweisen zu können. Da das Anzeigen der Kategorien in diesem Format unübersichtlich ist,
 sollten zunächst nur die Oberkategorien und anschließend die Unterkategorien angezeigt werden.
@@ -247,7 +247,7 @@ werden, um die benötigten Datein des Prisma-Clients zu generieren.
 \subsection{Konfiguration}
 Zur Festlegung von umgebungsabhängigen Variablen werden für Server und Client je eine
 \textit{.env}-Datei verwendet. Diese müssen vor der Inbetriebnahme angelegt werden und sind nach dem
-Schema in BILD aufgebaut. Der Server benötigt die URL der zuverwendenden Snipe-IT Instanz, den
+Schema in BILD aufgebaut. Der Server benötigt die URL der zu verwendenden Snipe-IT Instanz, den
 API-Key zur Authentifizierung (\ref{section:api}) und den Pfad der SQLite Datenbankdatei.
 Aufseiten des Clients wird lediglich die URL des Reservierungsinterfaces benötigt.
 
@@ -262,7 +262,7 @@ Aufseiten des Clients wird lediglich die URL des Reservierungsinterfaces benöti
 
 \subsection{Einrichtung des Snipe-IT API-Zugangs}
 \label{section:api}
-Um die gewünschte Datenbank(en) aus Snipe-IT nutzen zu können, wird ein Account in Snipe-IT
+Um die gewünschte(n) Datenbank(en) aus Snipe-IT nutzen zu können, wird ein Account in Snipe-IT
 benötigt, welcher von Administrierenden angelegt werden muss. Daraufhin muss über die
 Profileinstellung \textit{Manage API Keys} ein API-Key generiert werden. Der generierte API kann nun
 in der Konfiguration genutzt werden. Außerdem sollte beachtet werden, dass der API Key nur einmalig
@@ -277,7 +277,7 @@ nach der Generierung einsehbar ist.
 \subsection{Ausführung der Web-App}
 Das Ausführen und "bauen" der Web-App geschieht über den Befehl \lstinline{npm run build-only}.
 Nachdem der Prozess erfolgreich abgeschlossen ist, sollte ein neues \textit{dist}-Verzeichnis
-generiert wurden sein. Das \textit{dist}-Verzeichnis kann zum statischen Hosting genutzt werden.
+generiert worden sein. Das \textit{dist}-Verzeichnis kann zum statischen Hosting genutzt werden.
 
 
 \section{Fazit der Implementierung}

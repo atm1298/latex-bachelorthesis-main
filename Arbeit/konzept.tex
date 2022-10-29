@@ -116,7 +116,7 @@ In der Detailansicht werden die Assets und deren Eigenschaften dargestellt.
 Hierbei werden Informationen wie Name, Seriennummer, Artikelbeschreibung,
 technische Details und Kontaktinformation der Verleihenden dargestellt. Des
 Weiteren kann der Ausleihzeitraum eingestellt und die Zeiträume der
-Verfügbarkeit eines Assets eingesehen werden. In Form eines Button wird
+Verfügbarkeit eines Assets eingesehen werden. In Form eines Buttons wird
 sichtbar, dass das Asset zur Ausleihe hinzugefügt werden kann. Das Hinzufügen
 wird durch eine Pop-Up-Mitteilung bestätigt. \todo{Auch hier wieder die Frage -
     warum hast du diese Umsetzung gewählt? }
@@ -129,7 +129,7 @@ näher erläutert (\ref{table:ft-v}).\todo{deutlicheren Bezug zu den Anforderung
 
 \begin{table}[h]
     \centering
-    \caption{Funktionalitäten für (V)erleihenden }
+    \caption{Funktionalitäten für Verleihenden }
     \begin{tabular}{lll}
         \arrayrulecolor{maincolor}\hline
         \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Titel   &
@@ -176,7 +176,7 @@ jeweiligen Tages.
 
     {\sffamily\color{maincolor}{Ft-V-3 | Pflege von Assets   }}\\
 \todo[]{baue ich eigentlich nict mit ein}
-Mit Hilfe der Zuständigkeitsbereich \textit{(Ft-V-2)} kann die Pflege der Assets
+Mithilfe des Zuständigkeitsbereichs \textit{(Ft-V-2)} kann die Pflege der Assets
 besser kontrolliert werden. Außerdem können durch Erinnerungen und Checkliste
 Wartungen weniger leicht vergessen werden und besser aufgeteilt werden.
 
@@ -240,7 +240,7 @@ zurückgestellt oder Akkus geladen. Diese Funktionalität soll insbesondere daf�
 sorgen, dass nachfolgende Ausleihende die Assets direkt nutzen können.
 
 {\sffamily\color{maincolor}{Ft-B-4 | Kalenderansicht für Ausleihende}}\\
-\todo[]{Mehr arbeit.. eher raus nehmen?}
+\todo[ inline ]{Mehr arbeit.. eher raus nehmen? ;; Bezieht sich das auf die vom Ausleihenden geliehenen Assets oder allgemein? Bei Allgemein würde ich das raus nehmen - vielleicht macht es Sinn diese Info in der Detailansicht darzustellen (Verfügbar/nicht verfügbar) oder wieder verfügbar ab....}
 Die Kalenderansicht für Ausleihende beinhaltet eine Übersicht, über alle Assets,
 welche gerade ausgeliehen sind. Mithilfe einer Monatsübersicht werden Termin zur
 Asset-Abholung oder Rückgabe angezeigt.
@@ -250,14 +250,13 @@ Asset-Abholung oder Rückgabe angezeigt.
 Die Systemarchitektur gibt eine Übersicht über die technische Umsetzung des
 Systems und bildet die Basis der Realisierung von Software-Systemen
 \cite{dumke_software-metriken_2000}. Diese besteht im Wesentlichen aus den
-folgenden drei Komponenten (\ref{fig:uml}): dem \textit{Snipe-IT Server}, dem
+folgenden drei Komponenten: dem \textit{Snipe-IT Server}, dem
 Reservierungsinterface und dem Front-End.
 
-Aufbauend auf den Anforderungen und der am \ac{imis} bereits eingesetzten Asset
-Managementsoftware \textit{Snipe-IT} werden im Folgenden die gewählten
-Frameworks erläutert. Um ein besseres Verständnis für die Architektur des
-entwickelten Software-Systemes voraussetzen zu können, wird nach dem C4-Modell
-zur Visualisierung von Softwarearchitektur der Aufbau der Architektur mit den
+Aufbauend auf den Anforderungen und der am \ac{imis} bereits eingesetzten Asset Managementsoftware
+\textit{Snipe-IT} werden im Folgenden die gewählten Frameworks erläutert. Um ein besseres
+Verständnis für die Architektur des entwickelten Software-Systemes voraussetzen zu können, wird nach
+dem C4-Modell zur Visualisierung von Softwarearchitektur der Aufbau der Architektur mit den
 Teilkomponenten detaillierter dargestellt \cite{brown2013software}.
 
 \subsection{Frameworkwahl}
@@ -293,7 +292,7 @@ Des Weiteren werden die Bestandteile des Systems in vier Kategorien gegliedert:
 
 {\sffamily\color{maincolor}{Level 1: Context}}
 
-Das erste Level der Architekturvisualisierung, nach dem C4-Modell, stellt die
+Das erste Level der Architekturvisualisierung nach dem C4-Modell, stellt die
 entwickelte Software mithilfe eines Systemkontextdiagramms dar. \ref{fig:level1}
 zeigt die zwei Komponenten des im Rahmen der Arbeit entwickelten Systems im
 Zusammenhang mit der Asset Managementsoftware \textit{Snipe-IT}.
@@ -306,30 +305,25 @@ Zusammenhang mit der Asset Managementsoftware \textit{Snipe-IT}.
     \label{fig:level1}
 \end{figure}
 
-Der Kontext umfasst zwei Software-Systeme: das Reservierungstool und die Asset
-Managementsoftware Snipe-IT. Das Reservierungstool bildet die Oberfläche für
-Ausleihende und ermöglicht es, die Assets einzusehen, zu suchen und zu buchen.
-Außerdem laufen über die Web-Oberfläche alle administrativen Aufgaben für
-Verleihende, wie das Aktualisieren eines Asset-Status. Hierzu nutzt die Web-App
-das Reservierungsinterface, um auf die \textit{Snipe-IT} Funktionalitäten
-zuzugreifen.
-\todo[inline]{Referenzierungen hinzufügen}
-Die Basis für das in dieser Arbeit umgesetzte System schafft die Asset
-Managementsoftware \textit{Snipe-IT} \cite{noauthor_home_nodate}, welche bereits
-am \ac{imis} eingesetzt wird. \textit{Snipe-IT} ist eine kostenlose, quelloffene
-IT-Asset-Verwaltungs-Plattform, welche das Nachverfolgen von Software-Lizenzen,
-Hardware und Verbrauchsgegenständen ermöglicht. Genannte Assets können über ein
-Dashboard hinzugefügt, verwaltet und gelöscht werden. Über Labels können Assets
-für die Übersichtlichkeit in verschiedene Kategorien eingeordnet werden, während
-Tags ein Asset eindeutig identifizieren (z. B. Seriennummer). Zudem ermöglicht
-das „Checkin/Checkout“-System die Nachverfolgung aller Assets, falls diese zum
-Beispiel an Personen ausgeliehen werden. Zu jedem Zeitpunkt kann ein Asset
-maximal einer Person zugeordnet werden, wodurch das mehrfache oder gleichzeitige
-Ausleihen eines Assets verhindert wird. Darüber hinaus beschreiben Status-Label
-den Zustands eines Assets und ob dieses ausgeliehen werden kann. Alle
-Funktionalitäten können zudem über eine REST-API programmatisch genutzt werden.
-Des Weiteren verfügt \textit{Snipe-IT} über eine Schnittstelle, welche die
-Integration von LDAP stark vereinfacht.
+Der Kontext umfasst zwei Software-Systeme: das Reservierungstool und die Asset Managementsoftware
+Snipe-IT. Das Reservierungstool bildet die Oberfläche für Ausleihende und ermöglicht es, die Assets
+einzusehen, zu suchen und zu buchen. Außerdem laufen über die Web-Oberfläche alle administrativen
+Aufgaben für Verleihende, wie das Aktualisieren eines Asset-Status. Hierzu nutzt die Web-App das
+Reservierungsinterface, um auf die \textit{Snipe-IT} Funktionalitäten zuzugreifen.
+\todo[inline]{Referenzierungen hinzufügen Management trennung}
+Die Basis für das in dieser Arbeit umgesetzte System schafft die Asset Managementsoftware
+\textit{Snipe-IT} \cite{noauthor_home_nodate}, welche bereits am \ac{imis} eingesetzt wird.
+\textit{Snipe-IT} ist eine kostenlose, quelloffene IT-Asset-Verwaltungs-Plattform, welche das
+Nachverfolgen von Software-Lizenzen, Hardware und Verbrauchsgegenständen ermöglicht. Genannte Assets
+können über ein Dashboard hinzugefügt, verwaltet und gelöscht werden. Über Labels können Assets für
+die Übersichtlichkeit in verschiedene Kategorien eingeordnet werden, während Tags ein Asset
+eindeutig identifizieren (z. B. Seriennummer). Zudem ermöglicht das „Checkin/Checkout“-System die
+Nachverfolgung aller Assets, falls diese zum Beispiel an Personen ausgeliehen werden. Zu jedem
+Zeitpunkt kann ein Asset maximal einer Person zugeordnet werden, wodurch das mehrfache oder
+gleichzeitige Ausleihen eines Assets verhindert wird. Darüber hinaus beschreiben Status-Label den
+Zustands eines Assets und ob dieses ausgeliehen werden kann. Alle Funktionalitäten können zudem über
+eine REST-API programmatisch genutzt werden. Des Weiteren verfügt \textit{Snipe-IT} über eine
+Schnittstelle, welche die Integration von LDAP stark vereinfacht.
 
     {\sffamily\color{maincolor}{Level 2: Container}}
 
