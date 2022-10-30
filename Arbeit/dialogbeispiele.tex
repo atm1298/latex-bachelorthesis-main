@@ -1,7 +1,5 @@
 \chapter{Dialogbeispiele}
 \label{chapter-dialogbeispiel}
-\todo[inline]{Bilder überarbeiten und Anordnung}
-
 Der folgende Abschnitt präsentiert das in der vorliegenden Arbeit realisierte
 System anhand eines beispielhaften Nutzungsszenarios. Das Szenario startet mit
 Mila, einer Erstsemester Studentin im Studiengang Medieninformatik. Mila belegt
@@ -20,32 +18,52 @@ Mila und ihre Gruppenmitglieder:innen, dass über die Ausleih-App
 \textit{Snipe-IT Companion} unter anderem Videoequipment an Studierende
 verliehen wird.
 
-Mila ruft die Ausleih-App unter der URL \textit{https://snipe-it-companion.de/}
-auf und meldet sich mit ihren Daten an. Daraufhin wird sie zu einem
-bisher leeren \textit{Dashboard} weitergeleitet und aufgefordert nach benötigtem
-Material zu suchen. Da Mila sich nicht sicher ist, welche Kamera sie benötigt,
-schaut sich Mila unter dem Menü, in den Kategorien um und findet schnell die
-Kategorie \enquote{Kameras}. Nachdem sie auf die Seite der Unterkategorien
-weitergeleitet wurde, entscheidet sich Mila dafür, eine \textit{GoPro}
-auszuleihen, weil sie so auch Erze und Metalle unter Wasser aufnehmen können.
-Dazu klickt Mila auf \enquote{Hinzufügen}.
-
-\begin{figure}[h]
+Mila ruft die Ausleih-App unter der URL \textit{https://snipe-it-companion.de/} auf und meldet sich
+mit ihren Daten an. Daraufhin wird sie zu einem bisher leeren \textit{Dashboard} weitergeleitet und
+aufgefordert nach benötigtem Material zu suchen. Da Mila sich nicht sicher ist, welche Kamera sie
+benötigt, schaut sich Mila unter dem Menü, in den Kategorien um und findet schnell die Kategorie
+\enquote{Kameras} (\ref{fig:login}). Nachdem sie auf die Seite der Unterkategorien weitergeleitet
+wurde, entscheidet sich Mila dafür, eine \textit{GoPro} auszuleihen, weil sie so auch Erze und
+Metalle unter Wasser aufnehmen können. Dazu klickt Mila auf \enquote{Hinzufügen} (\ref{fig:suchen}).
+\begin{figure}[p]
     \centering
-    \includegraphics[scale=0.3]{Bilder/Prototyp/Übersicht.png}\hspace{2em}
-    \includegraphics[scale=0.3]{Bilder/Prototyp/Übersicht1.png}
-    \label{fig:p4}
-    \caption[Mockup: Kategorien, Assets, Assetdetails]{Kategorien (l), Assetdetails (r)}
+    \includegraphics[scale=0.17]{Bilder/Dialgobeispiel/Login.png}\hspace{1em}
+    \includegraphics[scale=0.17]{Bilder/Dialgobeispiel/Suiche2.png} \hspace{1em}
+    \includegraphics[scale=0.17]{Bilder/Dialgobeispiel/Kategorien.png}
+    \caption[Dialogbeispiel 1]{Kategorieergebniss (l), Detailansicht: GoPro (m, r)}\label{fig:login}
+\end{figure}
+\begin{figure}[p]
+    \centering
+    \includegraphics[scale=0.17]{Bilder/Dialgobeispiel/Suche.png}\hspace{1em}
+    \includegraphics[scale=0.17]{Bilder/Dialgobeispiel/Details 1.png} \hspace{1em}
+    \includegraphics[scale=0.17]{Bilder/Dialgobeispiel/Details 2.png}
+    \caption[Dialogbeispiel 1]{Kategorieergebniss (l), Detailansicht: GoPro (m, r)}\label{fig:suchen}
 \end{figure}
 
+\newpage
 Nun wird sie dazu aufgefordert, einen Ausleihzeitraum anzugeben. Milas Gruppe
 hat entschieden, dass sie von kommenden Montag bis Mittwoch das Material
 benötigten. Da Mila von 8:00 Uhr bis 10:00 Uhr eine Vorlesung hat, gibt sie
 10:30 Uhr als Abholzeit und Rückgabezeit an. Um die Reservierung abschließen zu
-können, klickt Mila auf \enquote{Reservieren}. Mila überprüft in der
+können, klickt Mila auf \enquote{Reservieren} (\ref{fig:datum}). Mila überprüft in der
 Zusammenfassung, ob ihre Angaben stimmen und stellt fest, dass die Rückgabezeit
 am Mittwoch doch nicht mehr in ihren Kalender passt. Daher ändert sie die
-Uhrzeit auf 12:30 Uhr und bestätigt abschließend ihre Reservierung.
+Uhrzeit auf 12:30 Uhr und bestätigt abschließend ihre Reservierung (\ref{fig:geandert}).
+
+\begin{figure}[p]
+    \centering
+    \includegraphics[scale=0.17]{Bilder/Dialgobeispiel/Datum eingeben.png}\hspace{1em}
+    \includegraphics[scale=0.17]{Bilder/Dialgobeispiel/mit datum .png} \hspace{1em}
+    \includegraphics[scale=0.17]{Bilder/Dialgobeispiel/Falsche Uhrzeit.png}
+    \caption[Dialogbeispiel 1]{Zeitraum eingabe (l), Detailansicht: GoPro mit Datum (m), Übersicht (r)}\label{fig:datum}
+\end{figure}
+\begin{figure}[p]
+    \centering
+    \includegraphics[scale=0.17]{Bilder/Dialgobeispiel/datumänderung.png}\hspace{1em}
+    \includegraphics[scale=0.17]{Bilder/Dialgobeispiel/Bestätigung.png} \hspace{1em}
+    \includegraphics[scale=0.17]{Bilder/Dialgobeispiel/Zsuammenfassung.png}
+    \caption[Dialogbeispiel 2]{zeitraumsänderung (l), Detailansicht: GoPro mit Datum (r)}\label{fig:geandert}
+\end{figure}
 
 Da sich die Gruppe nicht sicher ist, welches Mikrofon für die Aufnahme eines
 Voiceover sinnvoll ist, suchen sie zunächst in der Ausleih-App nach Mikrofon und
@@ -59,80 +77,66 @@ dieses.
 Georg ist als fiktiver \ac{wimi} am \ac{imis} für zwei Labore zuständig, in
 denen Material ausgeliehen werden kann. Zum Feierabend überprüft er sein
 Verwaltungsdashboard auf dem Desktop in der Ausleih-App. Er sieht, das eine neue
-Reservierung für Montag um 10:30 Uhr von Mila eingegangen ist.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.3]{Bilder/Prototyp/Übersicht.png}
-    \label{fig:p4}
-    \caption[Mockup: Kategorien, Assets, Assetdetails]{Kategorien (l), Assetdetails (r)}
-\end{figure}
+Reservierung für Montag um 10:30 Uhr von Mila eingegangen ist (\ref{fig:georg}).
 
 Da sich Mila am Sonntag nicht sicher ist, wo die Materialien abgeholt werden
 sollen, schaut sie erneut in der Ausleih-App nach und findet den Abholort auf
 der Dashboardansicht.
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.3]{Bilder/Prototyp/Übersicht.png}\hspace{2em}
-    \includegraphics[scale=0.3]{Bilder/Prototyp/Übersicht1.png}
-    \label{fig:p4}
-    \caption[Mockup: Kategorien, Assets, Assetdetails]{Kategorien (l), Assetdetails (r)}
-\end{figure}
-
 Nach der Vorlesung am Montag macht sich Mila auf den Weg in das Gebäude 64 zum
 Abholort: Techniklabor. Georg wartet dort bereits auf Mila und erklärt ihr, was
 sie bei der Nutzung der \textit{GoPro} beachten sollte. Nachdem Mila gegangen ist, trägt
-Georg auf seinem Smartphone ein, dass die Materialien abgeholt wurden. Sobald
+Georg auf seinem Smartphone ein, dass die Materialien abgeholt wurden (\ref{fig:georg2}). Sobald
 Georg die Abholung bestätigt hat, wird der Status in der internen Datenbank von
-Snipe-IT geändert.
+Snipe-IT geändert (\ref{fig:georg2}).
 
-\begin{figure}[h]
+\begin{figure}[p]
     \centering
-    \includegraphics[scale=0.3]{Bilder/Prototyp/Übersicht.png}\hspace{2em}
-    \includegraphics[scale=0.3]{Bilder/Prototyp/Übersicht1.png}
-    \label{fig:p4}
-    \caption[Mockup: Kategorien, Assets, Assetdetails]{Kategorien (l), Assetdetails (r)}
+    \includegraphics[scale=0.25]{Bilder/Dialgobeispiel/Verwaltung.png}
+    \caption[Dialogbeispiel 3]{Desktop: Verwaltung}\label{fig:georg}
+\end{figure}
+\begin{figure}[p]
+    \centering
+    \includegraphics[scale=0.17]{Bilder/Dialgobeispiel/Reservierung Abholung.png}\hspace{1em}
+    \caption[Dialogbeispiel 3]{Verwaltung}\label{fig:georg2}
 \end{figure}
 
+\newpage
 Laura Eggers ist ebenfalls fiktive \ac{wimi} am \ac{imis} und möchte für eine
 Studie ein Mikrofon ausleihen. Da sie Zugriff auf Snipe-IT hat, schaut sie
 zunächst dort nach dem gewünschten Material und stellt fest, dass dieses
 \textit{herausgegeben} ist. Daraufhin ruft sie die URL
 \textit{https://snipe-it-companion.de/} auf und reserviert das Mikrofon im
 gewünschten Zeitraum. Am Abholtag entnimmt sie das Asset und bestätigt die
-Abholung auf ihrem Smartphone. \todo{Hier wird der Use-Case noch nicht so klar}
-
+Abholung auf ihrem Smartphone \ref{fig:georg5}. \todo{Hier wird der Use-Case noch nicht so klar}
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.16]{Bilder/Screenshot 2022-10-14 at 11-26-25 Asset ansehen 00087 Ausleihmanagement.png}
-    \label{fig:p4}
-    \caption[Assetansicht in Snipe-IT]{Assetansicht in Snipe-IT}
+    \includegraphics[scale=0.17]{Bilder/Screenshot 2022-10-14 at 11-26-25 Asset ansehen 00087 Ausleihmanagement.png}
+    \caption[Assetansicht in Snipe-IT]{Assetansicht in Snipe-IT}\label{fig:georg5}
 \end{figure}
 
-Milas Gruppe stellt am Dienstag fest, dass ihnen der Ausleihzeitraum nicht
-ausreicht und möchte diesen daher um einen Tag verlängern. Dafür öffnet sie die
-Ausleih-App und sieht auf dem Dashboard unter dem Tab \textit{Laufende} ihre
-Reservierungen. Daraufhin ändert sie die Daten der beiden Materialien auf
-Donnerstag um 9:00 Uhr.\todo{Noch kurz erwähnen das Georg die Verlängerung auch in seinem Dashboard sehen kann} Am Donnerstag um 9:00 Uhr wartet Mila bereits auf Georg,
-welcher die Materialien entgegennimmt und in seinem Büro die Rückgabe bestätigt.
 
+Milas Gruppe stellt am Dienstag fest, dass ihnen der Ausleihzeitraum nicht ausreicht und möchte
+diesen daher um einen Tag verlängern. Dafür öffnet sie die Ausleih-App und sieht auf dem Dashboard
+unter dem Tab \textit{Laufende} ihre Reservierungen. Daraufhin ändert sie die Daten der beiden
+Materialien auf Donnerstag um 9:00 Uhr (\ref{fig:andern}).\todo{Noch kurz erwähnen das Georg die Verlängerung auch in
+seinem Dashboard sehen kann} 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.3]{Bilder/Prototyp/Übersicht.png}\hspace{2em}
-    \includegraphics[scale=0.3]{Bilder/Prototyp/Übersicht1.png}
-    \label{fig:p4}
-    \caption[Mockup: Kategorien, Assets, Assetdetails]{Kategorien (l), Assetdetails (r)}
+    \includegraphics[scale=0.14]{Bilder/Dialgobeispiel/laufende nach änderung.png}\hspace{1em}
+    \includegraphics[scale=0.14]{Bilder/Dialgobeispiel/Datum ändern 2.png}\hspace{1em}
+    \caption[Dialogbeispiel 3]{Zeitraumverlängern}\label{fig:andern}
 \end{figure}
+
+Am Donnerstag um 9:00 Uhr wartet Mila bereits auf Georg, welcher die
+Materialien entgegennimmt und in seinem Büro die Rückgabe bestätigt (\ref{fig:zuruck}).
 
 Im vierten Semester möchte Mila das Mikrofon für das Modul \textit{\ac{ide}}
 ausleihen, um wieder ein Voiceover aufnehmen zu können. Sie findet das Mikrofon
-unter \textit{zurückgegeben} und leiht das Material erneut aus.
-
+unter \textit{zurückgegeben} und leiht das Material erneut aus (\ref{fig:zuruck}).
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.3]{Bilder/Prototyp/Übersicht.png}\hspace{2em}
-    \includegraphics[scale=0.3]{Bilder/Prototyp/Übersicht1.png}
-    \label{fig:p4}
-    \caption[Mockup: Kategorien, Assets, Assetdetails]{Kategorien (l), Assetdetails (r)}
+    \includegraphics[scale=0.14]{Bilder/Dialgobeispiel/Altes Datum.png}\hspace{1em}
+    \includegraphics[scale=0.14]{Bilder/Dialgobeispiel/Zurück.png}\hspace{1em}
+    \caption[Dialogbeispiel 5]{Zurückgegeben}\label{fig:zuruck}
 \end{figure}
