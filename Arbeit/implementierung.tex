@@ -3,27 +3,14 @@
 \label{chapter-implementierung}
 Das folgende Kapitel beschreibt die Implementierung des Reservierungsinterfaces sowie des Frontends.
 Zunächst werden die Implementierung des Reservierungsinterfaces und die damit einhergehenden
-technischen Aspekte beschrieben. Dabei wird Aufschluss über die Struktur gegeben und die
-Kernfunktionalitäten sowie Herausforderungen in der Realisierung
-näher erläutert. Daraufhin wird die Umsetzung des Frontends erläutert. Abschließend wird auf die
-Inbetriebnahme des Systems eingegangen.
-
-% Um ein besseres Verständnis für die Interaktion der einzelnen Komponenten zu erlangen, wurde ein
-% UML-Sequenzdiagramm erstellt (\ref{fig:uml}). Bei der vierten Komponente handelt es sich um das
-% LDAP-System der Universität zu Lübeck. Mithilfe der Integration können Nutzende sich mit ihrem
-% bereits bestehenden IDM Account anmelden. Zum einen kann somit sichergestellt werden, dass nur
-% befugte Personen Assets einsehen und ausleihen können. Zum anderen erleichtert es den Nutzenden den
-% Ausleihprozess, da kein neuer Account erstellt werden muss.
-
-% \begin{figure}[h]
-%   \centering
-%   \includegraphics[scale=0.45]{Bilder/uml.pdf}
-%   \caption[UML-Sequenzdiagramm]{UML-Sequenzdiagramm}
-%   \label{fig:uml}
-% \end{figure}
-
+technischen Aspekte beschrieben (\ref{subsec:aufbauinterface}). Dabei wird Aufschluss über die
+Struktur gegeben und die Kernfunktionalitäten (\ref{subsec:kernfkt}) sowie Herausforderungen
+(\ref{subsec:heraus}) in der Realisierung näher erläutert. Daraufhin wird die Umsetzung des
+Frontends erläutert (\ref{subsec:frontend}). Abschließend wird auf die Inbetriebnahme des Systems
+eingegangen (\ref{subsec:nutzung}).
 
 \section{Implementierung des Reservierungsinterfaces}
+\label{sec:interface}
 Dieser Abschnitt erläutert den technischen Aufbau des Rervierungsinterfaces und geht auf relevante
 Aspekte in der Realisierung der Kernfunktionalitäten (\ref{section:funktionale}) ein. Des Weiteren
 werden unerwartete Herausforderungen thematisiert, welche im Rahmen der Arbeit nicht bewältigt
@@ -31,6 +18,7 @@ werden konnten.
 
 
 \subsection{Aufbau des Reservierungsinterface}
+\label{subsec:aufbauinterface}
 Das Reservierungsinterface teilt sich in drei wesentliche Bestandteile: der
 \textit{Fastify-HTTP-Server}, die \textit{SQLite Datenbank} und das \textit{ORM Prisma} (vgl.
 \ref{fig:level3}). Diese Komponenten spiegeln sich auch in der Verzeichnisstruktur aus \ref{fig:db}
@@ -116,6 +104,7 @@ drei zentrale Funktionen bietet.
 
 
 \subsection{Implementierung der Kernfunktionalität}
+\label{subsec:kernfkt}
 Dieser Abschnitt präsentiert die Implementierung der Kernfunktionalität des
 Reservierungsinterfaces, welche aus den Anforderungen bestimmt wurde (\ref{section:anforderung}).
 Bei der Funktionalität handelt es sich um das Reservieren in die Zukunft, sowie das Speichern
@@ -165,6 +154,7 @@ verwendet werden, spiegeln die Berechtigungen des API-Tokens die Berechtigungen 
 wider.
 
 \subsection{Herausforderungen in der Einbindung von LDAP}
+\label{subsec:heraus}
 Snipe-IT bietet bereits eine integrierte Lösung zur Synchronisation und Login mit
 LDAP\footnote{\url{https://snipe-it.readme.io/docs/ldap-sync-login}}. Da die \textit{persönlichen
   Zugriffstoken} jedoch die einzige Authentifizierungsmöglichkeit der API sind und lediglich manuell
@@ -179,6 +169,7 @@ würde ein speziell für das Reservierungsinterface generierte Token für die Ko
 Snipe-IT genutzt werden.
 
 \section{Implementierung des Frontends}
+\label{subsec:frontend}
 Das kommende Kapitel beschreibt die Client-seitige Realisierung der Arbeit. Zunächst wird der Aufbau
 betrachtet, daraufhin wird auf das Extrahieren der Unterkategorien eingegangen (\ref{fig:vue}).
 
@@ -198,9 +189,9 @@ aufgrund der Verzeichnisstruktur generiert. Hierfür wurde das Vite-Plugin
 Vue-Komponenten, welche sich im \textit{/pages}-Verzeichnis des Projekts befinden, werden in eine,
 dem Dateinamen gleichende, Route umgewandelt. Ordner können hierbei verwendet werden, um Unterrouten
 zu erstellen, während die Verwendung von eckigen Klammern zur Kennzeichnung von Parametern genutzt
-wird\todo{Der vorherige Statz=DOOF}. Beispielsweise wird eine \textit{[id].vue}-Datei, welche sich
-in dem Ordner \textit{categories} befindet, in die \textit{/categories/<id>}-Route umgewandelt,
-welche die angegebene ID in der Komponente als Parameter nutzen kann (\ref{fig:vue}).
+wird. Beispielsweise wird eine \textit{[id].vue}-Datei, welche sich in dem Ordner
+\textit{categories} befindet, in die \textit{/categories/<id>}-Route umgewandelt, welche die
+angegebene ID in der Komponente als Parameter nutzen kann (\ref{fig:vue}).
 
 \begin{figure}[h]
   \centering
@@ -232,6 +223,7 @@ in der Anwendung schrittweise durchlaufen werden kann.
 
 
 \section{Nutzung des Systems}
+\label{subsec:nutzung}
 Der folgende Abschnitt führt die nötigen Schritte auf, um das System in Betrieb nehmen zu können.
 Zuerst wird die Installation erklärt, gefolgt von der Konfiguration und Ausführung des Systems.
 
@@ -269,16 +261,16 @@ in der Konfiguration genutzt werden. Außerdem sollte beachtet werden, dass der 
 nach der Generierung einsehbar ist.
 
 \subsection{Ausführung des Reservierungsinterfaces}
-\begin{itemize}
-  \item Ausführung per \lstinline{npm run serve}
-\end{itemize}
-\todo{ausformulieren}
+Um die Daten der Snipe-IT Datenbank abzurufen, die Reservierungen zwischen zu speichern und den
+Status in \textit{Snipe-IT} aktualisieren zu können, muss das Reservierungsinterface mithilfe des
+Befehls \lstinline{npm run serve} gestartet werden.
+
 
 \subsection{Ausführung der Web-App}
-Das Ausführen und "bauen" der Web-App geschieht über den Befehl \lstinline{npm run build-only}.
-Nachdem der Prozess erfolgreich abgeschlossen ist, sollte ein neues \textit{dist}-Verzeichnis
-generiert worden sein. Das \textit{dist}-Verzeichnis kann zum statischen Hosting genutzt werden.
-
+Das \enquote{Bauen} der Web-App geschieht über den Befehl \lstinline{npm run build-only}. Nachdem
+der Prozess erfolgreich abgeschlossen ist, sollte ein neues \textit{dist}-Verzeichnis generiert
+worden sein. Das \textit{dist}-Verzeichnis kann zum statischen Hosting genutzt werden. Zur lokalen
+Entwicklung kann durch\lstinline{npm run dev} zudem ein Entwicklungsserver gestartet werden.
 
 \section{Fazit der Implementierung}
 

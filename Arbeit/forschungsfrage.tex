@@ -1,31 +1,33 @@
 %!TEX root = thesis.tex
 
 \chapter{Einleitung}
-
 Das Ausleihen von Assets jeglicher Art ist keine Neuheit \cite{soderholm2018borrowing}. An der
 Zentralen Hochschulbibliothek Lübeck (ZHB) wird hierzu beispielsweise die Buchungsapp
-\textit{Affluences} verwendet. Zum Ausleihen von Materialien müssen Terminabholungen online gebucht
-werden \cite{zhb_offnung_nodate}. Die Anfragen können überprüft werden, wodurch das vorausschauende Planen
-der Materialien ermöglicht wird. Am \ac{imis} werden Assets ohne Anmeldung oder mit einer mündlichen
-Absprache verwendet. Aufseiten der Mitarbeitenden wird der Gebrauch der Assets individuell geplant,
-sodass das frühzeitige Reservieren oder das geplante Ausleihen erschwert werden. Für die
-vorausschauende Planung von anstehenden Projekten gibt es keine feste Reservierung oder einen
-Überblick, wann die gewünschten Assets wieder verfügbar sind. Zudem ist vielen Mitarbeitenden
+\textit{Affluences}\footnote{\url{https://affluences.com/?lang=de}} verwendet. Zum Ausleihen von
+Materialien müssen Terminabholungen online gebucht werden \cite{zhb_offnung_nodate}. Die Anfragen
+können überprüft werden, wodurch das vorausschauende Planen der Materialien ermöglicht wird. 
+
+Am Institut für Multimediale und Interaktive Systeme (\ac{imis}) werden Assets ohne Anmeldung oder
+mit einer mündlichen Absprache verwendet. Aufseiten der Mitarbeitenden wird der Gebrauch der Assets
+individuell geplant, sodass das frühzeitige Reservieren oder das geplante Ausleihen erschwert wird.
+Für die vorausschauende Planung von anstehenden Projekten gibt es keine feste Reservierung oder
+einen Überblick, wann die gewünschten Assets wieder verfügbar sind. Zudem ist vielen Mitarbeitenden
 unklar, welche Assets sich in den Laboren des \ac{imis} befinden. Folglich kennen Mitarbeitende nur
 selten die Möglichkeiten, mit denen sie ihre Forschungsprojekte oder die Lehre ergänzen könnten.
 
+\todo{Neu: Kommender Absatz überarbeitet}
 Aktuell werden Reservierungen sowie der Gebrauch von Equipment über unterschiedliche
-Kommunikationswege wie E-Mail oder mündlicher Absprache bei zuständigen Mitarbeitenden angefragt. Die
-zuständigen Mitarbeitenden prüfen die Anfrage und koordinieren potenzielle Kollisionen mit bereits
-reservierten Zeiträumen oder Absprachen und bestätigen, ändern oder lehnen diese
+Kommunikationswege wie E-Mail oder mündlicher Absprache bei zuständigen Mitarbeitenden angefragt.
+Die zuständigen Mitarbeitenden prüfen die Anfrage und koordinieren potenzielle Kollisionen mit
+bereits reservierten Zeiträumen oder Absprachen und bestätigen, ändern oder lehnen diese
 (Reservierungs-)Anfrage ab. In einigen Fällen werden die gebuchten Zeiten auf Papier dokumentiert.
-Aufseiten der Studierenden kann ein solches\todo{Formulierung} System für Gruppenarbeiten, wie zum Beispiel die des Moduls
-„Einführung in die Medieninformatik“ hilfreich sein. Studierende müssen während dieses Projekts eine
-multimediale Abgabe produzieren, welche beispielsweise die Form eines Videos haben kann. Aktuell ist
-vielen Studierenden nicht bewusst, dass das \ac{imis} Equipment wie Kameras, Greenscreens oder Gimbals für
-Videos bereitstellt. Des Weiteren sind Hemmschwelle und Aufwand zum Ausleihen der Hardware hoch, da
-uneindeutig ist, welche Mitarbeitenden für die jeweilige Hardware zuständig sind.
-
+Aufseiten der Studierenden kann ein Reservierungstool für Projekte, wie zum Beispiel die des Moduls
+\ac{emi} hilfreich sein. Studierende müssen während dieses Projekts eine multimediale Abgabe
+produzieren, welche beispielsweise die Form eines Videos haben kann.\\ Aktuell ist vielen
+Studierenden nicht bewusst, dass das \ac{imis} Equipment wie Kameras, Gimbals oder VR-Equipment für
+Videos oder Projektaufgaben bereitstellt. Des Weiteren sind Hemmschwelle und Aufwand zum Ausleihen
+der Hardware hoch, da uneindeutig ist, welche Mitarbeitenden für die jeweilige Hardware zuständig
+sind.
 
 \section{Ziel der Arbeit}
 Das Ziel dieser Arbeit ist es ein wirksames System zu entwickeln, welches den Reservierungs- und
@@ -63,20 +65,16 @@ daher mit der Analyse der Schwierigkeit des Ausleihprozesses.
 \begin{enumerate}
   \item[\sffamily\color{maincolor} {F1 |}] {Welche zentralen Schwierigkeiten bringt die aktuelle Planung und Reservierung von Assets für Mitarbeitende und Studierende mit sich?}
 \end{enumerate}
-
 Um die zentralen Schwierigkeiten und Probleme lösen zu können, müssen Anforderungen an das System
 ermittelt werden. Anschließend müssen diese nach Relevanz sortiert werden, um möglichst viele
 Schwierigkeiten lösen zu können. Die zweite Forschungsfrage beschäftigt sich folglich mit den
 Anforderungen, welche ein solches Reservierungstool umfassen sollte, um die Schwierigkeiten zu minimieren.
-
 \begin{enumerate}
   \item[\sffamily\color{maincolor} {F2 |}] {Was sind Anforderungen an ein System, welches die in F1 gezeigten Schwierigkeiten adressiert und reduziert?}
 \end{enumerate}
-
 Abschließend soll eruiert werden, ob die erste Iteration des Systems die ermittelten Schwierigkeiten
 mit den erarbeiteten Funktionalitäten lösen kann. Die letzte Forschungsfrage beschäftigt sich
 demzufolge mit der Evaluation des erarbeiteten Systems und den möglichen Stärken und Schwächen.
-
 \begin{enumerate}
   \item[\sffamily\color{maincolor} {F3 |}] {Inwieweit kann ein aus F2 resultierender Prototyp die in F1 identifizierten Schwierigkeiten reduzieren?}
 \end{enumerate}
@@ -84,32 +82,36 @@ demzufolge mit der Evaluation des erarbeiteten Systems und den möglichen Stärk
 \section{Vorgehensweise}
 Die Entwicklung des Systems orientiert sich am menschenzentrierten Gestaltungsprozess
 \cite{DINISO9241}. Der Prozess teilt sich im Rahmen dieser Arbeit in
-fünf aufeinanderfolgende Phasen (\ref{fig:schablone}), wobei die Entwurfs- und Implementierungsphasen
+fünf aufeinanderfolgende Phasen (\ref{fig:vorgehen}), wobei die Entwurfs- und Implementierungsphasen
 Spielraum für ein iteratives Vorgehen lassen. Unter anderem werden in der Analyse die Aufgaben des
-Systems, die Benutzenden und der Kontext nach dem Entwicklungsprozess für interaktive Medien
-\cite{HerczegMDI2009} aufgeführt, um ein gebrauchstaugliches Ergebnis erzielen zu können.
+Systems, die Nutzenden und der Kontext nach dem Entwicklungsprozess für interaktive Medien
+aufgeführt, um ein gebrauchstaugliches Ergebnis erzielen zu können \cite{HerczegMDI2009}.
 
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.156]{Bilder/Screenshot 2022-10-17 at 18-39-40 Vorgehensmodell.pptx.png}
-  \label{fig:schablone}
+  \label{fig:vorgehen}
   \caption[Vorgehensmodell]{Vorgehensmodell}
 \end{figure}
 
 In der ersten Phase werden die Anforderungen an das zu entwickelnde System erarbeitet und
 verstanden. Die Erkenntnisse dieser Phase sind in \ref{chapter-analyse} zu finden.
 \ref{chapter-analyse} soll unter anderem die Forschungsfragen F1 und F2 beantworten. Durch
-Interviews mit Stakeholdern sollen die zentralen Schwierigkeiten des Ausleihprozesses
-festgestellt werden. Folglich werden die Notwendigkeit der angedachten Anforderungen mithilfe der
-Interviews überprüft und ergänzt.
+semi-strukturierte Interviews mit Stakeholdern sollen die zentralen Schwierigkeiten und Aufgaben des
+Ausleihprozesses festgestellt werden. Folglich werden die Notwendigkeit der angedachten
+Anforderungen mithilfe der Interviews überprüft und ergänzt. Außerdem wurde eine Recherchiere
+vergleichbarer Systeme durchgeführt, um die Aussagekraft der ermittelten Interviewergebnisse zu
+überprüfen.
 
+\todo{Neu: Kommender Absatz überarbeitet}
 In der Spezifikationsphase werden die Anforderungen an das System weiter spezialisiert
 (\ref{chapter-konzept}). Daher werden Funktionalitäten entsprechend den Anforderungen entwickelt und
 in einer priorisierten Feature-Liste festgehalten. Anschließend wird die Systemarchitektur,
-aufgeteilt in Frontend, Backend und den bestehenden Snipe-IT Server, erarbeitet und passende
-Frameworks begründet zur Entwicklung ausgewählt. Darüber hinaus wird das Interface-Design
-erarbeitet (\ref{chapter-design}). Hierbei wird durch Usability Tests ein iteratives Vorgehen
-ermöglicht.
+aufgeteilt in Frontend, Reservierungsinterface (Backend) und dem bestehenden Snipe-IT Server,
+mithilfe des C4-Models erarbeitet. Aufbauend darauf werden passende Frameworks zur Entwicklung
+ausgewählt. Darüber hinaus wird das Interface-Design erarbeitet (\ref{chapter-design}). Hierbei wird
+durch Usability Tests ein iteratives Vorgehen ermöglicht.
+ 
 
 Die Implementierungsphase umfasst die eigentliche Umsetzung des Reservierungstools
 (\ref{chapter-implementierung}). Hierbei werden die in der Konzeptionsphase festgelegten Frameworks

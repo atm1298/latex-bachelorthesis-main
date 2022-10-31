@@ -5,7 +5,7 @@
 Das folgende Kapitel stellt die Evaluation, des im Rahmen dieser Arbeit
 realisierten Systems vor. Zunächst werden die Ziele der Evaluation und das
 Vorgehen erläutert. Hierbei werden die Versuchsgruppen, welche sich aus der
-\nameref{section:benutzer} ergeben, näher betrachtet. Abschließend werden die
+\nameref{section:Nutzenden} ergeben, näher betrachtet. Abschließend werden die
 Ergebnisse umfassend präsentiert, zusammengefasst und entsprechend diskutiert.
 
 \section{Ziele}
@@ -17,7 +17,7 @@ Forschungsfrage F2 zu beantworten.
 
 
 \section{Vorgehen und Methodik}
-\todo[inline]{Formative vs. Summative Evaluations https://www.nngroup.com/articles/formative-vs-summative-evaluations/}
+\todo[inline]{IDE Kurs nutzen: Warum Laborstudie}
 Da es sich um ein universitätsinternes Tool handelt, wurde sich zur Evaluation,
 im Rahmen einer Laborstudie (N=6) mit Mitarbeitenden des \ac{imis} und
 Studierenden im Bereich der Medieninformatik zusammengesetzt. Zu Beginn der
@@ -81,7 +81,7 @@ Aussagekraft der ausgewerteten Ergebnisse ist somit zu hinterfragen.
 
 Des Weiteren wurde mithilfe des \ac{ati} das technische Interesse und Verständnis der Teilnehmenden
 festgestellt \cite{attig_assessing_2017}. In beiden Gruppen konnten wie zu Beginn in der
-\nameref{section:benutzer} lediglich geringe Unterschiede innerhalb der soziodemografischen Daten
+\nameref{section:Nutzenden} lediglich geringe Unterschiede innerhalb der soziodemografischen Daten
 festgestellt werden.
 
 Die erfasste Technikaffinität der Proband:innen wird in \ref{table:atipartzwei} dargestellt. Durch
@@ -89,29 +89,28 @@ die Hinzunahme zweier Vergleichsstichproben aus \citeA{franke_personal_2019} (M=
 M=4.23, N=65), lässt sich schlussfolgern, dass die Nutzendengruppen eine vergleichsweise hohe
 Technikaffinität aufweisen.
 
-\todo{tabelle ergänzen}
 \begin{table}[h]
   \centering
   \caption{Werte der \ac{ati}-Skala}
   \begin{tabular}{lccc}
     \arrayrulecolor{maincolor}\hline
-    \sffamily\color{maincolor}Benutzergruppe            &
+    \sffamily\color{maincolor}Nutzendengruppe            &
     \sffamily\color{maincolor}Mittelwert $(M)$          &
     \sffamily\color{maincolor}Standardabweichung $(SD)$ &
     \sffamily\color{maincolor}Teilnehmende $(N)$                        \\
     \arrayrulecolor{maincolor}\hline
-    Verleihende                                         & 5.X & 0.X & 3 \\
-    Ausleihende                                         & 5.X & 0.X & 8 \\
+    Verleihende                                         & 5.11 & 0.48 & 3 \\
+    Ausleihende                                         & 5.18 & 0.49 & 8 \\
     \arrayrulecolor{maincolor}\hline
   \end{tabular}
   \label{table:atipartzwei}
 \end{table}
 
-
 \section{Verleihende}
-Dieser Abschnitt umfasst die Evaluationsergebnisse, welche spezifisch die Verleihenden betreffen.
-Hierbei wird der Fokus auf den Verwaltungsteil des Systems gesetzt. \ref{table:vzwei} zeigt die
-Rollen der Versuchspersonen. Die IDs der Versuchspersonen werden in dem folgenden
+\label{sec:ev-ver}
+Dieser Abschnitt umfasst die Evaluationsergebnisse, welche spezifisch die Aufgaben der Verleihenden
+betreffen. Hierbei wird der Fokus auf den Verwaltungsteil des Systems beschränkt. \ref{table:vzwei}
+zeigt die Rollen der Versuchspersonen. Die IDs der Versuchspersonen werden in dem folgenden
 Abschnitt als Verweise verwendet.
 
 \begin{table}[h]
@@ -122,35 +121,24 @@ Abschnitt als Verweise verwendet.
     \sffamily\color{maincolor}ID &
     \sffamily\color{maincolor}Zuständigkeitsbereich \\
     \arrayrulecolor{maincolor}\hline
-    E-V1                         & Multimedialabor  \\
-    E-V2                         & VR-Labor         \\
-    E-V3                         & ??               \\
+    EV1                         & Multimedialabor  \\
+    EV2                         & VR-Labor         \\
+    EV3                         & ??               \\
     \arrayrulecolor{maincolor}\hline
   \end{tabular}
   \label{table:vzwei}
 \end{table}
 
-Für Verleihende ist es von hoher Bedeutung überprüfen zu können, ob die richtige
-Person das entsprechende Asset abholt. Diese Information wurde nach dem Klicken auf das
-Listenelement erwartet (E-V1). Des Weiteren bedarf die Bestätigung, dass ein
-Asset \textit{abgeholt} oder \textit{zurückgegeben} wurde, bei mehreren
-Elementen in der Listenansicht, viele Aktionen. Stattdessen wurde eine
-Bearbeitungsansicht beim Klicken des Listenelements erwartet und/oder vorgeschlagen
-(E-V1-3).
-
-\todo{Karte öffnen und dann erst Aktion, auf einen blick sonst sehr viele
-Interaktionen, und nicht abgeholt auch erst wenn es relevant wird anzeigen, Hovern und mit Kalender
-verbinden karte anzeigen und hervorheben}
-
-Calender icall dateine zum Kalender eintagung, exportieren
-
-Wie sinnvoll ist der Abholtag und zeit wenn Rückgabe ansteht(E-V3)
-
-
-Sortierung der Rückgabe, und Abholung
-
-
-Warum bei verwaltung keine bilder aber bei anderen nicht, warum ausleihzeitraum  datum selbsterklärend
+Für Verleihende ist es von hoher Bedeutung überprüfen zu können, ob die richtige Person das
+entsprechende Asset abholt. Diese Information wurde nach dem Klicken auf das Listenelement erwartet
+(EV1, EV3). Des Weiteren wird die Menge der möglichen Aktionen (\enquote{abgeholt} oder
+\enquote{zurückgegeben}) bei einer hohen Anzahl an Listenelementen unübersichtlich. Stattdessen
+wurde eine Bearbeitungsansicht beim Klicken des Listenelements erwartet und/oder vorgeschlagen
+(EV1-3). Außerdem wurden die \enquote{nicht abgeholt} und \enquote{nicht zurückgegeben}-Buttons als
+irritierend empfunden, wenn die Abholung oder Rückgabe des Assets noch nicht anstand. Diese wurden
+erst erwartet, wenn die Reservierung bereits überfällig ist (EV1, EV2). Zudem fehlt eine Rückmeldung
+bei getätigten Aktionen und die Möglichkeit Aktionen rückgängig zu machen, falls diese versehentlich
+ausgelöst wurden (EV1, EV3). 
 
 \begin{longtable}{p{0.85\textwidth}} \arrayrulecolor{maincolor}\hline
   \enquote{\textit{\enquote{Abgeholt}, dass muss man bestätigen können. Wenn ich
@@ -159,8 +147,21 @@ Warum bei verwaltung keine bilder aber bei anderen nicht, warum ausleihzeitraum 
   \arrayrulecolor{maincolor}\hline
 \end{longtable}
 
-\section{Ausleihende}
+Des Weiteren wurde das Anzeigen von überflüssigen Informationen und das Verbergen von relevanten
+Informationen im Listenelement kritisiert. Für die Abholung und Rückgabe eines Assets ist lediglich
+das Datum der jeweiligen Aktion relevant, jedoch wurden stets beide Daten angegeben (EV1-3). Zudem
+löste die fehlende Beschriftung der \enquote{(nicht) abgeholt} und \enquote{(nicht)
+zurückgegeben}-Buttons Unsicherheit aus (EV1, EV3). Durch das Verschieben der Buttons an den unteren
+Rand des Listenelements und das Einbinden eines Hinweistextes könnte diese Problematik gelöst
+werden (EV1). Außerdem sei eine Sortierung der Reservierungen nach ihrem Datum hilfreich, um die
+aktuellsten und somit relevantesten Reservierungen zuerst anzuzeigen (EV2, EV3). Zuletzt wurde das Fehlen
+der Assetbilder bemängelt (EV3). 
 
+Des Weiteren wurde sich das Ablehnen von Reservierungen von Verleihenden gewünscht. Dies stelle
+eine zentrale Funktion dar, welche in der jetztigen Umsetzung des Systems nicht eingebunden ist und
+separat per E-Mail geschehen müsste (EV1, EV3).
+
+\section{Ausleihende}
 Im Folgenden werden die Ergebnisse der Aufgaben, welche von Ausleihenden ausgeführt wurden,
 präsentiert. \ref{table:azwei} zeigt die Rolle und das Alter der Versuchspersonen. Die IDs der
 Versuchspersonen werden in dem folgenden Abschnitt als Verweise verwendet.
@@ -173,15 +174,15 @@ Versuchspersonen werden in dem folgenden Abschnitt als Verweise verwendet.
     \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Alter &
     \sffamily\color{maincolor}Rolle                                  \\
     \arrayrulecolor{maincolor}\hline
-    E-A1                         & 19 - 25 J.                      &
+    EA1                         & 19 - 25 J.                      &
     Masterstudent:in, Hilfswissenschaftlerin:in                      \\
-    E-A2                         & 19 - 25 J.                      &
+    EA2                         & 19 - 25 J.                      &
     Bachelorstudent:in                                               \\
-    E-A3                         & 19 - 25 J.                      &
+    EA3                         & 19 - 25 J.                      &
     Bachelorstudent:in, Hilfswissenschaftler:in                      \\
-    E-A4                         & 19 - 25 J.                      &
+    EA4                         & 19 - 25 J.                      &
     Bachelorstudent:in, Hilfswissenschaftler:in                      \\
-    E-A5                         & 19 - 25 J.                      &
+    EA5                         & 19 - 25 J.                      &
     Masterstudent:in                                                 \\
     \arrayrulecolor{maincolor}\hline
   \end{tabular}
@@ -193,32 +194,21 @@ Auf dem Einlogbildschirm wurde der Name der Anwendung erwartet, da die
 Zuordnung des Tools sonst schwerfallen könnte. Außerdem war die Wortwahl und der
 Platz des \enquote{\textit{Mit IDM Accout einloggen}}-Button problematisch, da die
 Eingabefelder und der Button als zwei unterscheidliche Einlog-Möglichkeiten verstanden
-wurden und nicht als Bestätigungs-Button für das Formular (E-V1, E-A4).
+wurden und nicht als Bestätigungs-Button für das Formular (EV1, EA4).
 
 \subsection{Dashboard}
 Das Dashboard wurde von Nutzenden stets als übersichtlich und hilfreich
 betitelt, wobei die Namensgebung \textit{Dashboard} als einziges englisches
-Wort negativ aufgefallen ist (E-V1). In der Beschreibung der Tabs würde ein
+Wort negativ aufgefallen ist (EV1). In der Beschreibung der Tabs würde ein
 \enquote{\textit{deine}} förderlich sein, um zu verdeutlichen, dass es sich um die \textit{eigens}
-getätigten Reservierungen handelt und nicht um alle Reservierungen (E-A1). Da
+getätigten Reservierungen handelt und nicht um alle Reservierungen (EA1). Da
 das Dashboard ohne getätigte Reservierungen viel freien Platz lässt, wäre eine
-direkte Übersicht über Kategorien erwünscht (E-A3). 
-
-\todo{Datum gleichmäßig anzeigen und ISO ddeutsches datum nutzen, Üerschriften fehlen!}
-
-
-
-
-\subsection{Navigationsleiste}
-Von alleine Schließen\\
-Abstände gut , damit man nicht auf andere Bereiche drückt, die man nicth anklicken will
-
+direkte Übersicht über Kategorien erwünscht (EA3). 
 
 \subsection{Kategorien}
-Die Kategorien wurden von allen Nutzenden als einfach und wichtig bezeichnet.
-Positiv wurde angemerkt, dass diese ein schnelles Durchsuchen ermöglichen, um zu
-erfahren, was für Materialien ausgeliehen werden können (E-A3). Ohne Kategorien
-sei die Anwendung deutlich weniger übersichtlich (V-E4).
+Die Kategorien wurden überwiegend als einfach und wichtig bezeichnet. Positiv wurde angemerkt, dass
+diese ein schnelles Durchsuchen ermöglichen, um zu erfahren, was für Materialien ausgeliehen werden
+können (EA3). Ohne Kategorien sei die Anwendung deutlich weniger übersichtlich (EV4).
 
 \begin{longtable}{p{0.85\textwidth}} \arrayrulecolor{maincolor}\hline
   \enquote{\textit{[\dots], die Kategorien das hätte ich mir nur ein bisschen
@@ -227,18 +217,17 @@ sei die Anwendung deutlich weniger übersichtlich (V-E4).
   \arrayrulecolor{maincolor}\hline
 \end{longtable}
 
-Eine weitere Beobachtung, in Hinsicht auf die Kategorien, betrifft das
-Aufgeklappen der Unterkategorien. Nachdem diese geöffent wurden, müssen Nutzende
-zunächt auf \enquote{Zurück}-Button klicken, um Oberkategorien erneut einsehen zu können
-(V-E3).
-
-
-\todo{Kein Fan von dem Menü: Kategorien auf das letzte Klicken und springen hoch; Weniger anzeigt wird, wenn man eins ausklappt, Oberkategorien anzegigen, wie viele gerät in kategorien oder oberkategorien (4)}
+Eine weitere Beobachtung, in Hinsicht auf die Kategorien, betrifft das Aufgeklappen der
+Unterkategorien. Nachdem diese geöffnet wurden, müssen Nutzende erst auf den \enquote{Zurück}-Button
+klicken, um Oberkategorien erneut einsehen zu können (EV3, EV5). Zudem wurde die Navigationsleiste
+beim Auswählen einer Unterkategorie in der mobilen Ansicht nicht automatisch geschlossen (EV1-5).
+Schließlich wurde sich eine Anzeige der Stückzahl an Assets gewünscht, welche sich hinter der
+entsprechenden (Unter-)Kategorie befinden(EV1, EA5).
 
 \subsection{Suche}
 Allen Versuchspersonen ist das Suchen über die Suchleiste sowie die Navigationsleiste leicht
 gefallen. Ansprechpartner:innen und der Abholort eines Assets wurden auf den ersten Blick entdeckt.
-Jedoch sollte der Abholort um eine Raumnummer ergänzt werden (E-A1,5).
+Jedoch sollte der Abholort um eine Raumnummer ergänzt werden (EA1, EA5).
 \begin{longtable}{p{0.85\textwidth}} \arrayrulecolor{maincolor}\hline
   \enquote{\textit{[\dots], wenn hier die Kontaktdaten zu den Verantwortlichen
       sind [\dots], dass man draufklicken könnte und direkt kontaktieren könnte
@@ -246,65 +235,72 @@ Jedoch sollte der Abholort um eine Raumnummer ergänzt werden (E-A1,5).
   \arrayrulecolor{maincolor}\hline
 \end{longtable}
 
-Das Suchen über die Navigationsleiste wurde als modern und ansprechend befunden. Die
-Suche im Hamburger-Menü wurde nicht von allen Nutzenden als eindeutig und hilfreich
-betitelt (E-??). Das Suchen über einen bestimmten Zeitraum erschien sehr praktisch
-(E-A5). Ergänzend könnte in der Navigationsleiste ein Filter-Icon eingebaut
-werden, welches ebenfalls das Suchen über einen Zeitraum ermöglicht (E-A5).
+Das Suchen über die Navigationsleiste wurde als modern und ansprechend befunden. Das Suchen im
+Hamburger-Menü über einen bestimmten Zeitraum erschien sehr praktisch (EA3, EA5). Ergänzend könnte
+in der Navigationsleiste ein Filter-Icon eingebaut werden, welches ebenfalls das Suchen über einen
+gewünschten Zeitraum ermöglicht (E-A5).
 
-Um die Suchergebnisse für Nutzende übersichtllicher gestalten zu können, wäre eine Anzahl der
-durchsuchten Materialien, die Ergebnissanzahl und bei "falschschreiben" ein "In diesem Bereich gesucht"
-hilfreich oder "meinen sie das" (E-V1). \todo{erklären}
+Um die Suchergebnisse für Nutzende übersichtlicher zu gestalten, sollten einige Meta-Daten zur
+Suche angezeigt werden. Hierzu wurde auf ähnliche Suchmaschinen in Online-Shops verwiesen, welche
+beispielsweise die Anzahl der durchsuchten Objekte, die Ergebnissanzahl und Vorschläge für ähnliche
+oder korrigierte Suchbegriffe angeben (EV1, EA5). 
 
 \subsection{Reservieren und Kalender}
 Der Reservierungsprozess wurde durch die Kalenderkomponente zu Teilen erschwert. Als irritierend
 galt die fehlende Hervorhebung des aktuellen Tages (E-A1,2). Nicht auswählbare Tage werden bisher
 lediglich ausgegraut, was die Unterscheidung zwischen generell nicht auswählbaren Tagen (Wochenende)
-und bereits reservierten Zeiträumen unübersichlich wirken lässt. Zudem wurde angemerkt, dass die
-Kalender- und Uhrzeitansicht als einzige Oberfläche in Englisch beschriftet ist. Zur Einheitlichkeit
-sollte diese standardmäßig in Deutsch verfügbar sein (E-A1). Sobald der Zeitraum ausgewählt wurde,
-erhielten Nutzende eine Reservierungsübersicht und Zusammenfassung. Die Bestätigung beider
-Reservierungsübersichten war für die Versuchsperson unklar. Bereits bei der ersten Übersicht
-interpretierten Nutzende die Reservierung als abgeschlossen. Einige Nutzende kehrten direkt zum
-Dashboard zurück, wo die Reservierung jedoch nicht angezeigt wurde. Dieses Missverständnis wurde
-unter anderem auf die Betitelung des Butten \textit{weiter} zurückgeführt. Um den
-Reservierungsprozess sichtbarer zu gestalten, wurde das Einblenden einer Fortschrittsanzeige
-vorgeschlagen (E-A3). Das Fehlen eines \enquote{Zurück zum Dashboard}-Buttons auf der
-Reservierungszusammenfassung könnte ebenfalls zur falschen Interpretation des Abschlusszustands
-beitragen (E-A1,3). Des Weiteren wurde die Animation der Kalenderkomponente beim Schließen dieser als
-Bestätigung interpretiert (E-V1, A3).\todo{Einheitliche Tabelle auf Detailscreens}
+und bereits reservierten Zeiträumen unübersichlich wirken lässt (EV1, EA1). Auch die Bedeutung
+\enquote{Zurücksetzen} und \enquote{Heute}-Buttons wurde nicht direkt deutlich. Zudem könnte das
+versehentliche Nutzen der Buttons zu Frustration führen (EV1). Zuletzt wurde angemerkt, dass die
+Kalender- und Uhrzeitansicht als einzige Oberfläche in Englisch beschriftet ist und verschiedene
+Datumsformate nutzt. Zur Einheitlichkeit sollte nur ein Datumsformat genutzt werden und die
+Oberfläche standardmäßig in Deutsch verfügbar sein (EV1, EV3, EA1). 
 
-\todo[inline]{Kontaktdaten: drei Icons mit Telefon, Email, etc., Ausleihbar immer Orange, Deutlicher kennzeichenen wenn etwas ausgeihehen oder verlihen ist -> bei raufklicken popup! -> Reserviert zu diesem Zeitraum; Zurücksetzten und heute doof, weglassen, Wording weiter doof, 3 Screens verwirrend, Progressbar: nurnoch ein schritt}
+Sobald der Zeitraum ausgewählt wurde, erhielten Nutzende eine Reservierungsübersicht und
+Zusammenfassung. Die Bestätigung beider Reservierungsübersichten war für die Versuchsperson unklar.
+Bereits bei der ersten Übersicht interpretierten Nutzende die Reservierung als abgeschlossen. Einige
+Nutzende kehrten direkt zum Dashboard zurück, wo die Reservierung jedoch nicht angezeigt wurde.
+Dieses Missverständnis wurde unter anderem auf die Betitelung des Butten \textit{weiter}
+zurückgeführt. Um den Reservierungsprozess sichtbarer zu gestalten, wurde das Einblenden einer
+Fortschrittsanzeige vorgeschlagen (EV1, EA3). Das Fehlen eines \enquote*{Zurück zum Dashboard}-Buttons
+auf der Reservierungszusammenfassung könnte ebenfalls zur falschen Interpretation des
+Abschlusszustands beitragen (EA1, EA3). Des Weiteren wurde die Animation der Kalenderkomponente beim
+Schließen dieser als Bestätigung interpretiert (EV1, EA3).
 
-bestätigung der zeitraumsänderung fehlt
-
-
+Für die Detailansicht eines Assets wurde sich eine konsistente Übersicht gewünscht (EV1, EV2).
+Hierzu zählt auch, dass die Kontaktinformationen zu Teilen triviale Beschriftungen beinhalten und
+relevante Informationen fehlen. Beispielsweise wurde die Beschriftung des Namens als überflüssig
+bezeichnet und sich eine Verlinkung mit Icons zu der E-Mail-Adresse und bisher fehlenden
+Telefonnummer gewünscht (EV1, EA3).
 
 Um erneut Informationen zum reservierten Material einsehen zu können, erschien es als umständlich,
 dass Nutzende erneut nach dem Material suchen müssen. Alle Versuchspersonen haben intuitiv auf das
-im Dashboard angezeigte Listenelement geklickt und eine Verlinkung erwartet (E-V1 bis E-V5, E-A1-2).
+im Dashboard angezeigte Listenelement geklickt und eine Verlinkung erwartet (EV1-EV5, EA1, EA2).
 Eine Versuchsperson hat zunächst auf das Listenelement geklickt, in der Erwatung, dass sich eine
-Seite zum Bearbeiten des Materials öffnet (E-A4). Beim Bearbeiten des Zeitraums stellte sich das
+Seite zum Bearbeiten des Materials öffnet (EA4). Beim Bearbeiten des Zeitraums stellte sich das
 Kalender-Popup auf der mobile Version als unhandlich heraus. Beim Öffnen der Komponente wurde
-automatisch die Tastatur eingeblendet, welche die Komponente überwiegend verdeckte. Zudem wurde
-schloss sich die Kalenderkomponente, wenn der Bereich außerhalb ihr versehentlich angetippt wurde.
-Außerdem fehlte eine Bestätigung der Änderung oder ein \enquote{Änderungen speichern}-Button (E-A1
-bis 5, E-V1-2). Ebenfalls versuchten alle Versuchspersonen, die im Kalender ausgewählten Tage per
-Ziehen zuverändern.
+automatisch die Tastatur eingeblendet, welche die Komponente überwiegend verdeckte. Zudem schloss
+sich die Kalenderkomponente, wenn der Bereich außerhalb ihr versehentlich angetippt wurde. Außerdem
+fehlte eine Bestätigung der Änderung oder ein \enquote{Änderungen speichern}-Button (EA1-EA5, EV1,
+EV2). Ebenfalls versuchten alle Versuchspersonen, die im Kalender ausgewählten Tage per Ziehen
+zuverändern.
 
 Das Löschen einer Reservierung hat bei allen Versuchspersonen gut funktoniert
 und wurde als intuitiv bezeichnet. Zwei Versuchspersonen wiesen darauf hin, dass vor dem
 Löschen eine Warnung angezeigt werden sollte, falls Nutzende versehentlich auf \enquote{Löschen}
-klicken (V-E1, E-A1).
+klicken (VE1, EA1).
 
 
 \subsection{Status der Assets}
-Die Asset-Status \enquote{Fest verbaut} und \enquote{Am Standort nutzbar} führten
-bei den Versuchspersonen zu Irritation. Versuchspersonen fehlte zu der Betitelung
-eine Erkläurng.\todo{Wording oder legende.}
+Die Asset-Status \enquote{Fest verbaut} und \enquote{Am Standort nutzbar} führten bei den
+Versuchspersonen zu Irritationen. Versuchspersonen fehlte zu der Betitelung eine Erklärung, da die
+Implikationen für die Ausleihbarkeit unklar blieben (EA1-EA5). Die teils fehlende und inkonsistente
+Farbcodierung des Status erschwerte die Interpretation zusätzlich. Während alle Status in der
+Kachelansicht orange angezeigt wurden, fehlte die Farbcodierung in der Detailansicht (EV1, EV3, EA1,
+EA2, EA5).
 
 \begin{longtable}{p{0.85\textwidth}} \arrayrulecolor{maincolor}\hline
-  \enquote{\textit{Was bedeutet das für die Reservierung?}} \\
+  \enquote{\textit{Was bedeutet das (\enquote{fest verbaut}) für die Reservierung?}} \\
   \enquote{\textit{[\dots] das heißt von \enquote{fest verbaut} frage ich mich,
       ob ich das jetzt trotzdem ausleihen kann oder ob \enquote{fest verbaut} heißt,
   dass ich dass nur vor Ort nutzen kann[\dots]}}            \\
@@ -313,9 +309,35 @@ eine Erkläurng.\todo{Wording oder legende.}
   \arrayrulecolor{maincolor}\hline
 \end{longtable}
 
+\section{Ergebnisse der Umfrage}
+Der Aufbau der Umfrage und eine ausfürliche Auflistung der Ergebnisse befindet sich in \todo{Anhang
+X}. 
+
+Versuchspersonen mussten die Funktionen in einer 4-Punkte-Likert-Skala bewerten. Anschließend
+sollten die gleichen Funktionen nach ihrer empfundenen Wichtigkeit in einem Ranking angeordnet
+werden. Zunächst konnte aus den Antworten entnommen werden, dass keine bisher implementierte
+Funktion unerwünscht sei. Des Weiteren ließ sich folgern, dass das Reservieren und die Suche die
+zentralen Funktionen der Anwendung darstellen. Außerdem wurde der Assetstatus als eine wichtige
+Funktion empfunden.  
+
+Auf die Frage, welche Funktionalitäten Versuchspersonen fehlten, ergab sich folgendes Ranking:
+\begin{enumerate}
+  \item Nach Zweck suchen (M \(\approx 2.13\), SD \(\approx 0.99\))
+  \item Set-Vorschläge (M \( = 2.5\), SD \(\approx 1.07\))
+  \item Filter-Funktion (M \( \approx 2.63\), SD \(\approx 1.19\))
+  \item Erfahrungsberichte und Kommentare (M \( = 2.75\), SD \(\approx 1.39\))
+\end{enumerate}
+
+Zuerkennen ist, dass die Standardabweichung (SD) bei zunhemender Platzierung mit ansteigt. Somit
+sollten die Funktionalitäten \enquote{Nach Zweck suchen} und \enquote{Set-Vorschläge}  in
+zukünftigen Weiterentwicklungen priosiert werden.  Zudem wurde von Verleihenden die das Ablehnen von
+Reservierungen als Funktion gewünscht (vgl. \ref{sec:ev-ver}).
+
+
+\section{Fazit}
 Generell wurde die Oberfläche als übersichtlich und \enquote{clean} beschrieben
-(E-A1 bis E-A4). Der Wunsch, die Anwendung im Universitätsalltag für Projekte
-nutzen zu können, wurde entsprechend geäußert (E-A1,3,4).
+(EA1-EA4). Der Wunsch, die Anwendung im Universitätsalltag für Projekte
+nutzen zu können, wurde entsprechend geäußert (EA1, EA3, EA4).
 
 \begin{longtable}{p{0.85\textwidth}} \arrayrulecolor{maincolor}\hline
   \enquote{\textit{Ja, wäre cool, wenn wir das am IMIS wirklich nutzen
@@ -329,37 +351,19 @@ nutzen zu können, wurde entsprechend geäußert (E-A1,3,4).
   \arrayrulecolor{maincolor}\hline
 \end{longtable}
 
+Insgesamt führten die anonyme Umfrage und Evaluation per Think-Aloud-Methode zu übereinstimmenden
+Ergebnissen. Sowohl die Ergebnisse der Verleihenden als auch der Ausleihenden zeigen, dass das
+System als Unterstützung wahrgenommen wurde. Aufseiten der Ausleihenden wurden alle Funktionalitäten
+überwiegend als hilfreich eingestuft. Auch aus Sicht der Verleihenden war die Nutzung des Systems
+überwiegend positiv eingestuft worden.
 
-\section{Ergebnisse der Umfrage}
-Der Aufbau der Umfrage und eine ausfürliche Auflistung der Ergebnisse befindet sich in \todo{Anhang
-X}. 
-
-Versuchspersonen mussten die Funktionen in einer 4-Punkte-Likert-Skala bewerten. Anschließend
-sollten die gleichen Funktionen nach ihrer empfundenen Wichtigkeit in einem Ranking angeordnet
-werden. Zunächst konnte aus den Antworten entnommen werden, dass keine bisher implementierte
-Funktion unerwünscht sei. Des Weiteren ließ sich folgern, dass das Reservieren und die Suche die zentralen
-Funktionen der Anwendung darstellen. Im Verhältnis zum
-Ranking und zur Kachelübersicht\todo{hier fehlt was}. Die aus der Umfrage entnommenen Aussagen lassen sich
-deckungsgleich mit den Aussagen aus dem ersten Teil der Evaluation abgleichen.\todo{hä}
-
-\section{Fazit}
-
-\todo{überarbeiten}
-
-Sowohl die Ergebnisse der Verleihenden als auch der Ausleihenden zeigen, dass das System als
-Unterstützung wahrgenommen wurde. Aufseiten der Ausleihenden wurden alle Funktionalitäten
-überwiegend als hilfreich und sehr hilfreich eingestuft. Auch aus Sicht der Verleihenden
-war die Nutzung des Systems überwiegend positiv eingestuft worden. Beispielsweise
-wurde das Dashboard dank XXX als deutlicher Mehrwert bezeichnet.
-
-Die eingangs formulierte Forschungsfrage F2 konnte lediglich bedingt beantwortet werden, da das
-positive Ergebnis der durchgeführten Studie nicht signifikant war. Dies könnte, wie in den
-vorigen Abschnitten diskutiert, mehrere Gründe haben. Eine weitere ausführlichere
-Studie mit einem Vergleichsystem wird somit empfohlen. Trotz des nicht
-signifikant positiven Ergebnisses konnte die Arbeit ein qualitativ hochwertiges System
-hervorbringen, welches sich als übersichtlich und sinnvoll herausstellt.
-
-Die dargestellten Verbesserungsvorschläge sollten in das Reservierungstool eingearbeitet werden,
-bevor die Erhebung einer weiteren Studie durchgeführt wird. Zudem sollte ein ausreichend
-XXX zum Wording vorgenommen werden. Des Weiteren sollte eine Feldstudie in betracht gezogen werden,
-um die technische Performanz des Systems ausreichende zu testen.
+Die eingangs formulierte Forschungsfrage F3 konnte lediglich bedingt beantwortet werden, da das
+positive Ergebnis der durchgeführten Studie nicht verglichen werden konnte. Eine weitere
+ausführlichere Studie mit einem Vergleichsystem wird somit empfohlen. Trotz des fehlenden Vergleichs
+konnte die Arbeit ein qualitativ hochwertiges System hervorbringen, welches sich als übersichtlich
+und unterstützend herausstellt. Für Forschungsfrage 2 konnten weitere Anforderungen an das System
+herausgearbeitet werden. Die dargestellten Verbesserungsvorschläge sollten in das Reservierungstool
+eingearbeitet werden, bevor die Erhebung einer weiteren Studie durchgeführt wird. Zudem sollte ein
+weitere Analyse zu den verwendeten Begrifflichkeiten vorgenommen werden, um letzte Verwirrungen zu
+beseitigen. Des Weiteren sollte eine Feldstudie in betracht gezogen werden, um die technische
+Performanz des Systems im realen Einsatz zu testen.

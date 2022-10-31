@@ -1,21 +1,21 @@
 \chapter{Anforderungen}
 \label{chapter-analyse}
 
-Um Benutzende, Aufgaben und Kontext des Projektes genauer zu verstehen, wurde eine Analyse nach dem
-menschenzentrierten Gestaltungsprozess durchgeführt \cite{DINISO9241}.
-Hierbei wurden relevante Anforderungen, die Einfluss auf die Entwicklung und die spätere Nutzung des
-Reservierungstools nehmen, identifiziert und eingeordnet. Mit der Durchführung einer Recherche,
-welche in den Datenquellen (\ref{section:daten}) genauer präsentiert wird, wurden zunächst zwei
-Benutzergruppen (Verleihende und Ausleihende) festgehalten. Mittels einer Benutzeranalyse
-(\ref{section:benutzer}) unter der Zuhilfenahme von durchgeführten Interviews, konnten diese weiter
-klassifiziert und eingegrenzt werden. Daraufhin wurden die Probleme und Herausforderungen des
-aktuellen Vorgehens und den unterschiedlichen Ausleihprozessen (\ref{section:iststand}) hergeleitet.
-Anschließend wurden die Aufgaben, die Verleihende und Ausleihende mithilfe der Anwendung bewältigen
-sollten, diskutiert (\ref{section:aufgaben}). Abschließend wurde der organisatorische und
-zeitlich-räumliche Kontext des Verleihens und Ausleihens am \ac{imis} (\ref{section:kontext})
-untersucht. Aufbauend auf den Resultaten der vorangestellten Untersuchungen wurden die objektiven
-Anforderungen an den Snipe-IT Companion nach \citeA{Balzert2009} formalisiert
-(\ref{section:anforderung}). Diese dienen als Grundlage für das gesamte Konzept der Arbeit.
+Um Nutzenden, Aufgaben und Kontext des Projektes genauer zu verstehen, wurde eine Analyse nach dem
+menschenzentrierten Gestaltungsprozess durchgeführt \cite{DINISO9241}. Hierbei wurden relevante
+Anforderungen, die Einfluss auf die Entwicklung und die spätere Nutzung des Reservierungstools
+nehmen, identifiziert und eingeordnet. Mit der Durchführung einer Recherche, welche in den
+Datenquellen (\ref{section:daten}) genauer präsentiert wird, wurden zunächst zwei Nutzendengruppen
+(Verleihende und Ausleihende) festgehalten. Mittels einer Nutzendenanalyse (\ref{section:Nutzenden})
+unter der Zuhilfenahme von durchgeführten Interviews, konnten diese weiter klassifiziert und
+eingegrenzt werden. Daraufhin wurden die Probleme und Herausforderungen des aktuellen Vorgehens und
+den unterschiedlichen Ausleihprozessen (\ref{section:iststand}) hergeleitet. Anschließend wurden die
+Aufgaben, die Verleihende und Ausleihende im Reservierungsprozess erledigen müssen diskutiert
+(\ref{section:aufgaben}). Abschließend wurde der organisatorische und zeitlich-räumliche Kontext des
+Verleihens und Ausleihens am \ac{imis} (\ref{section:kontext}) untersucht. Aufbauend auf den
+Resultaten der vorangestellten Untersuchungen wurden die objektiven Anforderungen an den Snipe-IT
+Companion nach \citeA{Balzert2009} formalisiert (\ref{section:anforderung}). Diese dienen als
+Grundlage für das gesamte Konzept der Arbeit.
 
 \section{Datenquellen}
 \label{section:daten}
@@ -25,30 +25,30 @@ recherchiert (\ref{subsection:system}).
 
 \subsection{Stakeholder-Interviews}
 \label{subsection:interview}
-\todo[inline]{bei denen es um die subjektive Sicht von Personen geht, die unterschiedlich ausfallen und
-begründet werden können – hier liegt eine Stärke qualitativer Verfahren, weil sie z.B. in Interviews
-dem Befragten für eigene Sinngebungen, Deutungen etc. Raum geben (vgl. Bortz  Döring 2016, 184.}
-
 Zunächst wurde anhand der zu untersuchenden Gesichtspunkte ein Interviewleitfaden für ein
 semi-strukturiertes Interview entwickelt (\ref{appendix:interview}). Mithilfe dieses Leitfadens
-wurden die Befragten durch das Interview geführt. Die Interviews wurden aufgezeichnet und
-anschließend in Teilen, mithilfe eines vereinfachten Transkriptionssystems, verschriftlicht
+wurden die Befragten im Mai 2022 durch das Interview geführt. Die Interviews, wurden aufgezeichnet
+und anschließend in Teilen, mithilfe eines vereinfachten Transkriptionssystems, verschriftlicht
 \cite{dresing_praxisbuch_2016}. Daraufhin wurde eine qualitative Inhaltsanalyse durchgeführt.
 Hierfür wurden die Transkripte erneut gelesen und für die Arbeit und Forschungsfragen relevante
 Textstellen kommentiert. Infolgedessen wurden die erarbeiteten Kommentare in ein Ordnungssystem
-strukturiert und unter den einzelnen Analysepunkten zusammengefasst \cite{dresing_praxisbuch_2016}.
+strukturiert und unter den einzelnen Analysepunkten zusammengefasst (\todo{Anhang})
+\cite{dresing_praxisbuch_2016}.
 
-Es wurde eine Unterteilung in Verleihende und Ausleihende von Assets vorgenommen (genauere
-Definition der Benutzergruppen in \ref{section:benutzer}). Bei den Teilnehmenden handelt es sich um
-Mitarbeitende, welche am \ac{imis} tätig sind und Studierende der Medieninformatik an der
-Universität zu Lübeck. In \ref{table:v} ist der jeweilige (Haupt-)Zuständigkeitsbereich der
-Verleihenden aufgeführt. Verleihende der Assets können gleichzeitig die Position eines Ausleihenden
-einnehmen. Die Ausleihenden umfassen außerdem Studierende, welche in \ref{table:a} dargestellt sind.
-Durch den geplanten Einsatz am \ac{imis} wurde sich zunächst ausschließlich auf \ac{wimi} des
-\ac{imis} und Studierende der Medieninformatik begrenzt. Hierbei wurde insbesondere der Fokus auf
-die Probleme am \ac{imis} gelegt (genauere Untersuchungen in der Problemanalyse in
-\ref{section:iststand}). Die IDs der Teilnehmenden werden als Verweise in den folgenden Abschnitten
-verwendet.
+Es wurde eine Unterteilung in Verleihende und Ausleihende von Assets vorgenommen (genaue
+Definitionen der Nutzendengruppen in \ref{section:Nutzenden}). Bei den Teilnehmenden der Interviews
+handelt es sich um Mitarbeitende, welche am \ac{imis} tätig sind und Studierende der
+Medieninformatik an der Universität zu Lübeck. In \ref{table:v} ist der jeweilige
+(Haupt-)Zuständigkeitsbereich der Verleihenden aufgeführt. Verleihende der Assets können
+gleichzeitig die Position eines Ausleihenden einnehmen. Die Ausleihenden umfassen außerdem
+Studierende, welche in \ref{table:a} dargestellt sind. Durch den geplanten Einsatz am \ac{imis}
+wurde sich zunächst ausschließlich auf \ac{wimi} des \ac{imis} und Studierende der Medieninformatik
+fokussiert. Hierbei wurde insbesondere der Fokus auf die Probleme am \ac{imis} gelegt (genauere
+Untersuchungen in der Problemanalyse in \ref{section:iststand}). Die IDs der Teilnehmenden werden
+als Verweise in den folgenden Abschnitten verwendet. Des Weiteren wurde mithilfe des \ac{ati} das
+technische Interesse und Verständnis der Teilnehmenden festgestellt (\ref{table:ati})
+\cite{attig_assessing_2017}.
+
 
 \begin{table}[h]
         \centering
@@ -99,25 +99,55 @@ verwendet.
         \label{table:a}
 \end{table}
 
-Des Weiteren wurde mithilfe des \ac{ati} das technische Interesse und Verständnis der Teilnehmenden
-festgestellt (\ref{table:ati}) \cite{attig_assessing_2017}. In beiden Gruppen konnten lediglich
-geringe Unterschiede innerhalb der soziodemografischen Daten festgestellt werden. Neben diesen Daten
-ist im Kontext der vorliegenden Arbeit insbesondere die Technikaffinität relevant. 
+\subsection{Recherche vergleichbare Systeme}
+\label{subsection:system}
+Für die Recherche wurde die digitalen Bibliotheken ACM Digital
+Library\footnote{\url{https://dl.acm.org/}} und Google
+Scholar\footnote{\url{https://scholar.google.de/}} genutzt. Es wurden Begriffe aus den Bereichen
+Managementsystem \textit{(Assets, Assetmanagement, schedule)} und Reservation \textit{(reservation,
+Lending, lend, borrow)} zur Suche am 23.05.2022 verwendet. Die Recherche sollte dem besseren
+Vergleichen und Abwägen der analysierten Interview-Ergebnisse dienen und vergleichbare Systeme und
+Projekte eruieren. Des Weiteren sollte die Recherche dazu dienen mögliche Fehlerquellen zu erörtern,
+um diese umgehen zu können. Durch den speziellen Einsatzort am \ac{imis} stellte sich zeitnah
+heraus, dass wenige bis keine vergleichbaren Systeme für den konkreten Anwendungsfall gefunden
+werden konnten. 
 
-Insgesamt konnte für beide Gruppen eine Einschätzung der Technikaffinität anhand der \ac{ati}-Skala
-ermittelt werden (Verleihende: M=5.00, SD=0.58, N=3; Ausleihende: M=5.09, SD=0.48, N=9)
-(\ref{table:ati}). Durch das Heranziehen zweier Vergleichsstichproben aus
-\citeA{franke_personal_2019} (M=4.14, N=300 und M=4.23, N=65), lässt sich schlussfolgern, dass die
-Nutzendengruppen eine vergleichsweise hohe Technikaffinität ausweisen.
+Bei einer weiteren Recherche am 20.06.2022 mit Google Scholar wurde sich auf Plattformen mit
+ähnlichen Funktionalitäten und Online-Shops fokussiert, welche in den \nameref{subsection:interview}
+genannt wurden. Zwei schematisch wiederkehrende Systeme waren dabei
+\textit{Airbnb}\footnote{\url{https://www.airbnb.de/}} und
+\textit{Otto}\footnote{\url{https://www.otto.de/}} (\ref{fig:system}). Insbesondere \textit{Airbnb}
+ist mit einem konsequentem Einsatz des Design Thinking-Prozesses dient als gutes Beispiel für die
+Gebrauchstauglichkeit eines Systems\cite{glitza_hands_2019}.
 
+\begin{figure}[h]
+        \centering
+        \includegraphics[scale=0.1]{Bilder/otto.png}\hspace{1em}
+        \includegraphics[scale=0.1]{Bilder/KAtegoorienotto.png}\hspace{1em}
+        \includegraphics[scale=0.1]{Bilder/Arbnbnsuche.png}
+        \caption[Vergleichbare Systeme]{Vergleichbare Systeme}\label{fig:system}
+\end{figure}
+\section{Analyse der Nutzenden}
+\todo{Im Text schauen, ob Nutzendengruppen dast Benutzergruppen steht}
 
+\label{section:Nutzenden}
+Um eine zielgruppengerechte Gestaltung des Snipe-IT Companion voraussetzen zu können, werden in
+diesem Abschnitt die Nutzendengruppen des Reservierungstools eruiert und näher untersucht.
+Resultierend aus den Stakeholder-Interviews wurden zwei Gruppen, zu denen Verleihende sowie
+Ausleihende eines Assets gehören, für das System erarbeitet. Die Zielgruppe beschränkt sich im
+Rahmen dieser Arbeit auf die Mitarbeitenden des \ac{imis} sowie die Studierenden der
+Medieninformatik an der Universität zu Lübeck. Für den Snipe-IT Companion konnte eine Zielgruppe mit
+einer Alterspanne von 17 bis 35 Jahren festgelegt werden. Aus den Interviews (\ref{section:daten})
+konnte entnommen werden, dass beide Nutzendengruppen täglich ein Smartphone, Tablet, Laptop oder
+Desktop PC nutzen und somit ein grundlegendes technisches Verständnis vorausgesetzt werden kann.
+Diese Behauptung konnte mit den Ergebnissen der \ac{ati}-Skala bestärkt werden (\ref{table:ati}).
 
 \begin{table}[h]
         \centering
         \caption{Ergebniswerte der \ac{ati}-Skala}
         \begin{tabular}{lccc}
                 \arrayrulecolor{maincolor}\hline
-                \sffamily\color{maincolor}Benutzergruppe & \sffamily\color{maincolor}Mittelwert
+                \sffamily\color{maincolor}BNutzendengruppe & \sffamily\color{maincolor}Mittelwert
                 $(M)$                                    & \sffamily\color{maincolor}Standardabweichung $(SD)$ &
                 \sffamily\color{maincolor}Teilnehmende $(N)$                                                          \\
                 \arrayrulecolor{maincolor}\hline
@@ -130,37 +160,13 @@ Nutzendengruppen eine vergleichsweise hohe Technikaffinität ausweisen.
         \label{table:ati}
 \end{table}
 
-\subsection{Recherche vergleichbare Systeme}
-\label{subsection:system}
-Für die Recherche wurden die digitalen Bibliotheken ACM Digital
-Library\footnote{\url{https://dl.acm.org/}} und Google
-Scholar\footnote{\url{https://scholar.google.de/}} genutzt. Es wurden Begriffe aus den Bereichen
-Managementsystem \textit{(Assets, Assetmanagement, schedule)} und Reservation \textit{(reservation,
-Lending, lend, borrow)} zur Suche verwendet. Die Recherche sollte dem besseren Vergleichen und
-Abwägen der analysierten Interview-Ergebnisse dienen und vergleichbare Systeme und Projekte
-eruieren. Des Weiteren sollte die Recherche dazu dienen mögliche Fehlerquellen zu erörtern, um diese
-umgehen zu können. Durch den speziellen Einsatzort am \ac{imis} stellte sich zeitnah heraus, dass
-wenige bis keine vergleichbaren Systeme gefunden werden konnten. Folglich boten die vorhandenen
-Vergleiche keinen hilfreichen Aufschluss für den Rahmen dieser Arbeit, daher wurde die Recherche
-nicht fortgeführt.\todo[inline]{Systeme schildern: Airbnb und Otto}
-
-% Vielleicht schilderst du lieber erst die zwei Beispiele und leitest dann ab, dass diese deinem
-% Nutzungskontext nicht entsprechen und du demzufolge nur jene und solche Ableitungen treffen
-% konntest?  Denke nur ans Kolloquium und mit so einer Aussage machst du dich relativ angreifbar,
-% glaube ich 
-
-\section{Benutzeranalyse}
-\label{section:benutzer}
-Um eine zielgruppengerechte Gestaltung des Snipe-IT Companion voraussetzen zu können, werden in
-diesem Abschnitt die Benutzergruppen des Reservierungstools eruiert und näher untersucht.
-Resultierend aus den Stakeholder-Interviews wurden zwei Benutzergruppen, zu denen Verleihende sowie
-Ausleihende eines Assets gehören, für das System erarbeitet. Die Zielgruppe beschränkt sich im
-Rahmen dieser Arbeit auf die Mitarbeitenden des \ac{imis} sowie die Studierenden der
-Medieninformatik an der Universität zu Lübeck. Für den Snipe-IT Companion konnte eine Zielgruppe mit
-einer Alterspanne von 17 bis 35 Jahren festgelegt werden. Aus den Interviews (\ref{section:daten})
-konnte entnommen werden, dass beide Benutzergruppen täglich ein Smartphone, Tablet, Laptop oder
-Desktop PC nutzen und somit ein grundlegendes technisches Verständnis vorausgesetzt werden kann.
-Diese Behauptung konnte mit den Ergebnissen der \ac{ati}-Skala bestärkt werden (\ref{table:ati}).
+In beiden Gruppen konnten lediglich geringe Unterschiede innerhalb der soziodemografischen Daten
+festgestellt werden. Neben diesen Daten ist im Kontext der vorliegenden Arbeit insbesondere die
+Technikaffinität relevant. Insgesamt konnte für beide Gruppen eine Einschätzung der Technikaffinität
+anhand der \ac{ati}-Skala ermittelt werden (Verleihende: M=5.00, SD=0.58, N=3; Ausleihende: M=5.09,
+SD=0.48, N=9). Durch das Heranziehen zweier Vergleichsstichproben aus \citeA{franke_personal_2019}
+(M=4.14, N=300 und M=4.23, N=65), lässt sich schlussfolgern, dass die Nutzendengruppen eine
+vergleichsweise hohe Technikaffinität ausweisen.
 
 
 %Mitarbeitende, sowie administratives Personal des \ac{imis}, welche verantwortlich für die Ausgabe
@@ -189,7 +195,7 @@ Problematiken besser nachvollziehen zu können, wurde eine Problemanalyse auf Ba
 Vorgehens durchgeführt. Hierfür wurde sich auf die in \ref{section:daten} aufgeführten
 Interview-Teilnehmenden referenziert. Der Übersichtlichkeit wegen werden zunächst Probleme,
 welche Verleihende und Ausleihende betreffen, thematisiert. Daraufhin werden Probleme der einzelnen
-Benutzergruppen näher erläutert.
+Nutzendengruppen näher erläutert.
 
 \subsection{Probleme: Allgemein}
 \label{section:probleme-allgemein}
@@ -255,19 +261,20 @@ V5).
 \label{section:probleme-Ausleihende}
 Die mangelnde Sichtbarkeit der Assets nach außen erschwert das Ausleihen für Studierende. Der
 Austausch zu Assets findet fast ausschließlich über Übungen, Workshops oder institutsinterne
-Kommunikation statt (A1-5). Obwohl einige Studierende dem Ausleihen per E-Mail nicht abgeneigt sind,
-erschweren fehlende Informationen zur Verfügbarkeit den Prozess (A4, A5). Studierende, welche dem
-E-Mail-Prozess negativ gegenüberstehen, führen die langen Antwortzeiten als Hauptgrund an. Folglich
-sei das spontane Planen von Assets unzuverlässig (A1, A6). Spontanes Nachfragen nach Assets ist
-aufseiten der Studierenden weniger zu sehen. Hier wird vorher eine E-Mail an die verantwortlichen
-Übungsleiter:innen oder die Studiengangkoordination geschrieben, da das Risiko zu hoch sei, dass
-Assets nicht ausleihbar sind (A3). Stark bemängelt wird, dass die Verfügbarkeit der Assets zum
+Kommunikation statt (A1-5). Spontanes Nachfragen nach Assets ist aufseiten der Studierenden weniger
+zu sehen. Meist wird vorher eine E-Mail an die verantwortlichen Übungsleiter:innen oder die
+Studiengangkoordination geschrieben, da das Risiko zu hoch sei, dass Assets nicht ausleihbar sind
+(A3). Obwohl einige Studierende dem Ausleihen per E-Mail nicht abgeneigt sind, erschweren fehlende
+Informationen zur Verfügbarkeit den Prozess (A4, A5). Studierende, welche dem E-Mail-Prozess negativ
+gegenüberstehen, führen die langen Antwortzeiten als Hauptgrund an. Folglich sei das spontane Planen
+von Assets unzuverlässig (A1, A6). Stark bemängelt wird, dass die Verfügbarkeit der Assets zum
 gewünschten Zeitpunkt der Ausleihe nicht garantiert ist (A1, A3). Zudem kann kein schnelles
-Herankommen ermöglicht werden (A3). Des Weiteren wird das Nachfragen als nervig empfunden, da
-\ac{wimi} in ihrer Arbeit gestört werden, obwohl eine Liste der Assets ausreichen würde (A6). Ein
-weiterer Kritikpunkt ist, dass Ausleihende nicht über alle Geräte Kenntnis besitzen, sodass es durch
-fehlende Auskunft beispielsweise zu Kompatibilitätsfehlern kommen kann (A3). Dies führte dazu, dass
-Projekte nicht mit dem ausgeliehenen Asset umgesetzt werden konnten (A3).
+Herankommen ermöglicht werden (A3). Des Weiteren wird das Nachfragen als anstrengend und unpassend
+empfunden, da \ac{wimi} in ihrer Arbeit gestört werden, obwohl eine Liste der Assets die Frage
+häufig beantworten würde (A6). Ein weiterer Kritikpunkt ist, dass Ausleihende nicht über alle Geräte
+Kenntnis besitzen, sodass es durch fehlende Auskunft beispielsweise zu Kompatibilitätsfehlern kommen
+kann (A3). Dies führte dazu, dass Projekte nicht mit dem ausgeliehenen Asset umgesetzt werden
+konnten (A3).
 
 \section{Aufgabenanalyse}
 \label{section:aufgaben}
@@ -291,44 +298,39 @@ Folgenden näher erläutert werden (\ref{table:Ag-Vt}).
                 \arrayrulecolor{maincolor}\hline
                 \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Aufgabe \\
                 \arrayrulecolor{maincolor}\hline
-                Ag-Vt-1                      & Nachfragen, ob Assets vorhanden    \\
-                Ag-Vt-2                      & Abfragen der Verfügbarkeit        \\
-                Ag-Vt-3                      & Einsehen der Verfügbarkeit        \\
-                Ag-Vt-4                      & Reservierung der Assets           \\
-                Ag-Vt-5                      & Beratung der Ausleihenden         \\
+                Ag-Vt-1                      & Abfragen der Assets/Verfügbarkeit    \\
+                Ag-Vt-2                       & Einsehen der Verfügbarkeit        \\
+                Ag-Vt-3                      & Reservierung der Assets           \\
+                Ag-Vt-4                      & Beratung der Ausleihenden         \\
                 \arrayrulecolor{maincolor}\hline
         \end{tabular}
         \label{table:Ag-Vt}
 \end{table}
-{\sffamily\color{maincolor}{Ag-Vt-1 |  Nachfragen ob Assets vorhanden}}\\
-\todo{erläutern}
 
-{\sffamily\color{maincolor}{Ag-Vt-2 | Abfragen der Verfügbarkeit}}\\
+{\sffamily\color{maincolor}{Ag-Vt-1 | Abfragen der Assets/Verfügbarkeit}}\\
 Um ein Asset ausleihen zu können, muss eine Anfrage an die Verantwortlichen gesendet werden. Dies
 geschieht meist per E-Mail. Ausleihende fragen nach konkreten Assets, von dessen Existenz sie bspw.
-durch die institutsinterne Kommunikation erfahren haben. Wie bereits in der Problemanalyse geschildert
-(\nameref{section:probleme-allgemein}), gibt es keine Übersicht über ausleihbare Assets. Dies zeigt
-die Dringlichkeit des Snipe-IT Companion für eine bessere Vorbereitung.
+durch die institutsinterne Kommunikation erfahren haben. Wie bereits in der Problemanalyse
+geschildert (\nameref{section:probleme-allgemein}), gibt es keine Übersicht über ausleihbare Assets.
+Dies zeigt die Dringlichkeit des Snipe-IT Companion für eine bessere Vorbereitung.
 
-        {\sffamily\color{maincolor}{Ag-Vt-3 | Einsehen der Verfügbarkeit}}\\
+        {\sffamily\color{maincolor}{Ag-Vt-2 | Einsehen der Verfügbarkeit}}\\
 Um ein Asset ausleihen zu können muss das gewünschte Asset ausleihbar sein. Verleihende überprüfen,
 ob das angefragte Asset im Schrank vorhanden ist. Hierbei ist zu berücksichtigen, dass keine
 langfristige Planung gewährleistet werden kann. Dies kann durch den Snipe-IT Companion mittels eines
 Kalenders und einer Reservierungsfunktion ermöglicht werden.
 
-        {\sffamily\color{maincolor}{Ag-Vt-4 | Reservierung der Assets}}\\
-Wie in \textit{Ag-Vt-3} bereits geschildert, kann eine langfristige Planung
-in die Zukunft nicht gewährleistet werden. Liegt eine Anfrage in der Zukunft vor, wird diese mittels
-eines Klebezettels am gewünschten Asset vermerkt. Die Verfügbarkeit des Assets zum reservierten
-Zeitraum hängt somit davon ab, ob die Notiz von anderen \ac{wimi} berücksichtigt wird.
+        {\sffamily\color{maincolor}{Ag-Vt-3 | Reservierung der Assets}}\\
+Wie in \textit{Ag-Vt-3} bereits geschildert, kann eine langfristige Planung in die Zukunft nicht
+gewährleistet werden. Liegt eine Anfrage in der Zukunft vor, wird diese mittels eines Klebezettels
+am gewünschten Asset vermerkt. Die Verfügbarkeit des Assets zum reservierten Zeitraum hängt somit
+davon ab, ob die Notiz von anderen \ac{wimi} berücksichtigt wird.
 
-        {\sffamily\color{maincolor}{Ag-Vt-5 | Beratung der Ausleihenden}}\\
-Die zuvor erhaltene Anfrage aus \textit{Ag-Vt-2} wird von Verleihenden
-bearbeitet, wobei in einigen Fällen der Use Case des Ausleihens erfragt wird, um den Ausleihenden
-Empfehlungen zu geben. Um den Ausleihprozess für
-Verleihende zu erleichtern, kann der vorangestellte Use Case mittels eines Dialogs im Snipe-IT
-Companion ermöglicht werden. So können aufbauend auf dem Dialog, direkt Vorschläge an Ausleihende
-gegeben werden.
+        {\sffamily\color{maincolor}{Ag-Vt-4 | Beratung der Ausleihenden}}\\
+Die zuvor erhaltene Anfrage aus \textit{Ag-Vt-1} wird von Verleihenden bearbeitet, wobei in einigen
+Fällen der Use Case des Ausleihens erfragt wird, um den Ausleihenden Empfehlungen zu geben. Um den
+Ausleihprozess für Verleihende zu erleichtern, kann der vorangestellte Use Case mittels eines
+Dialogs im Snipe-IT Companion ermöglicht werden. 
 
 
 % Aufgabe der Ausgabe 
@@ -358,9 +360,10 @@ schaffen hierfür Zugriff zum Labor oder Schrank.
 {\sffamily\color{maincolor}{Ag-Au-2 | Erläuterung der Assetnutzung}}\\
 Hierbei wissen Ausleihende vorher häufig nicht genau, um was für ein Gerät es sich handelt, sodass
 es zu Kompatibilitätsfehlern kommen kann und das Asset für den ursprünglichen Gebrauch nicht nutzbar
-ist. Im besten Fall ist eine Übersicht mit Informationen wie Name, Seriennummer, Stückzahl und die
-dazugehörige Anleitung bereits vor dem Ausleihprozess verfügbar, sodass Ausleihende sich im
-Vorhinein selbständig besser informieren können.
+ist. Folglich müssen/sollten Verleihende die Assetnutzung erklären. Im besten Fall ist eine
+Übersicht mit Informationen wie Name, Seriennummer, Stückzahl und die dazugehörige Anleitung bereits
+vor dem Ausleihprozess verfügbar, sodass Ausleihende sich im Vorhinein selbständig informieren
+können (V1-4).
 
 {\sffamily\color{maincolor}{Ag-Au-3 | Unterschreiben des Formulars}}\\
 Im Idealfall werden die ausgeliehenen Assets in einem Formular dokumentiert, welches von den
@@ -392,8 +395,8 @@ Unterschrift entsorgt oder die Assets ohne weitere Dokumentation in die Schränk
 zurückgebracht.
 
 {\sffamily\color{maincolor}{Ag-Rg-2 | Überprüfung der Assets}}\\
-Für einige Verleihende fällt das Überprüfen der Assets nach einer Rückgabe an. Die
-Überprüfung umfasst bspw. das Formatieren von SD-Karten und Laden von Akkus. Außerdem sollten
+Für einige Verleihende fällt das Überprüfen der Assets nach einer Rückgabe an. Die Überprüfung
+umfasst beispielsweise das Formatieren von SD-Karten und Laden von Akkus. Außerdem sollten
 Einstellungen an den Assets zurückgesetzt werden. Idealerweise würde diese Aufgabe von Ausleihenden
 übernommen werden, jedoch fehlt auch hier die Aufklärung, welche vom Snipe-IT Companion übernommen
 werden kann.
@@ -421,11 +424,9 @@ näher erläutert (\ref{table:Ag-Wt}).
 Assets, welche längere Zeit nicht genutzt werden, müssen von Verleihenden gewartet werden. Jedoch
 wird diese Aufgabe in manchen Fällen vergessen.
 
-        {\sffamily\color{maincolor}{Ag-Wt-2 | Pflege von Assets}} \\
+{\sffamily\color{maincolor}{Ag-Wt-2 | Pflege von Assets}} \\
 Bei Neuanschaffungen sollten \ac{wimi} über diese informiert werden. Innerhalb von
 Forschungsgruppen gerät dies häufig in Vergessenheit, da keine Übersicht vorhanden ist.
-
-\todo[]{zuordnung der Aufgaben zu den relevanten Nutzungsphasen}
 
 \section{Kontextanalyse}
 \label{section:kontext}
@@ -446,7 +447,7 @@ weisen teilweise verschiedene Zugriffe auf Labor und Schränke auf, welche die A
 
 Um die \nameref{subsec:wartung} berücksichtigen zu können, sollten Verleihende, zum Eintragen neuer
 Assets einen administrativen Zugang zum System erhalten \textit{(Ag-Wt-2)}. Des Weiteren sollte ein
-Überblick über Updates oder ähnliches gegeben werden können \textit{(Ag-Wt-1)}.
+Überblick über Softwareupdates oder ähnliches gegeben werden können \textit{(Ag-Wt-1)}.
 
 
 \subsection{Zeitlich-Räumlicher Kontext}
@@ -459,14 +460,14 @@ Mitarbeitende halten sich entweder in Präsenz an der Universität oder im Homeo
 werden bei der Analyse des zeitlich-räumlichen Kontextes beide Fälle betrachtet.
 
 Befinden sich Mitarbeitende im Büro, arbeiten diese an einem Desktop-Arbeitsplatz. Der Computer ist
-dabei die meiste Zeit eingeschaltet, wodurch ein System in Form einer Web-App sinnvoll wäre (V1,V5).
+dabei die meiste Zeit eingeschaltet, wodurch ein System in Form einer Web-App sinnvoll wäre (V1, V5).
 Wenn Mitarbeitende das Büro verlassen, um ein Asset zu Verleihen, können sich \ac{wimi} in
 verschiedenen Laboren befinden. Da der Ort der Nutzung unter anderem durch Homeoffice variiert,
 liegt ein mobiler Nutzungskontext vor, welcher beispielsweise durch die Nutzung einer Web-App auf
 dem Smartphone ermöglicht werden kann (V1, V2, V3, V5). Die Bedienung der Anwendung sollte
 niedrigschwellig sein, da Mitarbeitende häufig nicht viel Zeit für die Bedienung haben oder
 investieren möchten (V1, V2, V3). Das System sollte einen pragmatischen Zweck erfüllen und kein zu
-großes Konzept umfassen, sodass womöglich neue Anläufe dazu kommen und die Arbeit zweckmäßig
+großes Konzept umfassen, sodass womöglich neue Abläufe dazu kommen und die Arbeit zweckmäßig
 erhöht statt reduziert wird (V2).
 
 \subsubsection{Ausleihende}
@@ -493,7 +494,7 @@ Abschließend werden die Qualitätsanforderungen formuliert (\ref{section:qualit
 \label{section:visionziel}
 Zunächst werden die Visionen und Ziele des Systems konkretisiert, an denen sich die Anforderungen
 auf Zielgerichtetheit überprüfen lassen \cite{Balzert2009}. Diese setzen sich aus der Analyse der
-Benutzenden sowie Aufgaben und des Kontextes zusammen. Zunächst werden die Visionen für die Zukunft
+Nutzenden sowie Aufgaben und des Kontextes zusammen. Zunächst werden die Visionen für die Zukunft
 realitätsnah festgelegt.
 
 \setanf{V}
@@ -550,7 +551,7 @@ operationalisieren. Diese folgen dabei den standardisierten Regeln zur Formulier
 \subsection{Rahmenbedingungen}
 \label{section:rahmen}
 Die Rahmenbedingungen legen organisatorische und technische Restriktionen für das System oder den
-Entwicklungsprozess fest \cite{Balzert2009}. Die Bedingungen wurden aus der Benutzer- und
+Entwicklungsprozess fest \cite{Balzert2009}. Die Bedingungen wurden aus der Nutzenden- und
 Kontextanalyse abgeleitet.
 \setanf{R}
 \begin{center}
@@ -559,10 +560,10 @@ Kontextanalyse abgeleitet.
                 \anfrow & Das System ist eine informative Web-Anwendung (\secref{section:kontext}).
                 \\
                 \anfrow & Die Zielgruppe sind Mitarbeitende des \ac{imis} und Studierende
-                (\secref{section:benutzer}).                                                        \\
+                (\secref{section:Nutzenden}).                                                        \\
                 \anfrow & Die Zielgruppe teilt sich in zwei Nutzergruppen: die Verleihenden und
                 Ausleihende von Assets. Die Definitionen der Nutzergruppen sind in
-                \secref{section:benutzer} zu finden.                                                \\
+                \secref{section:Nutzenden} zu finden.                                                \\
                 \anfrow & Das System wird von Verleihenden in einem Arbeitsplatzsystemkontext und
                 mobilen Kontext genutzt. Von Ausleihenden vorwiegend nur im mobilen Kontext
                 (\secref{section:kontext}).                                                         \\
@@ -690,7 +691,7 @@ möglich, die Anforderungsschablone aus \ref{fig:schablone} verwendet.
                 (\textit{DIN EN ISO 9241-110}, 2019).
                 \\
                 \anfrow & Das System \textit{muss} die definierten Nutzungsklassen aus
-                \ref{section:benutzer} unterscheiden und die dazugehörigen Zugriffsrechte
+                \ref{section:Nutzenden} unterscheiden und die dazugehörigen Zugriffsrechte
                 sicherstellen.                                                                       \\
                 \anfrow & Das System \textit{muss} zuverlässig und ohne Störung im Dauerbetrieb
                 laufen (\nameref{section:zeit}).                                                     \\
@@ -700,7 +701,7 @@ möglich, die Anforderungsschablone aus \ref{fig:schablone} verwendet.
                 \anfrow & Das System \textit{soll} beim Zugriff über das Internet eine gesicherte
                 Übertragung (bspw. \ac{HTTPS}) ermöglichen.
                 \\
-                \anfrow & Das System \textit{soll} alle Benutzerinteraktionen in unter fünf Sekunden
+                \anfrow & Das System \textit{soll} alle Nutzendeninteraktionen in unter fünf Sekunden
                 ausführen.                                                                           \\
                 \arrayrulecolor{maincolor}\hline
         \end{longtable}
