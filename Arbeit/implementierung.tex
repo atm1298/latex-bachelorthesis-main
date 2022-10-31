@@ -23,14 +23,12 @@ Das Reservierungsinterface teilt sich in drei wesentliche Bestandteile: der
 \textit{Fastify-HTTP-Server}, die \textit{SQLite Datenbank} und das \textit{ORM Prisma} (vgl.
 \ref{fig:level3}). Diese Komponenten spiegeln sich auch in der Verzeichnisstruktur aus \ref{fig:db}
 wider.
-
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.7]{Bilder/Db.jpg}
+  \includegraphics[scale=0.2]{Bilder/vuejs.png}
   \caption[Verzeichnisstruktur des Reservierungsinterfaces]{Verzeichnisstruktur des Reservierungsinterfaces}
   \label{fig:db}
 \end{figure}
-
 Der HTTP-Server findet sich in der \textit{server.ts} wieder und stellt dort die API des
 Reservierungsinterfaces bereit. Die entwickelte API lässt sich in drei Bereiche teilen:
 \textit{Assets}, \textit{Kategorien} und \textit{Reservierungen} (\ref{table:impl-backend-routes}).
@@ -43,7 +41,6 @@ werden, um einen neuen Eintrag im System zu erschaffen. Beispielsweise wird eine
 erhalten. Um den Status in Snipe-IT auf \textit{herausgegeben} zu aktualisieren, wird eine
 \textit{POST}-Anfrage an \textit{/reservation/receive} gesendet, sobald Verleihende eine abgeholte
 Reservierung bestätigen.
-
 \begin{table}[h]
   \centering
   \caption{API des Reservierungsinterfaces}
@@ -72,34 +69,26 @@ Reservierung bestätigen.
 Die mit SQLite bereitgestellte Datenbank speichert die Reservierungen sowie die
 Profile. Hierfür wurde das in \ref{fig:orm} dargestellte Datenbankschema
 erarbeitet. Zur Umsetzung dieses Schemas wurde das ORM Prisma genutzt, welches
-drei zentrale Funktionen bietet.
-
-\begin{figure}[ht]
+drei zentrale Funktionen bietet (\ref{fig:prisma}).
+\begin{figure}[h]
   \centering
-  \includegraphics[scale=0.25]{Bilder/drawSQL-export-2022-10-09_15 56.png}
+  \includegraphics[scale=0.35]{Bilder/Code/UML_DB.png}
   \caption[Datenstruktur der Reservierungen in Verbindung mit Nutzenden]{Datenstruktur der Reservierungen in Verbindung mit Nutzenden}
   \label{fig:orm}
 \end{figure}
 
-
 \begin{enumerate}
-  \item Beschreibung des Schemas durch eigene \ac{dsl} (\ref{fig:prisma})
+  \item Beschreibung des Schemas durch eigene \ac{dsl}
   \item Automatisierte Migration bei Schemaänderung
-  \item JavaScript-Client mit generierten TypeScript-Typen (\ref{fig:mig})
+  \item JavaScript-Client mit generierten TypeScript-Typen
 \end{enumerate}
 
-\begin{figure}[h]
+\begin{figure}[p]
   \centering
-  \includegraphics[scale=0.35]{Bilder/screenshot(8).png}
-  \caption[Quellcode: schema.prisma]{Quellcode: schema.prisma}
+  \includegraphics[scale=0.35]{Bilder/Code/schemasql.png}
+  \includegraphics[scale=0.35]{Bilder/Code/migrationsql.png}
+  \caption[Quellcode: schema.prisma und migration.sql]{Quellcode: schema.prisma und migration.sql}
   \label{fig:prisma}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[scale=0.35]{Bilder/screenshot(7).png}
-  \caption[Quellcode: migration.sql]{Quellcode: migration.sql}
-  \label{fig:mig}
 \end{figure}
 
 
@@ -124,10 +113,9 @@ Assets mit der \textit{assetId} wird beispielsweise eine \textit{POST}-Anfrage a
 \textit{herausgegeben}-Status und die ID des ausleihenden Nutzenden beinhaltet (\ref{fig:server}).
 Analog geschieht dies für das Zurückgeben eines Assets mit einer \textit{POST}-Anfrage an
 \textit{/reservation/return}.
-
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.3]{Bilder/apisnipeit.png}
+  \includegraphics[scale=0.4]{Bilder/Code/DB_RES_INT.png}
   \caption[UML Snipe-IT API]{UML Snipe-IT API}
   \label{fig:server}
 \end{figure}
@@ -138,10 +126,9 @@ Abfrage und Manipulation der internen Datenbank, wovon \textit{/hardware, /categ
 \textit{/statuslabels} relevant für die Umsetzung dieser Arbeit waren. \ref{fig:snipe} zeigt den
 Aufbau und die Beziehungen der genutzten Snipe-IT API Ressourcen, wobei die Ressource
 \textit{hardware} den Assets in der Snipe-IT Datenbank entspricht.
-
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.4]{Bilder/screenshot(5).png}
+  \includegraphics[scale=0.4]{Bilder/Code/serverts.png}
   \caption[Quellcode: server.ts]{Quellcode: server.ts}
   \label{fig:snipe}
 \end{figure}
@@ -192,7 +179,6 @@ zu erstellen, während die Verwendung von eckigen Klammern zur Kennzeichnung von
 wird. Beispielsweise wird eine \textit{[id].vue}-Datei, welche sich in dem Ordner
 \textit{categories} befindet, in die \textit{/categories/<id>}-Route umgewandelt, welche die
 angegebene ID in der Komponente als Parameter nutzen kann (\ref{fig:vue}).
-
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.7]{Bilder/Db.jpg}
@@ -207,11 +193,10 @@ Das verwendete Format ergibt sich aus der fehlenden Funktionalität Snipe-Its, e
 Kategorien zuweisen zu können. Da das Anzeigen der Kategorien in diesem Format unübersichtlich ist,
 sollten zunächst nur die Oberkategorien und anschließend die Unterkategorien angezeigt werden.
 \ref{fig:categoriecode} stellt eine vereinfachte Form des verwendeten Quellcodes dar.
-
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.4]{Bilder/screenshot(5).png}
-  \caption[Quellcode: server.ts]{Quellcode: server.ts}
+  \includegraphics[scale=0.4]{Bilder/carbon(1).png}
+  \caption[vereinfachte Form des verwendeten Quellcodes]{vereinfachte Form des verwendeten Quellcodes}
   \label{fig:categoriecode}
 \end{figure}
 
@@ -242,11 +227,10 @@ Zur Festlegung von umgebungsabhängigen Variablen werden für Server und Client 
 Schema in BILD aufgebaut. Der Server benötigt die URL der zu verwendenden Snipe-IT Instanz, den
 API-Key zur Authentifizierung (\ref{section:api}) und den Pfad der SQLite Datenbankdatei.
 Aufseiten des Clients wird lediglich die URL des Reservierungsinterfaces benötigt.
-
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.25]{Bilder/client.png}
-  \includegraphics[scale=0.25]{Bilder/sever.png}
+  \includegraphics[scale=0.3]{Bilder/Code/client.png}
+  \includegraphics[scale=0.3]{Bilder/Code/sever.png}
   \caption[Inhalte der .env Datei im Frontend (links) und Backend (rechts)]{Inhalte der .env Datei im Frontend (l) und Backend (r)}
   \label{fig:env}
 \end{figure}
