@@ -24,7 +24,7 @@ Bedeutung sind, näher erläutert (\ref{table:ft-b}).
         \sffamily\color{maincolor}Anforderungen
         \\
         \arrayrulecolor{maincolor}\hline
-        Ft-VA-1                      & Authentifizierung über LDAP        &
+        Ft-VA-1                      & Authentifizierung über \ac{ldap}        &
         \anfref{F70} \anfref{F80}                                           \\
         Ft-VA-2                      & Übersicht über ausleihbaren Assets &
         \anfref{V20} \anfref{Z20} \anfref{F50} \anfref{K10} \anfref{F10}
@@ -51,13 +51,12 @@ Bedeutung sind, näher erläutert (\ref{table:ft-b}).
     \label{table:ft-b}
 \end{table}
 
-{\sffamily\color{maincolor}{Ft-VA-1 | Authentifizierung über LDAP}}\\
-Mithilfe der Verknüpfung zum LDAP-System der Universität zu Lübeck, können sich
-Nutzende mit einem bereits existierenden IDM Account einloggen. Folglich muss
-kein neues Konto erstellt werden. Außerdem kann überprüft werden, ob es sich bei
-der Anmeldung um Studierenden oder \ac{wimi} handelt, um entsprechende
-Systemrechte zu vergeben. Des Weiteren verhindert die Nutzung des LDAP-Systems
-das Eindringen unbefugter Personen.
+{\sffamily\color{maincolor}{Ft-VA-1 | Authentifizierung über \ac{ldap}}}\\
+Mithilfe der Verknüpfung zum \ac{ldap}-System des \ac{imis}, können sich Nutzende mit einem bereits
+existierenden IDM Account einloggen \cite{howes_x500_1993}. Folglich muss kein neues Konto erstellt
+werden. Außerdem kann überprüft werden, ob es sich bei der Anmeldung um Studierenden oder \ac{wimi}
+handelt, um entsprechende Systemrechte zu vergeben. Des Weiteren verhindert die Nutzung des
+\ac{ldap}-Systems das Eindringen unbefugter Personen.
 
 
     {\sffamily\color{maincolor}{Ft-VA-2 | Übersicht über ausleihbare Assets }}\\
@@ -243,7 +242,7 @@ um eine Web-Anwendung mit Fokus auf den Einsatz im mobilen Kontext (\anfref{R10}
 handelt. Für Nutzende ist es wichtig, dass das System dauerhaft erreichbar ist (\anfref{R50}). Aus
 funktionaler Sicht müssen die Frameworks eine Unterstützung für progressive Web-Applikationen
 bieten. Folglich ist auch eine Unterstützung für HTTPS notwendig (\anfref{Q50}). Außerdem sollte es
-einfache Möglichkeiten zur Verknüpfung von LDAP bieten (\anfref{K10} \anfref{F90}). Die konkrete
+einfache Möglichkeiten zur Verknüpfung von \ac{ldap} bieten (\anfref{K10} \anfref{F90}). Die konkrete
 Wahl der Frameworkwahl wird in \ref{subsec:level2} aufgeführt.
 
 \subsection{C4-Modell zur Visualisierung von Softwarearchitektur}
@@ -295,7 +294,7 @@ Zeitpunkt kann ein Asset maximal einer Person zugeordnet werden, wodurch das meh
 gleichzeitige Ausleihen eines Assets verhindert wird. Darüber hinaus beschreiben Status-Label den
 Zustands eines Assets und ob dieses ausgeliehen werden kann. Alle Funktionalitäten können zudem über
 eine REST-API programmatisch genutzt werden. Des Weiteren verfügt \textit{Snipe-IT} über eine
-Schnittstelle, welche die Integration von LDAP stark vereinfacht.
+Schnittstelle, welche die Integration von \ac{ldap} stark vereinfacht.
 
     {\sffamily\color{maincolor}{Level 2: Container}}
 \label{subsec:level2}

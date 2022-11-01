@@ -72,11 +72,11 @@ werden.
 Die in den Anforderungen festgelegten Funktionalitäten mit hoher Prioriät
 konnten umgesetzt werden. Die mittel priorisierten Funktionalitäten stellten
 sich als Herausforderung raus. Insbesondere \anfref{F90}, die Einbindung des
-LDAP-Systems, führte zu Schwierigkeiten und wurde dementsprechend nicht
+\ac{ldap}-Systems, führte zu Schwierigkeiten und wurde dementsprechend nicht
 umgesetzt. Zentrale Gründe hierfür waren der \textit{persönliche
     Zugriffstoken}, welcher die einzige Authentifizierungsmöglichkeit der Snipe-IT
 API ist und lediglich manuell im Dashboard generiert werden kann. Demzufolge
-konnte das LDAP-System nicht ohne Umstände eingebunden und genutzt
+konnte das \ac{ldap}-System nicht ohne Umstände eingebunden und genutzt
 werden. Dies führte ebenfalls dazu, dass eine Unterscheidung der Zugriffsrechte
 zunächst nicht sichergestellt werden konnte (\anfref{Q20}). Durch die
 eingeschränkte Beispieldatenbank konnte eine Nutzen-Suche (\anfref{F100}) nicht
@@ -86,7 +86,7 @@ Funktion erwünscht sei.
 Die erarbeitete Funktionalität Ft-VA-7 umfasst das Filtern von Materialien. Hierzu gehört unter
 anderem, dass Nutzende verschiedene Präferezen, wie Sortierung, Status, etc. für die Suche
 einstellen können. Im Interface-Design wurden bereits Entwürfe für diese Komponente erarbeitet
-\todo{Anhang}.
+(\label{appendix:digitaleMedien}).
 
 Funktionalitäten zur Pflege und Wartung von Assets (F-V-5) werden durch Snipe-IT bereits gegeben.
 Diese Prozesse sollten jedoch am \ac{imis} klar kommuniziert werden.
@@ -119,10 +119,10 @@ Die im Rahmen dieser Arbeit verwendete Kalenderkomponente
 eine leichte Erweiterbarkeit und sollte insbesondere in der mobile Ansicht beim
 Bearbeiten des Reservierungszeitraums angepasst werden.
 
-\subsection{LDAP-System Einbindung}
+\subsection{\ac{ldap}-System Einbindung}
 Wie bereits in \ref{sec:punkte} erläutert, konnte die accountbasierte Nutzung des Systems nicht
 umgesetzt werden. Für den realen Einsatz des Systems ist diese Funktionalität unabdingbar. Die
-Einbindung des  LDAP-Systems deckt zudem die Zugriffsrechte der Nutzenden ab, sodass lediglich
+Einbindung des  \ac{ldap}-Systems deckt zudem die Zugriffsrechte der Nutzenden ab, sodass lediglich
 Studierende und Mitarbeitende der Universität zugriff auf die Listen, der am \ac{imis} bestehenden Assets, haben. Eine
 mögliche Umsetzung ist in \ref{subsec:heraus} aufgeführt.
 

@@ -140,17 +140,17 @@ eines \lstinline{Bearer <Token>} HTTP-Headers, mitgeschickt werden. Da persönli
 verwendet werden, spiegeln die Berechtigungen des API-Tokens die Berechtigungen des Nutzenden
 wider.
 
-\subsection{Herausforderungen in der Einbindung von LDAP}
+\subsection{Herausforderungen in der Einbindung von \ac{ldap}}
 \label{subsec:heraus}
 Snipe-IT bietet bereits eine integrierte Lösung zur Synchronisation und Login mit
-LDAP\footnote{\url{https://snipe-it.readme.io/docs/ldap-sync-login}}. Da die \textit{persönlichen
+\ac{ldap}\footnote{\url{https://snipe-it.readme.io/docs/ldap-sync-login}}. Da die \textit{persönlichen
   Zugriffstoken} jedoch die einzige Authentifizierungsmöglichkeit der API sind und lediglich manuell
-im Dashboard generiert werden können, kann das LDAP-System der Universität zu Lübeck nicht ohne
+im Dashboard generiert werden können, kann das \ac{ldap}-System der Universität zu Lübeck nicht ohne
 Umstände eingebunden und entsprechend genutzt werden.
 
 Ein möglicher Lösungsansatz wäre das programmatische Nutzen eines Browsers aufseiten des
 Reservierungsinterfaces, welcher die Angaben von Nutzenden in der Wep-App verwendet, um mit diesen
-den LDAP-Login in Snipe-IT durchzuführen. Sollte der Snipe-IT Login erfolgreich sein, könnten
+den \ac{ldap}-Login in Snipe-IT durchzuführen. Sollte der Snipe-IT Login erfolgreich sein, könnten
 Nutzende für den Rest der Sitzung als authentifiziert gelten. Im Reservierungsinterface selbst
 würde ein speziell für das Reservierungsinterface generierte Token für die Kommunikation mit
 Snipe-IT genutzt werden.

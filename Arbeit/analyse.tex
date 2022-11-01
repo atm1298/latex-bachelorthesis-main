@@ -1,7 +1,7 @@
 \chapter{Anforderungen}
 \label{chapter-analyse}
 
-Um Nutzenden, Aufgaben und Kontext des Projektes genauer zu verstehen, wurde eine Analyse nach dem
+Um Nutzende, Aufgaben und Kontext des Projektes genauer zu verstehen, wurde eine Analyse nach dem
 menschenzentrierten Gestaltungsprozess durchgeführt \cite{DINISO9241}. Hierbei wurden relevante
 Anforderungen, die Einfluss auf die Entwicklung und die spätere Nutzung des Reservierungstools
 nehmen, identifiziert und eingeordnet. Mit der Durchführung einer Recherche, welche in den
@@ -26,14 +26,14 @@ recherchiert (\ref{subsection:system}).
 \subsection{Stakeholder-Interviews}
 \label{subsection:interview}
 Zunächst wurde anhand der zu untersuchenden Gesichtspunkte ein Interviewleitfaden für ein
-semi-strukturiertes Interview entwickelt (\ref{appendix:interview}). Mithilfe dieses Leitfadens
-wurden die Befragten im Mai 2022 durch das Interview geführt. Die Interviews, wurden aufgezeichnet
-und anschließend in Teilen, mithilfe eines vereinfachten Transkriptionssystems, verschriftlicht
-\cite{dresing_praxisbuch_2016}. Daraufhin wurde eine qualitative Inhaltsanalyse durchgeführt.
-Hierfür wurden die Transkripte erneut gelesen und für die Arbeit und Forschungsfragen relevante
-Textstellen kommentiert. Infolgedessen wurden die erarbeiteten Kommentare in ein Ordnungssystem
-strukturiert und unter den einzelnen Analysepunkten zusammengefasst (\todo{Anhang})
-\cite{dresing_praxisbuch_2016}.
+semi-strukturiertes Interview entwickelt (\ref{appendix:interview})
+\cite{blandford_qualitative_2016}. Mithilfe dieses Leitfadens wurden die Befragten im Mai 2022 durch
+das Interview geführt. Die Interviews, wurden aufgezeichnet und anschließend in Teilen, mithilfe
+eines vereinfachten Transkriptionssystems, verschriftlicht \cite{dresing_praxisbuch_2016}. Daraufhin
+wurde eine qualitative Inhaltsanalyse durchgeführt. Hierfür wurden die Transkripte erneut gelesen
+und für die Arbeit und Forschungsfragen relevante Textstellen kommentiert. Infolgedessen wurden die
+erarbeiteten Kommentare in ein Ordnungssystem strukturiert und unter den einzelnen Analysepunkten
+zusammengefasst (\label{appendix:digitaleMedien}) \cite{dresing_praxisbuch_2016}.
 
 Es wurde eine Unterteilung in Verleihende und Ausleihende von Assets vorgenommen (genaue
 Definitionen der Nutzendengruppen in \ref{section:Nutzenden}). Bei den Teilnehmenden der Interviews
@@ -127,7 +127,7 @@ Gebrauchstauglichkeit eines Systems\cite{glitza_hands_2019}.
         \includegraphics[scale=0.1]{Bilder/Arbnbnsuche.png}
         \caption[Vergleichbare Systeme]{Vergleichbare Systeme}\label{fig:system}
 \end{figure}
-\section{Analyse der Nutzenden}
+\section{Nutzendenanalyse}
 \todo{Im Text schauen, ob Nutzendengruppen dast Benutzergruppen steht}
 
 \label{section:Nutzenden}
@@ -166,7 +166,7 @@ Technikaffinität relevant. Insgesamt konnte für beide Gruppen eine Einschätzu
 anhand der \ac{ati}-Skala ermittelt werden (Verleihende: M=5.00, SD=0.58, N=3; Ausleihende: M=5.09,
 SD=0.48, N=9). Durch das Heranziehen zweier Vergleichsstichproben aus \citeA{franke_personal_2019}
 (M=4.14, N=300 und M=4.23, N=65), lässt sich schlussfolgern, dass die Nutzendengruppen eine
-vergleichsweise hohe Technikaffinität ausweisen.
+vergleichsweise hohe Technikaffinität aufweisen.
 
 
 %Mitarbeitende, sowie administratives Personal des \ac{imis}, welche verantwortlich für die Ausgabe
@@ -311,7 +311,7 @@ Folgenden näher erläutert werden (\ref{table:Ag-Vt}).
 Um ein Asset ausleihen zu können, muss eine Anfrage an die Verantwortlichen gesendet werden. Dies
 geschieht meist per E-Mail. Ausleihende fragen nach konkreten Assets, von dessen Existenz sie bspw.
 durch die institutsinterne Kommunikation erfahren haben. Wie bereits in der Problemanalyse
-geschildert (\nameref{section:probleme-allgemein}), gibt es keine Übersicht über ausleihbare Assets.
+geschildert (\ref{section:probleme-allgemein}), gibt es keine Übersicht über ausleihbare Assets.
 Dies zeigt die Dringlichkeit des Snipe-IT Companion für eine bessere Vorbereitung.
 
         {\sffamily\color{maincolor}{Ag-Vt-2 | Einsehen der Verfügbarkeit}}\\
@@ -588,7 +588,7 @@ Bezug auf das aktuelle Vorgehen mithilfe des \secref{section:iststand} geschloss
         \renewcommand{\arraystretch}{1.5}
         \begin{longtable}{lp{0.85\textwidth}} \arrayrulecolor{maincolor}\hline
                 \anfrow & Zur Anmeldung und Abruf von Informationen existiert eine Schnittstelle zum
-                IDM LDAP.                                                                            \\
+                IDM \ac{ldap}\cite{howes_x500_1993}.                                                                            \\
                 \anfrow & Es existieren von Forschungsgruppe zu Forschungsgruppe unterschiedliche
                 Ausleihprozesse.                                                                     \\
                 \anfrow & Es existieren Formulare, mit denen das Verleihen dokumentiert wird.
@@ -645,7 +645,7 @@ verwendet, um natürlichsprachliche Anforderungen zu definieren \cite{Balzert200
                 Assets abzuholen, zurückzubringen oder zu verlängern sind \textit{(Ag-Au-1,
                 Ag-Rg-1)}.                                                                         \\
                 \anfrow & Das System \textit{soll} Verleihenden und Ausleihenden die Möglichkeit
-                bieten, sich mit dem vorhanden IDM (LDAP) Account einzuloggen.
+                bieten, sich mit dem vorhanden IDM (\ac{ldap}) Account einzuloggen.
                 \\
                 \anfrow & Das System \textit{soll} Ausleihenden die Möglichkeit bieten, mittels
                 einer Nutzen-Suche individuelle und personalisierte Asset-Vorschläge zu erhalten
