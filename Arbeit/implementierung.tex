@@ -258,18 +258,18 @@ Entwicklung kann durch\lstinline{npm run dev} zudem ein Entwicklungsserver gesta
 
 \section{Fazit der Implementierung}
 
-Die in der Implementierung realisierten Funktionalitäten umfassen das \textit{muss} der in der
+Die in der Implementierung realisierten Funktionalitäten umfassen das \textit{muss}, der in der
 \nameref{section:anforderung} erarbeiteten Funktionen.
 
-Im Rahmen der vorliegenden Arbeit wurde ein umfassendes System realisiert, welche die Grundlagen des
-Reservierens mit einer Verknüpfung zu Snipe-IT ermöglicht. Die Implementierung teilt sich in zwei
-Teile, dass Reservierungsinterface (Backend) und das Frontend, die Web-App. Das
+Im Rahmen der vorliegenden Arbeit wurde ein umfassendes System realisiert, welches die Grundlagen
+des Reservierens mit einer Verknüpfung zu Snipe-IT ermöglicht. Die Implementierung teilt sich in
+zwei Teile, das Reservierungsinterface (Backend) und die Webapp (Frontend). Das
 Reservierungsinterface teilt sich in drei wesentliche Bestandteile: der
 \textit{Fastify-HTTP-Server}, die \textit{SQLite Datenbank} und das \textit{ORM Prisma} (vgl.
 \ref{fig:level3}). Diese Komponenten spiegeln sich in der Verzeichnisstruktur aus \ref{fig:db}
 wider. Für die serverseitige Umsetzung wurde eine API entwickelt, welche sich in drei Bereiche teilt
 (\textit{Assets}, \textit{Kategorien} und \textit{Reservierungen} (\ref{table:impl-backend-routes}).
-Die Datenbank speichert die getätigten Reservierungen und Beispiel Profile. Für eine vereinfachte
+Die Datenbank speichert die getätigten Reservierungen und Beispielprofile. Für eine vereinfachte
 Umsetzung wurde das ORM Prisma verwendet. Die Implementierung der Kernfunktionalitäten zeigt die
 Nutzung der Snipe-IT Datenbank. Für die Nutzung dieser musste ein \textit{persönliches
 Zugriffstoken} generiert werden. Sobald ein Asset über die Web-App ausgeliehen wird, werden die

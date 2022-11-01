@@ -77,67 +77,64 @@ umgesetzt. Zentrale Gründe hierfür waren der \textit{persönliche
     Zugriffstoken}, welcher die einzige Authentifizierungsmöglichkeit der Snipe-IT
 API ist und lediglich manuell im Dashboard generiert werden kann. Demzufolge
 konnte das LDAP-System nicht ohne Umstände eingebunden und genutzt
-werden. Dis führte auch dazu, dass eine Unterscheidung der Zugriffsrechte
-zunächst nicht sichergestellt werden konnten (\anfref{Q20}). Durch die
+werden. Dies führte ebenfalls dazu, dass eine Unterscheidung der Zugriffsrechte
+zunächst nicht sichergestellt werden konnte (\anfref{Q20}). Durch die
 eingeschränkte Beispieldatenbank konnte eine Nutzen-Suche (\anfref{F100}) nicht
 ermöglicht werden. Aus der Evaluation ließ sich jedoch schließen, dass diese
 Funktion erwünscht sei.
 
-Die erarbeite Funktionalität Ft-VA-7 umfasst das Filtern von Materialen. Das
-heißt unter anderem, dass Nutzende verschiebene Preferezen, wie Sortierung,
-Status, etc. für die Suche einstellen können. Im Interface-Design wurden bereits
-Entwürfe für diese Komponente erarbeitet \todo{Anhang}.
+Die erarbeitete Funktionalität Ft-VA-7 umfasst das Filtern von Materialien. Hierzu gehört unter
+anderem, dass Nutzende verschiedene Präferezen, wie Sortierung, Status, etc. für die Suche
+einstellen können. Im Interface-Design wurden bereits Entwürfe für diese Komponente erarbeitet
+\todo{Anhang}.
 
-Funktionalitäten zur Pflege und Wartung von Assets (F-V-5) ist durch das
-Assetmangement Snipe-IT bereits gegeben, diese Prozesse sollten jedoch am
-\ac{imis} klar kommuniziert werden.
+Funktionalitäten zur Pflege und Wartung von Assets (F-V-5) werden durch Snipe-IT bereits gegeben.
+Diese Prozesse sollten jedoch am \ac{imis} klar kommuniziert werden.
 
 
 \section{Ausblick}
-Die Resultate der Untersuchungen im Rahmen der Arbeit können als Indikator und
-Grundlage für weiterführende Arbeiten und Untersuchungen eingesetzt werden.
-Insbesondere für Erhebungen mit der Nutzendengruppe wurden zahlreiche
-Vorarbeiten geleistet, an die es anzuknüpfen gilt. Ebenso zentrall sind die
-offenen Punkte für die Weiterentwicklung des Systems.
+Die im Rahmen der Arbeit erarbeiteten Konzepte und Ergebnisse können als Indikator und Grundlage für
+weiterführende Arbeiten und Untersuchungen eingesetzt werden. Insbesondere für Erhebungen mit der
+Nutzendengruppe wurden zahlreiche Vorarbeiten geleistet, an die es anzuknüpfen gilt. Ebenso zentral
+sind die offenen Punkte für die Weiterentwicklung des Systems.
 
 \subsection{Weiterentwicklung der Funktionalitäten}
-Das Filtern von Material (F-VA-7) wurde ebenfalls in den Evaluationsergebnissen
+Das Filtern von Material (F-VA-7) wurde in den Evaluationsergebnissen
 herausgearbeitet und sollte bei der Weiterentwicklung des Systems mit
 berücksichtigt werden.
 
-Aus der Evaluation ließen sich die Funktionalität \enquote{Nach Zweck suchen}
+Aus der Evaluation ließen sich die Funktionalitäten \enquote{Nach Zweck suchen}
 und \enquote{Set-Vorschläge} ableiten, welche in der späteren Entwicklung
 implementiert und evaluiert werden könnten.
 
-Bevor die ausgeliehenen Assets an Verleihende zurückgeben werden, sollte eine
-Checkliste für das jeweilige Asset angezeigt. Dort werden Hinweise angezeigt,
-wie zum Beispiel SD-Karte geleert, Assets auf Ursprungseinstellungen
-zurückgestellt oder Akkus geladen. Diese Funktionalität soll insbesondere dafür
+Bevor die ausgeliehenen Assets an Verleihende zurückgegeben werden, sollte eine
+Checkliste für das jeweilige Asset angezeigt  werden. Dort werden Hinweise angezeigt,
+wie zum Beispiel \enquote*{SD-Karte geleert}, \enquote*{Assets auf Ursprungseinstellungen
+zurückgestellt} oder \enquote*{Akkus geladen}. Diese Funktionalität soll insbesondere dafür
 sorgen, dass nachfolgende Ausleihende die Assets direkt nutzen können.
 
 \subsection{Weiterentwicklung der Kalenderkomponente}
 Die im Rahmen dieser Arbeit verwendete Kalenderkomponente
 \textit{V-Calendar}\footnote{\url{https://vcalendar.io/layouts.html}} ermöglicht
-eine leichte Erweiterbarkeit und sollt insbesondere in der mobile Ansicht beim
-Bearbeiten des Reseriveurngszeitraums angepasst werden.
+eine leichte Erweiterbarkeit und sollte insbesondere in der mobile Ansicht beim
+Bearbeiten des Reservierungszeitraums angepasst werden.
 
 \subsection{LDAP-System Einbindung}
-Wie bereits in \ref{sec:punkte} erläutert konnte die Accountbasierte Nutzung des
-Systems nicht umgesetzt werden. Für den realen Einsatz des Systems ist diese
-Funktionalität unabdingbar. Die Einbindung des  LDAP-Systems deckt zudem die
-Datenschutz und Zugriffsrechte der Nutzenden ab, sodass lediglich Nutzende der
-Universität zugriff auf die Listen der am \ac{imis} bestehenden Assets haben.
-Eine mögliche Umsetzung ist in \ref{subsec:heraus} aufgeführt.
+Wie bereits in \ref{sec:punkte} erläutert, konnte die accountbasierte Nutzung des Systems nicht
+umgesetzt werden. Für den realen Einsatz des Systems ist diese Funktionalität unabdingbar. Die
+Einbindung des  LDAP-Systems deckt zudem die Zugriffsrechte der Nutzenden ab, sodass lediglich
+Studierende und Mitarbeitende der Universität zugriff auf die Listen, der am \ac{imis} bestehenden Assets, haben. Eine
+mögliche Umsetzung ist in \ref{subsec:heraus} aufgeführt.
 
 \subsection{Einbindung in das Labormanagementsystem}
 Abschließend ist eine Möglicheit, um die Prozesse und die aus der Evaluation
 erarbeiteten Probleme der Begrifflichkeiten in Bezug auf den Assetstatus lösen
-zu können, das erarbeitet Konzept in das Labormanagementsystem zu \todo{Pabst
+zu können, das erarbeitete Konzept in das Labormanagementsystem zu \todo{Pabst
     Zitieren} integrieren. Da sich das Labormanagementsystem bereits in der zweiten
-Iteraktion befindet, ist die Integration auf diesem Wege sinnvoll. Dies
+Iteration befindet, sollte dies als robuste Basis verwendet werden. Dies
 ermöglicht ein Reservierungs- und Ausleihsystem für Räume und Assets. Demzufolge
 können Assets, welche den Status \enquote{Fest verbaut} aufweisen, über die
 Raumbuchung genutzt werden. Außerdem haben Nutzende so nur ein System. Dies löst
-somit ebenfalls die Funktionalität der Accountbasierten Nutzung.
+somit ebenfalls die Funktionalität der accountbasierten Nutzung.
 
 
