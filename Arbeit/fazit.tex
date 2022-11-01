@@ -3,33 +3,124 @@
 \chapter{Zusammenfassung und Ausblick}
 \label{chapter-fazit}
 
-Die Zusammenfassung greift die in der Einleitung angerissenen Bereiche wieder auf und erläutert, zu
-welchen Ergebnissen diese Arbeit kommt. Dabei wird insbesondere auf die neuen Erkenntnisse und den
-Nutzen der Arbeit eingegangen.
-
-Im anschließenden Ausblick werden mögliche nächste Schritte aufgezählt, um die Forschung an diesem
-Thema weiter voranzubringen. Hier darf man sich nicht scheuen, klar zu benennen, was im Rahmen
-dieser Arbeit nicht bearbeitet werden konnte und wo noch weitere Arbeit notwendig ist.
-
-Die Resultate der Untersuchungen im Rahmen der Arbeit können als Indikator und Grundlage für
-weiterführende Projekte und Untersuchungen eingesetzt werden. Insbesondere für Erhebungen mit der
-Zielgruppe wurden zahlreiche Vorarbeiten geleistet, an die es anzuknüpfen gilt:
-
+Abschließen werden die wischtigsten Ergebnisse sowie Antworten auf die Forschungsfragen
+(\ref{sec:Forschungsfragen}) der vorliegenden Arbeit zusammengefasst. Im Anschluss werden offene
+Punkte aus dem Konzept, welche nicht wie geplant umgesetzt werden konnten, erläutert. Zum Abschluss
+auf die möglichen Weiterentwicklungen des Frameworks eingegangen.
 
 
 \section{Zusammenfassung}
+Für einen Ausleih- und Reservierungsprozess ist die Unterstützung durch ein Reservierungstool eine
+zielführende Möglichkeit, um die Planung in die Zukunft zu erleichtern und ermöglichen. Hierbei ist
+insbesondere eine strukturierte und übersichtliche Ansicht der auszuleihenden Assets von hoher
+Bedeutung.
+
+Um ein solches Konzept entwickeln zu können wuden zunächst aus vorangestellten Untersuchungen die
+objektiven Anforderungen an den Snipe-IT Companion formalisiert (\ref{section:anforderung}). Die
+wesentliche Informationsquelle stellten hierbei die Stakeholder-Interviews mit Mitarbeitenden des
+\ac{imis} und Studierenden der Medieninformatik. Zusätzlich wurde eine Recherche zu vergleichbaren
+Systemen vorgenommen, welche Aufschluss über mögliche Fehlerquellen geben sollte. Hierbei wurde sich
+nach einer weiteren Recherche auf zwei aus dem Interview genannte Apps beschränkt, da die vorherige
+Recherche wenig Aufschluss für den spezifischen Einsatzfall gab. Aus den Qullen konnten zwei
+Nutzendengruppen (Verleihende und Ausleihende) festgehalten (\ref{section:Nutzenden}). Für
+Forschungsfrage F1 wurden die Probleme und Herausforderungen des aktuellen Vorgehens und den
+unterschiedlichen Ausleihprozessen, in einer Problemanalyse, erarbeitet und beantwortet
+(\ref{section:iststand}). Anschließend wurden für die Vorbereitung auf Forschungsfrage F2 die
+Aufgaben, die Verleihende und Ausleihende im Reservierungsprozess erledigen müssen diskutiert
+(\ref{section:aufgaben}). 
+
+In der Spezifikationsphase wurden die Anforderungen an das System weiter spezialisiert
+(\ref{chapter-konzept}). Dazu wurden zunächst gemäß der Forschungsfrage F2 Funktionalitäten
+definiert. Die Funktionalitäten wurden entsprechend den Anforderungen entwickelt und in einer
+priorisierten Feature-Liste festgehalten. Anschließend wurde die Systemarchitektur, aufgeteilt in
+Frontend, Reservierungsinterface (Backend) und dem bestehenden Snipe-IT Server, mithilfe des
+C4-Models dargestellt (\ref{section:architektur}). Aufbauend darauf wurden passende Frameworks zur
+Entwicklung ausgewählt. 
+
+Aufbauend auf dem Konzept wurde das Interface-Design erarbeitet (\ref{chapter-design}). Durch das
+regelmäßige einarbeiten von Interviews konnte ein iteratives Vorgehen ermöglicht werden. Daraus
+resultierten zentrale Designentscheidungen wie Begrifflichkeiten oder die Navigation, welche in
+Folgearbeiten berücksichtigt werden sollten. 
+
+Mithilfe der vorangehstellten Phasen wurde das Reservierungstools entsprechend umgesetzt
+(\ref{chapter-implementierung}). Hierbei wurden die in der Konzeptionsphase festgelegten Frameworks
+genutzt. \ref{chapter-dialogbeispiel} präsentiert das realisierte System anhand von
+Dialogbeispielen.
+
+In der abschließenden Phase wurde das realisierte System mithilfe von Interviews und Umfragen
+evaluiert (\ref{chapter-evaluation}). Die Ergebnisse der Phase dienten zur Beantwortung von
+Forschungsfrage F3, inwieweit ein aus F2 resultierender Prototyp die in F1 identifizierten
+Schwierigkeiten reduzieren kann und gaben Aufschluss über die Wirksamkeit des entwickelten Systems.
+Generell wurde die Oberfläche als übersichtlich beschrieben und der Wunsch, die Anwendung im
+Universitätsalltag für Projekte nutzen zu können geäußert. Die eingangs formulierte Forschungsfrage
+F3 konnte lediglich bedingt beantwortet werden, da das positive Ergebnis der durchgeführten Studie
+nicht verglichen werden konnte. Eine weitere ausführliche Studie mit einem Vergleichsystem wird
+somit empfohlen. Trotz des fehlenden Vergleichs konnte die Arbeit ein qualitativ hochwertiges System
+hervorbringen, welches sich als übersichtlich und unterstützend herausstellt. Für Forschungsfrage 2
+konnten weitere Anforderungen an das System herausgearbeitet werden. 
 
 \section{Offene Punkte}
-Funktionalitäten erwähnen! alles was soll und sollte in zukunft + Konzeption!
+\label{sec:punkte}
+Die in den Anforderungen festgelegten Funktionalitäten mit einer hohen Prioriät konnten umgesetzt
+werden. Die mittle prioriseirten Funktionalitäten stellten sich als Herausforderung dar.
+Insbesondere \anfref{F90}, die Einbindung des LDAP-Systems führte zu Schwierigkeiten und wurde
+dementsprechend nicht umgesetzt. Zentrale Gründe hierfür waren der \textit{persönlichen
+Zugriffstoken}, welcher die einzige Authentifizierungsmöglichkeit der Snipe-IT API ist und lediglich
+manuell im Dashboard generiert werden können. Demzufolge konnte das LDAP-System nicht ohne Umstände
+eingebunden und entsprechend genutzt werden. Dis führte auch dazu, dass eine Unterscheidung der
+Zugriffsrechte zunächst nicht sichergestellt werden konnten (\anfref{Q20}). Durch die eingeschränkte
+Beispieldatenbank konnte eine Nutzen-Suche (\anfref{F100}) nicht ermöglicht werden. Aus der
+Evaluation ließ sich jedoch schließen, dass diese Funktion erwünscht sei.
+
+Die erarbeite Funktionalität Ft-VA-7 umfasst das Filtern von Materialen. Das heißt unter anderem,
+dass Nutzende verschiebene Preferezen, wie Sortierung, Status, etc. für die Suche einstellen können.
+Im Interface-Design wurden bereits Entwürfe für diese Komponente erarbeitet \todo{Anhang}.
+
+Funktionalitäten zur Pflege und Wartung von Assets (F-V-5) ist durch das Assetmangement
+Snipe-IT bereits gegeben, diese Prozesse sollten jedoch am \ac{imis} klar kommuniziert werden.
+
 
 \section{Ausblick}
-
-\subsection{Weiterentwicklung des Interfacedesigns}
+Die Resultate der Untersuchungen im Rahmen der Arbeit können als Indikator und Grundlage für
+weiterführende Arbeiten und Untersuchungen eingesetzt werden. Insbesondere für Erhebungen mit der
+Nutzendengruppe wurden zahlreiche Vorarbeiten geleistet, an die es anzuknüpfen gilt. Ebenso
+zentrall sind die offenen Punkte für die Weiterentwicklung des Systems.
 
 \subsection{Weiterentwicklung der Funktionalitäten}
-\subsection{LDAP Einbindung}
+Das Filtern von Material (F-VA-7) wurde ebenfalls in den Evaluationsergebnissen herausgearbeitet und
+sollte bei der Weiterentwicklung des Systems mit berücksichtigt werden. 
+
+Aus der Evaluation ließen sich die Funktionalität \enquote{Nach Zweck suchen} und
+\enquote{Set-Vorschläge} ableiten, welche in der späteren Entwicklung implementiert und evaluiert
+werden könnten.
+
+Bevor die ausgeliehenen Assets an Verleihende zurückgeben werden, sollte eine Checkliste
+für das jeweilige Asset angezeigt. Dort werden Hinweise angezeigt, wie zum Beispiel
+SD-Karte geleert, Assets auf Ursprungseinstellungen zurückgestellt oder Akkus geladen. Diese
+Funktionalität soll insbesondere dafür sorgen, dass nachfolgende Ausleihende die Assets
+direkt nutzen können.
+
+\subsection{Weiterentwicklung der Kalenderkomponente}
+Die im Rahmen dieser Arbeit verwendete Kalenderkomponente
+\textit{V-Calendar}\footnote{\url{https://vcalendar.io/layouts.html}} ermöglicht eine leichte
+Erweiterbarkeit und sollt insbesondere in der mobile Ansicht beim Bearbeiten des
+Reseriveurngszeitraums angepasst werden.
+
+\subsection{LDAP-System Einbindung}
+Wie bereits in \ref{sec:punkte} erläutert konnte die Accountbasierte Nutzung des Systems nicht
+umgesetzt werden. Für den realen Einsatz des Systems ist diese Funktionalität unabdingbar. Die
+Einbindung des  LDAP-Systems deckt zudem die Datenschutz und Zugriffsrechte der Nutzenden ab, sodass
+lediglich Nutzende der Universität zugriff auf die Listen der am \ac{imis} bestehenden Assets haben.
+Eine mögliche Umsetzung ist in \ref{subsec:heraus} aufgeführt. 
 
 \subsection{Einbindung in das Labormanagementsystem}
-Labormanagementsystem \todo{Pabst Zitieren}
-\section{Abschließendes Fazit}
+Abschließend ist eine Möglicheit, um die Prozesse und die aus der Evaluation erarbeiteten Probleme
+der Begrifflichkeiten in Bezug auf den Assetstatus lösen zu können, das erarbeitet Konzept in das
+Labormanagementsystem zu \todo{Pabst Zitieren} integrieren. Da sich das Labormanagementsystem
+bereits in der zweiten Iteraktion befindet, ist die Integration auf diesem Wege sinnvoll. Dies
+ermöglicht ein Reservierungs- und Ausleihsystem für Räume und Assets. Demzufolge können Assets,
+welche den Status \enquote{Fest verbaut} aufweisen, über die Raumbuchung genutzt werden. Außerdem
+haben Nutzende so nur ein System. Dies löst somit ebenfalls die Funktionalität der Accountbasierten
+Nutzung.
+
 

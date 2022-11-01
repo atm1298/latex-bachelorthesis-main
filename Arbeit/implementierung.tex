@@ -262,5 +262,26 @@ Die in der Implementierung realisierten Funktionalitäten umfassen das \textit{m
 \nameref{section:anforderung} erarbeiteten Funktionen.
 
 Im Rahmen der vorliegenden Arbeit wurde ein umfassendes System realisiert, welche die Grundlagen des
-Reservierens mit einer Verknüpfung zu Snipe-IT ermöglicht. 
-\todo{alle Unterüberschriften in einem Satz zusammenfassen}
+Reservierens mit einer Verknüpfung zu Snipe-IT ermöglicht. Die Implementierung teilt sich in zwei
+Teile, dass Reservierungsinterface (Backend) und das Frontend, die Web-App. Das
+Reservierungsinterface teilt sich in drei wesentliche Bestandteile: der
+\textit{Fastify-HTTP-Server}, die \textit{SQLite Datenbank} und das \textit{ORM Prisma} (vgl.
+\ref{fig:level3}). Diese Komponenten spiegeln sich in der Verzeichnisstruktur aus \ref{fig:db}
+wider. Für die serverseitige Umsetzung wurde eine API entwickelt, welche sich in drei Bereiche teilt
+(\textit{Assets}, \textit{Kategorien} und \textit{Reservierungen} (\ref{table:impl-backend-routes}).
+Die Datenbank speichert die getätigten Reservierungen und Beispiel Profile. Für eine vereinfachte
+Umsetzung wurde das ORM Prisma verwendet. Die Implementierung der Kernfunktionalitäten zeigt die
+Nutzung der Snipe-IT Datenbank. Für die Nutzung dieser musste ein \textit{persönliches
+Zugriffstoken} generiert werden. Sobald ein Asset über die Web-App ausgeliehen wird, werden die
+relevanten Daten mit einer \textit{POST}-Anfrage an die \textit{/reservation}-Route des
+Reservierungsinterfaces gesendet. Diese relevanten Daten werden im Reservierungsinterfaces
+gespeichert. Sobald Verleihende die Ausleihe bestätigen, wird der Ausleihstatus mit einer
+\textit{POST}-Anfrage an \textit{/reservation/receive} intern und in Snipe-IT aktualisiert. Die
+Accoutbasierte Nutzung mit dem LADp-System stelltsich aufgrund des \textit{persönliches
+Zugriffstoken} als Herausforderung heraus und wurde demzufolge nicht eingearbeitet. Für den zweiten
+Teil der Anwendung wurde \textit{vue.js} und \textit{TypeScript} verwendet. Für den Aufbau der
+Routen wurde der File-Based-Routing Ansatz verwendet, welcher die Routen aufgrund der
+Verzeichnisstruktur generiert. Hierfür wurde das Vite-Plugin
+\textit{vite-plugin-pages}\footnote{\url{https://github.com/hannoeru/vite-plugin-pages}} genutzt.
+Abschliend musste eine Extrahierung der Unterkategorien anhand eines Trennsymbols (\enquote{-}),
+implementiert werden. 
