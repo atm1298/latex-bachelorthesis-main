@@ -17,14 +17,14 @@ Bedeutung sind, näher erläutert (\ref{table:ft-b}).
 
 \begin{table}[h]
     \centering
-    \caption{Funktionalitäten für VA (Ver- und Ausleihende)}
+    \caption{Funktionalitäten für Ver- und Ausleihende}
     \begin{tabular}{lll}
         \arrayrulecolor{maincolor}\hline
         \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Titel    &
         \sffamily\color{maincolor}Anforderungen
         \\
         \arrayrulecolor{maincolor}\hline
-        Ft-VA-1                      & Authentifizierung über \ac{ldap}        &
+        Ft-VA-1                      & Authentifizierung über \ac{ldap}   &
         \anfref{F70} \anfref{F80}                                           \\
         Ft-VA-2                      & Übersicht über ausleihbaren Assets &
         \anfref{V20} \anfref{Z20} \anfref{F50} \anfref{K10} \anfref{F10}
@@ -61,18 +61,18 @@ handelt, um entsprechende Systemrechte zu vergeben. Des Weiteren verhindert die 
 
     {\sffamily\color{maincolor}{Ft-VA-2 | Übersicht über ausleihbare Assets }}\\
 Die Übersicht, der am \ac{imis} vorhandenen Assets wurde mittels Kategorien
-umgesetzt. Dafür gibt es eine Übersicht, bei der alle Assets eingesehen werden
-können. Die einzelnen Kategorien beinhalten Unterkategorien. In der Übersicht
-werden Informationen wie Name, Seriennummer, Marke und Status eines Assets
-angezeigt.
+umgesetzt, welche aus \textit{Snipe-IT} abgeleitet werden konnten. Dafür gibt es
+eine Übersicht, bei der alle Assets eingesehen werden können. Die einzelnen
+Kategorien beinhalten Unterkategorien. In der Übersicht werden Informationen wie
+Name, Seriennummer, Marke und Status eines Assets angezeigt.
 
     {\sffamily\color{maincolor}{Ft-VA-3 |  Verfügbarkeit von Assets }}\\
 Der Status eines Asset (ausleihbar und herausgegeben) muss klar ersichtlich sein. Dies geschieht
-mittels Farbcodierung. Durch Die Farbcodierung können Nutzende schneller relefante Informationen
+mittels Farbcodierung. Durch Die Farbcodierung können Nutzende schneller relevante Informationen
 filtern, was insbesondere für den Status eines Assets wichtig ist.
 
 
-{\sffamily\color{maincolor}{Ft-VA-4 | Zuständigkeitsbereich }}\\
+    {\sffamily\color{maincolor}{Ft-VA-4 | Zuständigkeitsbereich }}\\
 Um für Ausleihende Kontaktinformationen anzeigen zu können \textit{(Ft-A-6)},
 müssen die Zuständigkeitsbereiche eingetragen werden können. Außerdem sollten
 alternative Ansprechpartner:innen kenntlich gemacht werden, um Abholtermine
@@ -108,7 +108,7 @@ In der Detailansicht werden die Assets und deren Eigenschaften dargestellt. Hier
 Informationen wie Name, Artikelbeschreibung, technische Details und Kontaktinformation der
 Verleihenden dargestellt. Des Weiteren kann der Ausleihzeitraum eingestellt und die Zeiträume der
 Verfügbarkeit eines Assets eingesehen werden. In Form eines Buttons wird sichtbar, dass das Asset
-zur Ausleihe hinzugefügt werden kann. 
+zur Ausleihe hinzugefügt werden kann.
 
 
 \subsection{Funktionalitäten für Verleihende}
@@ -120,20 +120,20 @@ näher erläutert (\ref{table:ft-v}).
     \caption{Funktionalitäten für Verleihenden }
     \begin{tabular}{lll}
         \arrayrulecolor{maincolor}\hline
-        \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Titel   &
+        \sffamily\color{maincolor}ID & \sffamily\color{maincolor}Titel  &
         \sffamily\color{maincolor}Anforderungen
         \\
         \arrayrulecolor{maincolor}\hline
-        Ft-V-1                       & Verwaltungsansicht                         & \anfref{F60}
+        Ft-V-1                       & Verwaltungsansicht               & \anfref{F60}
         \\
-        Ft-V-2                       & Bearbeiten des Assetstatus        &        \anfref{F150}     \\
+        Ft-V-2                       & Bearbeiten des Assetstatus       & \anfref{F150} \\
         Ft-V-3                       & Kalenderansicht  für Verleihende &
         \anfref{V50} \anfref{Z30} \anfref{F40} \anfref{F50}
         \\
-        Ft-V-4                       & Pflege von Assets                 &
-        \anfref{F130}                                                          \\
-        Ft-V-5                       & Pflege der Datenbank              &
-        \anfref{F140}                                                          \\
+        Ft-V-4                       & Pflege von Assets                &
+        \anfref{F130}                                                                   \\
+        Ft-V-5                       & Pflege der Datenbank             &
+        \anfref{F140}                                                                   \\
         \arrayrulecolor{maincolor}\hline
     \end{tabular}
     \label{table:ft-v}
@@ -142,7 +142,7 @@ näher erläutert (\ref{table:ft-v}).
 {\sffamily\color{maincolor}{Ft-V-1 | Verwaltungsansicht }}\\
 Die Verwaltungsansicht umfasst eine Aufgabenliste mit zwei Tabs. Die Tabs umfassen Abholungs- oder
 Rückgabetermine. Über eine Kalenderübersicht können die Abholungs- oder Rückgabetermine der
-einzelnen Tage eingesehen werden. 
+einzelnen Tage eingesehen werden.
 
     {\sffamily\color{maincolor}{Ft-V-2 | Bearbeiten des Assetstatus }}\\
 Assets, welche an Ausleihende übergeben wurden, müssen zunächst manuell in ihrem
@@ -181,11 +181,11 @@ näher erläutert (\ref{table:ft-A}).
         \sffamily\color{maincolor}Anforderungen
         \\
         \arrayrulecolor{maincolor}\hline
-        Ft-A-1                       & Dashboard                  &
-        \anfref{F60}                                                         \\
+        Ft-A-1                       & Dashboard                       &
+        \anfref{F60}                                                     \\
         Ft-A-2                       & Reservierungs-Checkout          &
-        \anfref{F60} \anfref{F150}                                           \\
-        Ft-A-3                      & Kalenderansicht für Ausleihende &
+        \anfref{F60} \anfref{F150}                                       \\
+        Ft-A-3                       & Kalenderansicht für Ausleihende &
         \anfref{V50} \anfref{Z30} \anfref{F40} \anfref{F50}
         \\
         \arrayrulecolor{maincolor}\hline
@@ -208,7 +208,7 @@ gibt es die Möglichkeit alle Ausleihdaten bearbeiten zu können, sollte ein Dat
 unpassend sein. Nach Bestätigung einer Reservierung gilt die Reservierung des Assets als
 abgeschlossen.
 
-{\sffamily\color{maincolor}{Ft-A-3 | Kalenderansicht für Ausleihende}}\\
+    {\sffamily\color{maincolor}{Ft-A-3 | Kalenderansicht für Ausleihende}}\\
 Die Kalenderansicht für Ausleihende beinhaltet eine Übersicht, über die Verfügbarkeit eines
 einzelnen Assets. Diese wird angezeigt, sobald sich Nutzende auf der Detailsansicht eines Assets
 befinden und den Ausleihzeitraum angeben. Außerdem befindet sich eine Kalenderübersicht in der
@@ -222,7 +222,7 @@ Die Systemarchitektur gibt eine Übersicht über die technische Umsetzung des
 Systems und bildet die Basis der Realisierung von Software-Systemen
 \cite{dumke_software-metriken_2000}. Diese besteht im Wesentlichen aus den
 folgenden drei Komponenten: dem \textit{Snipe-IT Server}, dem
-Reservierungsinterface und dem Frontend.
+\textit{Reservierungsinterface} und dem \textit{Frontend}.
 
 Aufbauend auf den Anforderungen und der am \ac{imis} bereits eingesetzten Asset Managementsoftware
 \textit{Snipe-IT} werden im Folgenden die gewählten Frameworks erläutert. Um ein besseres
@@ -243,7 +243,7 @@ handelt. Für Nutzende ist es wichtig, dass das System dauerhaft erreichbar ist 
 funktionaler Sicht müssen die Frameworks eine Unterstützung für progressive Web-Applikationen
 bieten. Folglich ist auch eine Unterstützung für HTTPS notwendig (\anfref{Q50}). Außerdem sollte es
 einfache Möglichkeiten zur Verknüpfung von \ac{ldap} bieten (\anfref{K10} \anfref{F90}). Die konkrete
-Wahl der Frameworkwahl wird in \ref{subsec:level2} aufgeführt.
+Wahl der Frameworks wird in \ref{subsec:level2} aufgeführt.
 
 \subsection{C4-Modell zur Visualisierung von Softwarearchitektur}
 Das Modell unterteilt die Architektur in vier Abstraktionsebenen (Level):
@@ -270,7 +270,7 @@ Zusammenhang mit der Asset-Managementsoftware \textit{Snipe-IT}.
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.4]{Bilder/C4_1.pdf}
-    \caption[Architektur Level 1]{Architektur Level 1 nach
+    \caption[C4-Modell Level 1: Context]{C4-Modell Level 1: Context nach
         \citeA{brown2013software}}
     \label{fig:level1}
 \end{figure}
@@ -305,7 +305,7 @@ Software-Systems dargestellt (\ref{fig:level2})(Brown, 2021).
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.47]{Bilder/C4_2.pdf}
-    \caption[Architektur Level 2]{Architektur Level 2 nach
+    \caption[C4-Modell Level 2: Container]{C4-Modell Level 2: Container nach
         \citeA{brown2013software}}
     \label{fig:level2}
 \end{figure}
@@ -339,7 +339,7 @@ aufzuzeigen (Brown, 2021). Im Folgenden werden die Container
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.9]{Bilder/C4_3.pdf}
-    \caption[Architektur Level 3]{Architektur Level 3 nach \citeA{brown2013software}}
+    \caption[C4-Modell Level 3: Components]{C4-Modell Level 3: Components nach \citeA{brown2013software}}
     \label{fig:level3}
 \end{figure}
 
