@@ -7,7 +7,7 @@ Abschließend werden die wichtigsten Ergebnisse und Antworten auf die
 Forschungsfragen (\ref{sec:Forschungsfragen}) der vorliegenden Arbeit
 zusammengefasst. Im Anschluss werden offene Punkte der Konzeption, welche nicht
 wie geplant umgesetzt werden konnten, erläutert. Zum Abschluss wird auf die
-möglichen Weiterentwicklungen des entwickelten Systems eingegangen.
+möglichen Weiterentwicklungen des konzipierten Systems eingegangen.
 
 
 \section{Zusammenfassung}
@@ -24,11 +24,11 @@ Studierenden der Medieninformatik dar. Zusätzlich wurde eine Recherche zu
 vergleichbaren Systemen vorgenommen, welche Aufschluss über mögliche
 Fehlerquellen geben sollte. Hierbei wurde sich nach einer weiteren Recherche auf
 zwei in den Interviews genannten Apps beschränkt, da die vorherige Recherche
-wenig Aufschluss für den spezifischen Einsatzfall gab. Aus den Quellen konnten
+wenig Aufschluss für den spezifischen Einsatzfall ergab. Aus den Quellen konnten
 zwei Nutzendengruppen (Verleihende und Ausleihende) erarbeitet werden
 (\ref{section:Nutzenden}). Für Forschungsfrage F1 wurden die Probleme und
-Herausforderungen des aktuellen Vorgehens und de unterschiedlichen
-Ausleihprozesse, in einer Problemanalyse erarbeitet und beantwortet
+Herausforderungen des aktuellen Vorgehens und der unterschiedlichen
+Ausleihprozesse in einer Problemanalyse erarbeitet und beantwortet
 (\ref{section:iststand}). Anschließend wurden die Aufgaben, welche Verleihende
 und Ausleihende im Reservierungsprozess erledigen müssen, zur Vorbereitung für
 Forschungsfrage F2 diskutiert (\ref{section:aufgaben}).
@@ -53,16 +53,19 @@ umgesetzt (\ref{chapter-implementierung}). Hierbei wurden die in der
 Konzeptionsphase festgelegten Frameworks genutzt. \ref{chapter-dialogbeispiel}
 präsentiert das realisierte System anhand von Dialogbeispielen.
 
-In der abschließenden Phase wurde das realisierte System mithilfe von Interviews und Umfragen
-evaluiert (\ref{chapter-evaluation}). Die Ergebnisse der Phase dienten zur Beantwortung von
-Forschungsfrage F3 und gaben Aufschluss über die Wirksamkeit des entwickelten Systems. Generell
-wurde die Oberfläche als übersichtlich beschrieben und der Wunsch, die Anwendung im
-Universitätsalltag für Projekte nutzen zu können, geäußert. Die eingangs formulierte Forschungsfrage
-F3 konnte lediglich bedingt beantwortet werden, da das positive Ergebnis der durchgeführten Studie
-kein Vergleichssystem aufweisen konnte. Eine weitere ausführliche Studie mit einem Vergleichsystem
-wird somit empfohlen. Trotz des fehlenden Vergleichs konnte die Arbeit ein qualitativ hochwertiges
-System hervorbringen, welches sich als übersichtlich und unterstützend herausstellt. Für
-Forschungsfrage 2 konnten weitere Anforderungen an das System herausgearbeitet werden.
+In der abschließenden Phase wurde das realisierte System mithilfe von Interviews
+und Umfragen evaluiert (\ref{chapter-evaluation}). Die Ergebnisse der Phase
+dienten zur Beantwortung von Forschungsfrage F3 und gaben Aufschluss über die
+Wirksamkeit des entwickelten Systems. Generell wurde die Oberfläche als
+übersichtlich beschrieben und der Wunsch, die Anwendung im Universitätsalltag
+für Projekte nutzen zu können, geäußert. Die eingangs formulierte
+Forschungsfrage F3 konnte lediglich bedingt beantwortet werden, da das positive
+Ergebnis der durchgeführten Studie kein Vergleichssystem aufweisen konnte. Eine
+weitere ausführliche Studie mit einem Vergleichsystem wird somit empfohlen.
+Trotz des fehlenden Vergleichs konnte die Arbeit ein qualitativ hochwertiges
+System hervorbringen, welches sich als übersichtlich und unterstützend
+herausgestellt hat. Für Forschungsfrage 2 konnten weitere Anforderungen an das
+System herausgearbeitet werden.
 
 \section{Offene Punkte}
 \label{sec:punkte}
@@ -81,7 +84,7 @@ ermöglicht werden. Aus der Evaluation ließ sich jedoch schließen, dass diese
 Funktion erwünscht sei.
 
 Die erarbeitete Funktionalität Ft-VA-7 umfasst das Filtern von Materialien. Hierzu gehört unter
-anderem, dass Nutzende verschiedene Präferezen, wie Sortierung, Status, etc. für die Suche
+anderem, dass Nutzende verschiedene Präferenzen, wie Sortierung, Status, etc. für die Suche
 einstellen können. Im Interface-Design wurden bereits Entwürfe für diese Komponente erarbeitet
 (\ref{appendix:digitaleMedien}).
 
@@ -107,7 +110,7 @@ implementiert und evaluiert werden könnten.
 Bevor die ausgeliehenen Assets an Verleihende zurückgegeben werden, sollte eine
 Checkliste für das jeweilige Asset angezeigt  werden. Dort werden Hinweise angezeigt,
 wie zum Beispiel \enquote*{SD-Karte geleert}, \enquote*{Assets auf Ursprungseinstellungen
-zurückgestellt} oder \enquote*{Akkus geladen}. Diese Funktionalität soll insbesondere dafür
+    zurückgestellt} oder \enquote*{Akkus geladen}. Diese Funktionalität soll insbesondere dafür
 sorgen, dass nachfolgende Ausleihende die Assets direkt nutzen können.
 
 \subsection{Weiterentwicklung der Kalenderkomponente}
@@ -116,11 +119,12 @@ Die im Rahmen dieser Arbeit verwendete Kalenderkomponente
 eine leichte Erweiterbarkeit und sollte insbesondere in der mobile Ansicht beim
 Bearbeiten des Reservierungszeitraums angepasst werden.
 
-\subsection{\ac{ldap}-System Einbindung}
-Wie bereits in \ref{sec:punkte} erläutert, konnte die accountbasierte Nutzung des Systems nicht
-umgesetzt werden. Für den realen Einsatz des Systems ist diese Funktionalität unabdingbar. Die
-Einbindung des  \ac{ldap}-Systems deckt zudem die Zugriffsrechte der Nutzenden ab, sodass lediglich
-Studierende und Mitarbeitende der Universität zugriff auf die Listen, der am \ac{imis} bestehenden Assets, haben. Eine
+\subsection{\ac{ldap}-System Einbindung} Wie bereits in \ref{sec:punkte}
+erläutert, konnte die accountbasierte Nutzung des Systems nicht umgesetzt
+werden. Für den realen Einsatz des Systems ist diese Funktionalität unabdingbar.
+Die Einbindung des  \ac{ldap}-Systems deckt zudem die Zugriffsrechte der
+Nutzenden ab, sodass lediglich Studierende und Mitarbeitende der Universität
+zugriff auf die Listen der am \ac{imis} bestehenden Assets haben. Eine
 mögliche Umsetzung ist in \ref{subsec:heraus} aufgeführt.
 
 \subsection{Einbindung in das Labormanagementsystem}

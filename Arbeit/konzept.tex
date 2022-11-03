@@ -72,7 +72,7 @@ mittels Farbcodierung. Durch Die Farbcodierung können Nutzende schneller releva
 filtern, was insbesondere für den Status eines Assets wichtig ist \cite{google_material_2022}.
 
 
-    {\sffamily\color{maincolor}{Ft-VA-4 | Zuständigkeitsbereich }}\\
+{\sffamily\color{maincolor}{Ft-VA-4 | Zuständigkeitsbereich }}\\
 Um für Ausleihende Kontaktinformationen anzeigen zu können \textit{(Ft-A-6)},
 müssen die Zuständigkeitsbereiche eingetragen werden können. Außerdem sollten
 alternative Ansprechpartner:innen kenntlich gemacht werden, um Abholtermine
@@ -278,10 +278,9 @@ Zusammenhang mit der Asset-Managementsoftware \textit{Snipe-IT}.
 Der Kontext umfasst zwei Software-Systeme: das Reservierungstool und die Asset- Managementsoftware
 \textit{Snipe-IT}. Das Reservierungstool bildet die Oberfläche für Ausleihende und ermöglicht es, die Assets
 einzusehen, zu suchen und zu buchen. Außerdem laufen über die Web-Oberfläche alle administrativen
-Aufgaben für Verleihende, wie das Aktualisieren eines Asset-Status. Hierzu nutzt die Web-App das
+Aufgaben für Verleihende, wie das Aktualisieren eines Assetstatus. Hierzu nutzt die Web-App das
 Reservierungsinterface, um auf die \textit{Snipe-IT} Funktionalitäten zuzugreifen.
 
-\todo{Referenzierungen hinzufügen}
 Die Basis für das in dieser Arbeit umgesetzte System schafft die Asset-Managementsoftware
 \textit{Snipe-IT} \cite{noauthor_home_nodate}, welche bereits am \ac{imis} eingesetzt wird.
 \textit{Snipe-IT} ist eine kostenlose, quelloffene IT-Asset-Verwaltungs-Plattform, welche das
@@ -354,18 +353,18 @@ bleiben die Daten zudem auch beim Neuladen der Webapp erhalten.
 
 
 
-Für das Reservierungsinterface werden ein Serverframework und eine Speichermöglichkeit in Form einer
-Datenbank benötigt. Aufgrund der ausgeprägten
-Pluginauswahl\footnote{\url{https://www.fastify.io/ecosystem/}} und breiten
-Nutzung\footnote{\url{https://www.fastify.io/organisations/}} wird
-\textit{Fastify}\footnote{\url{https://www.fastify.io/}} als Serverframework eingesetzt. Als
-relationale Datenbank wird die quelloffene Software
-\textit{SQLite}\footnote{\url{https://www.sqlite.org/index.html}} eingesetzt, da diese zur
-Verwendung keine komplexe Einrichtung benötigt. Im Gegensatz zu Datenbanken wie \textit{PostgreSQL}
-oder \textit{MySQL} benötigt SQLite keine Installation eines Datenbank-Servers. Alle Daten werden in
-einer alleinstehenden Datei gespeichert\footnote{\url{https://www.sqlite.org/different.html}}. Trotz
-der simplen Einrichtung bietet SQLite ein umfangreiches Sortiment an SQL-Funktionen und unterstützt
-auch den Umgang mit großen Datensätzen \footnote{\url{https://www.sqlite.org/limits.html}}. Um den
-Zugriff und die Verwaltung der Daten zu vereinfachen, wird zudem die ORM-Bibliothek
-Prisma\footnote{\url{https://www.prisma.de/}} verwendet.
+Für das Reservierungsinterface werden ein Serverframework und eine
+Speichermöglichkeit in Form einer Datenbank benötigt. Aufgrund der ausgeprägten
+Pluginauswahl und breiten Nutzung wird
+\textit{Fastify}\footnote{\url{https://www.fastify.io/}} als Serverframework
+eingesetzt. Als relationale Datenbank wird die quelloffene Software
+\textit{SQLite}\footnote{\url{https://www.sqlite.org/index.html}} eingesetzt, da
+diese zur Verwendung keine komplexe Einrichtung benötigt. Im Gegensatz zu
+Datenbanken wie \textit{PostgreSQL} oder \textit{MySQL} benötigt SQLite keine
+Installation eines Datenbank-Servers. Alle Daten werden in einer alleinstehenden
+Datei gespeichert. Trotz der simplen Einrichtung bietet SQLite ein umfangreiches
+Sortiment an SQL-Funktionen und unterstützt auch den Umgang mit großen
+Datensätzen. Um den Zugriff und die Verwaltung der Daten zu vereinfachen, wird
+zudem die ORM-Bibliothek Prisma\footnote{\url{https://www.prisma.de/}}
+verwendet.
 

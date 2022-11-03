@@ -166,7 +166,7 @@ betrachtet, daraufhin wird auf das Extrahieren der Unterkategorien eingegangen (
 
 Für den Aufbau des Projektes wurde aus den in \ref{chapter-konzept} festgestellten Anforderungen
 \textit{vue.js} verwendet. Bei der Implementierung wurde sich an den best practices der
-Vue.js-Dokumentation orientiert \todo{(Vue.js, 2021a)}. Für sich wiederholende Elemente wurden
+Vue.js-Dokumentation orientiert \cite{You2022a}. Für sich wiederholende Elemente wurden
 eigene Views erstellt. Dadurch ergibt sich eine hierarchisch geschachtelte Client-Anwendung der
 Vue-Komponenten. \ref{fig:vue} stellt die Komponenten-Struktur vereinfacht dar. Um
 konkretere Vorschläge in der Entwicklungsumgebung zu ermöglichen und vorzeitige Fehler zu
@@ -214,7 +214,7 @@ Für die Nutzung des Systems wird eine Installation von \textit{Node.js} vorausg
 müssen alle eingebundenen Pakete des \textit{npm} Paketverzeichnis mit \lstinline{npm install}
 installiert werden. Dies muss für Server (\lstinline{\server}) und Client (\lstinline{\client})
 jeweils im entsprechenden Verzeichnis ausgeführt werden. Zusätzlich sollte die Datenbank im
-Server-Verzeichnis mithilfe des Befehls \lstinline{npx prisma install }\todo{Befehl raussuchen}
+Server-Verzeichnis mithilfe des Befehls \lstinline{npx prisma generate}
 erstellt und vorbereitet werden. Abschließend sollte \lstinline{npx prisma generate} ausgeführt
 werden, um die benötigten Dateien des Prisma-Clients zu generieren.
 
