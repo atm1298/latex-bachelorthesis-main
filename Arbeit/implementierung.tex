@@ -25,7 +25,7 @@ Verzeichnisstruktur aus \ref{fig:db} wider.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.2]{Bilder/vuejs.png}
+  \includegraphics[scale=0.4]{Bilder/verzeichnisback.png}
   \caption{Verzeichnisstruktur des Reservierungsinterfaces}
   \label{fig:db}
 \end{figure}
@@ -105,7 +105,7 @@ dieser Vorgänge und die damit einhergehende Bestätigung für die Aktualisierun
 
 Sobald ein Asset über die Web-App ausgeliehen wird, werden die relevanten Daten mit einer
 \textit{POST}-Anfrage an die \textit{/reservation}-Route des Reservierungsinterfaces gesendet.
-Diese relevanten Daten (Assetname, Datum, Uhrzeit, Ort, etc.) werden im Reservierungsinterfaces
+Diese relevanten Daten (Assetname, Datum, Uhrzeit, Ort, etc.) werden im Reservierungsinterface
 gespeichert. Sobald Verleihende die Ausleihe bestätigen, wird der Ausleihstatus mit einer
 \textit{POST}-Anfrage an \textit{/reservation/receive} intern und in Snipe-IT von
 \textit{ausleihbar} zu \textit{herausgegeben} aktualisiert. Zur Kommunikation zwischen dem
@@ -176,29 +176,30 @@ minimieren, wurde ergänzt zu \textit{JavaScript} \textit{TypeScript} verwendet.
 Für die Realsisierung der Routen wurde der File-Based-Routing Ansatz verwendet, welcher die Routen
 aufgrund der Verzeichnisstruktur generiert. Hierfür wurde das Vite-Plugin
 \textit{vite-plugin-pages}\footnote{\url{https://github.com/hannoeru/vite-plugin-pages}} genutzt.
-Vue-Komponenten, welche sich im \textit{/pages}-Verzeichnis des Projekts befinden, werden in eine,
+Vue-Komponenten, welche sich im \textit{/pages}-Verzeichnis des Projekts befinden werden in eine
 dem Dateinamen gleichende, Route umgewandelt. Ordner können hierbei verwendet werden, um Unterrouten
 zu erstellen, während die Verwendung von eckigen Klammern zur Kennzeichnung von Parametern genutzt
 wird. Beispielsweise wird eine \textit{[id].vue}-Datei, welche sich in dem Ordner
 \textit{categories} befindet, in die \textit{/categories/<id>}-Route umgewandelt, welche die
 angegebene ID in der Komponente als Parameter nutzen kann (\ref{fig:vue}).
+
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.7]{Bilder/Db.jpg}
+  \includegraphics[scale=0.3]{Bilder/verzeichnisfront.png}
   \caption{Verzeichnisstruktur des Clients}
   \label{fig:vue}
 \end{figure}
 
 \subsection{Extrahieren von Unterkategorien}
 Die im Rahmen dieser Arbeit verwendete Beispieldatenbank beinhaltete eine Vielzahl an Kategorien und
-Unterkategorien welche nach folgendem Format benannt wurden: \enquote{Kategorie - Unterkategorie}.
+Unterkategorien, welche nach folgendem Format benannt wurden: \enquote{Kategorie - Unterkategorie}.
 Das verwendete Format ergibt sich aus der fehlenden Funktionalität Snipe-Its, einem Asset mehrere
 Kategorien zuweisen zu können. Da das Anzeigen der Kategorien in diesem Format unübersichtlich ist,
 sollten zunächst nur die Oberkategorien und anschließend die Unterkategorien angezeigt werden.
 
-Zur Extrahierung werden die erhaltenen Kategorien, anhand eines Trennsymbols (\enquote{-}), in Ober- und
+Zur Extrahierung werden die erhaltenen Kategorien anhand eines Trennsymbols (\enquote{-}), in Ober- und
 Unterkategoriepaare getrennt. Anschließend werden alle Paare mit der gleichen Oberkategorie zu einem
-Eintrag zusammengefasst, welcher alle zugehöhrigen Unterkategorien beinhaltet. Hierbei wird für jede
+Eintrag zusammengefasst, welcher alle zugehörigen Unterkategorien beinhaltet. Hierbei wird für jede
 Unterkategorie die hinterlegte Kategorie-ID gespeichert. Somit ergibt sich eine Baumstruktur, welche
 in der Anwendung schrittweise durchlaufen werden kann.
 
@@ -215,7 +216,7 @@ installiert werden. Dies muss für Server (\lstinline{\server}) und Client (\lst
 jeweils im entsprechenden Verzeichnis ausgeführt werden. Zusätzlich sollte die Datenbank im
 Server-Verzeichnis mithilfe des Befehls \lstinline{npx prisma install }\todo{Befehl raussuchen}
 erstellt und vorbereitet werden. Abschließend sollte \lstinline{npx prisma generate} ausgeführt
-werden, um die benötigten Datein des Prisma-Clients zu generieren.
+werden, um die benötigten Dateien des Prisma-Clients zu generieren.
 
 \subsection{Konfiguration}
 Zur Festlegung von umgebungsabhängigen Variablen werden für Server und Client je eine
@@ -241,7 +242,7 @@ in der Konfiguration genutzt werden. Außerdem sollte beachtet werden, dass der 
 nach der Generierung einsehbar ist.
 
 \subsection{Ausführung des Reservierungsinterfaces}
-Um die Daten der Snipe-IT Datenbank abzurufen, die Reservierungen zwischen zu speichern und den
+Um die Daten der Snipe-IT Datenbank abzurufen, die Reservierungen zwischenzuspeichern und den
 Status in \textit{Snipe-IT} aktualisieren zu können, muss das Reservierungsinterface mithilfe des
 Befehls \lstinline{npm run serve} gestartet werden.
 
@@ -254,36 +255,24 @@ Entwicklung kann durch\lstinline{npm run dev} zudem ein Entwicklungsserver gesta
 
 \section{Fazit der Implementierung}
 
-Die in der Implementierung realisierten Funktionalitäten umfassen das \textit{muss} der in der
-\nameref{section:anforderung} erarbeiteten Funktionen.
-
-Im Rahmen der vorliegenden Arbeit wurde ein umfassender Prototyp realisiert,
-welches die Grundlagen des Reservierens mit einer Verknüpfung zu Snipe-IT
-ermöglicht. Die Implementierung teilt sich in zwei Teile, das
-Reservierungsinterface (Backend) und die Webapp (Frontend). Das
+Im Rahmen der vorliegenden Arbeit wurde ein umfassender Prototyp realisiert, welcher die Grundlagen
+des Reservierens mit einer Verknüpfung zu Snipe-IT ermöglicht. Die Implementierung teilt sich in
+zwei Teile, das Reservierungsinterface (Backend) und die Webapp (Frontend). Das
 Reservierungsinterface teilt sich in drei wesentliche Bestandteile: der
-\textit{Fastify-HTTP-Server}, die \textit{SQLite Datenbank} und das \textit{ORM
-  Prisma} (vgl. \ref{fig:level3}). Diese Komponenten spiegeln sich in der
-Verzeichnisstruktur aus \ref{fig:db} wider. Für die serverseitige Umsetzung
-wurde eine API entwickelt, welche sich in drei Bereiche teilt (\textit{Assets},
-\textit{Kategorien} und \textit{Reservierungen}
-(\ref{table:impl-backend-routes}). Die Datenbank speichert die getätigten
-Reservierungen und Beispielprofile. Für eine vereinfachte Umsetzung wurde das
-ORM Prisma verwendet. Die Implementierung der Kernfunktionalitäten zeigt die
-Nutzung der Snipe-IT Datenbank. Für die Nutzung dieser musste ein
-\textit{persönliches Zugriffstoken} generiert werden. Sobald ein Asset über die
-Web-App ausgeliehen wird, werden die relevanten Daten mit einer
-\textit{POST}-Anfrage an die \textit{/reservation}-Route des
-Reservierungsinterfaces gesendet. Diese relevanten Daten werden im
-Reservierungsinterfaces gespeichert. Sobald Verleihende die Ausleihe bestätigen,
-wird der Ausleihstatus mit einer \textit{POST}-Anfrage an
-\textit{/reservation/receive} intern und in Snipe-IT aktualisiert. Die
-Accoutbasierte Nutzung mit dem LADp-System stelltsich aufgrund des
-\textit{persönliches Zugriffstoken} als Herausforderung heraus und wurde
-demzufolge nicht eingearbeitet. Für den zweiten Teil der Anwendung wurde
-\textit{vue.js} und \textit{TypeScript} verwendet. Für den Aufbau der Routen
-wurde der File-Based-Routing Ansatz verwendet, welcher die Routen aufgrund der
-Verzeichnisstruktur generiert. Hierfür wurde das Vite-Plugin
-\textit{vite-plugin-pages}\footnote{\url{https://github.com/hannoeru/vite-plugin-pages}}
-genutzt. Abschliend musste eine Extrahierung der Unterkategorien anhand eines
-Trennsymbols (\enquote{-}), implementiert werden.
+\textit{Fastify-HTTP-Server}, die \textit{SQLite Datenbank} und das \textit{ORM Prisma} (vgl.
+\ref{fig:level3}). Diese Komponenten spiegeln sich in der Verzeichnisstruktur aus \ref{fig:db}
+wider. Für die serverseitige Umsetzung wurde eine API entwickelt, welche sich in drei Bereiche teilt
+(\textit{Assets}, \textit{Kategorien} und \textit{Reservierungen}
+(\ref{table:impl-backend-routes})). Die Datenbank speichert die getätigten Reservierungen und
+Beispielprofile. Für eine vereinfachte Umsetzung wurde das ORM Prisma verwendet. Die Implementierung
+der Kernfunktionlitäten benötigt die Einbindung der Snipe-IT Datenbank. Für die Nutzung dieser
+musste ein \textit{persönliches Zugriffstoken} generiert werden. Alle für die Ausleihe benötigten
+Aktionen werden an das Reservierungsinterface gesendet. Die relevanten Daten werden in der Datenbank
+gespeichert, während der Status in Snipe-IT bei Bedarf aktualisiert wird. Die accountbasierte
+Nutzung mithilfe des \ac{ldap}-Systems stellt sich aufgrund des \textit{persönliches Zugriffstoken}
+als Herausforderung heraus und wurde demzufolge nicht eingearbeitet. Für den clientseitigen Teil der
+Anwendung wurde \textit{vue.js} und \textit{TypeScript} verwendet. Für den Aufbau der Routen wurde
+der File-Based-Routing Ansatz verwendet, welcher die Routen anhand der Verzeichnisstruktur
+generiert. Hierfür wurde das Vite-Plugin
+\textit{vite-plugin-pages}\footnote{\url{https://github.com/hannoeru/vite-plugin-pages}} genutzt.
+Abschließend musste die Extrahierung der Unterkategorien, implementiert werden.

@@ -13,7 +13,7 @@ und bedienen können.
 
 Die Medieninformatik bietet viele Methoden und Vorgehensweisen zur menschzentrierten Gestaltung
 \cite{HerczegIDE2009}. Im Rahmen der Arbeit wurde vor allem Prototyping in verschiedenen Formen
-eingesetzt \cite{HerczegMDI2009}. Des Weiteren wurden die Zehn Usability Heuristiken nach
+eingesetzt \cite{HerczegMDI2009}. Des Weiteren wurden die zehn Usability Heuristiken nach
 \citeA{nielsen_enhancing_1994} bei der Entwicklung stets beachtet, um Kriterien der
 Gebrauchstauglichkeit zu addressieren. Eine ausführliche Aufzählung der Heuristiken befindet sich in
 \ref{appendix:Heuristiken}. In der Gestaltung wurde nach der \enquote{Mobile First}-Strategie
@@ -29,14 +29,14 @@ Realisierung des Systems zu erleichtern.
 
 Die erste Iteration des Interface-Designs umfasst Skizzen. Die Skizzen wurden
 erstellt, um einen groben Überblick der verschiedenen Ansichten zu erhalten und
-in \textit{Mockup}\footnote{\url{https://getmockup.app/}} umgesetzt. Während des
+in der iOS-App \textit{Mockup}\footnote{\url{https://getmockup.app/}} umgesetzt. Während des
 Designprozesses wurden die Skizzen mit
 Figma\footnote{\url{https://www.figma.com/de/}} zu einem High-Fidelity-Prototyp
 weiterentwickelt.
 
 Im Rahmen dieses Kapitels werden die zentralen Ansichten und
 Design-Entscheidungen erläutert. Eine Übersicht aller Entwürfe befindet sich im
-(\label{appendix:digitaleMedien}).
+(\ref{appendix:digitaleMedien}).
 
 \section{Iteratives Vorgehen}
 Für die Tests wurden Usability-Spezifikationen aus Szenarien abgeleitet. Die
@@ -80,13 +80,13 @@ als Verweise verwendet werden.
 \section{Designsprache}
 
 Im Folgenden wird auf die Entwicklung der wichtigsten Komponenten und Ansichten
-in der Interfacegestaltung eingegangen.
+in der Interface-Gestaltung eingegangen.
 
 \subsection{Wortlaut}
 Ein zentrales Problem des Prototyps war der konsistente Wortlaut (H2, H4, H5).
 Insbesondere der Begriff \textit{Assets} konnte mehrfach nicht oder schlecht
-interpretiert werden (E1, E2). Daraufhin wurden Vorschläge geliefert, wie
-\textit{Material, Hardware, Systeme, Geräte}. Im weiteren Verlauf hat sich
+interpretiert werden (E1, E2). Daraufhin wurden Vorschläge, wie
+\textit{Material, Hardware, Systeme, Geräte} geliefert. Im weiteren Verlauf hat sich
 \textit{Material} als präferierter Begriff herausgestellt (E3-E5). Des Weiteren
 hat das \textit{Suchen nach Kriterien} für Missverständnisse in Verbindung mit
 der ebenfalls existierenden \textit{Suche} ergeben (E1, E2). Daher wurden auch
@@ -96,7 +96,7 @@ erarbeitet. Da die Funktion im Rahmen dieser Arbeit nicht realisiert wurde, ist 
 diesen Begriffen ausstehend.\todo{Ausblick}
 
 \subsection{Schrift}
-Allgemein wurde die Schriftart nach Kriterien für eine gute Lesbarkeit, wie:
+Allgemein wurde die Schriftart nach Kriterien für eine gute Lesbarkeit wie
 Erkennbarkeit, Unterscheidbarkeit und Offenheit betrachtet
 \cite{kommunikationsdesign_leserlichinfo}. Außerdem wurde sich für die spätere
 Realisierung der Typografie direkt an Tailwind
@@ -114,11 +114,11 @@ UI gewählt (\ref{fig:schrift}).
 
 \subsection{Farbschema}
 Die Farben der Anwendung (\ref{fig:farben}) werden nach dem 60-30-10 Prinzip genutzt
-\cite{experience_using}. Hierbei stellt grau die Hauptfarbe dar, weiß die Sekundärfarbe und orange
+\cite{experience_using}. Hierbei stellt Grau die Hauptfarbe dar, Weiß die Sekundärfarbe und Orange
 die Akzentfarbe. Da die Anwendung für den Gebrauch am \ac{imis} entwickelt wird und die Farben des
 Instituts sich auf Orange und das Universitäts-Blau beschränken, wurde sich nach einigen Vergleichen
-für das Orange entschieden (E4, E5). Der dunkle Ton stellt die Textfarbe der Anwendung dar. Außerdem
-wurde mit verschiedenen Graustuffen gearbeitet, um Interaktionen von Elementen zu verdeutlichen.
+für das Orange entschieden (E4, E5). Der dunkle Farbton stellt die Textfarbe der Anwendung dar. Außerdem
+wurde mit verschiedenen Graustufen gearbeitet, um Interaktionen von Elementen zu verdeutlichen.
 
 \begin{figure}[h]
     \centering
@@ -128,7 +128,7 @@ wurde mit verschiedenen Graustuffen gearbeitet, um Interaktionen von Elementen z
 \end{figure}
 
 \subsection{Dashboard}
-Positiv wurde stets angemerkt, dass die Anwendung im allgemeinen verständlich
+Positiv wurde stets angemerkt, dass die Anwendung im Allgemeinen verständlich
 und \enquote{nicht überfordernd} wirkt (H8) (E1-6). Aufgrund des zu Beginn geringen
 Inhalts auf der Startseite ist eine ansprechende und fokussierte Anordnungen der
 Komponenten wichtig (H8). \ref{fig:home} zeigt die Entwicklung des Dashboards.
@@ -137,7 +137,7 @@ Außerdem wirkte die Ansicht durch die vielen einzelnen Elemente schnell
 überladen (H8) (E1-2). Als Konsequenz wurde sich für eine Tab-Leiste entschieden.
 Folglich ist die Seite auch bei mehr als drei Reservierungen übersichtlich (E4).
 Sobald ein Asset ausgeliehen wurde, sollten die entsprechenden Informationen
-(Status, Zeitraum, Ort) übersichtlich und schnell eingesehen werden können (H1)
+(Status, Zeitraum, Ort) übersichtlich sein und schnell eingesehen werden können (H1)
 (F-A-1). Dies ermöglicht die Kartenansicht, wobei eine Möglichkeit zum Löschen
 und das Bearbeiten des Zeitraums erwünscht war und in der Realisierung
 integriert wurde (E6).
@@ -179,14 +179,14 @@ Nutzende jederzeit die Möglichkeit haben, nach Assets zu suchen
 \end{figure}
 
 \subsection{Kategorien und Suche}
-Bei der Übersicht der Kategorien wurde sich  ebenfalls an bekannte Anwendungen
+Bei der Übersicht der Kategorien wurde sich ebenfalls an bekannten Anwendungen
 mit ähnlichen Funktionen (z. B. Airbnb, Otto) orientiert (H4, H8). Dies führt
 unter anderem dazu, dass Fehler besser vermieden werden können (H9).
 
 Die Suche wurde der Anwendung Airbnb\footnote{\url{https://www.airbnb.de/}}
 nachempfunden, da viele Nutzende den Reserviervorgang mit dieser Anwendung
 assoziieren (H2, H4). Die Suche sollte durch das direkte Einstellen eines
-Ausleihzeitraums Fehlern vorbeugen und die Verfügbarkeit anzeigen (H5) (F-VA-6).
+Ausleihzeitraums Fehler vorbeugen und die Verfügbarkeit anzeigen (H5) (F-VA-6).
 \ref{fig:p1} zeigt die erste Version des High-Fidelity-Prototypen, bei welcher
 ein Suchbutton fehlte. Zudem wurden die Vorschläge der angezeigten Kategorien
 weniger genutzt und direkt auf die Suche oder \enquote{alle Kategorien Anzeigen}
@@ -216,7 +216,7 @@ Assetverfügbarkeit mit eingebunden (H4, H8) (F-VA-3).
 
 \subsection{Kalender}
 Die Kalenderkomponente wurde lediglich als Skizze veranschaulicht
-(\ref{fig:kalender}). Im High-Fidelity-Prototyp wurde sich bereits an der
+(\ref{fig:kalender}). Im High-Fidelity-Prototyp wurde sich an der
 Komponente
 \textit{V-Calendar}\footnote{\url{https://vcalendar.io/layouts.html}}
 orientiert, welche die wichtigsten Funktionen bereits implementiert und so die Realisierung
